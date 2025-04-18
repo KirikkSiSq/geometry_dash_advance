@@ -506,8 +506,6 @@ void wave_gamemode() {
         curr_player.player_y_speed = curr_player.player_x_speed * 2 * sign * hold_sign;     
     }
     
-    wave_set_new_point();
-    
     curr_player.on_floor = FALSE;
 
     for (s32 step = 0; step < num_steps - 1; step++) {
@@ -521,6 +519,8 @@ void wave_gamemode() {
 
         // Run collision
         collision_wave();
+
+        if (speed_id > SPEED_X2 && step == 1) wave_set_new_point();
 
         // If player is dead, do not advance more half steps
         if (player_death) break;
@@ -538,6 +538,8 @@ void wave_gamemode() {
 
         // Run collision
         collision_wave();
+        
+        wave_set_new_point();
         
         // Stop buffering
         if (curr_player.player_buffering == ORB_BUFFER_READY) curr_player.player_buffering = ORB_BUFFER_END;
