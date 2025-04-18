@@ -1,8 +1,8 @@
 #include "soundbank.h"
 // groundtospace properties
 const unsigned int groundtospace_properties[] = {
- /*BG color*/      0x2c41,
- /*GROUND color*/  0x5294,
+ /*BG color*/      0xc00,
+ /*GROUND color*/  0x842,
  /*COL1 color*/    0x7fff,
  /*COL2 color*/    0x7fff,
  /*COL3 color*/    0x7fff,
