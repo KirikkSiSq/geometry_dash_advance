@@ -16,7 +16,7 @@
 #define NUM_COINS_PER_LEVEL 3
 
 
-/* GAMEPLAY*/
+/* GAMEPLAY */
 // Number of stored checkpoints before older ones are overwritten
 #define NUM_PRACTICE_CHECKPOINTS 100
 
@@ -25,7 +25,7 @@
 #define NUM_DUAL_STEPS 2
 
 
-/* SAVES*/
+/* SAVES */
 // Version of the savefile, increment if a wipe is needed
 #define SAVE_VERSION 9
 
@@ -34,7 +34,13 @@
 #define DEFAULT_P2_COLOR 51
 #define DEFAULT_GLOW_COLOR 51
 
-
+/* ICONS */
+// Number of icons, increment when adding a new one
+#define ICON_COUNT_CUBES 43
+#define ICON_COUNT_SHIPS 9
+#define ICON_COUNT_BALLS 14
+#define ICON_COUNT_UFOS 8
+#define ICON_COUNT_WAVES 16
 
 // DO NOT TOUCH IF YOU DON'T KNOW WHAT THIS DOES
 #define GROUND_HEIGHT MAX_LEVEL_HEIGHT - 4
