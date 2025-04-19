@@ -1420,7 +1420,10 @@ void handle_trail() {
 
         // Put the trail sprite
         if (trail_enabled[curr_player_id][i - 1]) oam_metaspr(relative_x, relative_y, normalTrailChunk, FALSE, FALSE, 0, trail_palette, priority, 0, FALSE, FALSE);
+    }
 
+    // Now shift trails
+    for (s32 i = 0; i < TRAIL_LENGTH; i++) {
         // Shift left this trail chunk
         if (i != 0) {
             trail_enabled[curr_player_id][i - 1] = trail_enabled[curr_player_id][i];
