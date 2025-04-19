@@ -176,6 +176,8 @@ void cube_gamemode() {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_JUMP_SPEED : CUBE_MINI_JUMP_SPEED) * sign;       
         }
 
+        if (curr_player.on_slope) curr_player.slope_counter = 2;
+
         curr_player.airborne_jumped = TRUE;
         curr_player.player_buffering = ORB_BUFFER_END;
         curr_player.on_slope = FALSE;
