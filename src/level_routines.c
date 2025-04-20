@@ -837,6 +837,7 @@ void check_for_same_dual_gravity() {
                     player_2.player_y_speed /= 2;
                     set_ceil_invulnerability();
                     player_2.gravity_dir = curr_player.gravity_dir ^ 1;
+                    player_2.ball_rotation_direction = (player_2.gravity_dir == GRAVITY_DOWN) ? -1 : 1;
                 }
             }
         } else {
@@ -847,6 +848,7 @@ void check_for_same_dual_gravity() {
                     player_1.player_y_speed /= 2;
                     set_ceil_invulnerability();
                     player_1.gravity_dir = curr_player.gravity_dir ^ 1;
+                    player_1.ball_rotation_direction = (player_1.gravity_dir == GRAVITY_DOWN) ? -1 : 1;
                 }
             }
         }
@@ -1419,17 +1421,15 @@ void handle_trail() {
         s32 relative_y = y - FROM_FIXED(scroll_y);
 
         // Put the trail sprite
-        if (trail_enabled[curr_player_id][i - 1]) oam_metaspr(relative_x, relative_y, normalTrailChunk, FALSE, FALSE, 0, trail_palette, priority, 0, FALSE, FALSE);
+        if (trail_enabled[curr_player_id][i]) oam_metaspr(relative_x, relative_y, normalTrailChunk, FALSE, FALSE, 0, trail_palette, priority, 0, FALSE, FALSE);
     }
 
     // Now shift trails
-    for (s32 i = 0; i < TRAIL_LENGTH; i++) {
+    for (s32 i = 1; i < TRAIL_LENGTH; i++) {
         // Shift left this trail chunk
-        if (i != 0) {
-            trail_enabled[curr_player_id][i - 1] = trail_enabled[curr_player_id][i];
-            trail_x[curr_player_id][i - 1] = trail_x[curr_player_id][i];
-            trail_y[curr_player_id][i - 1] = trail_y[curr_player_id][i];
-        }
+        trail_enabled[curr_player_id][i - 1] = trail_enabled[curr_player_id][i];
+        trail_x[curr_player_id][i - 1] = trail_x[curr_player_id][i];
+        trail_y[curr_player_id][i - 1] = trail_y[curr_player_id][i];
     }
 }
 
