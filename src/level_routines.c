@@ -1379,7 +1379,7 @@ void handle_wave_trail() {
     u32 priority = (cutscene_frame > TOTAL_CUTSCENE_FRAMES - 20) ? 2 : 0;
     u8 trail_palette = (curr_player_id == ID_PLAYER_1) ? 9 : 8;
     
-    for (s32 i = 0; i < wave_trail_pointer[curr_player_id]; i++) {
+    for (s32 i = 1; i < wave_trail_pointer[curr_player_id]; i++) {
         u32 x = wave_trail_x[curr_player_id][i];
         u16 y = wave_trail_y[curr_player_id][i];
         u32 size = wave_trail_size[curr_player_id][i];
@@ -1410,7 +1410,7 @@ void handle_trail() {
 
     u8 trail_palette = (curr_player_id == ID_PLAYER_1) ? 9 : 8;
 
-    for (s32 i = trail_length[curr_player_id]; i < TRAIL_LENGTH; i++) {
+    for (s32 i = trail_length[curr_player_id]; i < TRAIL_LENGTH - 1; i++) {
         u32 x = trail_x[curr_player_id][i];
         u16 y = trail_y[curr_player_id][i];
 
