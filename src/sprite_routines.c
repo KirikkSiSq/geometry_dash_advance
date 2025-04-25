@@ -117,6 +117,8 @@ void wave_portal(struct ObjectSlot *objectSlot) {
     curr_player.on_floor = FALSE;
     curr_player.inverse_rotation_flag = FALSE;
     curr_player.airborne_jumped = TRUE;
+    
+    curr_player.trail_on = FALSE;
 
     gamemode_upload_buffer[curr_player_id] = GAMEMODE_WAVE;
     

@@ -1401,13 +1401,23 @@ void handle_wave_trail() {
     }
 }
 
-void handle_trail() {
+void shift_trail() {
     // Get initial trail index
     s32 initial_index = (curr_player.player_size == SIZE_BIG ? 0 : (u32) (TRAIL_LENGTH * (1 - MINI_SIZE)));
 
     // Approach trail index by 1 per frame
     trail_length[curr_player_id] = approach_value(trail_length[curr_player_id], initial_index, 1, 1);
-    
+
+    // Shift trails
+    for (s32 i = 1; i < TRAIL_LENGTH; i++) {
+        // Shift left this trail chunk
+        trail_enabled[curr_player_id][i - 1] = trail_enabled[curr_player_id][i];
+        trail_x[curr_player_id][i - 1] = trail_x[curr_player_id][i];
+        trail_y[curr_player_id][i - 1] = trail_y[curr_player_id][i];
+    }
+}
+
+void handle_trail() {
     u32 priority = (cutscene_frame > TOTAL_CUTSCENE_FRAMES - 20) ? 2 : 0;
 
     u8 trail_palette = (curr_player_id == ID_PLAYER_1) ? 9 : 8;
@@ -1422,14 +1432,6 @@ void handle_trail() {
 
         // Put the trail sprite
         if (trail_enabled[curr_player_id][i]) oam_metaspr(relative_x, relative_y, normalTrailChunk, FALSE, FALSE, 0, trail_palette, priority, 0, FALSE, FALSE);
-    }
-
-    // Now shift trails
-    for (s32 i = 1; i < TRAIL_LENGTH; i++) {
-        // Shift left this trail chunk
-        trail_enabled[curr_player_id][i - 1] = trail_enabled[curr_player_id][i];
-        trail_x[curr_player_id][i - 1] = trail_x[curr_player_id][i];
-        trail_y[curr_player_id][i - 1] = trail_y[curr_player_id][i];
     }
 }
 

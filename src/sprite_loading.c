@@ -413,8 +413,8 @@ ARM_CODE void check_obj_collision(u32 index) {
     u32 obj_x = curr_object.x + offset_x;
     u32 obj_y = curr_object.y + offset_y;
 
-    u32 ply_x = (curr_player.player_x >> SUBPIXEL_BITS);
-    u32 ply_y = (curr_player.player_y >> SUBPIXEL_BITS);
+    u32 ply_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+    u32 ply_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
     
     if (curr_object.attrib1 & ENABLE_ROTATION_FLAG) {
@@ -427,11 +427,7 @@ ARM_CODE void check_obj_collision(u32 index) {
             do_collision(&object_buffer[index]);
         }   
     } else {
-        ply_x += ((0x10 - curr_player.player_width) >> 1);
-        ply_y += ((0x10 - curr_player.player_height) >> 1);
-
         if (curr_object.attrib2 & CIRCLE_HITBOX_FLAG) {
-
             u32 obj_cx = curr_object.x + center_x;
             u32 obj_cy = curr_object.y + center_y;
 

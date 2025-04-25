@@ -96,6 +96,8 @@ void player_main() {
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
 
+        shift_trail();
+
         // Gamemode specific routines
         switch (curr_player.gamemode) {
             case GAMEMODE_CUBE:
@@ -663,9 +665,11 @@ void draw_player() {
             }
 
             handle_trail();
+            wave_trail_pointer[curr_player_id] = 0;
         } else if (!complete_cutscene) {
-            // Else, if it's a wave and the complete cutscene is not playing, draw the wave trail
+            // Else, if it's a wave and the complete cutscene is not playing, draw the wave trail and set main trail to 0
             handle_wave_trail();
+            trail_enabled[curr_player_id][TRAIL_LENGTH - 1] = FALSE;
         }
 
         switch (curr_player.gamemode) {

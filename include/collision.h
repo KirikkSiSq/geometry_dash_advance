@@ -116,6 +116,11 @@ enum CollisionTypes {
     COL_MINIBLOCK_0110,
     COL_MINIBLOCK_1111,
 
+    COL_OUTLINE_TOP,
+    COL_OUTLINE_BOTTOM,
+    COL_OUTLINE_LEFT,
+    COL_OUTLINE_RIGHT,
+
     COL_SLOPE_START,
     COL_SLOPE_45_UP = COL_SLOPE_START,
     COL_SLOPE_45_DOWN,
@@ -179,6 +184,11 @@ void collision_ship_ball_ufo();
 void collision_wave();
 ARM_CODE void do_collision_with_objects();
 ARM_CODE void check_obj_collision(u32 index);
+
+#ifdef DEBUG
+void draw_hitbox_points(u32 x, u32 y, u32 w, u32 h, u32 collided);
+#endif
+
 ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2, u32 h2);
 ARM_CODE u32 is_colliding_circle(u32 cx1, u32 cy1, u32 r1, u32 cx2, u32 cy2, u32 r2);
 ARM_CODE u32 is_colliding_circle_square(u32 x1, u32 y1, u32 w1, u32 h1, u32 cx2, u32 cy2, u32 r2);

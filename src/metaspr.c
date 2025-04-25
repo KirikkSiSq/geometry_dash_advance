@@ -74,6 +74,7 @@ const u16 normalTrailChunk[] = {
     0xffff
 };
 
+
 const u16 miniWaveTrailChunk[] = {
     ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
     ATTR1_SIZE_8x16,
@@ -84,6 +85,18 @@ const u16 miniWaveTrailChunk[] = {
     CENTER(8, 8),
     0xffff
 };
+
+const u16 hitboxPoint[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(1021),
+    0,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff
+};
+
 
 
 // Menu

@@ -33,6 +33,12 @@ void collision_cube() {
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
+#ifdef DEBUG
+    if (debug_mode) {
+        draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
+    }
+#endif
+
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 
     // Check sprite spikes
@@ -163,6 +169,12 @@ void collision_ship_ball_ufo() {
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
     
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
+
+#ifdef DEBUG
+    if (debug_mode) {
+        draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
+    }
+#endif
     
     // Check sprite spikes
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS);
@@ -252,6 +264,12 @@ void collision_wave() {
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
     
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
+
+#ifdef DEBUG
+    if (debug_mode) {
+        draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
+    }
+#endif
 
     // Check sprite spikes
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS);
@@ -716,6 +734,38 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
                 }
             }
             return 0;
+            
+        case COL_OUTLINE_TOP:
+            if (y_inside_block == 0) {
+                eject_bottom = y_inside_block;
+                eject_top = 0x01 - y_inside_block;
+                break;
+            }
+            return 0;
+            
+        case COL_OUTLINE_BOTTOM:
+            if (y_inside_block == 15) {
+                eject_bottom = y_inside_block - 0xf;
+                eject_top = 0x10 - y_inside_block;
+                break;
+            }
+            return 0;
+            
+        case COL_OUTLINE_LEFT:
+            if (x_inside_block == 0) {
+                eject_bottom = y_inside_block;
+                eject_top = 0x10 - y_inside_block;
+                break;
+            }
+            return 0;
+            
+        case COL_OUTLINE_RIGHT:
+            if (x_inside_block == 15) {
+                eject_bottom = y_inside_block;
+                eject_top = 0x10 - y_inside_block;
+                break;
+            }
+            return 0;
 
         case COL_MINIBLOCK_0001:
             if (bottom_right_corner(x_inside_block, y_inside_block)) break;
@@ -908,27 +958,64 @@ ARM_CODE void do_collision_with_objects() {
     }
 }
 
+#ifdef DEBUG
+void draw_hitbox_points(u32 x, u32 y, u32 w, u32 h, u32 collided) {
+        u32 x_orig = x - (scroll_x >> SUBPIXEL_BITS);
+        u32 y_orig = y - (scroll_y >> SUBPIXEL_BITS);
+        oam_metaspr(x_orig,     y_orig,     hitboxPoint, 0, 0, 0, (collided) ? 2 : -1, 0, 0, FALSE, FALSE);
+        oam_metaspr(x_orig,     y_orig + h, hitboxPoint, 0, 0, 0, (collided) ? 2 : -1, 0, 0, FALSE, FALSE);
+        oam_metaspr(x_orig + w, y_orig,     hitboxPoint, 0, 0, 0, (collided) ? 2 : -1, 0, 0, FALSE, FALSE);
+        oam_metaspr(x_orig + w, y_orig + h, hitboxPoint, 0, 0, 0, (collided) ? 2 : -1, 0, 0, FALSE, FALSE);
+}
+#endif
+
 
 ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2, u32 h2) {
     // Right of object 1 < Left of object 2
     if (x1 + w1 < x2) {
+#ifdef DEBUG
+        if (debug_mode) {
+            draw_hitbox_points(x2, y2, w2, h2, FALSE);
+        }
+#endif
         return FALSE;
     }
 
     // Left of object 1 > Right of object 2
     if (x1 >= x2 + w2) {
+#ifdef DEBUG
+        if (debug_mode) {
+            draw_hitbox_points(x2, y2, w2, h2, FALSE);
+        }
+#endif
         return FALSE;
     }
 
     // Bottom of object 1 < Top of object 2
     if (y1 + h1 < y2) {
+#ifdef DEBUG
+        if (debug_mode) {
+            draw_hitbox_points(x2, y2, w2, h2, FALSE);
+        }
+#endif
         return FALSE;
     }
 
     // Top of object 1 > Bottom of object 1
     if (y1 >= y2 + h2) {
+#ifdef DEBUG
+        if (debug_mode) {
+            draw_hitbox_points(x2, y2, w2, h2, FALSE);
+        }
+#endif
         return FALSE;
     }
+
+#ifdef DEBUG
+    if (debug_mode) {
+        draw_hitbox_points(x2, y2, w2, h2, TRUE);
+    }
+#endif
 
     // If all above is FALSE, then collision has happen
     return TRUE;
@@ -1075,9 +1162,28 @@ ARM_CODE s32 is_colliding_rotated_fixed(
 
         // Check for gap
         if(max1 < min2 || max2 < min1) {
+#ifdef DEBUG
+            if (debug_mode) {
+                for (s32 i = 0; i < 4; i++) {
+                    u32 x = rect2_corners[i][0] - (scroll_x >> SUBPIXEL_BITS);
+                    u32 y = rect2_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);
+                    oam_metaspr(x, y, hitboxPoint, 0, 0, 0, -1, 0, 0, FALSE, FALSE);
+                }
+            }
+#endif
             return 0; // Gap found, no collision
         }
     }
+
+#ifdef DEBUG
+    if (debug_mode) {
+        for (s32 i = 0; i < 4; i++) {
+            u32 x = rect2_corners[i][0] - (scroll_x >> SUBPIXEL_BITS);
+            u32 y = rect2_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);
+            oam_metaspr(x, y, hitboxPoint, 0, 0, 0, 2, 0, 0, FALSE, FALSE);
+        }
+    }
+#endif
 
     return 1; // No gaps found, collision exists
 }
@@ -1434,21 +1540,26 @@ const jmp_table spike_coll_jump_table[] = {
     col_ground_wavy_spike_edge_rb, // COL_GROUND_WAVY_SPIKE_EDGE_RB
     col_ground_wavy_spike_edge_rt, // COL_GROUND_WAVY_SPIKE_EDGE_RT
 
-    not_an_spike, //COL_MINIBLOCK_0001
-    not_an_spike, //COL_MINIBLOCK_0010
-    not_an_spike, //COL_MINIBLOCK_0100
-    not_an_spike, //COL_MINIBLOCK_1000
-    not_an_spike, //COL_MINIBLOCK_0011
-    not_an_spike, //COL_MINIBLOCK_1100
-    not_an_spike, //COL_MINIBLOCK_1010
-    not_an_spike, //COL_MINIBLOCK_0101
-    not_an_spike, //COL_MINIBLOCK_1011
-    not_an_spike, //COL_MINIBLOCK_0111
-    not_an_spike, //COL_MINIBLOCK_1110
-    not_an_spike, //COL_MINIBLOCK_1101
-    not_an_spike, //COL_MINIBLOCK_1001
-    not_an_spike, //COL_MINIBLOCK_0110
-    not_an_spike, //COL_MINIBLOCK_1111
+    not_an_spike, // COL_MINIBLOCK_0001
+    not_an_spike, // COL_MINIBLOCK_0010
+    not_an_spike, // COL_MINIBLOCK_0100
+    not_an_spike, // COL_MINIBLOCK_1000
+    not_an_spike, // COL_MINIBLOCK_0011
+    not_an_spike, // COL_MINIBLOCK_1100
+    not_an_spike, // COL_MINIBLOCK_1010
+    not_an_spike, // COL_MINIBLOCK_0101
+    not_an_spike, // COL_MINIBLOCK_1011
+    not_an_spike, // COL_MINIBLOCK_0111
+    not_an_spike, // COL_MINIBLOCK_1110
+    not_an_spike, // COL_MINIBLOCK_1101
+    not_an_spike, // COL_MINIBLOCK_1001
+    not_an_spike, // COL_MINIBLOCK_0110
+    not_an_spike, // COL_MINIBLOCK_1111
+
+    not_an_spike, // COL_OUTLINE_TOP
+    not_an_spike, // COL_OUTLINE_BOTTOM
+    not_an_spike, // COL_OUTLINE_LEFT
+    not_an_spike, // COL_OUTLINE_RIGHT
 
     not_an_spike, // COL_SLOPE_45_UP
     not_an_spike, // COL_SLOPE_45_DOWN

@@ -16,6 +16,8 @@ extern u8 nextSpr;
 extern const u16 noclipSpr[];
 #endif
 
+extern const u16 hitboxPoint[];
+
 extern const u16 menuStarSpr[];
 extern const u16 menuNumberSpr[];
 extern const u16 gottenCoinSpr[];

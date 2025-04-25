@@ -70,6 +70,7 @@ void set_trail_point();
 void handle_trail();
 void wave_set_new_point();
 void update_scroll();
+void shift_trail();
 
 void set_background(u16 background_ID);
 void set_ground(u16 ground_ID);
