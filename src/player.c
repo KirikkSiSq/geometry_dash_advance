@@ -157,6 +157,14 @@ void player_main() {
 
 #define scale_inv(s) ((1<<24)/s)>>8
 
+FIXED_16 jump_speed_mult[SPEED_COUNT] = {
+    FLOAT_TO_FIXED(0.95),  // 0.5x
+    FLOAT_TO_FIXED(1),    // 1x
+    FLOAT_TO_FIXED(1.02), // 2x
+    FLOAT_TO_FIXED(1),    // 3x
+    FLOAT_TO_FIXED(1),    // 4x
+};
+
 void cube_gamemode() {
     if (curr_player.player_size == SIZE_BIG) {
         curr_player.player_width = CUBE_WIDTH;
@@ -179,6 +187,8 @@ void cube_gamemode() {
         } else {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_JUMP_SPEED : CUBE_MINI_JUMP_SPEED) * sign;       
         }
+
+        curr_player.player_y_speed = FIXED_MUL(curr_player.player_y_speed, jump_speed_mult[speed_id]);
 
         if (curr_player.on_slope) curr_player.slope_counter = 2;
 
