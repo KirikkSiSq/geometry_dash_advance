@@ -72,7 +72,7 @@ struct Player {
     s16 old_relative_player_y;
 
     // Change of y speed
-    s16 gravity;
+    s32 gravity;
 
     // Direction of the gravity. 0 : down, 1 : up
     u8 gravity_dir;

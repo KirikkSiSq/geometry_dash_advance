@@ -677,7 +677,7 @@
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="704" gid="16394" x="8496" y="316" width="16" height="16"/>
+  <object id="704" gid="16394" x="8496" y="320" width="16" height="16"/>
   <object id="705" gid="16394" x="8704" y="384" width="16" height="16"/>
   <object id="706" gid="16395" x="8896" y="400" width="16" height="16"/>
   <object id="707" gid="16394" x="8960" y="352" width="16" height="16"/>
@@ -1488,8 +1488,8 @@
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="1129" gid="16393" x="8496" y="300" width="16" height="16"/>
-  <object id="1130" gid="16393" x="8496" y="332" width="16" height="16">
+  <object id="1129" gid="16393" x="8496" y="304" width="16" height="16"/>
+  <object id="1130" gid="16393" x="8496" y="336" width="16" height="16">
    <properties>
     <property name="vflip" type="bool" value="true"/>
    </properties>

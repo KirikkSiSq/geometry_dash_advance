@@ -287,7 +287,7 @@ void reset_variables() {
 
     player_1.trail_on = FALSE;
 
-    scroll_x = 0x80000;
+    scroll_x = 0x7FFFF;
     last_sprite_x = 0;
 
     dual = DUAL_OFF;
