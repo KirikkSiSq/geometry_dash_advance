@@ -256,7 +256,7 @@ void set_initial_color(COLOR bg_color, COLOR ground_color, COLOR col1_color, COL
 }
 
 void reset_variables() {
-    player_1.player_x = -0x110000;  
+    player_1.player_x = -0x80000;  
     player_1.relative_player_x = 0;
     player_1.player_y_speed = 0;
     player_1.on_slope = FALSE;
@@ -287,7 +287,7 @@ void reset_variables() {
 
     player_1.trail_on = FALSE;
 
-    scroll_x = 0;
+    scroll_x = 0x80000;
     last_sprite_x = 0;
 
     dual = DUAL_OFF;
@@ -484,7 +484,7 @@ void fade_out_level() {
 }
 
 void fade_in_level() {
-    update_flags = UPDATE_OAM;
+    update_flags = UPDATE_OAM | UPDATE_SCROLL;
     // Fade in
     for (s32 frame = 0; frame <= 32; frame += 4) {
         VBlankIntrWait();

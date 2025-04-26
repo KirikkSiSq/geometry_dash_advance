@@ -67,6 +67,8 @@ FIXED mirror_scaling;
 void player_main() {    
     // Halve steps if dual
     num_steps = (dual == DUAL_ON) ? NUM_DUAL_STEPS : NUM_STEPS;
+    
+    shift_trail();
 
     if (complete_cutscene) {
         level_complete_cutscene();
@@ -97,8 +99,6 @@ void player_main() {
 
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
-
-        shift_trail();
 
         // Gamemode specific routines
         switch (curr_player.gamemode) {
