@@ -27,6 +27,8 @@ void collision_cube() {
     // Exit if above screen
     if (curr_player.player_y < 0) return;
 
+    u32 check_center = TRUE;
+
     curr_player.on_floor_step = FALSE;
     
     // Check slopes
@@ -68,72 +70,96 @@ void collision_cube() {
         }
 
         if (curr_player.gravity_dir == GRAVITY_DOWN) {
-            if (curr_player.player_y_speed >= 0) {
-                // Going down
-                coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
-                coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
-                
-                if (!curr_player.slope_counter) {
-                    if (run_coll(coll_x, coll_y + curr_player.player_height, layer, BOTTOM)) {
-                        continue;
-                    }
-                    if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height, layer, BOTTOM)) {
-                        continue;
-                    }
-                }
+            // Going down
+            coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+            coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
+            
+            if (!curr_player.slope_counter) {
+                if (run_coll(coll_x, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                    if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
+                    else if (eject_bottom < 7) check_center = FALSE;
 
-                if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height, layer, BOTTOM)) {
                     continue;
                 }
-            } else if (curr_player.should_check_ceiling) { {
-                    // If ceiling should be checked, check for top collision
-                    
-                    if (!curr_player.slope_counter) {
-                        if (run_coll(coll_x, coll_y, layer, TOP)) {
-                            continue;
-                        }
-                        if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y, layer, TOP)) {
-                            continue;
-                        }
-                    }
-                    if (run_coll(coll_x + curr_player.player_width, coll_y, layer, TOP)) {
-                        continue;
-                    }
-                    
-                    // Decrement counter
-                    curr_player.should_check_ceiling--;
+                if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height, layer, BOTTOM)) {
+                    if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
+                    else if (eject_bottom < 7) check_center = FALSE;
+
+                    continue;
                 }
             }
-        } else {
-            if (curr_player.player_y_speed <= 0) {
-                // Going up
-                coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
-                coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
+            if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
+                else if (eject_bottom < 7) check_center = FALSE;
+
+                continue;
+            }
+
+            if (curr_player.should_check_ceiling) {
+                // If ceiling should be checked, check for top collision
+                
                 if (!curr_player.slope_counter) {
                     if (run_coll(coll_x, coll_y, layer, TOP)) {
+                        do_ejection(eject_top, TOP);
                         continue;
                     }
                     if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y, layer, TOP)) {
+                        do_ejection(eject_top, TOP);
                         continue;
                     }
                 }
                 if (run_coll(coll_x + curr_player.player_width, coll_y, layer, TOP)) {
+                    do_ejection(eject_top, TOP);
                     continue;
                 }
-            } else if (curr_player.should_check_ceiling) {
+                
+                // Decrement counter
+                curr_player.should_check_ceiling--;
+            }
+        } else {
+            // Going up
+            coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+            coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
+
+            if (!curr_player.slope_counter) {
+                if (run_coll(coll_x, coll_y, layer, TOP)) {
+                    if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
+                    else if (eject_top < 7) check_center = FALSE;
+
+                    continue;
+                }
+                if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y, layer, TOP)) {
+                    if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
+                    else if (eject_top < 7) check_center = FALSE;
+
+                    continue;
+                }
+            }
+
+            if (run_coll(coll_x + curr_player.player_width, coll_y, layer, TOP)) {
+                if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
+                else if (eject_top < 7) check_center = FALSE;
+
+                continue;
+            }
+
+            if (curr_player.should_check_ceiling) {
                 // If ceiling should be checked, check for bottom collision
 
                 
                 if (!curr_player.slope_counter) {
                     if (run_coll(coll_x, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                        do_ejection(eject_bottom, BOTTOM);
                         continue;
                     }
                     if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height, layer, BOTTOM)) {
+                        do_ejection(eject_bottom, BOTTOM);
                         continue;
                     }
                 }
                 if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                    do_ejection(eject_bottom, BOTTOM);
                     continue;
                 }
 
@@ -142,6 +168,8 @@ void collision_cube() {
             }
         }
     }
+
+    if (!check_center) return;
 
     // Do center hitbox checks
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_internal_hitbox_width) >> 1);
@@ -208,31 +236,37 @@ void collision_ship_ball_ufo() {
             
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                    do_ejection(eject_bottom, BOTTOM);
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height, layer, BOTTOM)) {
+                    do_ejection(eject_bottom, BOTTOM);
                     continue;
                 }
             }
             if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height, layer, BOTTOM)) {
+                do_ejection(eject_bottom, BOTTOM);
                 continue;
             }
         }
         if (curr_player.player_y_speed <= 0) {
             // Going up
             coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
-            coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1) + 1;
+            coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y, layer, TOP)) {
+                    do_ejection(eject_top, TOP);
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y, layer, TOP)) {
+                    do_ejection(eject_top, TOP);
                     continue;
                 }
             }
 
             if (run_coll(coll_x + curr_player.player_width, coll_y, layer, TOP)) {
+                do_ejection(eject_top, TOP);
                 continue;
             }
         }
@@ -306,13 +340,16 @@ void collision_wave() {
             
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y + curr_player.player_height + offset + 1, layer, BOTTOM)) {
+                    do_ejection(eject_bottom, BOTTOM);
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height + offset + 1, layer, BOTTOM)) {
+                    do_ejection(eject_bottom, BOTTOM);
                     continue;
                 }
             }
             if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height + offset + 1, layer, BOTTOM)) {
+                do_ejection(eject_bottom, BOTTOM);
                 continue;
             }
         }
@@ -320,13 +357,16 @@ void collision_wave() {
             // Going up
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y - offset, layer, TOP)) {
+                    do_ejection(eject_top, TOP);
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y - offset, layer, TOP)) {
+                    do_ejection(eject_top, TOP);
                     continue;
                 }
             }
             if (run_coll(coll_x + curr_player.player_width, coll_y - offset, layer, TOP)) {
+                do_ejection(eject_top, TOP);
                 continue;
             }
         }
@@ -823,24 +863,6 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
         if (eject_value < max_eject) {
-            // Disable trail if cube jumped and is on ground
-            if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.airborne_jumped) curr_player.trail_on = FALSE;
-            
-            // If just landed and cube did a jump, then remove jumping status
-            if (!curr_player.on_floor && curr_player.airborne_jumped) curr_player.airborne_jumped = FALSE;
-
-            if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_UP) {
-                // We are resting on the ceiling so allow jumping and stuff
-                curr_player.on_floor = TRUE;
-                curr_player.on_floor_step = TRUE;
-                curr_player.snap_cube_rotation = TRUE;
-            }
-            curr_player.player_y += eject_value << SUBPIXEL_BITS;
-            curr_player.player_y_speed = 0;
-            
-            curr_player.inverse_rotation_flag = FALSE;
-            // Remove subpixels
-            curr_player.player_y &= ~0xffff;
             #ifdef DEBUG
                 if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) player_death = TRUE;
             #else
@@ -856,25 +878,6 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
         if (eject_value < max_eject) {
-            // Disable trail if cube jumped and is on ground
-            if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.airborne_jumped) curr_player.trail_on = FALSE;
-            
-            // If just landed and cube did a jump, then remove jumping status
-            if (!curr_player.on_floor && curr_player.airborne_jumped) curr_player.airborne_jumped = FALSE;
-            
-            if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_DOWN) {
-                // We are resting on the floor so allow jumping and stuff
-                curr_player.on_floor = TRUE;
-                curr_player.on_floor_step = TRUE;
-                curr_player.snap_cube_rotation = TRUE;
-            }
-            curr_player.player_y -= eject_value << SUBPIXEL_BITS;
-            curr_player.player_y_speed = 0;
-
-            curr_player.inverse_rotation_flag = FALSE;
-
-            // Remove subpixels
-            curr_player.player_y &= ~0xffff;
             #ifdef DEBUG
                 if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) player_death = TRUE;
             #else
@@ -883,7 +886,41 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         }
     }
    
+
     return 1;
+}
+
+ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
+    // Disable trail if cube jumped and is on ground
+    if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.airborne_jumped) curr_player.trail_on = FALSE;
+            
+    // If just landed and cube did a jump, then remove jumping status
+    if (!curr_player.on_floor && curr_player.airborne_jumped) curr_player.airborne_jumped = FALSE;
+
+    if (ejection_type == TOP) {
+        curr_player.player_y += eject_value << SUBPIXEL_BITS;
+
+        if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_UP) {
+            // We are resting on the ceiling so allow jumping and stuff
+            curr_player.on_floor = TRUE;
+            curr_player.on_floor_step = TRUE;
+            curr_player.snap_cube_rotation = TRUE;
+        }
+    } else {
+        curr_player.player_y -= eject_value << SUBPIXEL_BITS;
+
+        if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_DOWN) {
+            // We are resting on the ceiling so allow jumping and stuff
+            curr_player.on_floor = TRUE;
+            curr_player.on_floor_step = TRUE;
+            curr_player.snap_cube_rotation = TRUE;
+        }
+    }
+    curr_player.player_y_speed = 0;
+    
+    curr_player.inverse_rotation_flag = FALSE;
+    // Remove subpixels
+    curr_player.player_y &= ~0xffff;
 }
 
 ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
@@ -912,6 +949,12 @@ ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
             
             // Continue if no collision
             if (!returned) continue;
+
+            if (side == BOTTOM) {
+                do_ejection(eject_bottom, BOTTOM);
+            } else {
+                do_ejection(eject_top, TOP);
+            }
 
             // Update coll_y with the displacement that has occured
             coll_y += old_player_y - curr_player.player_y;
