@@ -1023,25 +1023,25 @@
   <object id="826" gid="16480" x="3936" y="304" width="16" height="16"/>
   <object id="827" gid="16394" x="3968" y="352" width="16" height="16"/>
   <object id="828" gid="16485" x="3968" y="352" width="16" height="16"/>
-  <object id="831" gid="16402" x="4057" y="374" width="16" height="16"/>
-  <object id="834" gid="16402" x="4027" y="330" width="16" height="16">
+  <object id="831" gid="16402" x="4057" y="372" width="16" height="16"/>
+  <object id="834" gid="16402" x="4027" y="332" width="16" height="16">
    <properties>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="835" gid="16488" x="4027" y="304" width="16" height="16"/>
-  <object id="838" gid="16488" x="4057" y="416" width="16" height="16">
+  <object id="835" gid="16488" x="4027" y="306" width="16" height="16"/>
+  <object id="838" gid="16488" x="4057" y="414" width="16" height="16">
    <properties>
     <property name="bg layer" value="1"/>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="840" gid="16402" x="4082" y="330" width="16" height="16">
+  <object id="840" gid="16402" x="4082" y="332" width="16" height="16">
    <properties>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="841" gid="16488" x="4082" y="304" width="16" height="16"/>
+  <object id="841" gid="16488" x="4082" y="306" width="16" height="16"/>
   <object id="843" gid="16394" x="4112" y="384" width="16" height="16"/>
   <object id="844" gid="16485" x="4112" y="384" width="16" height="16"/>
   <object id="847" gid="16402" x="4182" y="394" width="16" height="16"/>
@@ -3524,13 +3524,13 @@
   <object id="2030" gid="334" x="4209" y="426" width="16" height="16"/>
   <object id="2031" gid="282" x="4182" y="410" width="16" height="16"/>
   <object id="2032" gid="334" x="4182" y="426" width="16" height="16"/>
-  <object id="2033" gid="282" x="4057" y="390" width="16" height="16"/>
-  <object id="2034" gid="334" x="4057" y="406" width="16" height="16"/>
+  <object id="2033" gid="282" x="4057" y="388" width="16" height="16"/>
+  <object id="2034" gid="334" x="4057" y="404" width="16" height="16"/>
   <object id="2035" gid="335" x="4310" y="286" width="16" height="16"/>
   <object id="2036" gid="335" x="4254" y="326" width="16" height="16"/>
   <object id="2037" gid="335" x="4195" y="366" width="16" height="16"/>
-  <object id="2038" gid="335" x="4027" y="314" width="16" height="16"/>
-  <object id="2039" gid="335" x="4082" y="314" width="16" height="16"/>
+  <object id="2038" gid="335" x="4027" y="316" width="16" height="16"/>
+  <object id="2039" gid="335" x="4082" y="316" width="16" height="16"/>
   <object id="2040" gid="248" x="3819" y="410" width="16" height="16"/>
   <object id="2041" gid="248" x="3819" y="426" width="16" height="16"/>
   <object id="2042" gid="247" x="3765" y="410" width="16" height="16"/>

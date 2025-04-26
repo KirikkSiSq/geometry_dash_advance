@@ -2276,65 +2276,65 @@ electromanadventures_spr_data:
    .hword 0x0 @ z index 0
 @ Object 368
    .hword 0xb @ delta x
-   .hword 0x130 @ y
+   .hword 0x132 @ y
    .hword 0x67 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 369
    .hword 0x0 @ delta x
-   .hword 0x13a @ y
+   .hword 0x13c @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 334 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 370
    .hword 0x0 @ delta x
-   .hword 0x14a @ y
+   .hword 0x14c @ y
    .hword 0x11 @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
 @ Object 371
    .hword 0x1e @ delta x
-   .hword 0x176 @ y
+   .hword 0x174 @ y
    .hword 0x11 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 372
    .hword 0x0 @ delta x
-   .hword 0x186 @ y
+   .hword 0x184 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 281 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 373
    .hword 0x0 @ delta x
-   .hword 0x196 @ y
+   .hword 0x194 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 333 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 374
    .hword 0x0 @ delta x
-   .hword 0x1a0 @ y
+   .hword 0x19e @ y
    .hword 0x67 @ type
    .hword 0x11 @ bg layer 2 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
 @ Object 375
    .hword 0x19 @ delta x
-   .hword 0x130 @ y
+   .hword 0x132 @ y
    .hword 0x67 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 376
    .hword 0x0 @ delta x
-   .hword 0x13a @ y
+   .hword 0x13c @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 334 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 377
    .hword 0x0 @ delta x
-   .hword 0x14a @ y
+   .hword 0x14c @ y
    .hword 0x11 @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0

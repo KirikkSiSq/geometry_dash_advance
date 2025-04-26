@@ -955,9 +955,9 @@ ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
             // Continue if no collision
             if (!returned) continue;
 
-            if (side == BOTTOM) {
+            if (curr_player.player_y_speed >= 0 && side == BOTTOM) {
                 do_ejection(eject_bottom, BOTTOM);
-            } else {
+            } else if (curr_player.player_y_speed <= 0 && side == TOP) {
                 do_ejection(eject_top, TOP);
             }
 
