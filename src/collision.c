@@ -77,13 +77,13 @@ void collision_cube() {
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y + curr_player.player_height, layer, BOTTOM)) {
                     if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
-                    else if (eject_bottom < 7) check_center = FALSE;
+                    else if (eject_bottom < 6) check_center = FALSE;
 
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y + curr_player.player_height, layer, BOTTOM)) {
                     if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
-                    else if (eject_bottom < 7) check_center = FALSE;
+                    else if (eject_bottom < 6) check_center = FALSE;
 
                     continue;
                 }
@@ -91,7 +91,7 @@ void collision_cube() {
 
             if (run_coll(coll_x + curr_player.player_width, coll_y + curr_player.player_height, layer, BOTTOM)) {
                 if (curr_player.player_y_speed >= 0) do_ejection(eject_bottom, BOTTOM);
-                else if (eject_bottom < 7) check_center = FALSE;
+                else if (eject_bottom < 6) check_center = FALSE;
 
                 continue;
             }
@@ -125,13 +125,13 @@ void collision_cube() {
             if (!curr_player.slope_counter) {
                 if (run_coll(coll_x, coll_y, layer, TOP)) {
                     if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
-                    else if (eject_top < 7) check_center = FALSE;
+                    else if (eject_top < 6) check_center = FALSE;
 
                     continue;
                 }
                 if (run_coll(coll_x + (curr_player.player_width >> 1), coll_y, layer, TOP)) {
                     if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
-                    else if (eject_top < 7) check_center = FALSE;
+                    else if (eject_top < 6) check_center = FALSE;
 
                     continue;
                 }
@@ -139,7 +139,7 @@ void collision_cube() {
 
             if (run_coll(coll_x + curr_player.player_width, coll_y, layer, TOP)) {
                 if (curr_player.player_y_speed <= 0) do_ejection(eject_top, TOP);
-                else if (eject_top < 7) check_center = FALSE;
+                else if (eject_top < 6) check_center = FALSE;
 
                 continue;
             }
@@ -868,6 +868,8 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             #else
                 if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) player_death = TRUE;
             #endif
+   
+            return 1;
         }
     } else if (side == BOTTOM) {   
         s32 eject_value = eject_bottom;
@@ -883,11 +885,14 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             #else
                 if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) player_death = TRUE;
             #endif
-        }
-    }
    
+            return 1;
+        }
+    } else if (side == CENTER) {
+        return 1;
+    }
 
-    return 1;
+    return 0;
 }
 
 ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
