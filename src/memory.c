@@ -65,6 +65,7 @@ ALIGN4 u8 mixing_buffer[MM_MIXLEN_16KHZ];
 #ifdef DEBUG
 // 0 : off | 1 : on
 u8 debug_mode = 0;
+u8 hitbox_display = 0;
 u8 noclip = 0;
 #endif
 

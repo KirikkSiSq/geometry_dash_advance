@@ -34,7 +34,7 @@ void collision_cube() {
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
 #ifdef DEBUG
-    if (debug_mode) {
+    if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
 #endif
@@ -171,7 +171,7 @@ void collision_ship_ball_ufo() {
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 
 #ifdef DEBUG
-    if (debug_mode) {
+    if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
 #endif
@@ -266,7 +266,7 @@ void collision_wave() {
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 
 #ifdef DEBUG
-    if (debug_mode) {
+    if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
 #endif
@@ -974,7 +974,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     // Right of object 1 < Left of object 2
     if (x1 + w1 < x2) {
 #ifdef DEBUG
-        if (debug_mode) {
+        if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
         }
 #endif
@@ -984,7 +984,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     // Left of object 1 > Right of object 2
     if (x1 >= x2 + w2) {
 #ifdef DEBUG
-        if (debug_mode) {
+        if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
         }
 #endif
@@ -994,7 +994,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     // Bottom of object 1 < Top of object 2
     if (y1 + h1 < y2) {
 #ifdef DEBUG
-        if (debug_mode) {
+        if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
         }
 #endif
@@ -1004,7 +1004,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     // Top of object 1 > Bottom of object 1
     if (y1 >= y2 + h2) {
 #ifdef DEBUG
-        if (debug_mode) {
+        if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
         }
 #endif
@@ -1012,7 +1012,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     }
 
 #ifdef DEBUG
-    if (debug_mode) {
+    if (hitbox_display && current_step == 0) {
         draw_hitbox_points(x2, y2, w2, h2, TRUE);
     }
 #endif
@@ -1163,7 +1163,7 @@ ARM_CODE s32 is_colliding_rotated_fixed(
         // Check for gap
         if(max1 < min2 || max2 < min1) {
 #ifdef DEBUG
-            if (debug_mode) {
+            if (hitbox_display && current_step == 0) {
                 for (s32 i = 0; i < 4; i++) {
                     u32 x = rect2_corners[i][0] - (scroll_x >> SUBPIXEL_BITS);
                     u32 y = rect2_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);
@@ -1176,7 +1176,7 @@ ARM_CODE s32 is_colliding_rotated_fixed(
     }
 
 #ifdef DEBUG
-    if (debug_mode) {
+    if (hitbox_display && current_step == 0) {
         for (s32 i = 0; i < 4; i++) {
             u32 x = rect2_corners[i][0] - (scroll_x >> SUBPIXEL_BITS);
             u32 y = rect2_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);

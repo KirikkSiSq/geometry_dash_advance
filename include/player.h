@@ -138,6 +138,8 @@ extern u8 dual;
 
 extern FIXED mirror_scaling;
 
+extern u8 current_step;
+
 extern const u32 speed_constants[SPEED_COUNT];
 
 void player_main();

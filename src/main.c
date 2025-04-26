@@ -355,10 +355,17 @@ void level_loop() {
 #ifdef DEBUG
         if (key_hit(KEY_RIGHT)) {
             debug_mode ^= 1;
+            hitbox_display = 0;
         }
 
         if (key_hit(KEY_LEFT)) {
             noclip ^= 1;
+        }
+
+        if (debug_mode) {
+            if (key_hit(KEY_DOWN)) {
+                hitbox_display ^= 1;
+            }
         }
 #endif
 

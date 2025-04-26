@@ -44,6 +44,8 @@ const u16 ball_rot_multiplier[] = {
 u8 x_offset;
 u8 y_offset;
 
+u8 current_step;
+
 void anim_player_to_wall();
 void level_complete_cutscene();
 
@@ -233,7 +235,7 @@ void cube_gamemode() {
 
     curr_player.on_floor = FALSE;
 
-    for (s32 step = 0; step < num_steps - 1; step++) {
+    for (current_step = 0; current_step < num_steps - 1; current_step++) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -305,7 +307,7 @@ void ship_gamemode() {
     curr_player.on_floor = FALSE;
     curr_player.snap_cube_rotation = FALSE;
     
-    for (s32 step = 0; step < num_steps - 1; step++) {
+    for (current_step = 0; current_step < num_steps - 1; current_step++) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -362,7 +364,7 @@ void ball_gamemode() {
     
     curr_player.on_floor = FALSE;
 
-    for (s32 step = 0; step < num_steps - 1; step++) {
+    for (current_step = 0; current_step < num_steps - 1; current_step++) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -449,7 +451,7 @@ void ufo_gamemode() {
     
     curr_player.on_floor = FALSE;
 
-    for (s32 step = 0; step < num_steps - 1; step++) {
+    for (current_step = 0; current_step < num_steps - 1; current_step++) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -512,7 +514,7 @@ void wave_gamemode() {
     
     curr_player.on_floor = FALSE;
 
-    for (s32 step = 0; step < num_steps - 1; step++) {
+    for (current_step = 0; current_step < num_steps - 1; current_step++) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -524,7 +526,7 @@ void wave_gamemode() {
         // Run collision
         collision_wave();
 
-        if (speed_id > SPEED_X2 && step == 1) wave_set_new_point();
+        if (speed_id > SPEED_X2 && current_step == 1) wave_set_new_point();
 
         // If player is dead, do not advance more half steps
         if (player_death) break;
