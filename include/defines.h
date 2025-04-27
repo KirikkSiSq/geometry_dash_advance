@@ -36,10 +36,10 @@
 
 /* ICONS */
 // Number of icons, increment when adding a new one
-#define ICON_COUNT_CUBES 50
+#define ICON_COUNT_CUBES 56
 #define ICON_COUNT_SHIPS 9
-#define ICON_COUNT_BALLS 14
-#define ICON_COUNT_UFOS 8
+#define ICON_COUNT_BALLS 21
+#define ICON_COUNT_UFOS 12
 #define ICON_COUNT_WAVES 16
 
 // DO NOT TOUCH IF YOU DON'T KNOW WHAT THIS DOES
