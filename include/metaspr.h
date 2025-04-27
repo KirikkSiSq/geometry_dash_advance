@@ -31,6 +31,7 @@ extern const u16 paletteKitSelection[];
 extern const u16 paletteKitButton[];
 extern const u16 player1Spr[];
 extern const u16 player2Spr[];
+extern const u16 iconKitIconSelected[];
 extern const u16 iconKitIcon[];
 extern const u16 *obj_sprites[];
 extern const u32 obj_chr_offset[][2];

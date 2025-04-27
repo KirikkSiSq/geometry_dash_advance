@@ -2,7 +2,7 @@
 #include "../graphics/includes.h"
 
 #define NUM_PORTAL_PALETTES 6
-#define START_OF_OBJECT_CHR 8
+#define START_OF_OBJECT_CHR 32
 
 #define PAD_PARTICLE_VRAM_ID 1024-72
 

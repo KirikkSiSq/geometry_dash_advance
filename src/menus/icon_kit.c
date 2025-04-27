@@ -402,7 +402,7 @@ void palette_kit_loop() {
 void draw_palette_kit_icons() {
     if (scroll_y < TO_FIXED(80)) {
         for (s32 gamemode = 0; gamemode < GAMEMODE_COUNT; gamemode++) {
-            oam_metaspr(PALETTE_KIT_ICONS_X + (gamemode * ICON_STEP), PALETTE_KIT_ICONS_Y - (scroll_y >> SUBPIXEL_BITS), iconKitIcon, FALSE, FALSE, (gamemode << 2) + 64, 1, 2, 0, TRUE, FALSE);
+            oam_metaspr(PALETTE_KIT_ICONS_X + (gamemode * ICON_STEP_H), PALETTE_KIT_ICONS_Y - (scroll_y >> SUBPIXEL_BITS), iconKitIcon, FALSE, FALSE, (gamemode << 4) + PALETTE_KIT_CHR_INDEX, 1, 2, 0, TRUE, FALSE);
         }
     }
 }
@@ -444,23 +444,31 @@ void upload_palette_kit_icons() {
         u32 icon_index = *icon_selection_table[gamemode];
 
         // Get lower nybble, this is inside the row of icons
-        u32 lower = (icon_index & 0b111) << 1;
+        u32 lower = (icon_index & 0b11) << 2;
 
         // Get the rest of bits, shift twice to get the proper even 16 tile line
-        u32 higher = (icon_index & ~0b111) << 2;
+        u32 higher = (icon_index & ~0b11) << 4;
 
         u32 index = higher | lower;
 
         // Copy player sprite into VRAM
         if (save_data.glow_enabled) {
-            memcpy32(&tile_mem_obj[0][(gamemode << 2) + 64], &icon_kit[gamemode][index], PLAYER_CHR_SIZE);
-            memcpy32(&tile_mem_obj[0][(gamemode << 2) + 2 + 64], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + PALETTE_KIT_CHR_INDEX], &icon_kit[gamemode][index], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 4 + PALETTE_KIT_CHR_INDEX], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 8 + PALETTE_KIT_CHR_INDEX], &icon_kit[gamemode][index + 0x20], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 12 + PALETTE_KIT_CHR_INDEX], &icon_kit[gamemode][index + 0x30], PLAYER_CHR_SIZE);
         } else {
-            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 2);
-            memcpy32(&tile_mem_obj[0][(gamemode << 2) + 64], vram_copy_buffer, PLAYER_CHR_SIZE);
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 4);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + PALETTE_KIT_CHR_INDEX], vram_copy_buffer, PLAYER_CHR_SIZE);
 
-            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 2);
-            memcpy32(&tile_mem_obj[0][(gamemode << 2) + 2 + 64], vram_copy_buffer, PLAYER_CHR_SIZE);
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 4);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 4 + PALETTE_KIT_CHR_INDEX], vram_copy_buffer, PLAYER_CHR_SIZE);
+
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x20]), 4);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 8 + PALETTE_KIT_CHR_INDEX], vram_copy_buffer, PLAYER_CHR_SIZE);
+
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x30]), 4);
+            memcpy32(&tile_mem_obj[0][(gamemode << 4) + 12 + PALETTE_KIT_CHR_INDEX], vram_copy_buffer, PLAYER_CHR_SIZE);
         }
     }
 }
@@ -470,16 +478,18 @@ void upload_icons(u32 gamemode, u32 page) {
         u32 icon_index = icon + (page * ICONS_PER_PAGE);
 
         // Get lower nybble, this is inside the row of icons
-        u32 lower = (icon_index & 0b111) << 1;
+        u32 lower = (icon_index & 0b11) << 2;
 
         // Get the rest of bits, shift twice to get the proper even 16 tile line
-        u32 higher = (icon_index & ~0b111) << 2;
+        u32 higher = (icon_index & ~0b11) << 4;
 
         u32 index = higher | lower;
 
         // Copy player sprite into VRAM
-        memcpy32(&tile_mem_obj[0][(icon << 2) + VRAM_ICON_OFFSET], &icon_kit[gamemode][index], PLAYER_CHR_SIZE);
-        memcpy32(&tile_mem_obj[0][(icon << 2) + 2 + VRAM_ICON_OFFSET], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+        memcpy32(&tile_mem_obj[0][(icon << 4) + VRAM_ICON_OFFSET], &icon_kit[gamemode][index], PLAYER_CHR_SIZE);
+        memcpy32(&tile_mem_obj[0][(icon << 4) + 4 + VRAM_ICON_OFFSET], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+        memcpy32(&tile_mem_obj[0][(icon << 4) + 8 + VRAM_ICON_OFFSET], &icon_kit[gamemode][index + 0x20], PLAYER_CHR_SIZE);
+        memcpy32(&tile_mem_obj[0][(icon << 4) + 12 + VRAM_ICON_OFFSET], &icon_kit[gamemode][index + 0x30], PLAYER_CHR_SIZE);
     }
 }
 
@@ -491,7 +501,7 @@ void draw_icons(u32 gamemode, u32 page) {
     for (s32 y = 0; y < ICONS_ROWS; y++) {
         for (s32 x = 0; x < ICONS_COLUMNS; x++) {
             // Draw icon following a grid pattern
-            oam_metaspr(x_pos + (x * ICON_STEP), y_pos + (y * ICON_STEP), iconKitIcon, FALSE, FALSE, (icon << 2) + VRAM_ICON_OFFSET, 0, 3, 0, TRUE, FALSE);
+            oam_metaspr(x_pos + (x * ICON_STEP_H), y_pos + (y * ICON_STEP_V), iconKitIcon, FALSE, FALSE, (icon << 4) + VRAM_ICON_OFFSET, 0, 3, 0, TRUE, FALSE);
 
             icon++;
 
@@ -503,12 +513,12 @@ void draw_icons(u32 gamemode, u32 page) {
 
 void draw_selected_icon(u32 gamemode) {
     upload_player_chr(gamemode, ID_PLAYER_1);
-    oam_metaspr(SELECTED_ICON_X, SELECTED_ICON_Y, player1Spr, FALSE, FALSE, 0, 1, 3, 0, TRUE, FALSE);   
+    oam_metaspr(SELECTED_ICON_X, SELECTED_ICON_Y, iconKitIconSelected, FALSE, FALSE, 0, 1, 3, 0, TRUE, FALSE);   
     obj_aff_scale_inv(&obj_aff_buffer[0], float2fx(2.0), float2fx(2.0));
 }
 
 void draw_selected_glyph(u32 selected_x, u32 selected_y) {
-    oam_metaspr(ICON_X + (selected_x * ICON_STEP) - 8, ICON_Y + (selected_y * ICON_STEP) - 8, iconKitSelection, FALSE, FALSE, 0, 0, 3, 0, TRUE, FALSE);
+    oam_metaspr(ICON_X + (selected_x * ICON_STEP_H), ICON_Y + (selected_y * ICON_STEP_V), iconKitSelection, FALSE, FALSE, 0, 0, 3, 0, TRUE, FALSE);
 }
 
 void set_tab_palette(u32 pal, u32 x, u32 y);

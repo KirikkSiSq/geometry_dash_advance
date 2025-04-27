@@ -539,10 +539,10 @@ void upload_player_chr(u32 gamemode, u32 player_id) {
     u16 icon_selected = *icon_selection_table[gamemode];
 
     // Get lower nybble, this is inside the row of icons
-    u32 lower = (icon_selected & 0b111) << 1;
+    u32 lower = (icon_selected & 0b11) << 2;
 
     // Get the rest of bits, shift twice to get the proper even 16 tile line
-    u32 higher = (icon_selected & ~0b111) << 2;
+    u32 higher = (icon_selected & ~0b11) << 4;
 
     u32 index = higher | lower;
 
@@ -550,21 +550,36 @@ void upload_player_chr(u32 gamemode, u32 player_id) {
         // Copy player sprite into VRAM
         if (save_data.glow_enabled) {
             memcpy32(&tile_mem_obj[0][0], &icon_kit[gamemode][index], PLAYER_CHR_SIZE);
-            memcpy32(&tile_mem_obj[0][2], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][4], &icon_kit[gamemode][index + 0x10], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][8], &icon_kit[gamemode][index + 0x20], PLAYER_CHR_SIZE);
+            memcpy32(&tile_mem_obj[0][12], &icon_kit[gamemode][index + 0x30], PLAYER_CHR_SIZE);
         } else {
             // Flip colors
-            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 2);
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 4);
             memcpy32(&tile_mem_obj[0][0], vram_copy_buffer, PLAYER_CHR_SIZE);
             
-            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 2);
-            memcpy32(&tile_mem_obj[0][2], vram_copy_buffer, PLAYER_CHR_SIZE);
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 4);
+            memcpy32(&tile_mem_obj[0][4], vram_copy_buffer, PLAYER_CHR_SIZE);
+            
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x20]), 4);
+            memcpy32(&tile_mem_obj[0][8], vram_copy_buffer, PLAYER_CHR_SIZE);
+            
+            remove_glow_pixels(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x30]), 4);
+            memcpy32(&tile_mem_obj[0][12], vram_copy_buffer, PLAYER_CHR_SIZE);
         }
     } else {
         // Flip colors
-        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 2);
-        memcpy32(&tile_mem_obj[0][4], vram_copy_buffer, PLAYER_CHR_SIZE);
+        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index]), 4);
+        memcpy32(&tile_mem_obj[0][16], vram_copy_buffer, PLAYER_CHR_SIZE);
         
-        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 2);
-        memcpy32(&tile_mem_obj[0][6], vram_copy_buffer, PLAYER_CHR_SIZE);
+        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 4);
+        memcpy32(&tile_mem_obj[0][20], vram_copy_buffer, PLAYER_CHR_SIZE);
+        
+        
+        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x20]), 4);
+        memcpy32(&tile_mem_obj[0][24], vram_copy_buffer, PLAYER_CHR_SIZE);
+        
+        flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x30]), 4);
+        memcpy32(&tile_mem_obj[0][28], vram_copy_buffer, PLAYER_CHR_SIZE);
     }
 }
