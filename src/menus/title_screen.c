@@ -123,6 +123,9 @@ void title_screen_loop() {
         // Do scroll
         title_screen_scroll_x += SPEED_1x;
 
+        // Wrap around
+        if (title_screen_scroll_x >= 0x80000000) title_screen_scroll_x -= 0x80000000;
+
         do_menu_color_transition();
         
         // Copy palette from buffer
