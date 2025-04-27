@@ -17,7 +17,7 @@ Download nightly build (unstable) [CLICK HERE](https://nightly.link/AleFunky/geo
 |[AleFunky](https://github.com/PinguLinux)|code, levels, testing and bugfixes.|
 |[ElAngel378](https://github.com/ElAngel378)|music, testing, bugfixes and graphics.|
 |[adrluc096](https://github.com/123456oil)|graphics.|
-|orionconstel|levels, music and graphics.|
+|[orionconstel](https://github.com/orionConstel)|levels, music and graphics.|
 |[milkywaydotmoe](https://github.com/milkywaydotmoe)|music and graphics.|
 |[KawaiiDawn](https://github.com/Astroclimber26)|graphics.|
 |KirikkSiSq|graphics.|
