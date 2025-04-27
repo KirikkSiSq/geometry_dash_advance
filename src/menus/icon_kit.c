@@ -73,7 +73,7 @@ void icon_kit_loop() {
 
     nextSpr = 0;
 
-    set_player_colors_spr(palette_buffer, CLR_WHITE, CLR_GRAY, CLR_WHITE);
+    set_player_colors_spr(palette_buffer, 0x56B5, 0x7FFF, 0x2529);
     set_player_colors_spr(&palette_buffer[0x10], palette_kit_colors[save_data.p1_col_selected], palette_kit_colors[save_data.p2_col_selected], palette_kit_colors[save_data.glow_col_selected]);
 
     selected_gamemode = GAMEMODE_CUBE;
