@@ -20,7 +20,7 @@ Download nightly build (unstable) [CLICK HERE](https://nightly.link/AleFunky/geo
 |[orionconstel](https://github.com/orionConstel)|levels, music and graphics.|
 |[milkywaydotmoe](https://github.com/milkywaydotmoe)|music and graphics.|
 |[KawaiiDawn](https://github.com/Astroclimber26)|graphics.|
-|KirikkSiSq|graphics.|
+|[KirikkSiSq](https://github.com/orionConstel)|graphics.|
 |[SeaGlowingPro](https://github.com/SeaGlowingPro)|levels.|
 |[banana6000](https://github.com/xXFamidashFan69Xx)|graphics, levels and metatiles.|
 |Nicolestarlight|music.|
