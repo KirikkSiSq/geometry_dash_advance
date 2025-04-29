@@ -187,6 +187,14 @@
 #include "groundtospace/SP.h"
 #include "groundtospace/properties.h"
 
-#define LEVEL_COUNT 19
+// ultimatedestruction
+#define ultimatedestruction_ID 19
+
+#include "ultimatedestruction/l1.h"
+#include "ultimatedestruction/l2.h"
+#include "ultimatedestruction/SP.h"
+#include "ultimatedestruction/properties.h"
+
+#define LEVEL_COUNT 20
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];
