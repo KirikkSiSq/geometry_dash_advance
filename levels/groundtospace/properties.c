@@ -10,7 +10,7 @@ const unsigned int groundtospace_properties[] = {
  /*OBJ color*/     0x7fff,
  /*gamemode*/      0,
  /*speed*/         0,
- /*level height*/  27,
+ /*level height*/  30,
  /*level width*/   995,
  /*song*/          MOD_GROUND,
  /*name length*/   13,
