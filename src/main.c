@@ -212,6 +212,11 @@ void rom_waitstates() {
 }
 void main_loop();
 
+void init_variables() {
+    gamemode_upload_buffer[ID_PLAYER_1] = -1;
+    gamemode_upload_buffer[ID_PLAYER_2] = -1;
+}
+
 s32 main() {
     init_maxmod();
 
@@ -220,6 +225,8 @@ s32 main() {
     rom_waitstates();
 
     init_sram();
+
+    init_variables();
 
     game_state = STATE_TITLE_SCREEN;
     

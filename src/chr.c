@@ -575,7 +575,6 @@ void upload_player_chr(u32 gamemode, u32 player_id) {
         flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x10]), 4);
         memcpy32(&tile_mem_obj[0][20], vram_copy_buffer, PLAYER_CHR_SIZE);
         
-        
         flip_player_colors(vram_copy_buffer, (u8*)(&icon_kit[gamemode][index + 0x20]), 4);
         memcpy32(&tile_mem_obj[0][24], vram_copy_buffer, PLAYER_CHR_SIZE);
         
