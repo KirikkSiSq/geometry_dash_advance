@@ -2245,20 +2245,6 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
         case COL_SLOPE_66_UP_1:
             slope.p1.x = slope_x;
-            slope.p1.y = slope_y + 0x10;
-
-            slope.p2.x = slope_x + 0x10;
-            slope.p2.y = slope_y - 0x10;
-
-            slope.p3.x = slope_x + 0x10;
-            slope.p3.y = slope_y + 0x10;
-            
-            SLOPE_CHECK(DEGREES_63_5)
-            break;
-
-            
-        case COL_SLOPE_66_UP_2:
-            slope.p1.x = slope_x;
             slope.p1.y = slope_y + 0x20;
 
             slope.p2.x = slope_x + 0x10;
@@ -2266,6 +2252,20 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x20;
+            
+            SLOPE_CHECK(DEGREES_63_5)
+            break;
+
+            
+        case COL_SLOPE_66_UP_2:
+            slope.p1.x = slope_x;
+            slope.p1.y = slope_y + 0x10;
+
+            slope.p2.x = slope_x + 0x10;
+            slope.p2.y = slope_y - 0x10;
+
+            slope.p3.x = slope_x + 0x10;
+            slope.p3.y = slope_y + 0x10;
             
             SLOPE_CHECK(DEGREES_63_5)
             break;
@@ -2324,19 +2324,6 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
         case COL_SLOPE_66_DOWN_UD_1:
             slope.p1.x = slope_x;
-            slope.p1.y = slope_y + 0x10;
-
-            slope.p2.x = slope_x;
-            slope.p2.y = slope_y - 0x10;
-
-            slope.p3.x = slope_x + 0x10;
-            slope.p3.y = slope_y - 0x10;
-            
-            SLOPE_CHECK(DEGREES_63_5_UD_DOWN)   
-            break;
-
-        case COL_SLOPE_66_DOWN_UD_2:
-            slope.p1.x = slope_x;
             slope.p1.y = slope_y + 0x20;
 
             slope.p2.x = slope_x;
@@ -2346,6 +2333,19 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.y = slope_y;
             
             SLOPE_CHECK(DEGREES_63_5_UD_DOWN)
+            break;
+
+        case COL_SLOPE_66_DOWN_UD_2:
+            slope.p1.x = slope_x;
+            slope.p1.y = slope_y + 0x10;
+
+            slope.p2.x = slope_x;
+            slope.p2.y = slope_y - 0x10;
+
+            slope.p3.x = slope_x + 0x10;
+            slope.p3.y = slope_y - 0x10;
+            
+            SLOPE_CHECK(DEGREES_63_5_UD_DOWN)   
             break;
 
     }
