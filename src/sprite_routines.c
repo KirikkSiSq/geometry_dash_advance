@@ -693,11 +693,11 @@ const s16 obj_hitbox[][6] = {
 
     Object_Hitbox_Rectangle("PULSING_NOTE", 0, 0, 0, 0, 0, 0)
 
-    Object_Hitbox_Rectangle("SPEED_PORTAL_HALF", 18, 24, -1, -4,  8, 8)
-    Object_Hitbox_Rectangle("SPEED_PORTAL_1x", 16, 30, 0, -7, 8, 8)
-    Object_Hitbox_Rectangle("SPEED_PORTAL_2x",  28, 30, -6, -7, 8, 8)
-    Object_Hitbox_Rectangle("SPEED_PORTAL_3x",  34, 34, -9, -9, 8, 8)
-    Object_Hitbox_Rectangle("SPEED_PORTAL_4x",  36, 30, -10, -7, 8, 8)
+    Object_Hitbox_Rectangle("SPEED_PORTAL_HALF", 18, 24, -1,  -4, 8, 8)
+    Object_Hitbox_Rectangle("SPEED_PORTAL_1x",   16, 32, 0,   -8, 8, 8)
+    Object_Hitbox_Rectangle("SPEED_PORTAL_2x",   28, 32, -6,  -8, 8, 8)
+    Object_Hitbox_Rectangle("SPEED_PORTAL_3x",   34, 32, -9,  -8, 8, 8)
+    Object_Hitbox_Rectangle("SPEED_PORTAL_4x",   36, 32, -10, -8, 8, 8)
 
     Object_Hitbox_Rectangle("UFO_PORTAL", 20, 46, -2, -15, 8, 8)
 

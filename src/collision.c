@@ -938,8 +938,8 @@ ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
 
         u32 obj_x = slot.object.x;
         u32 obj_y = slot.object.y;
-        u32 obj_width = obj_hitbox[slot.object.type][0];
-        u32 obj_height = obj_hitbox[slot.object.type][1];
+        u32 obj_width = obj_hitbox[slot.object.type][0] - 1;
+        u32 obj_height = obj_hitbox[slot.object.type][1] - 1;
 
         // Check if this pixel is inside the object hitbox
         if (is_colliding(x, y, 0, 0, obj_x, obj_y, obj_width, obj_height)) {
@@ -1030,7 +1030,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     }
 
     // Left of object 1 > Right of object 2
-    if (x1 >= x2 + w2) {
+    if (x1 > x2 + w2) {
 #ifdef DEBUG
         if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
@@ -1050,7 +1050,7 @@ ARM_CODE u32 is_colliding(u32 x1, u32 y1, u32 w1, u32 h1, u32 x2, u32 y2, u32 w2
     }
 
     // Top of object 1 > Bottom of object 1
-    if (y1 >= y2 + h2) {
+    if (y1 > y2 + h2) {
 #ifdef DEBUG
         if (hitbox_display && current_step == 0) {
             draw_hitbox_points(x2, y2, w2, h2, FALSE);
@@ -2358,8 +2358,8 @@ ARM_CODE void collide_with_obj_spikes(u32 x, u32 y, u32 width, u32 height) {
         
         u32 obj_x = slot.object.x;
         u32 obj_y = slot.object.y;
-        u32 obj_width = obj_hitbox[slot.object.type][0];
-        u32 obj_height = obj_hitbox[slot.object.type][1];
+        u32 obj_width = obj_hitbox[slot.object.type][0] - 1;
+        u32 obj_height = obj_hitbox[slot.object.type][1] - 1;
 
         // Check if this pixel is inside the object hitbox
         if (is_colliding(x, y, width, height, obj_x, obj_y, obj_width, obj_height)) {
