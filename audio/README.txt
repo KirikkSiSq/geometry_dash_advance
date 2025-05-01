@@ -13,11 +13,11 @@ Attention: sample reuse is very important due to storage reasons. If you add sam
 
 Module instructions:
 •Format:         XM (Please notify if it is another format)
-•Sample mixing:  16000kHz
+•Sample mixing:  16000Hz
 •Chanels:        4-8 sample chanels
 ATTENTION: FM SYNTHESIZERS, MIDI OR OTHER MODERN SYNTHESIZER CHANNELS ARE NOT SUPPORTED, ONLY SAMPLES.
 
 To make your music you can use: Fasttracker II (recomended), Impulse tracker, OpenMPT, Milky tracker or another music tracker.
 If you have any questions, or want your track added to the game, send a message via discord to: @ElAngel378 or geometry dash advance server.
 
-On windows you need to install Devkitpro.
+you need to install Devkitpro.
