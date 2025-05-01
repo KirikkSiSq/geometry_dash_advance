@@ -1907,8 +1907,8 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     player_internal_hitbox.cx = player->cx;
     player_internal_hitbox.cy = player->cy;
 
-    // Die if the internal hitbox and normal hitbox collides with the vertical edge
-    if (ejection_type == EJECTION_TYPE_VERT && check_slope_eject_type(player_internal_hitbox, slope) == EJECTION_TYPE_VERT) {
+    // Die if the internal hitbox collides with the vertical edge
+    if (curr_player.slope_counter < 2 && check_slope_eject_type(player_internal_hitbox, slope) == EJECTION_TYPE_VERT) {
         #ifdef DEBUG
             if (!noclip) player_death = TRUE;
         #else
