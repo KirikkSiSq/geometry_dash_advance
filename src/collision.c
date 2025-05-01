@@ -1128,16 +1128,13 @@ s32 project_point(s32 point_x, s32 point_y, s32 axis_x, s32 axis_y) {
 
 ARM_CODE s32 is_colliding_rotated_fixed(
     s32 x1, s32 y1, s32 w1, s32 h1,                       // First rect (axis-aligned)
-    s32 rot_center_x, s32 rot_center_y, s32 w2, s32 h2,   // Rotation center for rect2
+    s32 x2, s32 y2, s32 w2, s32 h2,                       // Second rect position and dimensions
+    s32 rot_center_x, s32 rot_center_y,                    // Rotation center point
     u16 angle)                                             // Rotation angle (0-FFFF)
 {
     // Calculate fixed-point sine and cosine values
     s32 sin_angle = lu_sin(angle);
     s32 cos_angle = lu_cos(angle);
-
-    // Calculate half dimensions
-    s32 half_w2 = w2 >> 1;
-    s32 half_h2 = h2 >> 1;
 
     // Define corners of first (axis-aligned) rectangle
     s32 rect1_corners[4][2] = {
@@ -1147,21 +1144,22 @@ ARM_CODE s32 is_colliding_rotated_fixed(
         {x1,        y1 + h1  }  // Bottom-left
     };
 
-    // Define corners of second (rotated) rectangle relative to its rotation center
+    // Define corners of second rectangle relative to its top-left position
     s32 rect2_corners[4][2];
     s32 base_corners[4][2] = {
-        {-half_w2, -half_h2}, // Top-left
-        { half_w2, -half_h2}, // Top-right
-        { half_w2,  half_h2}, // Bottom-right
-        {-half_w2,  half_h2}  // Bottom-left
+        {0,    0   }, // Top-left
+        {w2,   0   }, // Top-right
+        {w2,   h2  }, // Bottom-right
+        {0,    h2  }  // Bottom-left
     };
 
-    // Rotate and translate corners of second rectangle
+    // First translate corners to rectangle center (x2, y2)
+    // Then rotate around rotation center (rot_center_x, rot_center_y)
     for(s32 i = 0; i < 4; i++) {
-        s32 x = base_corners[i][0];
-        s32 y = base_corners[i][1];
+        s32 x = base_corners[i][0] + x2 - rot_center_x;
+        s32 y = base_corners[i][1] + y2 - rot_center_y;
         
-        // Rotate point
+        // Rotate point around rotation center
         rect2_corners[i][0] = rot_center_x + 
             (Q12_MULT(x, cos_angle) - Q12_MULT(y, sin_angle));
         rect2_corners[i][1] = rot_center_y + 
@@ -1810,6 +1808,22 @@ s32 get_step(struct circle_t circle, struct triangle_t triangle) {
 s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
     s32 ejection = 0;
 
+#ifdef DEBUG
+        if (hitbox_display && current_step == 0) {
+            u32 x = triangle.p1.x - (scroll_x >> SUBPIXEL_BITS);
+            u32 y = triangle.p1.y - (scroll_y >> SUBPIXEL_BITS);
+            oam_metaspr(x, y, hitboxPoint, 0, 0, 0, -1, 0, 0, FALSE, FALSE);
+            
+            x = triangle.p2.x - (scroll_x >> SUBPIXEL_BITS);
+            y = triangle.p2.y - (scroll_y >> SUBPIXEL_BITS);
+            oam_metaspr(x, y, hitboxPoint, 0, 0, 0, -1, 0, 0, FALSE, FALSE);
+            
+            x = triangle.p3.x - (scroll_x >> SUBPIXEL_BITS);
+            y = triangle.p3.y - (scroll_y >> SUBPIXEL_BITS);
+            oam_metaspr(x, y, hitboxPoint, 0, 0, 0, -1, 0, 0, FALSE, FALSE);
+        }
+#endif
+
     s32 step = get_step(circle, triangle);
     if (check_distance_circle_hipotenuse(circle, triangle)) {
         // Colliding with the hipotenuse
@@ -1881,7 +1895,7 @@ const s32 slope_step[] = {
     -1, // COL_SLOPE_45_UP_UD
     -1, // COL_SLOPE_45_DOWN_UD
 
-     1, // COL_SLOPE_22_UP_1
+    1,  // COL_SLOPE_22_UP_1
     1,  // COL_SLOPE_22_UP_2
     1,  // COL_SLOPE_22_DOWN_1
     1,  // COL_SLOPE_22_DOWN_2
@@ -1958,7 +1972,6 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     // Eject player
     curr_player.player_y += TO_FIXED(eject);
     curr_player.player_y &= ~0xffff;
-    curr_player.player_y |= (step == 1) ? 0xffff : 0;
     player->cy += eject;
 
     // If ball and 66.5 degree slope, halve speed
@@ -2028,7 +2041,7 @@ u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
 
     // Make wave hitbox 2 pixels bigger
     if (curr_player.gamemode == GAMEMODE_WAVE) player.radius += 2;
-    else if (curr_player.gamemode == GAMEMODE_SHIP) player.radius -= 2;
+    else if (curr_player.gamemode == GAMEMODE_SHIP) player.radius -= 1;
 
     // Try to collide with sprite slopes only in the first layer check
     if (collide_with_obj_slopes(&player)) {
@@ -2232,20 +2245,6 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
         case COL_SLOPE_66_UP_1:
             slope.p1.x = slope_x;
-            slope.p1.y = slope_y + 0x20;
-
-            slope.p2.x = slope_x + 0x10;
-            slope.p2.y = slope_y;
-
-            slope.p3.x = slope_x + 0x10;
-            slope.p3.y = slope_y + 0x20;
-            
-            SLOPE_CHECK(DEGREES_63_5)
-            break;
-
-            
-        case COL_SLOPE_66_UP_2:
-            slope.p1.x = slope_x;
             slope.p1.y = slope_y + 0x10;
 
             slope.p2.x = slope_x + 0x10;
@@ -2253,6 +2252,20 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
+            
+            SLOPE_CHECK(DEGREES_63_5)
+            break;
+
+            
+        case COL_SLOPE_66_UP_2:
+            slope.p1.x = slope_x;
+            slope.p1.y = slope_y + 0x20;
+
+            slope.p2.x = slope_x + 0x10;
+            slope.p2.y = slope_y;
+
+            slope.p3.x = slope_x + 0x10;
+            slope.p3.y = slope_y + 0x20;
             
             SLOPE_CHECK(DEGREES_63_5)
             break;
@@ -2311,19 +2324,6 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
         case COL_SLOPE_66_DOWN_UD_1:
             slope.p1.x = slope_x;
-            slope.p1.y = slope_y + 0x20;
-
-            slope.p2.x = slope_x;
-            slope.p2.y = slope_y;
-
-            slope.p3.x = slope_x + 0x10;
-            slope.p3.y = slope_y;
-            
-            SLOPE_CHECK(DEGREES_63_5_UD_DOWN)
-            break;
-
-        case COL_SLOPE_66_DOWN_UD_2:
-            slope.p1.x = slope_x;
             slope.p1.y = slope_y + 0x10;
 
             slope.p2.x = slope_x;
@@ -2331,6 +2331,19 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y - 0x10;
+            
+            SLOPE_CHECK(DEGREES_63_5_UD_DOWN)   
+            break;
+
+        case COL_SLOPE_66_DOWN_UD_2:
+            slope.p1.x = slope_x;
+            slope.p1.y = slope_y + 0x20;
+
+            slope.p2.x = slope_x;
+            slope.p2.y = slope_y;
+
+            slope.p3.x = slope_x + 0x10;
+            slope.p3.y = slope_y;
             
             SLOPE_CHECK(DEGREES_63_5_UD_DOWN)
             break;

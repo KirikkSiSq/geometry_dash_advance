@@ -415,13 +415,12 @@ ARM_CODE void check_obj_collision(u32 index) {
 
     u32 ply_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
     u32 ply_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
-
     
     if (curr_object.attrib1 & ENABLE_ROTATION_FLAG) {
         // Check if a collision has happened
         if (is_colliding_rotated_fixed(
             ply_x, ply_y, curr_player.player_width, curr_player.player_height, 
-            curr_object.x + center_x, curr_object.y + center_y, obj_width, obj_height, curr_object.rotation
+            obj_x, obj_y, obj_width, obj_height, curr_object.x + center_x, curr_object.y + center_y, curr_object.rotation
         )) {
             // If yes, then run the collision routine
             do_collision(&object_buffer[index]);
