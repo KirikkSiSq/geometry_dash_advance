@@ -5905,19 +5905,19 @@ clutterfunk_spr_data:
    .hword 0x0 @ z index 0
 @ Object 940
    .hword 0x8 @ delta x
-   .hword 0x128 @ y
+   .hword 0x124 @ y
    .hword 0xa @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 941
    .hword 0x0 @ delta x
-   .hword 0x128 @ y
+   .hword 0x124 @ y
    .hword 0xb @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 942
    .hword 0x0 @ delta x
-   .hword 0x138 @ y
+   .hword 0x134 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 182 @ metatile ID appareance
