@@ -172,14 +172,16 @@ const SCR_ENTRY metatiles[][5] = {
 
     Metatile("BLK_FILLER_NO_COLL", TILE(0x3a, 0, 0, 0), TILE(0x3a, 0, 0, 0), TILE(0x3a, 0, 0, 0), TILE(0x3a, 0, 0, 0), COL_NONE)
     
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE) // 0x88
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
-    Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
+    Metatile("NO_COLL_SPIKE_UP",    TILE(0x53, 0, 0, 0), TILE(0x54, 0, 0, 0), TILE(0x55, 0, 0, 0), TILE(0x56, 0, 0, 0), COL_NONE)
+    Metatile("NO_COLL_SPIKE_DOWN",  TILE(0x55, 0, 0, V), TILE(0x56, 0, 0, V), TILE(0x53, 0, 0, V), TILE(0x54, 0, 0, V), COL_NONE)
+    Metatile("NO_COLL_SPIKE_RIGHT", TILE(0x57, 0, 0, 0), TILE(0x58, 0, 0, 0), TILE(0x59, 0, 0, 0), TILE(0x5a, 0, 0, 0), COL_NONE)
+    Metatile("NO_COLL_SPIKE_LEFT",  TILE(0x58, 0, H, 0), TILE(0x57, 0, H, 0), TILE(0x5a, 0, H, 0), TILE(0x59, 0, H, 0), COL_NONE) // 0x88
+
+    Metatile("INVIS_SPIKE_UP",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_SPIKE_TOP)
+    Metatile("INVIS_SPIKE_DOWN",  TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_SPIKE_BOTTOM)
+    Metatile("INVIS_SPIKE_RIGHT", TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_SPIKE_LEFT)
+    Metatile("INVIS_SPIKE_LEFT",  TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_SPIKE_RIGHT)
+
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
