@@ -2123,7 +2123,7 @@
   <object id="1921" gid="16395" x="13432" y="292" width="16" height="16"/>
   <object id="1923" gid="16394" x="13480" y="280" width="16" height="16"/>
   <object id="1924" gid="16394" x="13516" y="252" width="16" height="16"/>
-  <object id="1925" gid="16402" x="13584" y="264" width="16" height="16"/>
+  <object id="1925" gid="16402" x="13584" y="262" width="16" height="16"/>
   <object id="1928" gid="16427" x="13760" y="208" width="16" height="16"/>
   <object id="1929" gid="16427" x="13728" y="208" width="16" height="16"/>
   <object id="1930" gid="16426" x="13808" y="240" width="16" height="16"/>
@@ -2241,7 +2241,7 @@
   <object id="1987" gid="16394" x="15120" y="288" width="16" height="16"/>
   <object id="1988" gid="16395" x="15152" y="256" width="16" height="16"/>
   <object id="1989" gid="16394" x="15212" y="228" width="16" height="16"/>
-  <object id="1990" gid="16395" x="15240" y="200" width="16" height="16"/>
+  <object id="1990" gid="16395" x="15240" y="196" width="16" height="16"/>
   <object id="1992" gid="16419" x="15704" y="432" width="16" height="16"/>
   <object id="1993" gid="16415" x="11672" y="304" width="16" height="16">
    <properties>
@@ -2626,7 +2626,7 @@
   <object id="2272" gid="16433" x="15620" y="352" width="16" height="16"/>
   <object id="2274" gid="16433" x="15652" y="364" width="16" height="16"/>
   <object id="2275" gid="16433" x="15684" y="376" width="16" height="16"/>
-  <object id="2276" gid="16396" x="15240" y="200" width="16" height="16"/>
+  <object id="2276" gid="16396" x="15240" y="196" width="16" height="16"/>
   <object id="2277" gid="16396" x="15152" y="256" width="16" height="16"/>
   <object id="2278" gid="16396" x="15040" y="304" width="16" height="16"/>
   <object id="2279" gid="16393" x="14896" y="240" width="16" height="16"/>
@@ -3200,10 +3200,10 @@
   <object id="2430" gid="71" x="11704" y="272" width="16" height="16"/>
   <object id="2432" gid="74" x="11688" y="272" width="16" height="16"/>
   <object id="2433" gid="183" x="13432" y="308" width="16" height="16"/>
-  <object id="2434" gid="186" x="13592" y="280" width="16" height="16"/>
-  <object id="2435" gid="184" x="13576" y="280" width="16" height="16"/>
+  <object id="2434" gid="186" x="13592" y="278" width="16" height="16"/>
+  <object id="2435" gid="184" x="13576" y="278" width="16" height="16"/>
   <object id="2436" gid="187" x="13992" y="280" width="16" height="16"/>
-  <object id="2437" gid="183" x="15240" y="216" width="16" height="16"/>
+  <object id="2437" gid="183" x="15240" y="212" width="16" height="16"/>
   <object id="2438" gid="113" x="4568" y="416" width="16" height="16"/>
   <object id="2439" gid="185" x="13600" y="442" width="16" height="16">
    <properties>

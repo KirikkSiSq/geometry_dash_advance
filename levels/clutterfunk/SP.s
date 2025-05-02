@@ -5956,14 +5956,14 @@ clutterfunk_spr_data:
    .hword 0x0 @ normal trigger
 @ Object 948
    .hword 0x18 @ delta x
-   .hword 0x118 @ y
+   .hword 0x116 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 183 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 949
    .hword 0x8 @ delta x
-   .hword 0x108 @ y
+   .hword 0x106 @ y
    .hword 0x11 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
@@ -5975,7 +5975,7 @@ clutterfunk_spr_data:
    .hword 0x0 @ z index 0
 @ Object 951
    .hword 0x8 @ delta x
-   .hword 0x118 @ y
+   .hword 0x116 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 185 @ metatile ID appareance
@@ -7136,19 +7136,19 @@ clutterfunk_spr_data:
    .hword 0x0 @ z index 0
 @ Object 1142
    .hword 0x1c @ delta x
-   .hword 0xc8 @ y
+   .hword 0xc4 @ y
    .hword 0xa @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 1143
    .hword 0x0 @ delta x
-   .hword 0xc8 @ y
+   .hword 0xc4 @ y
    .hword 0xb @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 1144
    .hword 0x0 @ delta x
-   .hword 0xd8 @ y
+   .hword 0xd4 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 182 @ metatile ID appareance
