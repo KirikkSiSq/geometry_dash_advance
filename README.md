@@ -28,6 +28,7 @@ If you want to access to developer builds, you can download the latest nightly b
 |[banana6000](https://github.com/xXFamidashFan69Xx)|graphics, levels and metatiles|
 |Nicolestarlight|music|
 |Redgd|graphics|
+|[okujassu](https://github.com/okujassu)|levels|
 
 ## Additional
 |Additional thanks|Name|
