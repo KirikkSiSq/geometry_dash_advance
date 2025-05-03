@@ -391,8 +391,8 @@ void do_collision(struct ObjectSlot *objectSlot) {
 ARM_CODE void check_obj_collision(u32 index) {
     struct Object curr_object = object_buffer[index].object;
 
-    u16 obj_width = obj_hitbox[curr_object.type][0] - 1;
-    u16 obj_height = obj_hitbox[curr_object.type][1] - 1;
+    u16 obj_width = obj_hitbox[curr_object.type][0];
+    u16 obj_height = obj_hitbox[curr_object.type][1];
 
     s16 offset_x = obj_hitbox[curr_object.type][2];
     s16 offset_y = obj_hitbox[curr_object.type][3];
