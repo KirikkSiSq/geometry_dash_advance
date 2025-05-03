@@ -281,8 +281,8 @@ def rle_compress_level(level_array):
     prev_value = flat_level[0]
     for i in range(1, len(flat_level)):
         current_value = flat_level[i]
-
-        if current_value == prev_value:
+            
+        if current_value == prev_value and count < 65536:
             count += 1
         else:
             compressed.append((prev_value, count - 1))
