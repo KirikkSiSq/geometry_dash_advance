@@ -750,7 +750,7 @@ u32 get_level_progress() {
     } else if (curr_level_width == 0) {
         percentage = 100;
     } else {
-        percentage = ((((u32) curr_player.player_x) / curr_level_width) * 100) >> 20;
+        percentage = (((curr_player.player_x) / curr_level_width) * 100) >> 20;
     }
     return percentage;
 }

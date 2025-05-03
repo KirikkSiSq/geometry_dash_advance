@@ -767,14 +767,14 @@ void anim_player_to_wall() {
     u32 one_minus_t_squared = FIXED_MUL(one_minus_t, one_minus_t);
     u32 t_squared = FIXED_MUL(t_fixed, t_fixed);
 
-    u32 final_x = (scroll_x >> SUBPIXEL_BITS) + SCREEN_WIDTH + 0x10;
+    u64 final_x = (scroll_x >> SUBPIXEL_BITS) + SCREEN_WIDTH + 0x10;
     u32 final_y = (scroll_y >> SUBPIXEL_BITS) + (SCREEN_HEIGHT/2) - 8;
 
     // Calculate points
     u16 height_diff = curr_player.cutscene_initial_player_y - (scroll_y >> SUBPIXEL_BITS);
     u32 offset = height_diff >> 1;
 
-    u32 top_x = curr_player.cutscene_initial_player_x + offset; 
+    u64 top_x = curr_player.cutscene_initial_player_x + offset; 
     u32 top_y = curr_player.cutscene_initial_player_y - offset; 
     
     // Update player position

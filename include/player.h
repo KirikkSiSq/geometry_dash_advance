@@ -107,7 +107,7 @@ struct Player {
     s8 ball_rotation_direction;
 
     // Initial position of player for the curve. In pixels
-    u32 cutscene_initial_player_x;
+    u64 cutscene_initial_player_x;
     u32 cutscene_initial_player_y;
 
     // Only used for cube. If 1, then ceiling doesn't kill player
