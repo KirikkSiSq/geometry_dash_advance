@@ -3782,10 +3782,10 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("LBG_GLOW_CORNER_OUT_TOP_RIGHT",     TILE(0x000, LBG_PAL, 0, 0), TILE(0x1e3, LBG_PAL, 0, V), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
     Metatile("LBG_GLOW_CORNER_OUT_TOP_LEFT",      TILE(0x1e3, LBG_PAL, H, V), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
 
-    Metatile("EMPTY",                             TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
-    Metatile("EMPTY",                             TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
-    Metatile("EMPTY",                             TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
-    Metatile("EMPTY",                             TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), TILE(0x000, LBG_PAL, 0, 0), COL_NONE)
+    Metatile("BLACK_GLOW_BOTTOM",                 TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1e0, 0, 0, 0), TILE(0x1e0, 0, 0, 0), COL_NONE)
+    Metatile("BLACK_GLOW_TOP",                    TILE(0x1e0, 0, 0, V), TILE(0x1e0, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
+    Metatile("BLACK_GLOW_RIGHT",                  TILE(0x000, 0, 0, 0), TILE(0x1e1, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1e1, 0, 0, 0), COL_NONE)
+    Metatile("BLACK_GLOW_LEFT",                   TILE(0x1e1, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x1e1, 0, H, 0), TILE(0x000, 0, 0, 0), COL_NONE)
 
     Metatile("COL1_GLOW_BOTTOM",                  TILE(0x000, COL1_PAL, 0, 0), TILE(0x000, COL1_PAL, 0, 0), TILE(0x1e0, COL1_PAL, 0, 0), TILE(0x1e0, COL1_PAL, 0, 0), COL_NONE) // 0x700
     Metatile("COL1_GLOW_TOP",                     TILE(0x1e0, COL1_PAL, 0, V), TILE(0x1e0, COL1_PAL, 0, V), TILE(0x000, COL1_PAL, 0, 0), TILE(0x000, COL1_PAL, 0, 0), COL_NONE)
