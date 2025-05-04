@@ -1974,6 +1974,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     // Eject player
     curr_player.player_y += TO_FIXED(eject);
     curr_player.player_y &= ~0xffff;
+    curr_player.player_y |= (step == 1) ? 0xffff : 0;
     player->cy += eject;
 
     // If ball and 66.5 degree slope, halve speed
