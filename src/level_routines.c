@@ -1356,10 +1356,10 @@ void draw_checkpoints() {
 void update_scroll() {
     if (screen_mirrored) {
         REG_BG0HOFS = REG_BG1HOFS = 256 - (((scroll_x >> SUBPIXEL_BITS) - 16) & 0xff);
-        REG_BG2HOFS = 256 - ((scroll_x >> (2+SUBPIXEL_BITS)) & 0xff);
+        REG_BG2HOFS = 256 - ((scroll_x >> (3+SUBPIXEL_BITS)) & 0xff);
     } else {
         REG_BG0HOFS = REG_BG1HOFS = scroll_x >> SUBPIXEL_BITS;
-        REG_BG2HOFS = scroll_x >> (2+SUBPIXEL_BITS);
+        REG_BG2HOFS = scroll_x >> (3+SUBPIXEL_BITS);
     }
 
     REG_BG0VOFS = REG_BG1VOFS = scroll_y >> SUBPIXEL_BITS;

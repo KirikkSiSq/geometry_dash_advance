@@ -97,7 +97,7 @@ void title_screen_loop() {
         key_poll();
     
         REG_BG1HOFS = title_screen_scroll_x >> SUBPIXEL_BITS;
-        REG_BG2HOFS = title_screen_scroll_x >> (2+SUBPIXEL_BITS);
+        REG_BG2HOFS = title_screen_scroll_x >> (3+SUBPIXEL_BITS);
         
         obj_copy(oam_mem, shadow_oam, 128);
         obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
