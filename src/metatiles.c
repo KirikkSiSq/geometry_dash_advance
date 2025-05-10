@@ -90,7 +90,7 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("INVISIBLE_FLOOR_CEIL",    TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_FLOOR_CEIL)
 
     Metatile("SLAB_UP_FLIPPED",            TILE(0x4e, 0, 0, V), TILE(0x4f, 0, 0, V), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_SLAB_TOP)
-    Metatile("EMPTY",    TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_NONE)
+    Metatile("BASIC_BLOCK_NO_COLL",    TILE(0x0e, 0, 0, 0), TILE(0x0f, 0, 0, 0), TILE(0x10, 0, 0, 0), TILE(0x11, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), TILE(0x00, 0, 0, 0), COL_NONE)
