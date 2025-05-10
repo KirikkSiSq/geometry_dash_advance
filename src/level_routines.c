@@ -266,6 +266,7 @@ void reset_variables() {
     coll_y = 0;
     player_death = FALSE;
     player_1.cube_rotation = 0;
+    player_1.lerped_cube_rotation = 0;
 
     screen_mirrored = FALSE;
     mirror_scaling = float2fx(1.0);
