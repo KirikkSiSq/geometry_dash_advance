@@ -273,7 +273,7 @@ void reset_variables() {
     screen_mirrored_transition = FALSE;
 
     curr_column = 0;
-    player_1.on_floor = TRUE;
+    player_1.on_floor = FALSE;
     player_1.on_floor_step = TRUE;
     bitstream[0] = bitstream[1] = 0;
     bits_left[0] = bits_left[1] = 0;
@@ -368,7 +368,7 @@ void load_level(u32 level_ID) {
     if (speed_id >= SPEED_COUNT) speed_id = SPEED_X1;
 
     // Put player on the ground
-    player_1.player_y = ((GROUND_HEIGHT - 1) << (4 + SUBPIXEL_BITS)) + (0x2 << SUBPIXEL_BITS);  
+    player_1.player_y = ((GROUND_HEIGHT - 1) << (4 + SUBPIXEL_BITS));  
     scroll_y = BOTTOM_SCROLL_LIMIT;
     intended_scroll_y = BOTTOM_SCROLL_LIMIT;
 
