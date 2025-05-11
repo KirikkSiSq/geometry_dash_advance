@@ -179,6 +179,8 @@ void cube_gamemode() {
     s8 sign = curr_player.gravity_dir ? -1 : 1;
     s8 rotation_sign = curr_player.inverse_rotation_flag ? -1 : 1;
     s8 mirror_sign = screen_mirrored ? -1 : 1;
+
+    u32 jumped = FALSE;
    
     // If on floor and holding A or UP, jump
     if (curr_player.on_floor && key_is_down(KEY_A | KEY_UP)) {
@@ -193,7 +195,7 @@ void cube_gamemode() {
         if (curr_player.on_slope) curr_player.slope_counter = 2;
 
         curr_player.airborne_jumped = TRUE;
-        curr_player.player_buffering = ORB_BUFFER_END;
+        jumped = TRUE;
         curr_player.on_slope = FALSE;
         curr_player.inverse_rotation_flag = FALSE;
     }
@@ -279,6 +281,9 @@ void cube_gamemode() {
 
         // Run collision
         collision_cube();
+
+        // If jumped this frame, stop buffering
+        if (jumped) curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
 
