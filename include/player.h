@@ -81,7 +81,6 @@ struct Player {
     u8 player_size;
 
     // 0 : on air, 1 : on floor
-    u8 on_floor_step;
     u8 on_floor;
 
     // 0 : no snap, 1 : snapping
@@ -128,6 +127,9 @@ struct Player {
 
     // If player airborne was because of jumping
     u8 airborne_jumped;
+
+    // If player should not jump
+    u8 disable_jumping;
 };
 
 extern u8 player_death;

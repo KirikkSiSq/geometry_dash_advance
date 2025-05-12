@@ -99,25 +99,33 @@ void player_main() {
 
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
+        
+        curr_player.snap_cube_rotation = FALSE;
 
-        // Gamemode specific routines
-        switch (curr_player.gamemode) {
-            case GAMEMODE_CUBE:
-                cube_gamemode();
-                break;
-            case GAMEMODE_SHIP:
-                ship_gamemode();
-                break;
-            case GAMEMODE_BALL:
-                ball_gamemode();
-                break;
-            case GAMEMODE_UFO:
-                ufo_gamemode();
-                break;
-            case GAMEMODE_WAVE:
-                wave_gamemode();
-                break;
+        for (current_step = 0; current_step < num_steps; current_step++) {
+            // Gamemode specific routines
+            switch (curr_player.gamemode) {
+                case GAMEMODE_CUBE:
+                    cube_gamemode();
+                    break;
+                case GAMEMODE_SHIP:
+                    ship_gamemode();
+                    break;
+                case GAMEMODE_BALL:
+                    ball_gamemode();
+                    break;
+                case GAMEMODE_UFO:
+                    ufo_gamemode();
+                    break;
+                case GAMEMODE_WAVE:
+                    wave_gamemode();
+                    break;
+            }
+
+            if (player_death) break;
         }
+
+        curr_player.disable_jumping = FALSE;
 
         curr_player.player_y_diff = curr_player.player_y - curr_player.old_player_y;
         
@@ -183,7 +191,7 @@ void cube_gamemode() {
     u32 jumped = FALSE;
    
     // If on floor and holding A or UP, jump
-    if (curr_player.on_floor && key_is_down(KEY_A | KEY_UP)) {
+    if (!curr_player.disable_jumping && curr_player.on_floor && key_is_down(KEY_A | KEY_UP)) {
         if (key_hit(KEY_A | KEY_UP)) {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_FIRST_JUMP_SPEED : CUBE_MINI_FIRST_JUMP_SPEED) * sign;     
         } else {
@@ -213,8 +221,8 @@ void cube_gamemode() {
     }
 
     // If the cube is on the air and not on slope, rotate, else, snap to nearest 
-    if (!(curr_player.on_floor || curr_player.slope_counter)) {
-        curr_player.cube_rotation -= 0x500 * sign * mirror_sign * rotation_sign;
+    if (!(curr_player.snap_cube_rotation || curr_player.slope_counter)) {
+        curr_player.cube_rotation -= 0x500 * sign * mirror_sign * rotation_sign / num_steps;
     } else {
         // If player is on slope, snap the rotation to it, else, snap to normal ground
         if (curr_player.slope_counter) {
@@ -247,8 +255,8 @@ void cube_gamemode() {
 
     curr_player.on_floor = FALSE;
 
-    for (current_step = 0; current_step < num_steps - 1; current_step++) {
-        // Apply half of speed
+    if (current_step < num_steps - 1) {
+        // Apply part of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
         curr_player.player_y += curr_player.player_y_speed / num_steps;
@@ -261,14 +269,8 @@ void cube_gamemode() {
 
         // Run collision
         collision_cube();
-
-        // If player is dead, do not advance more half steps
-        if (player_death) break;
-    }
-    
-    // If player is dead, do not advance more half steps
-    if (!player_death) {
-        // Apply last half of speed
+    } else {
+        // Apply last part of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
         curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
@@ -320,9 +322,8 @@ void ship_gamemode() {
     }
     
     curr_player.on_floor = FALSE;
-    curr_player.snap_cube_rotation = FALSE;
     
-    for (current_step = 0; current_step < num_steps - 1; current_step++) {
+    if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -336,13 +337,7 @@ void ship_gamemode() {
 
         // Run collision
         collision_ship_ball_ufo();
-
-        // If player is dead, do not advance more half steps
-        if (player_death) break;
-    }
-
-    // If player is dead, do not advance more half steps
-    if (!player_death) {
+    } else {
         // Apply last half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
@@ -379,7 +374,7 @@ void ball_gamemode() {
     
     curr_player.on_floor = FALSE;
 
-    for (current_step = 0; current_step < num_steps - 1; current_step++) {
+    if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -393,13 +388,7 @@ void ball_gamemode() {
         
         // Run collision
         collision_ship_ball_ufo();
-        
-        // If player is dead, do not advance more half steps
-        if (player_death) break;
-    }
-
-    // If player is dead, do not advance more half steps
-    if (!player_death) {
+    } else {
         // Apply last half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
@@ -414,7 +403,7 @@ void ball_gamemode() {
         collision_ship_ball_ufo();
 
 
-        if (curr_player.on_floor && curr_player.player_buffering == ORB_BUFFER_READY) {
+        if (!curr_player.disable_jumping && curr_player.on_floor && curr_player.player_buffering == ORB_BUFFER_READY) {
             curr_player.gravity_dir ^= 1;
             curr_player.player_y_speed = BALL_SWITCH_SPEED * -sign; 
             
@@ -456,7 +445,7 @@ void ufo_gamemode() {
     }
 
     // If on floor and holding A or UP, jump
-    if (key_hit(KEY_A | KEY_UP) || curr_player.player_buffering == ORB_BUFFER_READY) {
+    if (!curr_player.disable_jumping && (key_hit(KEY_A | KEY_UP) || curr_player.player_buffering == ORB_BUFFER_READY)) {
         if (curr_player.player_size == SIZE_BIG) {
             curr_player.player_y_speed = -UFO_JUMP_SPEED * sign;     
         } else {
@@ -466,7 +455,7 @@ void ufo_gamemode() {
     
     curr_player.on_floor = FALSE;
 
-    for (current_step = 0; current_step < num_steps - 1; current_step++) {
+    if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -480,13 +469,7 @@ void ufo_gamemode() {
 
         // Run collision
         collision_ship_ball_ufo();
-
-        // If player is dead, do not advance more half steps
-        if (player_death) break;
-    }
-    
-    // If player is dead, do not advance more half steps
-    if (!player_death) {
+    } else {
         // Apply last half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
@@ -528,8 +511,8 @@ void wave_gamemode() {
     }
     
     curr_player.on_floor = FALSE;
-
-    for (current_step = 0; current_step < num_steps - 1; current_step++) {
+    
+    if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed / num_steps;
@@ -542,13 +525,7 @@ void wave_gamemode() {
         collision_wave();
 
         if (speed_id > SPEED_X2 && current_step == 1) wave_set_new_point();
-
-        // If player is dead, do not advance more half steps
-        if (player_death) break;
-    }
-    
-    // If player is dead, do not advance more half steps
-    if (!player_death) {
+    } else {
         // Apply last half of speed
         // Update player x and y
         curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));

@@ -28,8 +28,6 @@ void collision_cube() {
     if (curr_player.player_y < 0) return;
 
     u32 check_center = TRUE;
-
-    curr_player.on_floor_step = FALSE;
     
     // Check slopes
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
@@ -190,8 +188,6 @@ void collision_ship_ball_ufo() {
     // Exit if above screen
     if (curr_player.player_y < 0) return;
 
-    curr_player.on_floor_step = FALSE;
-
     // Check slopes
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
@@ -290,8 +286,6 @@ void collision_ship_ball_ufo() {
 void collision_wave() {
     // Exit if above screen
     if (curr_player.player_y < 0) return;
-
-    curr_player.on_floor_step = FALSE;
 
     // Check slopes
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
@@ -862,13 +856,25 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         // Raise eject cap if changed size
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
+#ifdef DEBUG
+        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
+            if (side == CENTER) {
+                player_death = TRUE;
+            } else {
+                return 0;
+            }
+        }
+#else
+        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
+            if (side == CENTER) {
+                player_death = TRUE;
+            } else {
+                return 0;
+            }
+        }
+#endif
+
         if (eject_value < max_eject) {
-            #ifdef DEBUG
-                if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) player_death = TRUE;
-            #else
-                if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) player_death = TRUE;
-            #endif
-   
             return 1;
         }
     } else if (side == BOTTOM) {   
@@ -879,13 +885,25 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
 
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
+#ifdef DEBUG
+        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
+            if (side == CENTER) {
+                player_death = TRUE;
+            } else {
+                return 0;
+            }
+        }
+#else
+        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
+            if (side == CENTER) {
+                player_death = TRUE;
+            } else {
+                return 0;
+            }
+        }
+#endif
+
         if (eject_value < max_eject) {
-            #ifdef DEBUG
-                if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) player_death = TRUE;
-            #else
-                if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) player_death = TRUE;
-            #endif
-   
             return 1;
         }
     } else if (side == CENTER) {
@@ -908,7 +926,6 @@ ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
         if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_UP) {
             // We are resting on the ceiling so allow jumping and stuff
             curr_player.on_floor = TRUE;
-            curr_player.on_floor_step = TRUE;
             curr_player.snap_cube_rotation = TRUE;
         }
     } else {
@@ -917,7 +934,6 @@ ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
         if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_DOWN) {
             // We are resting on the ceiling so allow jumping and stuff
             curr_player.on_floor = TRUE;
-            curr_player.on_floor_step = TRUE;
             curr_player.snap_cube_rotation = TRUE;
         }
     }
@@ -2003,7 +2019,6 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     }
 
     // Set slope related variables
-    curr_player.on_floor_step = TRUE;
     curr_player.on_floor = TRUE;
     curr_player.trail_on = FALSE;
     

@@ -274,8 +274,8 @@ void reset_variables() {
     screen_mirrored_transition = FALSE;
 
     curr_column = 0;
-    player_1.on_floor = FALSE;
-    player_1.on_floor_step = TRUE;
+    player_1.on_floor = TRUE;
+    player_1.disable_jumping = TRUE;
     bitstream[0] = bitstream[1] = 0;
     bits_left[0] = bits_left[1] = 0;
 
