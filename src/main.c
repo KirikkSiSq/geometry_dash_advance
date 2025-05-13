@@ -217,7 +217,11 @@ void init_variables() {
     gamemode_upload_buffer[ID_PLAYER_2] = -1;
 }
 
-s32 main() {
+int __attribute__((target("arm"))) main() {
+    __asm__(
+        "STMDB SP!, {R4-R6, LR}"
+    );
+    
     init_maxmod();
 
     check_ewram_overclock();
