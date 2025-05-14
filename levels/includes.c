@@ -21,6 +21,7 @@ ROM_DATA const u16 *level_defines[][4] = {
    { leveleasy_l1_level_data, leveleasy_l2_level_data, leveleasy_spr_data, (u16 *) leveleasy_properties },
    { groundtospace_l1_level_data, groundtospace_l2_level_data, groundtospace_spr_data, (u16 *) groundtospace_properties },
    { ultimatedestruction_l1_level_data, ultimatedestruction_l2_level_data, ultimatedestruction_spr_data, (u16 *) ultimatedestruction_properties },
+   { rose_l1_level_data, rose_l2_level_data, rose_spr_data, (u16 *) rose_properties },
 };
 
 ROM_DATA const u8 *level_names[] = {
@@ -44,4 +45,5 @@ ROM_DATA const u8 *level_names[] = {
    leveleasy_name,
    groundtospace_name,
    ultimatedestruction_name,
+   rose_name,
 };

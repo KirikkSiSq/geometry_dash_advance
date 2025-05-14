@@ -32,6 +32,7 @@ ROM_DATA char *sound_test_songs_names[] = {
     "STAY INSIDE ME",
     "GROUND TO SPACE",
     "ULTIMATE DESTRUCTION",
+    "ROSE",
 };
 
 ROM_DATA char *sound_test_song_files[] = {
@@ -53,7 +54,8 @@ ROM_DATA char *sound_test_song_files[] = {
     "MENU.XM",
     "PRACTICE.XM",
     "GROUND.XM",
-    "ULTIMATE.XM"
+    "ULTIMATE.XM",
+    "ROSE.XM",
 };
 
 ROM_DATA u16 sound_test_song_ids[] = {
@@ -76,6 +78,7 @@ ROM_DATA u16 sound_test_song_ids[] = {
     MOD_PRACTICE,
     MOD_GROUND,
     MOD_ULTIMATE,
+    MOD_ROSE
 };
 void put_song_info(u32 song_id);
 

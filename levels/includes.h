@@ -195,6 +195,14 @@
 #include "ultimatedestruction/SP.h"
 #include "ultimatedestruction/properties.h"
 
-#define LEVEL_COUNT 20
+// rose
+#define rose_ID 20
+
+#include "rose/l1.h"
+#include "rose/l2.h"
+#include "rose/SP.h"
+#include "rose/properties.h"
+
+#define LEVEL_COUNT 21
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

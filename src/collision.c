@@ -2059,6 +2059,7 @@ u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
 
     // Make wave hitbox 2 pixels bigger
     if (curr_player.gamemode == GAMEMODE_WAVE) player.radius += 2;
+    else if (curr_player.gamemode == GAMEMODE_SHIP) player.radius -= 1;
 
     // Try to collide with sprite slopes only in the first layer check
     if (collide_with_obj_slopes(&player)) {
