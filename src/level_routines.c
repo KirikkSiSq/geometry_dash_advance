@@ -757,7 +757,6 @@ u32 get_level_progress() {
 }
 
 void set_new_best(u32 new_best, u32 mode) {
-
     struct SaveLevelData *level_data = obtain_level_data(loaded_level_id);
 
     if (mode == NORMAL_MODE) {

@@ -78,7 +78,14 @@ ARM_CODE void load_objects(u32 load_chr) {
 
                 // Get x position
                 u16 delta_x = *sprite_pointer;
-                new_object.x = last_sprite_x + delta_x;
+
+                u32 absolute_x = last_sprite_x + delta_x;
+                s64 relative_x = absolute_x - (scroll_x >> SUBPIXEL_BITS);
+                
+                // Don't load if offscreen
+                if (load_chr && relative_x > 280) break;
+
+                new_object.x = absolute_x;
                 last_sprite_x += delta_x;
                 sprite_pointer++;
 

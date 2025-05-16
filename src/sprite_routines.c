@@ -628,6 +628,17 @@ const jmp_table routines_jump_table[] = {
     kill_player,
     kill_player,
 
+    kill_player,
+    kill_player,
+    kill_player,
+    
+    do_nothing,
+    do_nothing,
+    do_nothing,
+    
+    do_nothing,
+    do_nothing,
+    do_nothing,
 };
 
 // In pixels
@@ -789,6 +800,18 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Circle("COLORED_SAW_BIG", TRUE, 13, 0, 0, 8, 8)
     Object_Hitbox_Circle("COLORED_SAW_MEDIUM", TRUE, 10, 0, 0, 8, 8)
     Object_Hitbox_Circle("COLORED_SAW_SMALL", TRUE, 6, 0, 0, 8, 8)
+
+    Object_Hitbox_Circle("1.9_SAW_BIG", TRUE, 14, 0, 0, 8, 8)
+    Object_Hitbox_Circle("1.9_SAW_MEDIUM", TRUE, 11, 0, 0, 8, 8)
+    Object_Hitbox_Circle("1.9_SAW_SMALL", TRUE, 7, 0, 0, 8, 8)
+
+    Object_Hitbox_Circle("BIG_ROTATING_HEXAGON", TRUE, 0, 0, 0, 0, 0)
+    Object_Hitbox_Circle("MEDIUM_ROTATING_HEXAGON", TRUE, 0, 0, 0, 0, 0)
+    Object_Hitbox_Circle("SMALL_ROTATING_HEXAGON", TRUE, 0, 0, 0, 0, 0)
+
+    Object_Hitbox_Rectangle("FILLED_ARROW", 0, 0, 0, 0, 0, 0)
+    Object_Hitbox_Rectangle("UNFILLED_ARROW", 0, 0, 0, 0, 0, 0)
+    Object_Hitbox_Rectangle("BIG_SQUARE", 0, 0, 0, 0, 0, 0)
 };
 
 #undef Object_Hitbox

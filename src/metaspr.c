@@ -1167,6 +1167,17 @@ const u16 pulsingObjectBigSpr[] = {
     0xffff,
 };
 
+const u16 pulsingObjectBigSprP1[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(P1),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 1, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
 const u16 squareBgDecoSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
     ATTR1_SIZE_16x16,
@@ -1184,6 +1195,28 @@ const u16 tallBgDecoSpr[] = {
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     0, // x
     -16, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff
+};
+
+const u16 tallBgArrowSpr[] = {
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
+    0, // x
+    -8, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff
+};
+
+const u16 tallBgArrowSprP2[] = {
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
+    0, // x
+    -8, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
@@ -1672,6 +1705,17 @@ ROM_DATA const u16 *obj_sprites[] = {
     sawMedium,
     sawMedium,
 
+    sawBig,
+    sawMedium,
+    sawMedium,
+
+    sawDecoBig,
+    sawDecoMediumSmall,
+    sawDecoTiny,
+
+    tallBgArrowSpr,
+    tallBgArrowSprP2,
+    pulsingObjectBigSprP1,
 };
 
 #undef P1
@@ -1850,6 +1894,18 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("BIG_COLORED_SAW", 0x670, 0x40)
     CHR_SLOT("MEDIUM_COLORED_SAW", 0x6b0, 0x10)
     CHR_SLOT("SMALL_COLORED_SAW", 0x6c0, 0x10)
+
+    CHR_SLOT("1.9_SAW_BIG", 0x6d0, 0x40)
+    CHR_SLOT("1.9_SAW_MEDIUM", 0x710, 0x10)
+    CHR_SLOT("1.9_SAW_SMALL", 0x720, 0x10)
+    
+    CHR_SLOT("BIG_ROTATING_HEXAGON", 0x730, 0x40)
+    CHR_SLOT("MEDIUM_ROTATING_HEXAGON", 0x770, 0x10)
+    CHR_SLOT("SMALL_ROTATING_HEXAGON", 0x780, 0x4)
+    
+    CHR_SLOT("FILLED_ARROW",0x790, 0x8)
+    CHR_SLOT("UNFILLED_ARROW", 0x798, 0x8)
+    CHR_SLOT("BIG_SQUARE", 0x7a0, 0x10)
 };
 #undef CHR_SLOT
 
