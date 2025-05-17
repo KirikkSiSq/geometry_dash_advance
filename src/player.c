@@ -269,6 +269,9 @@ void cube_gamemode() {
 
         // Run collision
         collision_cube();
+        
+        // If jumped, stop buffering
+        if (jumped) curr_player.player_buffering = ORB_BUFFER_END;
     } else {
         // Apply last part of speed
         // Update player x and y
@@ -284,7 +287,7 @@ void cube_gamemode() {
         // Run collision
         collision_cube();
 
-        // If jumped this frame, stop buffering
+        // If jumped, stop buffering
         if (jumped) curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
