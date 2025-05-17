@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="895" height="27" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="782">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="895" height="27" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="785">
  <editorsettings>
   <export target="test2.json" format="json"/>
  </editorsettings>
@@ -338,5 +338,14 @@
   <object id="779" gid="16401" x="5136" y="288" width="16" height="16"/>
   <object id="780" gid="16401" x="5152" y="288" width="16" height="16"/>
   <object id="781" gid="16401" x="5168" y="288" width="16" height="16"/>
+  <object id="782" gid="16526" x="500" y="384" width="16" height="16"/>
+  <object id="783" gid="16526" x="460" y="384" width="16" height="16"/>
+  <object id="784" gid="16516" x="666" y="358" width="16" height="16">
+   <properties>
+    <property name="color channel" value="1"/>
+    <property name="enable rotation" type="bool" value="true"/>
+    <property name="rotation angle" type="int" value="225"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -57,6 +57,7 @@ void player_code();
 
 void break_brick(u32 x, u32 y, u32 layer);
 ARM_CODE void handle_fading_blocks();
+u32 get_sprite_fade_index(struct Object curr_object);
 
 void store_practice_vars();
 void delete_last_checkpoint();

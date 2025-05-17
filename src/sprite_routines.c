@@ -639,6 +639,20 @@ const jmp_table routines_jump_table[] = {
     do_nothing,
     do_nothing,
     do_nothing,
+    
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
+    
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
+    kill_player,
 };
 
 // In pixels
@@ -812,6 +826,20 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("FILLED_ARROW", 0, 0, 0, 0, 0, 0)
     Object_Hitbox_Rectangle("UNFILLED_ARROW", 0, 0, 0, 0, 0, 0)
     Object_Hitbox_Rectangle("BIG_SQUARE", 0, 0, 0, 0, 0, 0)
+
+    Object_Hitbox_Rectangle("COLORED_SPIKE_V", 2, 6, 7, 5, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_SPIKE_H", 6, 2, 5, 7, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_HALF_SPIKE_V", 4, 3, 6, 11, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_HALF_SPIKE_H", 3, 4, 2, 6, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_MEDIUM_SPIKE_V", 2, 4, 7, 9, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_MEDIUM_SPIKE_H", 4, 2, 2, 7, 8, 8)
+    
+    Object_Hitbox_Rectangle("FADING_SPIKE_V", 2, 6, 7, 5, 8, 8)
+    Object_Hitbox_Rectangle("FADING_SPIKE_H", 6, 2, 5, 7, 8, 8)
+    Object_Hitbox_Rectangle("FADING_HALF_SPIKE_V", 4, 3, 6, 11, 8, 8)
+    Object_Hitbox_Rectangle("FADING_HALF_SPIKE_H", 3, 4, 2, 6, 8, 8)
+    Object_Hitbox_Rectangle("FADING_MEDIUM_SPIKE_V", 2, 4, 7, 9, 8, 8)
+    Object_Hitbox_Rectangle("FADING_MEDIUM_SPIKE_H", 4, 2, 2, 7, 8, 8)
 };
 
 #undef Object_Hitbox

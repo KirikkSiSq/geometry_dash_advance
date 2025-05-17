@@ -1077,6 +1077,12 @@ ARM_CODE void handle_fading_blocks() {
     }
 }
 
+u32 get_sprite_fade_index(struct Object curr_object) {
+    u32 relative_x = curr_object.x + 8 - (scroll_x >> SUBPIXEL_BITS);
+
+    return fade_frame_table[relative_x >> 4];
+}
+
 void modify_fade_block(u16 block_id, s32 calculated_x, s32 calculated_y, u32 layer, u32 frame_id) {
     se_plot(&se_mem[27 + layer][0], calculated_x,     calculated_y,     fading_table[block_id - FIRST_FADING_METATILE][frame_id][0]);
     se_plot(&se_mem[27 + layer][0], calculated_x + 1, calculated_y,     fading_table[block_id - FIRST_FADING_METATILE][frame_id][1]);

@@ -1289,6 +1289,72 @@ const u16 mediumSpike_H[] = {
     0xffff,
 };
 
+const u16 coloredSpike_V[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(13),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredSpike_H[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(13),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredHalfSpike_V[] = {
+    ATTR0_4BPP | ATTR0_WIDE,
+    ATTR1_SIZE_8x16,
+    ATTR2_PALBANK(13),
+    0, // x
+    8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredHalfSpike_H[] = {
+    ATTR0_4BPP | ATTR0_TALL,
+    ATTR1_SIZE_16x8,
+    ATTR2_PALBANK(13),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredMediumSpike_V[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(13),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredMediumSpike_H[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(13),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
 const u16 groundSpike_V[] = {
     ATTR0_4BPP | ATTR0_WIDE,
     ATTR1_SIZE_8x16,
@@ -1716,6 +1782,20 @@ ROM_DATA const u16 *obj_sprites[] = {
     tallBgArrowSpr,
     tallBgArrowSprP2,
     pulsingObjectBigSprP1,
+
+    coloredSpike_V,
+    coloredSpike_H,
+    coloredHalfSpike_V,
+    coloredHalfSpike_H,
+    coloredMediumSpike_V,
+    coloredMediumSpike_H,
+
+    spike_V,
+    spike_H,
+    halfSpike_V,
+    halfSpike_H,
+    mediumSpike_V,
+    mediumSpike_H,
 };
 
 #undef P1
@@ -1906,6 +1986,20 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("FILLED_ARROW",0x790, 0x8)
     CHR_SLOT("UNFILLED_ARROW", 0x798, 0x8)
     CHR_SLOT("BIG_SQUARE", 0x7a0, 0x10)
+
+    CHR_SLOT("COLORED_SPIKE_V", 0x4a4, 0x4)
+    CHR_SLOT("COLORED_SPIKE_H", 0x4a8, 0x4)
+    CHR_SLOT("COLORED_HALF_SPIKE_V", 0x4ac, 0x2)
+    CHR_SLOT("COLORED_HALF_SPIKE_H", 0x4ae, 0x2)
+    CHR_SLOT("COLORED_MEDIUM_SPIKE_V", 0x518, 0x4)
+    CHR_SLOT("COLORED_MEDIUM_SPIKE_H", 0x5ac, 0x4)
+
+    CHR_SLOT("FADING_SPIKE_V", 0x7b0, 0x10)
+    CHR_SLOT("FADING_SPIKE_H", 0x7c0, 0x10)
+    CHR_SLOT("FADING_HALF_SPIKE_V", 0x7f0, 0x8)
+    CHR_SLOT("FADING_HALF_SPIKE_H", 0x7f8, 0x8)
+    CHR_SLOT("FADING_MEDIUM_SPIKE_V", 0x7d0, 0x10)
+    CHR_SLOT("FADING_MEDIUM_SPIKE_H", 0x7e0, 0x10)
 };
 #undef CHR_SLOT
 
