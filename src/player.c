@@ -99,8 +99,6 @@ void player_main() {
 
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
-        
-        curr_player.snap_cube_rotation = FALSE;
 
         for (current_step = 0; current_step < num_steps; current_step++) {
             // Gamemode specific routines
@@ -253,6 +251,7 @@ void cube_gamemode() {
         }
     }
 
+    curr_player.snap_cube_rotation = FALSE;
     curr_player.on_floor = FALSE;
 
     if (current_step < num_steps - 1) {
@@ -324,6 +323,7 @@ void ship_gamemode() {
         curr_player.cube_rotation = ArcTan2(curr_player.player_x_speed >> 8, curr_player.player_y_speed >> 8) * mirror_sign;
     }
     
+    curr_player.snap_cube_rotation = FALSE;
     curr_player.on_floor = FALSE;
     
     if (current_step < num_steps - 1) {

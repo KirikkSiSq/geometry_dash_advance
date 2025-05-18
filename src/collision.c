@@ -921,7 +921,7 @@ ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
     if (!curr_player.on_floor && curr_player.airborne_jumped) curr_player.airborne_jumped = FALSE;
 
     if (ejection_type == TOP) {
-        curr_player.player_y += eject_value << SUBPIXEL_BITS;
+        curr_player.player_y += (eject_value - 1) << SUBPIXEL_BITS;
 
         if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_UP) {
             // We are resting on the ceiling so allow jumping and stuff
@@ -987,6 +987,11 @@ ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
 }
 
 ARM_CODE u32 run_coll(u32 x, u32 y, u32 layer, u8 side) {
+    // Check for the pixel above
+    if (side == TOP) {
+        y -= 1;
+    }
+    
     if(collision_with_block_obj(x, y, side)) {
         // Return TRUE only if this is a center hitbox check, as this is needed for death to ocurr
         return side == CENTER;
