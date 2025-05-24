@@ -872,6 +872,7 @@ void break_brick(u32 x, u32 y, u32 layer) {
 }
 
 void modify_fade_block(u16 block_id, s32 calculated_x, s32 calculated_y, u32 layer, u32 frame_id);
+void modify_fade_block_flipped(u16 block_id, s32 calculated_x, s32 calculated_y, u32 layer, u32 frame_id);
 
 // Temp defines
 
@@ -1051,6 +1052,11 @@ ARM_CODE void handle_fading_blocks() {
             // Get tile x
             s32 calculated_x = (metatile_x << 1) & 0b11110;
 
+            if (screen_mirrored) {
+                // Flip position
+                calculated_x = (SCREENBLOCK_W - 2) - calculated_x;
+            }
+
             // Calculate frame ID 
             u32 frame_id = fade_frame_table[x >> 4];
 
@@ -1070,7 +1076,8 @@ ARM_CODE void handle_fading_blocks() {
                     s32 calculated_y = (metatile_y << 1) & 0b11110;
 
                     // Modify the specified block graphics
-                    modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
+                    if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
+                    else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
                 }
             }
         }
@@ -1088,6 +1095,13 @@ void modify_fade_block(u16 block_id, s32 calculated_x, s32 calculated_y, u32 lay
     se_plot(&se_mem[27 + layer][0], calculated_x + 1, calculated_y,     fading_table[block_id - FIRST_FADING_METATILE][frame_id][1]);
     se_plot(&se_mem[27 + layer][0], calculated_x,     calculated_y + 1, fading_table[block_id - FIRST_FADING_METATILE][frame_id][2]);
     se_plot(&se_mem[27 + layer][0], calculated_x + 1, calculated_y + 1, fading_table[block_id - FIRST_FADING_METATILE][frame_id][3]);
+}
+
+void modify_fade_block_flipped(u16 block_id, s32 calculated_x, s32 calculated_y, u32 layer, u32 frame_id) {
+    se_plot(&se_mem[27 + layer][0], calculated_x + 1, calculated_y,     fading_table[block_id - FIRST_FADING_METATILE][frame_id][0] ^ SE_HFLIP);
+    se_plot(&se_mem[27 + layer][0], calculated_x,     calculated_y,     fading_table[block_id - FIRST_FADING_METATILE][frame_id][1] ^ SE_HFLIP);
+    se_plot(&se_mem[27 + layer][0], calculated_x + 1, calculated_y + 1, fading_table[block_id - FIRST_FADING_METATILE][frame_id][2] ^ SE_HFLIP);
+    se_plot(&se_mem[27 + layer][0], calculated_x,     calculated_y + 1, fading_table[block_id - FIRST_FADING_METATILE][frame_id][3] ^ SE_HFLIP);
 }
 
 void draw_both_players() {
