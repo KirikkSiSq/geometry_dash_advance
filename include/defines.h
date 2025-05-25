@@ -26,8 +26,11 @@
 
 
 /* SAVES */
-// Version of the savefile, increment if a wipe is needed
-#define SAVE_VERSION 9
+// Version of the level save, increment if a new level is added
+#define LEVEL_VERSION 1
+ 
+// Version of the non level save, increment if a wipe is needed
+#define DATA_VERSION 9
 
 // Default color ID
 #define DEFAULT_P1_COLOR 15 

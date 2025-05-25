@@ -1,4 +1,5 @@
 #include "save.h"
+#include "defines.h"
 
 struct SaveBlock save_data;
 
@@ -14,15 +15,23 @@ void init_sram() {
 	read_save_block();
 
 	// Clear if magic is invalid or different save version
-	if (save_data.magic != 0xdeadbeef || save_data.save_version != SAVE_VERSION) {
-		memset8(sram_mem, 0x00, SRAM_SIZE);
+	if (save_data.magic != 0xdeadbeef || save_data.data_version != DATA_VERSION) {
 		memset8((u8*)&save_data, 0x00, sizeof(save_data));
+
 		save_data.magic = 0xdeadbeef;
-		save_data.save_version = SAVE_VERSION;
+		save_data.data_version = DATA_VERSION;
+		save_data.level_version = LEVEL_VERSION;
 		save_data.p1_col_selected = DEFAULT_P1_COLOR;
 		save_data.p2_col_selected = DEFAULT_P2_COLOR;
 		save_data.glow_col_selected = DEFAULT_GLOW_COLOR;
 		save_data.glow_enabled = FALSE;
+		
+		write_save_block();
+	}else if (save_data.level_version != LEVEL_VERSION) {
+		memset8((u8*)&save_data.saved_levels, 0x00, sizeof(save_data.saved_levels));
+
+		save_data.level_version = LEVEL_VERSION;
+		
 		write_save_block();
 	}
 }

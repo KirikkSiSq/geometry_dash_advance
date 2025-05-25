@@ -155,24 +155,8 @@
 #include "electrodynamix/SP.h"
 #include "electrodynamix/properties.h"
 
-// test
-#define test_ID 15
-
-#include "test/l1.h"
-#include "test/l2.h"
-#include "test/SP.h"
-#include "test/properties.h"
-
-// test2
-#define test2_ID 16
-
-#include "test2/l1.h"
-#include "test2/l2.h"
-#include "test2/SP.h"
-#include "test2/properties.h"
-
 // leveleasy
-#define leveleasy_ID 17
+#define leveleasy_ID 15
 
 #include "leveleasy/l1.h"
 #include "leveleasy/l2.h"
@@ -180,7 +164,7 @@
 #include "leveleasy/properties.h"
 
 // groundtospace
-#define groundtospace_ID 18
+#define groundtospace_ID 16
 
 #include "groundtospace/l1.h"
 #include "groundtospace/l2.h"
@@ -188,21 +172,45 @@
 #include "groundtospace/properties.h"
 
 // ultimatedestruction
-#define ultimatedestruction_ID 19
+#define ultimatedestruction_ID 17
 
 #include "ultimatedestruction/l1.h"
 #include "ultimatedestruction/l2.h"
 #include "ultimatedestruction/SP.h"
 #include "ultimatedestruction/properties.h"
 
+// thenightmare
+#define thenightmare_ID 18
+
+#include "thenightmare/l1.h"
+#include "thenightmare/l2.h"
+#include "thenightmare/SP.h"
+#include "thenightmare/properties.h"
+
 // rose
-#define rose_ID 20
+#define rose_ID 19
 
 #include "rose/l1.h"
 #include "rose/l2.h"
 #include "rose/SP.h"
 #include "rose/properties.h"
 
-#define LEVEL_COUNT 21
+// test
+#define test_ID 20
+
+#include "test/l1.h"
+#include "test/l2.h"
+#include "test/SP.h"
+#include "test/properties.h"
+
+// test2
+#define test2_ID 21
+
+#include "test2/l1.h"
+#include "test2/l2.h"
+#include "test2/SP.h"
+#include "test2/properties.h"
+
+#define LEVEL_COUNT 22
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

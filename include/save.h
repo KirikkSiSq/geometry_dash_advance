@@ -19,7 +19,8 @@ struct SaveLevelData {
 
 struct SaveBlock {
     u32 magic;
-    u32 save_version;
+    u16 level_version;
+    u16 data_version;
     u16 cube_selected;
     u16 ship_selected;
     u16 ball_selected;
