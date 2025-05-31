@@ -1151,58 +1151,56 @@ s32 project_point(s32 point_x, s32 point_y, s32 axis_x, s32 axis_y) {
 
 ARM_CODE s32 is_colliding_rotated_fixed(
     s32 x1, s32 y1, s32 w1, s32 h1,                       // First rect (axis-aligned)
+    s32 rot1_center_x, s32 rot1_center_y,                 // Rotation center point
+    u16 angle1,                                           // Rotation angle (0-FFFF)
+    
     s32 x2, s32 y2, s32 w2, s32 h2,                       // Second rect position and dimensions
-    s32 rot_center_x, s32 rot_center_y,                    // Rotation center point
-    u16 angle)                                             // Rotation angle (0-FFFF)
+    s32 rot2_center_x, s32 rot2_center_y,                 // Rotation center point
+    u16 angle2)                                           // Rotation angle (0-FFFF)
 {
-    // Calculate fixed-point sine and cosine values
-    s32 sin_angle = lu_sin(angle);
-    s32 cos_angle = lu_cos(angle);
+    // Calculate sin/cos for both rectangles
+    s32 sin1 = lu_sin(angle1);
+    s32 cos1 = lu_cos(angle1);
+    s32 sin2 = lu_sin(angle2);
+    s32 cos2 = lu_cos(angle2);
 
-    // Define corners of first (axis-aligned) rectangle
-    s32 rect1_corners[4][2] = {
-        {x1,        y1       }, // Top-left
-        {x1 + w1,   y1       }, // Top-right
-        {x1 + w1,   y1 + h1  }, // Bottom-right
-        {x1,        y1 + h1  }  // Bottom-left
-    };
-
-    // Define corners of second rectangle relative to its top-left position
-    s32 rect2_corners[4][2];
+    // Base corner positions for a rectangle
     s32 base_corners[4][2] = {
-        {0,    0   }, // Top-left
-        {w2,   0   }, // Top-right
-        {w2,   h2  }, // Bottom-right
-        {0,    h2  }  // Bottom-left
+        {0, 0},    // Top-left
+        {w1, 0},   // Top-right
+        {w1, h1},  // Bottom-right
+        {0, h1}    // Bottom-left
     };
 
-    // First translate corners to rectangle center (x2, y2)
-    // Then rotate around rotation center (rot_center_x, rot_center_y)
-    for(s32 i = 0; i < 4; i++) {
-        s32 x = base_corners[i][0] + x2 - rot_center_x;
-        s32 y = base_corners[i][1] + y2 - rot_center_y;
-        
-        // Rotate point around rotation center
-        rect2_corners[i][0] = rot_center_x + 
-            (Q12_MULT(x, cos_angle) - Q12_MULT(y, sin_angle));
-        rect2_corners[i][1] = rot_center_y + 
-            (Q12_MULT(x, sin_angle) + Q12_MULT(y, cos_angle));
+    // Rect1: rotate corners
+    s32 rect1_corners[4][2];
+    for (s32 i = 0; i < 4; i++) {
+        s32 x = base_corners[i][0] + x1 - rot1_center_x;
+        s32 y = base_corners[i][1] + y1 - rot1_center_y;
+        rect1_corners[i][0] = rot1_center_x + (Q12_MULT(x, cos1) - Q12_MULT(y, sin1));
+        rect1_corners[i][1] = rot1_center_y + (Q12_MULT(x, sin1) + Q12_MULT(y, cos1));
     }
 
+    // Rect2: rotate corners
+    base_corners[1][0] = w2; base_corners[1][1] = 0;
+    base_corners[2][0] = w2; base_corners[2][1] = h2;
+    base_corners[3][0] = 0;  base_corners[3][1] = h2;
+
+    s32 rect2_corners[4][2];
+    for (s32 i = 0; i < 4; i++) {
+        s32 x = base_corners[i][0] + x2 - rot2_center_x;
+        s32 y = base_corners[i][1] + y2 - rot2_center_y;
+        rect2_corners[i][0] = rot2_center_x + (Q12_MULT(x, cos2) - Q12_MULT(y, sin2));
+        rect2_corners[i][1] = rot2_center_y + (Q12_MULT(x, sin2) + Q12_MULT(y, cos2));
+    }
     // Define the axes we need to check
     // For rect1, they're just vertical and horizontal
     s32 axes[4][2] = {
-        {Q12_ONE, 0},      // Horizontal axis for rect1
-        {0, Q12_ONE},      // Vertical axis for rect1
-        {0, 0},            // Will store rotated horizontal axis for rect2
-        {0, 0}             // Will store rotated vertical axis for rect2
+        {cos1, sin1},     // rect1 "horizontal" axis
+        {-sin1, cos1},    // rect1 "vertical" axis
+        {cos2, sin2},     // rect2 "horizontal" axis
+        {-sin2, cos2}     // rect2 "vertical" axis
     };
-
-    // Calculate rotated axes for rect2
-    axes[2][0] = cos_angle;
-    axes[2][1] = sin_angle;
-    axes[3][0] = -sin_angle;
-    axes[3][1] = cos_angle;
 
     // Check projection onto each axis
     for(s32 i = 0; i < 4; i++) {

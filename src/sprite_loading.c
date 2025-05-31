@@ -402,6 +402,9 @@ void do_collision(struct ObjectSlot *objectSlot) {
     routines_jump_table[obj_type](objectSlot);
 }
 
+/// @brief 
+/// @param index 
+/// @return 
 ARM_CODE void check_obj_collision(u32 index) {
     struct Object curr_object = object_buffer[index].object;
 
@@ -431,12 +434,20 @@ ARM_CODE void check_obj_collision(u32 index) {
     u32 ply_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
     
     if (curr_object.attrib1 & ENABLE_ROTATION_FLAG) {
-        // Check if a collision has happened
+        u32 ply_center_x = ply_x + (curr_player.player_width >> 1);
+        u32 ply_center_y = ply_y + (curr_player.player_height >> 1);
+
+        u16 ply_rotation = 0;
+
+        // If the object rotation is not a 90 degrees step, use player's rotated hitbox
+        if (curr_object.rotation & 0x3fff) {
+            ply_rotation = curr_player.cube_rotation;
+        }
+
         if (is_colliding_rotated_fixed(
-            ply_x, ply_y, curr_player.player_width, curr_player.player_height, 
+            ply_x, ply_y, curr_player.player_width, curr_player.player_height, ply_center_x, ply_center_y, ply_rotation,
             obj_x, obj_y, obj_width, obj_height, curr_object.x + center_x, curr_object.y + center_y, curr_object.rotation
         )) {
-            // If yes, then run the collision routine
             do_collision(&object_buffer[index]);
         }   
     } else {

@@ -195,8 +195,16 @@
 #include "rose/SP.h"
 #include "rose/properties.h"
 
+// problematic
+#define problematic_ID 20
+
+#include "problematic/l1.h"
+#include "problematic/l2.h"
+#include "problematic/SP.h"
+#include "problematic/properties.h"
+
 // test
-#define test_ID 20
+#define test_ID 21
 
 #include "test/l1.h"
 #include "test/l2.h"
@@ -204,13 +212,13 @@
 #include "test/properties.h"
 
 // test2
-#define test2_ID 21
+#define test2_ID 22
 
 #include "test2/l1.h"
 #include "test2/l2.h"
 #include "test2/SP.h"
 #include "test2/properties.h"
 
-#define LEVEL_COUNT 22
+#define LEVEL_COUNT 23
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

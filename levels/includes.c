@@ -21,6 +21,7 @@ ROM_DATA const u16 *level_defines[][4] = {
    { ultimatedestruction_l1_level_data, ultimatedestruction_l2_level_data, ultimatedestruction_spr_data, (u16 *) ultimatedestruction_properties },
    { thenightmare_l1_level_data, thenightmare_l2_level_data, thenightmare_spr_data, (u16 *) thenightmare_properties },
    { rose_l1_level_data, rose_l2_level_data, rose_spr_data, (u16 *) rose_properties },
+   { problematic_l1_level_data, problematic_l2_level_data, problematic_spr_data, (u16 *) problematic_properties },
    { test_l1_level_data, test_l2_level_data, test_spr_data, (u16 *) test_properties },
    { test2_l1_level_data, test2_l2_level_data, test2_spr_data, (u16 *) test2_properties },
 };
@@ -46,6 +47,7 @@ ROM_DATA const u8 *level_names[] = {
    ultimatedestruction_name,
    thenightmare_name,
    rose_name,
+   problematic_name,
    test_name,
    test2_name,
 };
