@@ -2479,46 +2479,46 @@ electromanadventures_spr_data:
    .hword 0x0 @ z index 0
 @ Object 400
    .hword 0x20 @ delta x
-   .hword 0x162 @ y
+   .hword 0x161 @ y
    .hword 0x11 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 401
    .hword 0x0 @ delta x
-   .hword 0x172 @ y
+   .hword 0x171 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 281 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 402
    .hword 0x0 @ delta x
-   .hword 0x182 @ y
+   .hword 0x181 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 333 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 403
    .hword 0x0 @ delta x
-   .hword 0x18c @ y
+   .hword 0x18b @ y
    .hword 0x67 @ type
    .hword 0x11 @ bg layer 2 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
 @ Object 404
    .hword 0xd @ delta x
-   .hword 0x13c @ y
+   .hword 0x13b @ y
    .hword 0x67 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 405
    .hword 0x0 @ delta x
-   .hword 0x146 @ y
+   .hword 0x145 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 334 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 406
    .hword 0x0 @ delta x
-   .hword 0x156 @ y
+   .hword 0x155 @ y
    .hword 0x11 @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
@@ -2530,27 +2530,27 @@ electromanadventures_spr_data:
    .hword 0x0 @ z index 0
 @ Object 408
    .hword 0xc @ delta x
-   .hword 0x162 @ y
+   .hword 0x161 @ y
    .hword 0xa @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 409
    .hword 0x0 @ delta x
-   .hword 0x172 @ y
+   .hword 0x171 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 281 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 410
    .hword 0x0 @ delta x
-   .hword 0x182 @ y
+   .hword 0x181 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
    .hword 333 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 411
    .hword 0x0 @ delta x
-   .hword 0x18c @ y
+   .hword 0x18b @ y
    .hword 0x67 @ type
    .hword 0x11 @ bg layer 2 non rotated  flipped vertically 
    .hword 0x0 @ z index 0

@@ -1052,26 +1052,26 @@
    </properties>
   </object>
   <object id="856" gid="16488" x="4195" y="356" width="16" height="16"/>
-  <object id="859" gid="16402" x="4241" y="354" width="16" height="16"/>
-  <object id="861" gid="16488" x="4241" y="396" width="16" height="16">
+  <object id="859" gid="16402" x="4241" y="353" width="16" height="16"/>
+  <object id="861" gid="16488" x="4241" y="395" width="16" height="16">
    <properties>
     <property name="bg layer" value="1"/>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="864" gid="16488" x="4268" y="396" width="16" height="16">
+  <object id="864" gid="16488" x="4268" y="395" width="16" height="16">
    <properties>
     <property name="bg layer" value="1"/>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="865" gid="16395" x="4268" y="354" width="16" height="16"/>
-  <object id="866" gid="16402" x="4254" y="342" width="16" height="16">
+  <object id="865" gid="16395" x="4268" y="353" width="16" height="16"/>
+  <object id="866" gid="16402" x="4254" y="341" width="16" height="16">
    <properties>
     <property name="vflip" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="867" gid="16488" x="4254" y="316" width="16" height="16"/>
+  <object id="867" gid="16488" x="4254" y="315" width="16" height="16"/>
   <object id="870" gid="16402" x="4297" y="314" width="16" height="16"/>
   <object id="872" gid="16488" x="4297" y="356" width="16" height="16">
    <properties>
@@ -3516,10 +3516,10 @@
   <object id="2020" gid="334" x="4324" y="346" width="16" height="16"/>
   <object id="2021" gid="282" x="4297" y="330" width="16" height="16"/>
   <object id="2022" gid="334" x="4297" y="346" width="16" height="16"/>
-  <object id="2025" gid="282" x="4268" y="370" width="16" height="16"/>
-  <object id="2026" gid="334" x="4268" y="386" width="16" height="16"/>
-  <object id="2027" gid="282" x="4241" y="370" width="16" height="16"/>
-  <object id="2028" gid="334" x="4241" y="386" width="16" height="16"/>
+  <object id="2025" gid="282" x="4268" y="369" width="16" height="16"/>
+  <object id="2026" gid="334" x="4268" y="385" width="16" height="16"/>
+  <object id="2027" gid="282" x="4241" y="369" width="16" height="16"/>
+  <object id="2028" gid="334" x="4241" y="385" width="16" height="16"/>
   <object id="2029" gid="282" x="4209" y="410" width="16" height="16"/>
   <object id="2030" gid="334" x="4209" y="426" width="16" height="16"/>
   <object id="2031" gid="282" x="4182" y="410" width="16" height="16"/>
@@ -3527,7 +3527,7 @@
   <object id="2033" gid="282" x="4057" y="388" width="16" height="16"/>
   <object id="2034" gid="334" x="4057" y="404" width="16" height="16"/>
   <object id="2035" gid="335" x="4310" y="286" width="16" height="16"/>
-  <object id="2036" gid="335" x="4254" y="326" width="16" height="16"/>
+  <object id="2036" gid="335" x="4254" y="325" width="16" height="16"/>
   <object id="2037" gid="335" x="4195" y="366" width="16" height="16"/>
   <object id="2038" gid="335" x="4027" y="316" width="16" height="16"/>
   <object id="2039" gid="335" x="4082" y="316" width="16" height="16"/>
