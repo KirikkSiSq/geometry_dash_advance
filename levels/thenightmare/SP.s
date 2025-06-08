@@ -9120,21 +9120,21 @@ thenightmare_spr_data:
    .hword 0x0 @ doesn't copy any channel
    .hword 0x0 @ normal trigger
 @ Object 1344
-   .hword 0x6 @ delta x
-   .hword 0x170 @ y
-   .hword 0xc @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 1345
-   .hword 0x10 @ delta x
+   .hword 0x16 @ delta x
    .hword 0x140 @ y
    .hword 0x28 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 1346
+@ Object 1345
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2f @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 1346
+   .hword 0x0 @ delta x
+   .hword 0x170 @ y
+   .hword 0xc @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 1347
