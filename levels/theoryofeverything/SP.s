@@ -5293,23 +5293,23 @@ theoryofeverything_spr_data:
    .hword 0x0 @ z index 0
 @ Object 842
    .hword 0x8 @ delta x
-   .hword 0x80 @ y
-   .hword 0x4a @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 843
-   .hword 0x0 @ delta x
-   .hword 0x80 @ y
-   .hword 0x4b @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 844
-   .hword 0x0 @ delta x
-   .hword 0x80 @ y
+   .hword 0x78 @ y
    .hword 0xe @ type
    .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 49152 @ rotation
+@ Object 843
+   .hword 0x0 @ delta x
+   .hword 0x7d @ y
+   .hword 0x4a @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 844
+   .hword 0x0 @ delta x
+   .hword 0x7d @ y
+   .hword 0x4b @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
 @ Object 845
    .hword 0x8 @ delta x
    .hword 0xb0 @ y
