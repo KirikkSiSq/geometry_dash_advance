@@ -1598,6 +1598,18 @@ const u16 bushDecoBig[] = {
     0xffff
 };
 
+const u16 bushDecoTiny[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
+    0, // x
+    0, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
 const u16 coinSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE,
     ATTR1_SIZE_32x32,
@@ -1796,6 +1808,19 @@ ROM_DATA const u16 *obj_sprites[] = {
     halfSpike_H,
     mediumSpike_V,
     mediumSpike_H,
+
+    sawBig,
+    sawMedium,
+    sawMedium,
+    
+    sawDecoBig,
+    sawDecoBigP2,
+    sawDecoBig,
+    sawDecoMediumSmallP2,
+
+    bushDecoBig,
+    bgChainsSpr,
+    bushDecoTiny
 };
 
 #undef P1
@@ -2000,6 +2025,19 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("FADING_HALF_SPIKE_H", 0x7f8, 0x8)
     CHR_SLOT("FADING_MEDIUM_SPIKE_V", 0x7d0, 0x10)
     CHR_SLOT("FADING_MEDIUM_SPIKE_H", 0x7e0, 0x10)
+    
+    CHR_SLOT("BIG_1_8_SAW", 0x820, 0x40)
+    CHR_SLOT("MEDIUM_1_8_SAW", 0x860, 0x10)
+    CHR_SLOT("SMALL_1_8_SAW", 0x870, 0x10)
+
+    CHR_SLOT("BIG_1_8_ROTATION_DECO", 0x910, 0x40)
+    CHR_SLOT("MEDIUM_1_8_ROTATION_DECO", 0x8d0, 0x40)
+    CHR_SLOT("SMALL_1_8_ROTATION_DECO", 0x890, 0x40)
+    CHR_SLOT("TINY_1_8_ROTATION_DECO", 0x880, 0x10)
+
+    CHR_SLOT("BIG_1_9_BUSH", 0x800, 0x10)
+    CHR_SLOT("MEDIUM_1_9_BUSH", 0x810, 0x8)
+    CHR_SLOT("SMALL_1_9_BUSH", 0x818, 0x4)
 };
 #undef CHR_SLOT
 

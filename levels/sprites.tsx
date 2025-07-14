@@ -1544,6 +1544,7 @@
  <tile id="147">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1554,6 +1555,7 @@
  <tile id="148">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1564,6 +1566,7 @@
  <tile id="149">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1574,6 +1577,7 @@
  <tile id="150">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1584,6 +1588,7 @@
  <tile id="151">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1594,6 +1599,7 @@
  <tile id="152">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>
@@ -1604,6 +1610,7 @@
  <tile id="153">
   <properties>
    <property name="bg layer" value="-1"/>
+   <property name="color channel" value="DEFAULT"/>
    <property name="enable rotation" type="bool" value="false"/>
    <property name="hflip" type="bool" value="false"/>
    <property name="rotation angle" type="int" value="0"/>

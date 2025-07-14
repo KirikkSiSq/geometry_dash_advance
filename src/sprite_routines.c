@@ -653,6 +653,19 @@ const jmp_table routines_jump_table[] = {
     kill_player,
     kill_player,
     kill_player,
+
+    kill_player,
+    kill_player,
+    kill_player,
+
+    do_nothing,
+    do_nothing,
+    do_nothing,
+    do_nothing,
+
+    do_nothing,
+    do_nothing,
+    do_nothing,    
 };
 
 // In pixels
@@ -840,6 +853,19 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("FADING_HALF_SPIKE_H", 3, 4, 2, 6, 8, 8)
     Object_Hitbox_Rectangle("FADING_MEDIUM_SPIKE_V", 2, 4, 7, 9, 8, 8)
     Object_Hitbox_Rectangle("FADING_MEDIUM_SPIKE_H", 4, 2, 2, 7, 8, 8)
+
+    Object_Hitbox_Circle("BIG_1_8_SAW", TRUE, 14, 0, 0, 8, 8)
+    Object_Hitbox_Circle("MEDIUM_1_8_SAW", TRUE, 11, 0, 0, 8, 8)
+    Object_Hitbox_Circle("SMALL_1_8_SAW", TRUE, 7, 0, 0, 8, 8)
+
+    Object_Hitbox_Circle("BIG_1_8_ROTATION_DECO", TRUE, 0, 0, 0, 0, 0)
+    Object_Hitbox_Circle("MEDIUM_1_8_ROTATION_DECO", TRUE, 0, 0, 0, 0, 0)
+    Object_Hitbox_Circle("SMALL_1_8_ROTATION_DECO", TRUE, 0, 0, 0, 0, 0)
+    Object_Hitbox_Circle("TINY_1_8_ROTATION_DECO", TRUE, 0, 0, 0, 0, 0)
+
+    Object_Hitbox_Rectangle("BIG_1_9_BUSH", 0, 0, 0, 0, 0, 0)
+    Object_Hitbox_Rectangle("MEDIUM_1_9_BUSH", 0, 0, 0, 0, 0, 0)
+    Object_Hitbox_Rectangle("SMALL_1_9_BUSH", 0, 0, 0, 0, 0, 0)
 };
 
 #undef Object_Hitbox
