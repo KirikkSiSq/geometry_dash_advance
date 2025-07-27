@@ -1,4 +1,6 @@
-## Music credits
+# Music credits
+
+## Main levels Music
 
 | Song | autor | covered by |
 |---|---|---|
@@ -19,3 +21,13 @@
 |Clubstep|DJ-Nate|Orionconstel|
 |Electroman adventures|waterflame|Orionconstel|
 |Electrodynamix|DJ-Nate|Orionconstel|
+
+## Custom Music
+
+| Song | autor | covered by |
+|---|---|---|
+|Grond to space|Seaglowingpro|Orionconstel|
+|Rose|Cornandbeans|Orionconstel|
+|EveryEnd|Dimrain47|Orionconstel|
+|Problematic|Rukkus|HatSwitch|
+|Ultimate Destruction|DJVI|Orionconstel|
