@@ -14,6 +14,7 @@ Download latest stable version: [CLICK HERE](https://github.com/AleFunky/geometr
 If you want to access to developer builds, you can download the latest nightly build (unstable): [CLICK HERE](https://nightly.link/AleFunky/geometry_dash_advance/workflows/main/main/gd-adv.zip)
 
 # Credits
+
 ## Dev-Team
 |Contributor|Role|
 |---|---|
@@ -29,6 +30,9 @@ If you want to access to developer builds, you can download the latest nightly b
 |[banana6000](https://github.com/xXFamidashFan69Xx)|graphics, levels and metatiles|
 |Nicolestarlight|music|
 |Redgd|graphics|
+
+## Music credits
+Here are the original authors of the soundtrack and the person in charge of cover them to work on the GBA: [Click Here](https://github.com/AleFunky/geometry_dash_advance/blob/main/audio/Audio%20credits.md)
 
 ## Additional
 |Additional thanks|Name|
