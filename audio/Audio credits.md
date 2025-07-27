@@ -2,7 +2,7 @@
 
 ## Main levels Music
 
-| Song | autor | covered by |
+| Song | author | covered by |
 |---|---|---|
 |Main menu|Robtop|ElAngel378 & Orionconstel|
 |Practice|OcularNebula-stay inside me|Orionconstel|
@@ -24,7 +24,7 @@
 
 ## Custom Music
 
-| Song | autor | covered by |
+| Song | author | covered by |
 |---|---|---|
 |Grond to space|Seaglowingpro|Orionconstel|
 |Rose|Cornandbeans|Orionconstel|
