@@ -446,15 +446,6 @@ void ufo_gamemode() {
     } else {
         curr_player.cube_rotation = ((curr_player.player_y_speed) * mirror_sign) / (1 << (SUBPIXEL_BITS - 1)) * 0x180; 
     }
-
-    // If on floor and holding A or UP, jump
-    if (!curr_player.disable_jumping && (key_hit(KEY_A | KEY_UP) || curr_player.player_buffering == ORB_BUFFER_READY)) {
-        if (curr_player.player_size == SIZE_BIG) {
-            curr_player.player_y_speed = -UFO_JUMP_SPEED * sign;     
-        } else {
-            curr_player.player_y_speed = -UFO_MINI_JUMP_SPEED * sign;     
-        }
-    }
     
     curr_player.on_floor = FALSE;
 
@@ -486,9 +477,15 @@ void ufo_gamemode() {
 
         // Run collision
         collision_ship_ball_ufo();
-        
-        // Stop buffering
-        if (curr_player.player_buffering == ORB_BUFFER_READY) curr_player.player_buffering = ORB_BUFFER_END;
+        // If on floor and holding A or UP, jump
+        if (!curr_player.disable_jumping && (key_hit(KEY_A | KEY_UP) && curr_player.player_buffering == ORB_BUFFER_READY)) {
+            if (curr_player.player_size == SIZE_BIG) {
+                curr_player.player_y_speed = -UFO_JUMP_SPEED * sign;     
+            } else {
+                curr_player.player_y_speed = -UFO_MINI_JUMP_SPEED * sign;     
+            }
+            curr_player.player_buffering = ORB_BUFFER_END;
+        }
     }
 }
 

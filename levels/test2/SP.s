@@ -487,235 +487,235 @@ test2_spr_data:
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 76
-   .hword 0xc0 @ delta x
-   .hword 0x1a0 @ y
-   .hword 0x37 @ type
+   .hword 0x50 @ delta x
+   .hword 0x140 @ y
+   .hword 0x12 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 77
-   .hword 0x100 @ delta x
-   .hword 0x1a8 @ y
-   .hword 0x35 @ type
+   .hword 0x20 @ delta x
+   .hword 0x130 @ y
+   .hword 0x12 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 78
-   .hword 0x30 @ delta x
-   .hword 0x130 @ y
-   .hword 0x1d @ type
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 79
    .hword 0x10 @ delta x
    .hword 0x130 @ y
-   .hword 0x2 @ type
+   .hword 0x12 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 80
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 81
+   .hword 0x10 @ delta x
+   .hword 0x170 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 82
+   .hword 0x10 @ delta x
+   .hword 0x140 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 83
+   .hword 0x0 @ delta x
+   .hword 0x1a0 @ y
+   .hword 0x37 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 84
+   .hword 0x20 @ delta x
+   .hword 0x130 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 85
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 86
+   .hword 0x10 @ delta x
+   .hword 0x170 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 87
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 88
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 89
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 90
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x12 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 91
+   .hword 0xa0 @ delta x
+   .hword 0x1a8 @ y
+   .hword 0x35 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 92
+   .hword 0x30 @ delta x
+   .hword 0x130 @ y
+   .hword 0x1d @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 93
+   .hword 0x10 @ delta x
+   .hword 0x130 @ y
+   .hword 0x2 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 94
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 81
+@ Object 95
    .hword 0x40 @ delta x
    .hword 0x120 @ y
    .hword 0xa @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
-@ Object 82
+@ Object 96
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0xa @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 83
+@ Object 97
    .hword 0x50 @ delta x
    .hword 0x150 @ y
    .hword 0x9 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 84
+@ Object 98
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x9 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 85
+@ Object 99
    .hword 0xc0 @ delta x
    .hword 0x1a0 @ y
    .hword 0xf @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 86
+@ Object 100
    .hword 0x80 @ delta x
    .hword 0x140 @ y
    .hword 0x9 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 87
+@ Object 101
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x10 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 88
+@ Object 102
    .hword 0x80 @ delta x
    .hword 0x130 @ y
    .hword 0x1a @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 89
+@ Object 103
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x1a @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 90
+@ Object 104
    .hword 0xe0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x49 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 91
+@ Object 105
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0xe @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 92
+@ Object 106
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x1a @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 93
+@ Object 107
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x38 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 94
+@ Object 108
    .hword 0x160 @ delta x
    .hword 0x1a0 @ y
    .hword 0x35 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 95
+@ Object 109
    .hword 0x30 @ delta x
    .hword 0x1a0 @ y
    .hword 0x39 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 96
+@ Object 110
    .hword 0x20 @ delta x
    .hword 0x1a0 @ y
    .hword 0x37 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 97
+@ Object 111
    .hword 0x280 @ delta x
    .hword 0x160 @ y
    .hword 0x48 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 98
+@ Object 112
    .hword 0x10 @ delta x
    .hword 0x160 @ y
    .hword 0x1a @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 99
+@ Object 113
    .hword 0x10 @ delta x
    .hword 0x160 @ y
    .hword 0x35 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 100
-   .hword 0xa0 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 101
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 102
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 103
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 104
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 105
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 106
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 107
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 108
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 109
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 110
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 111
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 112
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 113
-   .hword 0x10 @ delta x
-   .hword 0x120 @ y
-   .hword 0x10 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
 @ Object 114
-   .hword 0x10 @ delta x
+   .hword 0xa0 @ delta x
    .hword 0x120 @ y
    .hword 0x10 @ type
    .hword 0x20 @ bg layer 4 non rotated   
@@ -925,6 +925,90 @@ test2_spr_data:
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 149
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 150
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 151
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 152
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 153
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 154
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 155
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 156
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 157
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 158
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 159
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 160
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 161
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 162
+   .hword 0x10 @ delta x
+   .hword 0x120 @ y
+   .hword 0x10 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 163
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x10 @ type
