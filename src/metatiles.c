@@ -1735,12 +1735,12 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("CHKRED_66_DOWN_UD_2",     TILE(0x1b6, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x1a6, 0, 0, V), TILE(0x000, 0, 0, 0), COL_SLOPE_66_DOWN_UD_2)
 
     Metatile("GROUND_SLOPE_SPIKE_EDGE_45_UP",                  TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ed, 0, 0, 0), COL_NONE) //slope spikes 45 deg
-	Metatile("GROUND_SLOPE_SPIKE_45_UP",                       TILE(0x2ed, 0, 0, 0), TILE(0x2ee, 0, 0, 0), TILE(0x2ef, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_45_DOWN",                     TILE(0x2ee, 0, H, 0), TILE(0x2ed, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x2ef, 0, H, 0), COL_NONE)
+	Metatile("GROUND_SLOPE_SPIKE_45_UP",                       TILE(0x2ed, 0, 0, 0), TILE(0x2ee, 0, 0, 0), TILE(0x2ef, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_SPIKE_SLOPE_45_UP)
+    Metatile("GROUND_SLOPE_SPIKE_45_DOWN",                     TILE(0x2ee, 0, H, 0), TILE(0x2ed, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x2ef, 0, H, 0), COL_SPIKE_SLOPE_45_DOWN)
     Metatile("GROUND_SLOPE_SPIKE_EDGE_45_DOWN",                TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ed, 0, H, 0), TILE(0x000, 0, 0, 0), COL_NONE)
 	Metatile("GROUND_SLOPE_SPIKE_EDGE_45_UP_UD",                TILE(0x000, 0, 0, 0), TILE(0x2ed, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-	Metatile("GROUND_SLOPE_SPIKE_45_UP_UD",                     TILE(0x2ef, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x2ed, 0, 0, V), TILE(0x2ee, 0, 0, V), COL_NONE)
-	Metatile("GROUND_SLOPE_SPIKE_45_DOWN_UD",                   TILE(0x000, 0, 0, 0), TILE(0x2ef, 0, H, V), TILE(0x2ee, 0, H, V), TILE(0x2ed, 0, H, V), COL_NONE)
+	Metatile("GROUND_SLOPE_SPIKE_45_UP_UD",                     TILE(0x2ef, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x2ed, 0, 0, V), TILE(0x2ee, 0, 0, V), COL_SPIKE_SLOPE_45_UP_UD)
+	Metatile("GROUND_SLOPE_SPIKE_45_DOWN_UD",                   TILE(0x000, 0, 0, 0), TILE(0x2ef, 0, H, V), TILE(0x2ee, 0, H, V), TILE(0x2ed, 0, H, V), COL_SPIKE_SLOPE_45_DOWN_UD)
     Metatile("GROUND_SLOPE_SPIKE_EDGE_45_DOWN_UD",              TILE(0x2ed, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
@@ -1768,17 +1768,17 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("CHKRED_NO_OUT_66_DOWN_UD_1",     TILE(0x005, 0, H, 0), TILE(0x1d2, 0, 0, V), TILE(0x005, 0, H, V), TILE(0x1c2, 0, 0, V), COL_NONE)
     Metatile("CHKRED_NO_OUT_66_DOWN_UD_2",     TILE(0x1d1, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x1c1, 0, 0, V), TILE(0x000, 0, 0, 0), COL_NONE)
 
-    Metatile("GROUND_SLOPE_SPIKE_22_UP_EDGE",            TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2fb, 0, 0, 0), COL_NONE) //slope spikes 22 deg
-	Metatile("GROUND_SLOPE_SPIKE_22_UP_1",               TILE(0x000, 0, 0, 0), TILE(0x302, 0, 0, 0), TILE(0x300, 0, 0, 0), TILE(0x301, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_UP_2",               TILE(0x303, 0, 0, 0), TILE(0x301, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_1",             TILE(0x301, 0, H, 0), TILE(0x303, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_2",             TILE(0x302, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x301, 0, H, 0), TILE(0x300, 0, H, 0), COL_NONE)
-	Metatile("GROUND_SLOPE_SPIKE_22_DOWN_EDGE",          TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2fb, 0, H, 0), TILE(0x000, 0, 0, 0), COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_22_UP_EDGE",            TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2fb, 0, 0, 0),    COL_NONE) //slope spikes 22 deg
+	Metatile("GROUND_SLOPE_SPIKE_22_UP_1",               TILE(0x000, 0, 0, 0), TILE(0x302, 0, 0, 0), TILE(0x300, 0, 0, 0), TILE(0x301, 0, 0, 0),    COL_SPIKE_SLOPE_22_UP_1)
+    Metatile("GROUND_SLOPE_SPIKE_22_UP_2",               TILE(0x303, 0, 0, 0), TILE(0x301, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_SPIKE_SLOPE_22_UP_2)
+    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_1",             TILE(0x301, 0, H, 0), TILE(0x303, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_SPIKE_SLOPE_22_DOWN_1)
+    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_2",             TILE(0x302, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x301, 0, H, 0), TILE(0x300, 0, H, 0),    COL_SPIKE_SLOPE_22_DOWN_2)
+	Metatile("GROUND_SLOPE_SPIKE_22_DOWN_EDGE",          TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2fb, 0, H, 0), TILE(0x000, 0, 0, 0),    COL_NONE)
 	Metatile("GROUND_SLOPE_SPIKE_22_UP_UD_EDGE",            TILE(0x000, 0, 0, 0), TILE(0x2fb, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_UP_UD_1",               TILE(0x300, 0, 0, V), TILE(0x301, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x302, 0, 0, V), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_UP_UD_2",               TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x303, 0, 0, V), TILE(0x301, 0, 0, V), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_UD_1",             TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x301, 0, H, V), TILE(0x303, 0, H, V), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_UD_2",             TILE(0x301, 0, H, V), TILE(0x300, 0, H, V), TILE(0x302, 0, H, V), TILE(0x000, 0, 0, V), COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_22_UP_UD_1",               TILE(0x300, 0, 0, V), TILE(0x301, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x302, 0, 0, V), COL_SPIKE_SLOPE_22_UP_UD_1)
+    Metatile("GROUND_SLOPE_SPIKE_22_UP_UD_2",               TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x303, 0, 0, V), TILE(0x301, 0, 0, V), COL_SPIKE_SLOPE_22_UP_UD_2)
+    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_UD_1",             TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x301, 0, H, V), TILE(0x303, 0, H, V), COL_SPIKE_SLOPE_22_DOWN_UD_1)
+    Metatile("GROUND_SLOPE_SPIKE_22_DOWN_UD_2",             TILE(0x301, 0, H, V), TILE(0x300, 0, H, V), TILE(0x302, 0, H, V), TILE(0x000, 0, 0, V), COL_SPIKE_SLOPE_22_DOWN_UD_2)
 	Metatile("GROUND_SLOPE_SPIKE_22_DOWN_UD_EDGE",          TILE(0x2fb, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
 
 
@@ -1803,18 +1803,18 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("X_66_DOWN_UD_1",     TILE(0x01a, 0, H, V), TILE(0x190, 0, 0, V), TILE(0x01c, 0, H, V), TILE(0x180, 0, 0, V), COL_SLOPE_66_DOWN_UD_1)
     Metatile("X_66_DOWN_UD_2",     TILE(0x191, 0, 0, V), TILE(0x000, 0, 0, V), TILE(0x181, 0, 0, V), TILE(0x000, 0, 0, V), COL_SLOPE_66_DOWN_UD_2)
 
-    Metatile("GROUND_SLOPE_SPIKE_66_UP_1",          TILE(0x000, 0, H, 0), TILE(0x304, 0, H, 0), TILE(0x306, 0, H, 0), TILE(0x305, 0, H, 0), COL_NONE) //slope spikes 66 deg
-	Metatile("GROUND_SLOPE_SPIKE_66_UP_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, H, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_UP_2",          TILE(0x307, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, H, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_1",          TILE(0x000, 0, 0, 0), TILE(0x307, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, 0), COL_NONE) 
-	Metatile("GROUND_SLOPE_SPIKE_66_DOWN_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_2",          TILE(0x304, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, 0), TILE(0x306, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_1",          TILE(0x306, 0, H, V), TILE(0x305, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x304, 0, H, V), COL_NONE)
-	Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_2",          TILE(0x305, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x307, 0, H, V), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_UD_1",          TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x307, 0, 0, V), COL_NONE) 
+    Metatile("GROUND_SLOPE_SPIKE_66_UP_1",          TILE(0x000, 0, H, 0), TILE(0x304, 0, H, 0), TILE(0x306, 0, H, 0), TILE(0x305, 0, H, 0),      COL_SPIKE_SLOPE_66_UP_1) //slope spikes 66 deg
+	Metatile("GROUND_SLOPE_SPIKE_66_UP_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, H, 0),      COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_66_UP_2",          TILE(0x307, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, H, 0), TILE(0x000, 0, 0, 0),      COL_SPIKE_SLOPE_66_UP_2)
+    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_1",          TILE(0x000, 0, 0, 0), TILE(0x307, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, 0),    COL_SPIKE_SLOPE_66_DOWN_1)  
+	Metatile("GROUND_SLOPE_SPIKE_66_DOWN_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_2",          TILE(0x304, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, 0), TILE(0x306, 0, 0, 0),    COL_SPIKE_SLOPE_66_DOWN_2)
+    Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_1",          TILE(0x306, 0, H, V), TILE(0x305, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x304, 0, H, V),   COL_SPIKE_SLOPE_66_UP_UD_1)
+	Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x2ec, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0),   COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_66_UP_UD_2",          TILE(0x305, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x307, 0, H, V), TILE(0x000, 0, 0, 0),   COL_SPIKE_SLOPE_66_UP_UD_2)
+    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_UD_1",          TILE(0x000, 0, 0, 0), TILE(0x305, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x307, 0, 0, V), COL_SPIKE_SLOPE_66_DOWN_UD_1)  
 	Metatile("GROUND_SLOPE_SPIKE_66_DOWN_UD_EDGE",       TILE(0x2ec, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_UD_2",          TILE(0x305, 0, 0, V), TILE(0x306, 0, 0, V), TILE(0x304, 0, 0, V), TILE(0x000, 0, 0, 0), COL_NONE)
+    Metatile("GROUND_SLOPE_SPIKE_66_DOWN_UD_2",          TILE(0x305, 0, 0, V), TILE(0x306, 0, 0, V), TILE(0x304, 0, 0, V), TILE(0x000, 0, 0, 0), COL_SPIKE_SLOPE_66_DOWN_UD_2)
 
     Metatile("X_NO_OUT_SLOPE_45_UP",      TILE(0x000, 0, 0, 0), TILE(0x18f, 0, 0, 0), TILE(0x18e, 0, 0, 0), TILE(0x01a, 0, 0, 0), COL_NONE) // 0x630
     Metatile("X_NO_OUT_SLOPE_45_DOWN",    TILE(0x18f, 0, H, 0), TILE(0x000, 0, H, 0), TILE(0x01a, 0, H, 0), TILE(0x18e, 0, H, 0), COL_NONE)
@@ -1943,12 +1943,12 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("BRICKS_66_DOWN_UD_2",     TILE(0x1bf, 0, 0, V), TILE(0x000, 0, 0, V), TILE(0x1be, 0, 0, V), TILE(0x000, 0, 0, V), COL_SLOPE_66_DOWN_UD_2)
 
     Metatile("WAVY_SLOPE_SPIKE_EDGE_45_UP",                  TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ff, 0, 0, 0), COL_NONE) //wavy slope spikes 45 deg
-	Metatile("WAVY_SLOPE_SPIKE_45_UP",                       TILE(0x2fc, 0, 0, 0), TILE(0x2fd, 0, 0, 0), TILE(0x2fe, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_45_DOWN",                     TILE(0x2fd, 0, H, 0), TILE(0x2fc, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x2fe, 0, H, 0), COL_NONE)
+	Metatile("WAVY_SLOPE_SPIKE_45_UP",                       TILE(0x2fc, 0, 0, 0), TILE(0x2fd, 0, 0, 0), TILE(0x2fe, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_SPIKE_SLOPE_45_UP)
+    Metatile("WAVY_SLOPE_SPIKE_45_DOWN",                     TILE(0x2fd, 0, H, 0), TILE(0x2fc, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x2fe, 0, H, 0), COL_SPIKE_SLOPE_45_DOWN)
     Metatile("WAVY_SLOPE_SPIKE_EDGE_45_DOWN",                TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x2ff, 0, H, 0), TILE(0x000, 0, 0, 0), COL_NONE)
 	Metatile("WAVY_SLOPE_SPIKE_EDGE_45_UP_UD",                TILE(0x000, 0, 0, 0), TILE(0x2ff, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-	Metatile("WAVY_SLOPE_SPIKE_45_UP_UD",                     TILE(0x2fe, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x2fc, 0, 0, V), TILE(0x2fd, 0, 0, V), COL_NONE)
-	Metatile("WAVY_SLOPE_SPIKE_45_DOWN_UD",                   TILE(0x000, 0, 0, 0), TILE(0x2fe, 0, H, V), TILE(0x2fd, 0, H, V), TILE(0x2fc, 0, H, V), COL_NONE)
+	Metatile("WAVY_SLOPE_SPIKE_45_UP_UD",                     TILE(0x2fe, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x2fc, 0, 0, V), TILE(0x2fd, 0, 0, V), COL_SPIKE_SLOPE_45_UP_UD)
+	Metatile("WAVY_SLOPE_SPIKE_45_DOWN_UD",                   TILE(0x000, 0, 0, 0), TILE(0x2fe, 0, H, V), TILE(0x2fd, 0, H, V), TILE(0x2fc, 0, H, V), COL_SPIKE_SLOPE_45_DOWN_UD)
     Metatile("WAVY_SLOPE_SPIKE_EDGE_45_DOWN_UD",              TILE(0x2ff, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
     Metatile("EMPTY",    TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), TILE(0, 0, 0, 0), COL_NONE)
@@ -1976,17 +1976,17 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("BRICKS_NO_OUT_66_DOWN_UD_1",     TILE(0x043, 0, 0, V), TILE(0x1b9, 0, 0, V), TILE(0x044, 0, 0, V), TILE(0x1b8, 0, 0, V), COL_NONE)
     Metatile("BRICKS_NO_OUT_66_DOWN_UD_2",     TILE(0x1b7, 0, 0, V), TILE(0x000, 0, 0, V), TILE(0x1a7, 0, 0, V), TILE(0x000, 0, 0, V), COL_NONE)
 
-    Metatile("WAVY_SLOPE_SPIKE_22_UP_EDGE",            TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x0e5, 0, H, 0), TILE(0x30b, 0, 0, 0), COL_NONE) //wavy slope spikes 22 deg
-	Metatile("WAVY_SLOPE_SPIKE_22_UP_1",               TILE(0x000, 0, 0, 0), TILE(0x309, 0, 0, 0), TILE(0x308, 0, 0, 0), TILE(0x1c6, 0, H, V), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_UP_2",               TILE(0x30a, 0, 0, 0), TILE(0x1c6, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_1",             TILE(0x1c6, 0, 0, V), TILE(0x30a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_2",             TILE(0x309, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x1c6, 0, 0, V), TILE(0x308, 0, H, 0), COL_NONE)
-	Metatile("WAVY_SLOPE_SPIKE_22_DOWN_EDGE",          TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30b, 0, H, 0), TILE(0x0e5, 0, 0, 0), COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_22_UP_EDGE",            TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x0e5, 0, H, 0), TILE(0x30b, 0, 0, 0),    COL_NONE) //wavy slope spikes 22 deg
+	Metatile("WAVY_SLOPE_SPIKE_22_UP_1",               TILE(0x000, 0, 0, 0), TILE(0x309, 0, 0, 0), TILE(0x308, 0, 0, 0), TILE(0x1c6, 0, H, V),    COL_SPIKE_SLOPE_22_UP_1)
+    Metatile("WAVY_SLOPE_SPIKE_22_UP_2",               TILE(0x30a, 0, 0, 0), TILE(0x1c6, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_SPIKE_SLOPE_22_UP_2)
+    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_1",             TILE(0x1c6, 0, 0, V), TILE(0x30a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_SPIKE_SLOPE_22_DOWN_1)
+    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_2",             TILE(0x309, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x1c6, 0, 0, V), TILE(0x308, 0, H, 0),    COL_SPIKE_SLOPE_22_DOWN_2)
+	Metatile("WAVY_SLOPE_SPIKE_22_DOWN_EDGE",          TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30b, 0, H, 0), TILE(0x0e5, 0, 0, 0),    COL_NONE)
 	Metatile("WAVY_SLOPE_SPIKE_22_UP_UD_EDGE",            TILE(0x0e5, 0, H, V), TILE(0x30b, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_UP_UD_1",               TILE(0x308, 0, 0, V), TILE(0x1c6, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x309, 0, 0, V), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_UP_UD_2",               TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30a, 0, 0, V), TILE(0x1c6, 0, H, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_UD_1",             TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c6, 0, 0, 0), TILE(0x30a, 0, H, V), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_UD_2",             TILE(0x1c6, 0, 0, 0), TILE(0x308, 0, H, V), TILE(0x309, 0, H, V), TILE(0x000, 0, 0, V), COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_22_UP_UD_1",               TILE(0x308, 0, 0, V), TILE(0x1c6, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x309, 0, 0, V), COL_SPIKE_SLOPE_22_UP_UD_1)
+    Metatile("WAVY_SLOPE_SPIKE_22_UP_UD_2",               TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30a, 0, 0, V), TILE(0x1c6, 0, H, 0), COL_SPIKE_SLOPE_22_UP_UD_2)
+    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_UD_1",             TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c6, 0, 0, 0), TILE(0x30a, 0, H, V), COL_SPIKE_SLOPE_22_DOWN_UD_1)
+    Metatile("WAVY_SLOPE_SPIKE_22_DOWN_UD_2",             TILE(0x1c6, 0, 0, 0), TILE(0x308, 0, H, V), TILE(0x309, 0, H, V), TILE(0x000, 0, 0, V), COL_SPIKE_SLOPE_22_DOWN_UD_2)
 	Metatile("WAVY_SLOPE_SPIKE_22_DOWN_UD_EDGE",          TILE(0x30b, 0, H, V), TILE(0x0e5, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
 
 
@@ -2011,18 +2011,18 @@ const SCR_ENTRY metatiles[][5] = {
     Metatile("BLK_66_DOWN_UD_1",     TILE(0x03a, 0, H, V), TILE(0x1c8, 0, H, V), TILE(0x03a, 0, H, V), TILE(0x1c9, 0, H, V), COL_NONE)
     Metatile("BLK_66_DOWN_UD_2",     TILE(0x1c8, 0, H, V), TILE(0x000, 0, H, V), TILE(0x1c9, 0, H, V), TILE(0x000, 0, H, V), COL_NONE)
 
-    Metatile("WAVY_SLOPE_SPIKE_66_UP_1",          TILE(0x000, 0, H, 0), TILE(0x30c, 0, H, 0), TILE(0x30d, 0, H, 0), TILE(0x1c9, 0, H, V), COL_NONE) //wavy slope spikes 66 deg
-	Metatile("WAVY_SLOPE_SPIKE_66_UP_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x0e4, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30f, 0, H, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_UP_2",          TILE(0x30e, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, H, V), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_1",          TILE(0x000, 0, 0, 0), TILE(0x30e, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, V), COL_NONE) 
-	Metatile("WAVY_SLOPE_SPIKE_66_DOWN_EDGE",       TILE(0x0e4, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30f, 0, 0, 0), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_2",          TILE(0x30c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, V), TILE(0x30d, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_1",          TILE(0x30d, 0, H, V), TILE(0x1c9, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30c, 0, H, V), COL_NONE)
-	Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x30f, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x0e4, 0, 0, V), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_2",          TILE(0x1c9, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30e, 0, H, V), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_UD_1",          TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30e, 0, 0, V), COL_NONE) 
+    Metatile("WAVY_SLOPE_SPIKE_66_UP_1",          TILE(0x000, 0, H, 0), TILE(0x30c, 0, H, 0), TILE(0x30d, 0, H, 0), TILE(0x1c9, 0, H, V),      COL_SPIKE_SLOPE_66_UP_1) //wavy slope spikes 66 deg
+	Metatile("WAVY_SLOPE_SPIKE_66_UP_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x0e4, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30f, 0, H, 0),      COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_66_UP_2",          TILE(0x30e, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, H, V), TILE(0x000, 0, 0, 0),      COL_SPIKE_SLOPE_66_UP_2)
+    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_1",          TILE(0x000, 0, 0, 0), TILE(0x30e, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, V),    COL_SPIKE_SLOPE_66_DOWN_1) 
+	Metatile("WAVY_SLOPE_SPIKE_66_DOWN_EDGE",       TILE(0x0e4, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30f, 0, 0, 0), TILE(0x000, 0, 0, 0),    COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_2",          TILE(0x30c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, V), TILE(0x30d, 0, 0, 0),    COL_SPIKE_SLOPE_66_DOWN_2)
+    Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_1",          TILE(0x30d, 0, H, V), TILE(0x1c9, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30c, 0, H, V),   COL_SPIKE_SLOPE_66_UP_UD_1)
+	Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_EDGE",       TILE(0x000, 0, 0, 0), TILE(0x30f, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x0e4, 0, 0, V),   COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_66_UP_UD_2",          TILE(0x1c9, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x30e, 0, H, V), TILE(0x000, 0, 0, 0),   COL_SPIKE_SLOPE_66_UP_UD_2)
+    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_UD_1",          TILE(0x000, 0, 0, 0), TILE(0x1c9, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x30e, 0, 0, V), COL_SPIKE_SLOPE_66_DOWN_UD_1) 
 	Metatile("WAVY_SLOPE_SPIKE_66_DOWN_UD_EDGE",       TILE(0x30f, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x0e4, 0, H, V), TILE(0x000, 0, 0, 0), COL_NONE)
-    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_UD_2",          TILE(0x1c9, 0, 0, 0), TILE(0x30d, 0, 0, V), TILE(0x30c, 0, 0, V), TILE(0x000, 0, 0, 0), COL_NONE)
+    Metatile("WAVY_SLOPE_SPIKE_66_DOWN_UD_2",          TILE(0x1c9, 0, 0, 0), TILE(0x30d, 0, 0, V), TILE(0x30c, 0, 0, V), TILE(0x000, 0, 0, 0), COL_SPIKE_SLOPE_66_DOWN_UD_2)
 
 
     Metatile("1.6_SLOPE_45_UP",      TILE(0x000, 0, 0, 0), TILE(0x1cd, 0, 0, 0), TILE(0x1cd, 0, 0, 0), TILE(0x1dd, 0, 0, 0), COL_SLOPE_45_UP) // 0x690

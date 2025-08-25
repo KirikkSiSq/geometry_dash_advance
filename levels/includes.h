@@ -203,8 +203,16 @@
 #include "problematic/SP.h"
 #include "problematic/properties.h"
 
+// deathmoon
+#define deathmoon_ID 21
+
+#include "deathmoon/l1.h"
+#include "deathmoon/l2.h"
+#include "deathmoon/SP.h"
+#include "deathmoon/properties.h"
+
 // everyend
-#define everyend_ID 21
+#define everyend_ID 22
 
 #include "everyend/l1.h"
 #include "everyend/l2.h"
@@ -212,7 +220,7 @@
 #include "everyend/properties.h"
 
 // test
-#define test_ID 22
+#define test_ID 23
 
 #include "test/l1.h"
 #include "test/l2.h"
@@ -220,13 +228,13 @@
 #include "test/properties.h"
 
 // test2
-#define test2_ID 23
+#define test2_ID 24
 
 #include "test2/l1.h"
 #include "test2/l2.h"
 #include "test2/SP.h"
 #include "test2/properties.h"
 
-#define LEVEL_COUNT 24
+#define LEVEL_COUNT 25
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

@@ -1650,6 +1650,29 @@ const jmp_table spike_coll_jump_table[] = {
     not_an_spike, // COL_SLOPE_66_UP_UD_2,
     not_an_spike, // COL_SLOPE_66_DOWN_UD,
     not_an_spike, // COL_SLOPE_66_DOWN_UD_2,
+    
+    not_an_spike, // COL_SPIKE_SLOPE_45_UP
+    not_an_spike, // COL_SPIKE_SLOPE_45_DOWN
+    not_an_spike, // COL_SPIKE_SLOPE_45_UP_UD
+    not_an_spike, // COL_SPIKE_SLOPE_45_DOWN_UD
+    
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_1,
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_2,
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN,
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_2,
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD,
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD_2,
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD,
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD_2,
+
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_1,
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_2,
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN,
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_2,
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD,
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD_2,
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD,
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD_2,
 };
 
 // This function iterates through spikes that the player is touching and applies collision to it
@@ -1980,6 +2003,17 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
 
     // If collided with the horizontal edge, skip
     if (ejection_type == EJECTION_TYPE_HIPO) {
+        // Die if spike slope
+        if (col_type >= COL_SPIKE_SLOPE_START) {
+#ifdef DEBUG
+            if (!noclip) player_death = TRUE;
+            
+            // For noclip, the speed must be on bounds
+            col_type -= COL_SPIKE_SLOPE_START - COL_SLOPE_START;
+#else
+            player_death = TRUE;
+#endif
+        }
         // Set the player speed so it goes along the slope
         FIXED_16 speed_multiplier = FIXED_MUL(curr_player.player_x_speed, curr_player.slope_speed_multiplier);
         // Set to 1.0 if the slope goes down
@@ -2093,11 +2127,16 @@ u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
 }
 
 s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *player) {
+    s32 slope_type = col_type;
+
+    // If a slope spike variant, behave mostly like a normal slope
+    if (slope_type >= COL_SPIKE_SLOPE_START) slope_type -= COL_SPIKE_SLOPE_START - COL_SLOPE_START;
+
     struct triangle_t slope;
-    slope.type = col_type - COL_SLOPE_START;
+    slope.type = slope_type - COL_SLOPE_START;
 
     s32 eject;
-    switch (col_type) {
+    switch (slope_type) {
 
         // 45 DEG
 

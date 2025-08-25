@@ -33,7 +33,8 @@ ROM_DATA char *sound_test_songs_names[] = {
     "GROUND TO SPACE",
     "ULTIMATE DESTRUCTION",
     "ROSE",
-    "PROBLEMATIC"
+    "PROBLEMATIC",
+    "DEATH MOON"
 };
 
 ROM_DATA char *sound_test_song_files[] = {
@@ -57,7 +58,8 @@ ROM_DATA char *sound_test_song_files[] = {
     "GROUND.XM",
     "ULTIMATE.XM",
     "ROSE.XM",
-    "PROBLEMATIC.XM"
+    "PROBLEMATIC.XM",
+    "DEATHMOON.XM"
 };
 
 ROM_DATA u16 sound_test_song_ids[] = {
@@ -81,7 +83,8 @@ ROM_DATA u16 sound_test_song_ids[] = {
     MOD_GROUND,
     MOD_ULTIMATE,
     MOD_ROSE,
-    MOD_PROBLEM
+    MOD_PROBLEM,
+    MOD_DEATHMOON
 };
 void put_song_info(u32 song_id);
 
