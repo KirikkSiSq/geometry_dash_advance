@@ -11,7 +11,7 @@ const unsigned int everyend_properties[] = {
  /*gamemode*/      0,
  /*speed*/         1,
  /*level height*/  50,
- /*level width*/   4575,
+ /*level width*/   4574,
  /*song*/          MOD_EVERYEND,
  /*name length*/   8,
  /*difficulty*/    5,

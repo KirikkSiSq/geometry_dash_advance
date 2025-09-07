@@ -2328,7 +2328,7 @@ everyend_spr_data:
    .hword 138 @ metatile ID appareance
    .hword 0x0 @ z index 0
 @ Object 314
-   .hword 0x2b2 @ delta x
+   .hword 0x2a2 @ delta x
    .hword 0x300 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   
