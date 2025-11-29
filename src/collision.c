@@ -1015,7 +1015,7 @@ ARM_CODE void do_collision_with_objects() {
         // Check collision only if the slot is occupied
         struct ObjectSlot curr_object = object_buffer[slot];
         // If it has collision, continue. Check if this object is a touch col trigger, if so, check collision
-        if (curr_object.has_collision || (curr_object.object.type == COL_TRIGGER && curr_object.object.rotation & COL_TRIGGER_ROT_VAR_TOUCH_MASK)) {   
+        if (curr_object.has_collision || (curr_object.object.type == COL_TRIGGER && curr_object.object.attrib3 & COL_TRIGGER_ATTRIB3_TOUCH_MASK)) {   
             // If is occupied and it hasn't been activated yet, continue
             if (curr_object.occupied && curr_object.activated[curr_player_id] == FALSE) {
                 // If it is behind the collision distance, skip

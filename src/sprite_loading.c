@@ -386,7 +386,7 @@ ARM_CODE void display_objects() {
                     object_buffer[index].object.y = coin_y_pos[coin_id] >> SUBPIXEL_BITS;
                     if (global_timer & 1) object_buffer[index].object.x -= 1;
                 }
-            } else if (!(curr_object.rotation & COL_TRIGGER_ROT_VAR_TOUCH_MASK)) {
+            } else if (!(curr_object.attrib3 & COL_TRIGGER_ATTRIB3_TOUCH_MASK)) {
                 // If a color trigger and not touch trigger, then just run collision
                 do_collision(&object_buffer[index]);
             }

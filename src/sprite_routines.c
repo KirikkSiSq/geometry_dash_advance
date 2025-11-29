@@ -221,7 +221,7 @@ void blue_dual_portal(struct ObjectSlot *objectSlot) {
 void col_trigger(struct ObjectSlot *objectSlot) {
     struct Object col_trigger = objectSlot->object;
     
-    u32 is_touch_trigger = col_trigger.rotation & COL_TRIGGER_ROT_VAR_TOUCH_MASK;
+    u32 is_touch_trigger = col_trigger.attrib3 & COL_TRIGGER_ATTRIB3_TOUCH_MASK;
 
     // If the trigger is a touch trigger, then behave like a normal object,
     // else if the player is right of the horizontal center of the trigger, activate the color trigger
@@ -267,7 +267,7 @@ void col_trigger(struct ObjectSlot *objectSlot) {
             }
         }
 
-        if (col_trigger.rotation & COL_TRIGGER_ROT_VAR_BLENDING_MASK) {
+        if (col_trigger.attrib3 & COL_TRIGGER_ATTRIB3_BLENDING_MASK) {
             col_channels_flags[channel] |= COL_CHANNEL_BLENDING_FLAG;
         } else {
             col_channels_flags[channel] &= ~COL_CHANNEL_BLENDING_FLAG;
