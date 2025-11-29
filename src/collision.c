@@ -770,7 +770,7 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             return 0;
             
         case COL_OUTLINE_TOP:
-            if (y_inside_block < 2) {
+            if (y_inside_block < 3) {
                 eject_bottom = y_inside_block;
                 eject_top = 0x01 - y_inside_block;
                 break;
@@ -778,7 +778,7 @@ u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             return 0;
             
         case COL_OUTLINE_BOTTOM:
-            if (y_inside_block > 13) {
+            if (y_inside_block > 12) {
                 eject_bottom = y_inside_block - 0xf;
                 eject_top = 0x10 - y_inside_block;
                 break;
@@ -1711,6 +1711,7 @@ struct triangle_t {
     struct point_t p2;
     struct point_t p3;
     u16 type;
+    u8 hurts;
 };
 
 const s32 slope_step[];
@@ -1811,6 +1812,8 @@ s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t t
     s32 hipo_x1, hipo_y1, hipo_x2, hipo_y2;
 
     get_hipotenuse(triangle, &hipo_x1, &hipo_y1, &hipo_x2, &hipo_y2);
+
+    if (triangle.hurts) circle.radius += 3;
 
     return (u32) find_squared_distance_to_line(circle.cx, circle.cy, hipo_x1, hipo_y1, hipo_x2, hipo_y2) <= circle.radius * circle.radius;
 }
@@ -2128,12 +2131,17 @@ u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
 
 s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *player) {
     s32 slope_type = col_type;
+    bool hurts = FALSE;
 
     // If a slope spike variant, behave mostly like a normal slope
-    if (slope_type >= COL_SPIKE_SLOPE_START) slope_type -= COL_SPIKE_SLOPE_START - COL_SLOPE_START;
+    if (slope_type >= COL_SPIKE_SLOPE_START) {
+        slope_type -= COL_SPIKE_SLOPE_START - COL_SLOPE_START;
+        hurts = TRUE;
+    }
 
     struct triangle_t slope;
     slope.type = slope_type - COL_SLOPE_START;
+    slope.hurts = hurts;
 
     s32 eject;
     switch (slope_type) {

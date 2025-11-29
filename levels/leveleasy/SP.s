@@ -33,9 +33,8 @@ leveleasy_spr_data:
    .hword 0x1b @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 6
    .hword 0x25 @ delta x
    .hword 0x1b0 @ y
@@ -52,9 +51,8 @@ leveleasy_spr_data:
    .hword 0xa @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 9
    .hword 0x26 @ delta x
    .hword 0x1b0 @ y
@@ -65,9 +63,8 @@ leveleasy_spr_data:
    .hword 0x1a @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 11
    .hword 0x16 @ delta x
    .hword 0x1b0 @ y
@@ -84,9 +81,8 @@ leveleasy_spr_data:
    .hword 0x1a @ delta x
    .hword 0x170 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 14
    .hword 0x66 @ delta x
    .hword 0x1b0 @ y
@@ -99,16 +95,14 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0xd24 @ changes BG for 420 frames
    .hword 0x7fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 16
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
    .hword 0xd25 @ changes GROUND for 420 frames
    .hword 0x4e80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 17
    .hword 0xa0 @ delta x
    .hword 0x1a0 @ y
@@ -187,16 +181,14 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x260 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 30
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x580 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 31
    .hword 0x30 @ delta x
    .hword 0x1b0 @ y
@@ -231,23 +223,20 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 37
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 38
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 39
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -312,9 +301,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 50
    .hword 0xf @ delta x
    .hword 0x1b0 @ y
@@ -349,9 +337,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 56
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -380,25 +367,22 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 61
    .hword 0x15 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xd24 @ changes BG for 420 frames
    .hword 0x7e20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 62
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0xd25 @ changes GROUND for 420 frames
    .hword 0x4940 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 63
    .hword 0x5 @ delta x
    .hword 0x1b0 @ y
@@ -409,9 +393,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 65
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -448,32 +431,28 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x440c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 71
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3008 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 72
    .hword 0x119 @ delta x
    .hword 0xde @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 73
    .hword 0x0 @ delta x
    .hword 0xef @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x274 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 74
    .hword 0x7 @ delta x
    .hword 0x140 @ y
@@ -580,16 +559,14 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 91
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x174 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 92
    .hword 0x1ab @ delta x
    .hword 0x1b0 @ y
@@ -648,9 +625,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 102
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -679,9 +655,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 107
    .hword 0xab @ delta x
    .hword 0x1b0 @ y
@@ -728,9 +703,8 @@ leveleasy_spr_data:
    .hword 0x2a @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 115
    .hword 0x2a @ delta x
    .hword 0x1a0 @ y
@@ -741,30 +715,26 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 117
    .hword 0x40 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 118
    .hword 0x40 @ delta x
    .hword 0x180 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 119
    .hword 0x50 @ delta x
    .hword 0x190 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 120
    .hword 0xac @ delta x
    .hword 0x1a0 @ y
@@ -813,16 +783,14 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x441f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 128
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
    .hword 0x3c5 @ changes GROUND for 120 frames
    .hword 0x3814 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 129
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
@@ -863,16 +831,14 @@ leveleasy_spr_data:
    .hword 0xf @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 136
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 137
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
@@ -883,9 +849,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 139
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -902,9 +867,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 142
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -921,9 +885,8 @@ leveleasy_spr_data:
    .hword 0x30 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 145
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -934,9 +897,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 147
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -953,9 +915,8 @@ leveleasy_spr_data:
    .hword 0x30 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 150
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -972,9 +933,8 @@ leveleasy_spr_data:
    .hword 0x1 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 153
    .hword 0x55 @ delta x
    .hword 0x158 @ y
@@ -985,9 +945,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 155
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -998,9 +957,8 @@ leveleasy_spr_data:
    .hword 0x70 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 157
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1017,9 +975,8 @@ leveleasy_spr_data:
    .hword 0x8 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 160
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1030,9 +987,8 @@ leveleasy_spr_data:
    .hword 0x70 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 162
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1055,9 +1011,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 166
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1074,9 +1029,8 @@ leveleasy_spr_data:
    .hword 0x4 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 169
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1087,9 +1041,8 @@ leveleasy_spr_data:
    .hword 0x72 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 171
    .hword 0xe @ delta x
    .hword 0x14a @ y
@@ -1100,9 +1053,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 173
    .hword 0x0 @ delta x
    .hword 0x16a @ y
@@ -1119,9 +1071,8 @@ leveleasy_spr_data:
    .hword 0xe @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 176
    .hword 0x0 @ delta x
    .hword 0x16a @ y
@@ -1138,9 +1089,8 @@ leveleasy_spr_data:
    .hword 0xf @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 179
    .hword 0x0 @ delta x
    .hword 0x16a @ y
@@ -1163,9 +1113,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 183
    .hword 0x0 @ delta x
    .hword 0x16a @ y
@@ -1212,53 +1161,46 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 191
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 192
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 193
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 194
    .hword 0x10 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x7a3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 195
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0x3c5 @ changes GROUND for 120 frames
    .hword 0x7c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 196
    .hword 0x0 @ delta x
    .hword 0x18b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 197
    .hword 0x0 @ delta x
    .hword 0x19b @ y
@@ -1269,16 +1211,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 199
    .hword 0x10 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 200
    .hword 0x0 @ delta x
    .hword 0x19a @ y
@@ -1289,16 +1229,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 202
    .hword 0x10 @ delta x
    .hword 0x189 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 203
    .hword 0x0 @ delta x
    .hword 0x199 @ y
@@ -1309,16 +1247,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 205
    .hword 0x10 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 206
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -1329,9 +1265,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x187 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 208
    .hword 0x0 @ delta x
    .hword 0x197 @ y
@@ -1342,16 +1277,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b7 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 210
    .hword 0x10 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 211
    .hword 0x0 @ delta x
    .hword 0x196 @ y
@@ -1362,16 +1295,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b6 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 213
    .hword 0x10 @ delta x
    .hword 0x185 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 214
    .hword 0x0 @ delta x
    .hword 0x195 @ y
@@ -1382,16 +1313,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b5 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 216
    .hword 0x10 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 217
    .hword 0x0 @ delta x
    .hword 0x194 @ y
@@ -1402,16 +1331,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b4 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 219
    .hword 0x10 @ delta x
    .hword 0x183 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 220
    .hword 0x0 @ delta x
    .hword 0x193 @ y
@@ -1422,16 +1349,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b3 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 222
    .hword 0x10 @ delta x
    .hword 0x182 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 223
    .hword 0x0 @ delta x
    .hword 0x192 @ y
@@ -1442,16 +1367,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b2 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 225
    .hword 0x10 @ delta x
    .hword 0x181 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 226
    .hword 0x0 @ delta x
    .hword 0x191 @ y
@@ -1462,16 +1385,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b1 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 228
    .hword 0x20 @ delta x
    .hword 0x17f @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 229
    .hword 0x0 @ delta x
    .hword 0x18f @ y
@@ -1482,16 +1403,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1af @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 231
    .hword 0x10 @ delta x
    .hword 0x17e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 232
    .hword 0x0 @ delta x
    .hword 0x18e @ y
@@ -1502,16 +1421,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ae @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 234
    .hword 0x10 @ delta x
    .hword 0x17d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 235
    .hword 0x0 @ delta x
    .hword 0x18d @ y
@@ -1522,16 +1439,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ad @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 237
    .hword 0x10 @ delta x
    .hword 0x17c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 238
    .hword 0x0 @ delta x
    .hword 0x18c @ y
@@ -1542,16 +1457,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ac @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 240
    .hword 0x10 @ delta x
    .hword 0x17b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 241
    .hword 0x0 @ delta x
    .hword 0x18b @ y
@@ -1562,16 +1475,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ab @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 243
    .hword 0x10 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 244
    .hword 0x0 @ delta x
    .hword 0x18a @ y
@@ -1582,16 +1493,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 246
    .hword 0x10 @ delta x
    .hword 0x179 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 247
    .hword 0x0 @ delta x
    .hword 0x189 @ y
@@ -1602,9 +1511,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a9 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 249
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -1615,9 +1523,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 251
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -1628,9 +1535,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x177 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 253
    .hword 0x0 @ delta x
    .hword 0x187 @ y
@@ -1641,9 +1547,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a7 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 255
    .hword 0x0 @ delta x
    .hword 0x1ae @ y
@@ -1654,9 +1559,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 257
    .hword 0x0 @ delta x
    .hword 0x186 @ y
@@ -1667,16 +1571,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a6 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 259
    .hword 0x10 @ delta x
    .hword 0x175 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 260
    .hword 0x0 @ delta x
    .hword 0x185 @ y
@@ -1687,9 +1589,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a5 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 262
    .hword 0x0 @ delta x
    .hword 0x1ac @ y
@@ -1700,9 +1601,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 264
    .hword 0x0 @ delta x
    .hword 0x184 @ y
@@ -1713,16 +1613,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 266
    .hword 0x10 @ delta x
    .hword 0x173 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 267
    .hword 0x0 @ delta x
    .hword 0x183 @ y
@@ -1733,9 +1631,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a3 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 269
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
@@ -1746,9 +1643,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x172 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 271
    .hword 0x0 @ delta x
    .hword 0x182 @ y
@@ -1759,32 +1655,28 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a2 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 273
    .hword 0x10 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x5016 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 274
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x3c5 @ changes GROUND for 120 frames
    .hword 0x3c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 275
    .hword 0x0 @ delta x
    .hword 0x171 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 276
    .hword 0x0 @ delta x
    .hword 0x181 @ y
@@ -1795,9 +1687,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a1 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 278
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
@@ -1808,9 +1699,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x172 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 280
    .hword 0x0 @ delta x
    .hword 0x182 @ y
@@ -1821,16 +1711,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a2 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 282
    .hword 0x10 @ delta x
    .hword 0x173 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 283
    .hword 0x0 @ delta x
    .hword 0x183 @ y
@@ -1841,9 +1729,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a3 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 285
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
@@ -1854,9 +1741,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 287
    .hword 0x0 @ delta x
    .hword 0x184 @ y
@@ -1867,16 +1753,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 289
    .hword 0x10 @ delta x
    .hword 0x175 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 290
    .hword 0x0 @ delta x
    .hword 0x185 @ y
@@ -1887,9 +1771,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a5 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 292
    .hword 0x0 @ delta x
    .hword 0x1ac @ y
@@ -1900,9 +1783,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 294
    .hword 0x0 @ delta x
    .hword 0x186 @ y
@@ -1913,16 +1795,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a6 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 296
    .hword 0x10 @ delta x
    .hword 0x177 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 297
    .hword 0x0 @ delta x
    .hword 0x187 @ y
@@ -1933,9 +1813,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a7 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 299
    .hword 0x0 @ delta x
    .hword 0x1ae @ y
@@ -1946,9 +1825,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 301
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -1959,9 +1837,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x179 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 303
    .hword 0x0 @ delta x
    .hword 0x189 @ y
@@ -1972,9 +1849,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a9 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 305
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -1985,9 +1861,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 307
    .hword 0x0 @ delta x
    .hword 0x18a @ y
@@ -1998,16 +1873,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 309
    .hword 0x10 @ delta x
    .hword 0x17b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 310
    .hword 0x0 @ delta x
    .hword 0x18b @ y
@@ -2018,16 +1891,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ab @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 312
    .hword 0x10 @ delta x
    .hword 0x17c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 313
    .hword 0x0 @ delta x
    .hword 0x18c @ y
@@ -2038,16 +1909,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ac @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 315
    .hword 0x10 @ delta x
    .hword 0x17d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 316
    .hword 0x0 @ delta x
    .hword 0x18d @ y
@@ -2058,16 +1927,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ad @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 318
    .hword 0x10 @ delta x
    .hword 0x17e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 319
    .hword 0x0 @ delta x
    .hword 0x18e @ y
@@ -2078,16 +1945,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ae @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 321
    .hword 0x10 @ delta x
    .hword 0x17f @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 322
    .hword 0x0 @ delta x
    .hword 0x18f @ y
@@ -2098,16 +1963,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1af @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 324
    .hword 0x20 @ delta x
    .hword 0x181 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 325
    .hword 0x0 @ delta x
    .hword 0x191 @ y
@@ -2118,16 +1981,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b1 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 327
    .hword 0x10 @ delta x
    .hword 0x182 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 328
    .hword 0x0 @ delta x
    .hword 0x192 @ y
@@ -2138,16 +1999,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b2 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 330
    .hword 0x10 @ delta x
    .hword 0x183 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 331
    .hword 0x0 @ delta x
    .hword 0x193 @ y
@@ -2158,16 +2017,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b3 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 333
    .hword 0x10 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 334
    .hword 0x0 @ delta x
    .hword 0x194 @ y
@@ -2178,16 +2035,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b4 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 336
    .hword 0x10 @ delta x
    .hword 0x185 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 337
    .hword 0x0 @ delta x
    .hword 0x195 @ y
@@ -2198,16 +2053,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b5 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 339
    .hword 0x10 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 340
    .hword 0x0 @ delta x
    .hword 0x196 @ y
@@ -2218,16 +2071,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b6 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 342
    .hword 0x10 @ delta x
    .hword 0x187 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 343
    .hword 0x0 @ delta x
    .hword 0x197 @ y
@@ -2238,16 +2089,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b7 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 345
    .hword 0x10 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 346
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -2258,9 +2107,8 @@ leveleasy_spr_data:
    .hword 0x10 @ delta x
    .hword 0x189 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 348
    .hword 0x0 @ delta x
    .hword 0x199 @ y
@@ -2271,16 +2119,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 350
    .hword 0x10 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 351
    .hword 0x0 @ delta x
    .hword 0x19a @ y
@@ -2291,16 +2137,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 353
    .hword 0x10 @ delta x
    .hword 0x18b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 354
    .hword 0x0 @ delta x
    .hword 0x19b @ y
@@ -2311,37 +2155,32 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 356
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 357
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 358
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 359
    .hword 0x10 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 360
    .hword 0x10 @ delta x
    .hword 0x1ab @ y
@@ -2352,25 +2191,22 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1bb @ y
    .hword 0x2c @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 362
    .hword 0x140 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x964 @ changes BG for 300 frames
    .hword 0x553f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 363
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x965 @ changes GROUND for 300 frames
    .hword 0x401a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 364
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -2447,16 +2283,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 377
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 378
    .hword 0x17 @ delta x
    .hword 0x180 @ y
@@ -2467,23 +2301,20 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 380
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 381
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 382
    .hword 0x17 @ delta x
    .hword 0x190 @ y
@@ -2494,16 +2325,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 384
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 385
    .hword 0x16 @ delta x
    .hword 0x190 @ y
@@ -2514,16 +2343,14 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 387
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 388
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -2582,9 +2409,8 @@ leveleasy_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 398
    .hword 0x2 @ delta x
    .hword 0x1b0 @ y
@@ -2615,16 +2441,14 @@ leveleasy_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x20df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 403
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x416 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 404
    .hword 0x0 @ delta x
    .hword 0x130 @ y

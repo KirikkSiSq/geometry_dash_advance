@@ -11,8 +11,7 @@ test2_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x6c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -49,15 +48,13 @@ test2_spr_data:
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x6c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 8
    .hword 0x8 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 704 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 9
    .hword 0x28 @ delta x
    .hword 0x160 @ y
@@ -130,64 +127,56 @@ test2_spr_data:
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0x3e0 @ color
-   .hword 0x11 @ copies {copy_channel}
-   .hword 0x0 @ normal trigger
+   .hword 0x11 @ copies {copy_channel} normal trigger
 @ Object 21
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e0 @ color
-   .hword 0x11 @ copies {copy_channel}
-   .hword 0x1 @ blending normal trigger
+   .hword 0x31 @ copies {copy_channel} blending normal trigger
 @ Object 22
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x3e0 @ color
-   .hword 0x11 @ copies {copy_channel}
-   .hword 0x0 @ normal trigger
+   .hword 0x11 @ copies {copy_channel} normal trigger
 @ Object 23
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x581a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 24
    .hword 0x10 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x91 @ changes 2 for 18 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 25
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x90 @ changes 1 for 18 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 26
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 27
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 28
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -288,37 +277,32 @@ test2_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1488 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 45
    .hword 0x10 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1492 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 46
    .hword 0x10 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1493 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 47
    .hword 0x10 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1492 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 48
    .hword 0x10 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1493 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 49
    .hword 0x1a @ delta x
    .hword 0x166 @ y
@@ -330,16 +314,14 @@ test2_spr_data:
    .hword 0x26 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1488 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 51
    .hword 0x10 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1488 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 52
    .hword 0x40 @ delta x
    .hword 0x160 @ y
@@ -386,16 +368,14 @@ test2_spr_data:
    .hword 0x40 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1490 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 60
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1490 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 61
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y

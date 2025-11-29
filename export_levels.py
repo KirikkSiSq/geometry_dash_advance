@@ -79,13 +79,24 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
 
                     y = int(obj['y'])  # Convert to int
                     gid = int(obj['gid'])
+                    gid &= 0x0fffffff
                     if gid > 16384:
                         gid = int(obj['gid']) - 16385  # Sprite
                     else:
                         saved_metatile_id = gid - 1
                         gid = 43
+                        
+                    gid &= 0x0fffffff
 
                     # Write the assembly instructions
+                    
+                    # ALL OBJECTS
+                    # x -> delta x (from last sprite)
+                    # y -> y position
+                    # t -> sprite id 
+                    # hword 1: xxxx xxxx xxxx xxxx 
+                    # hword 2: yyyy yyyy yyyy yyyy
+                    # hword 3: tttt tttt tttt tttt
                     out_file.write(f"@ Object {counter}\n")
                     out_file.write(f"   .hword {hex(delta_x)} @ delta x\n")
                     out_file.write(f"   .hword {hex(y)} @ y\n")
@@ -163,12 +174,17 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                             
 
                         color_bgr555 = rgb888_to_rgb555_24bit(color)
-                    
+                        # Color trigger
+                        # f -> duration in frames               E -> enable copy     T -> touch trigger
+                        # b,g,r -> blue, green, blue components c -> copy channel id
+                        # C -> channel id                       B -> blending
+                        # hword 4: ffff ffff ffff fCCC 
+                        # hword 5: 0bbb bbgg gggr rrrr
+                        # hword 6: 0000 0000 0TBc cccE
                         out_file.write(f"   .hword {hex((frames << 3) | channel_id)} @ changes {channel} for {frames} frames\n")
                         out_file.write(f"   .hword {hex(color_bgr555)} @ color\n")
-                        out_file.write(f"   .hword {hex((copy_channel_id << 1) | copy)} @ {"copies {copy_channel}" if copy else "doesn't copy any channel"}\n")
-                        out_file.write(f"   .hword {hex((touch << 1) | blending)} @ {"blending " if blending else ""}{"touch trigger" if touch else "normal trigger"}\n")
-                        byte_counter += 8
+                        out_file.write(f"   .hword {hex((touch << 6) | (blending << 5) | (copy_channel_id << 1) | copy)} @ {"copies {copy_channel}" if copy else "doesn't copy any channel"} {"blending " if blending else ""}{"touch trigger" if touch else "normal trigger"}\n")
+                        byte_counter += 6
                     else:
                         h_flip = False
                         v_flip = False
@@ -222,11 +238,29 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                             
                     
                         if gid == 43 or gid == 44:
-                            out_file.write(f"   .hword {hex(((priority & 0x7) << 3) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} \n")
+                            # Sprite that behaves like a metatile
+                            # P -> priority        M -> metatile id    A -> angle
+                            # H -> horizontal flip Z -> z index (0-62)
+                            # V -> vertical flip   p -> palette
+                            # hword 4: pppp ZZZZ ZZPP PEHV 
+                            # hword 5: MMMM MMMM MMMM MMMM
+                            # hword 6: AAAA AAAA AAAA AAAA
+                            out_file.write(f"   .hword {hex((pal << 12) | ((zindex & 0b111111) << 6) | ((priority & 0x7) << 3) | (enable_rotation << 2) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} z index {zindex}{f" pal {pal}" if pal != 0 else ""} \n")
                             out_file.write(f"   .hword {graphics} @ metatile ID appareance\n")
-                            out_file.write(f"   .hword {hex(zindex | (pal << 6))} @ z index {zindex}{f" pal {pal}" if pal != 0 else ""}\n")
+                            if enable_rotation:
+                                out_file.write(f"   .hword {int(rotation / 360.0 * 65536)} @ rotation\n")
+                                byte_counter += 2
+                            byte_counter += 4
                             byte_counter += 6
                         elif gid == 89:
+                            # Secret coin
+                            # P -> priority        A -> 16 bit angle   E -> enable rotation
+                            # H -> horizontal flip Z -> z index (0-62) C, c -> coin id (usually two bits (C), but there is no bound so it can take the rest of the hword (c))
+                            # V -> vertical flip   p -> palette
+                            # hword 4: cccc cccc CCPP PEHV 
+                            # hword 5: 0000 00pp ppZZ ZZZZ
+                            # If E is 1:
+                            # hword 6: AAAA AAAA AAAA AAAA
                             out_file.write(f"   .hword {hex((coin_counter << 7) | ((priority & 0x7) << 3) | (enable_rotation << 2) | (h_flip << 1) | v_flip)} @ coin {coin_counter} bg layer {priority} {"rotated" if enable_rotation else "non rotated"} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} \n")
                             out_file.write(f"   .hword {hex(zindex | (pal << 6))} @ z index {zindex}{f" pal {pal}" if pal != 0 else ""}\n")
                             if enable_rotation:
@@ -235,6 +269,14 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                             byte_counter += 4
                             coin_counter += 1
                         else:
+                            # Normal sprite
+                            # P -> priority        A -> 16 bit angle   E -> enable rotation
+                            # H -> horizontal flip Z -> z index (0-62)
+                            # V -> vertical flip   p -> palette
+                            # hword 4: 0000 0000 00PP PEHV 
+                            # hword 5: 0000 00pp ppZZ ZZZZ
+                            # If E is 1:
+                            # hword 6: AAAA AAAA AAAA AAAA
                             out_file.write(f"   .hword {hex(((priority & 0x7) << 3) | (enable_rotation << 2) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"rotated" if enable_rotation else "non rotated"} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} \n")
                             out_file.write(f"   .hword {hex(zindex | (pal << 6))} @ z index {zindex}{f" pal {pal}" if pal != 0 else ""}\n")
                             if enable_rotation:

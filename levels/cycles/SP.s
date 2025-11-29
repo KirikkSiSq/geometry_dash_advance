@@ -21,9 +21,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 4
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -40,9 +39,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 7
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -65,9 +63,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 11
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -90,9 +87,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 15
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -219,16 +215,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0xb44 @ changes BG for 360 frames
    .hword 0x2011 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 36
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xb45 @ changes GROUND for 360 frames
    .hword 0x483f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 37
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -720,51 +714,44 @@ cycles_spr_data:
    .hword 0xc @ delta x
    .hword 0xf0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 119
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 120
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 121
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 122
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 123
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 124
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 17 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 125
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -787,9 +774,8 @@ cycles_spr_data:
    .hword 0x24 @ delta x
    .hword 0x148 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 129
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -1018,8 +1004,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x4b4 @ changes BG for 150 frames
    .hword 0x401f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 167
    .hword 0x8 @ delta x
    .hword 0x178 @ y
@@ -1030,9 +1015,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 169
    .hword 0x18 @ delta x
    .hword 0x130 @ y
@@ -1185,16 +1169,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 194
    .hword 0x0 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 195
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -1273,16 +1255,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3c0a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 208
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3c0a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 209
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -1615,9 +1595,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 263
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -1635,9 +1614,8 @@ cycles_spr_data:
    .hword 0xc @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 266
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -1661,9 +1639,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 270
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -1718,9 +1695,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 279
    .hword 0xc @ delta x
    .hword 0x150 @ y
@@ -1738,9 +1714,8 @@ cycles_spr_data:
    .hword 0x4 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 282
    .hword 0xc @ delta x
    .hword 0x140 @ y
@@ -1764,9 +1739,8 @@ cycles_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2c @ type
-   .hword 0x21 @ bg layer 4  flipped vertically 
+   .hword 0x21 @ bg layer 4  flipped vertically z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 286
    .hword 0x1c @ delta x
    .hword 0x140 @ y
@@ -1984,16 +1958,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x781d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 322
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 323
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -2052,8 +2024,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 332
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -2096,8 +2067,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x641f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 339
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2134,8 +2104,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x441f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 345
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -2178,8 +2147,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 352
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2222,8 +2190,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7c1e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 359
    .hword 0x10 @ delta x
    .hword 0x180 @ y
@@ -2260,8 +2227,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x781f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 365
    .hword 0x10 @ delta x
    .hword 0x150 @ y
@@ -2298,8 +2264,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7c19 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 371
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -2342,8 +2307,7 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x401f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 378
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -2362,24 +2326,21 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 381
    .hword 0x90 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x381d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 382
    .hword 0x90 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x781f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 383
    .hword 0x10 @ delta x
    .hword 0x168 @ y
@@ -2392,32 +2353,28 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x4c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 385
    .hword 0x90 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x745f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 386
    .hword 0x90 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x781b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 387
    .hword 0x90 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x601f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 388
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2436,16 +2393,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0xc4 @ changes BG for 24 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 391
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xc4 @ changes BG for 24 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 392
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2508,16 +2463,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x2c11 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 402
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x3c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 403
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -2686,16 +2639,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x5c07 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 431
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x7d80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 432
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -3044,16 +2995,14 @@ cycles_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3c5f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 490
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x381f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 491
    .hword 0x0 @ delta x
    .hword 0x170 @ y

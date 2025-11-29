@@ -11,8 +11,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x784 @ changes BG for 240 frames
    .hword 0x200d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0xac @ delta x
    .hword 0x2b8 @ y
@@ -89,9 +88,8 @@ theoryofeverything_spr_data:
    .hword 0x30 @ delta x
    .hword 0x2a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 15
    .hword 0x2 @ delta x
    .hword 0x294 @ y
@@ -132,9 +130,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x2a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 22
    .hword 0x14 @ delta x
    .hword 0x230 @ y
@@ -187,9 +184,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x28e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 31
    .hword 0x8 @ delta x
    .hword 0x220 @ y
@@ -248,9 +244,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x264 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 41
    .hword 0x0 @ delta x
    .hword 0x274 @ y
@@ -267,9 +262,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x228 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 44
    .hword 0x0 @ delta x
    .hword 0x238 @ y
@@ -472,9 +466,8 @@ theoryofeverything_spr_data:
    .hword 0xc @ delta x
    .hword 0x298 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 78
    .hword 0x2 @ delta x
    .hword 0x288 @ y
@@ -491,9 +484,8 @@ theoryofeverything_spr_data:
    .hword 0x2 @ delta x
    .hword 0x298 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 81
    .hword 0x4 @ delta x
    .hword 0x230 @ y
@@ -644,16 +636,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x107 @ changes LINE for 32 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 106
    .hword 0x0 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0xfd @ changes GROUND for 31 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 107
    .hword 0x8 @ delta x
    .hword 0x260 @ y
@@ -672,8 +662,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x78c2 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 110
    .hword 0x0 @ delta x
    .hword 0x240 @ y
@@ -1286,32 +1275,28 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xcbf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 212
    .hword 0x0 @ delta x
    .hword 0x29c @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xcbf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 213
    .hword 0x10 @ delta x
    .hword 0x284 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0xc9b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 214
    .hword 0x0 @ delta x
    .hword 0x29c @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0xc9b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 215
    .hword 0x50 @ delta x
    .hword 0x290 @ y
@@ -1342,8 +1327,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x4403 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 220
    .hword 0x0 @ delta x
    .hword 0x240 @ y
@@ -1434,16 +1418,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3413 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 235
    .hword 0x0 @ delta x
    .hword 0x240 @ y
    .hword 0x3 @ type
    .hword 0xf7 @ changes LINE for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 236
    .hword 0x0 @ delta x
    .hword 0x270 @ y
@@ -1462,8 +1444,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x202c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 239
    .hword 0x10 @ delta x
    .hword 0x290 @ y
@@ -1588,9 +1569,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x274 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 260
    .hword 0x0 @ delta x
    .hword 0x284 @ y
@@ -1613,9 +1593,8 @@ theoryofeverything_spr_data:
    .hword 0xc @ delta x
    .hword 0x274 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 264
    .hword 0x0 @ delta x
    .hword 0x284 @ y
@@ -1644,9 +1623,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x274 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 269
    .hword 0x0 @ delta x
    .hword 0x284 @ y
@@ -1810,8 +1788,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 296
    .hword 0x0 @ delta x
    .hword 0x260 @ y
@@ -1944,16 +1921,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 318
    .hword 0x0 @ delta x
    .hword 0x1c0 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x542f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 319
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
@@ -2002,16 +1977,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x3c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 327
    .hword 0x0 @ delta x
    .hword 0x1c0 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x3435 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 328
    .hword 0x4 @ delta x
    .hword 0x230 @ y
@@ -2042,16 +2015,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 333
    .hword 0x0 @ delta x
    .hword 0x1c0 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x542f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 334
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
@@ -2076,16 +2047,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 338
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 339
    .hword 0x0 @ delta x
    .hword 0x230 @ y
@@ -2159,8 +2128,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 351
    .hword 0x0 @ delta x
    .hword 0x220 @ y
@@ -2173,8 +2141,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 353
    .hword 0x0 @ delta x
    .hword 0x220 @ y
@@ -2260,8 +2227,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 367
    .hword 0x4 @ delta x
    .hword 0x260 @ y
@@ -2275,8 +2241,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 369
    .hword 0x4 @ delta x
    .hword 0x210 @ y
@@ -2350,8 +2315,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 381
    .hword 0x4 @ delta x
    .hword 0x260 @ y
@@ -2370,8 +2334,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 384
    .hword 0x4 @ delta x
    .hword 0x200 @ y
@@ -2460,8 +2423,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 398
    .hword 0x4 @ delta x
    .hword 0x1ee @ y
@@ -2480,8 +2442,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 401
    .hword 0x4 @ delta x
    .hword 0x1ed @ y
@@ -2544,16 +2505,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x41f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 411
    .hword 0x0 @ delta x
    .hword 0x268 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x41f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 412
    .hword 0x10 @ delta x
    .hword 0x240 @ y
@@ -2566,8 +2525,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 414
    .hword 0x4 @ delta x
    .hword 0x230 @ y
@@ -2580,8 +2538,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 416
    .hword 0x14 @ delta x
    .hword 0x240 @ y
@@ -2606,8 +2563,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1be7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 420
    .hword 0x4 @ delta x
    .hword 0x230 @ y
@@ -2620,8 +2576,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x13a5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 422
    .hword 0x4 @ delta x
    .hword 0x260 @ y
@@ -2652,8 +2607,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xae4 @ changes BG for 348 frames
    .hword 0xcb6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 427
    .hword 0x4 @ delta x
    .hword 0x240 @ y
@@ -2710,9 +2664,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x218 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 436
    .hword 0x0 @ delta x
    .hword 0x228 @ y
@@ -2729,9 +2682,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x270 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 439
    .hword 0x0 @ delta x
    .hword 0x280 @ y
@@ -3065,16 +3017,14 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x294 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 492
    .hword 0x10 @ delta x
    .hword 0x294 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 493
    .hword 0x0 @ delta x
    .hword 0x29c @ y
@@ -3091,9 +3041,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x294 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 496
    .hword 0x0 @ delta x
    .hword 0x2b0 @ y
@@ -3272,44 +3221,38 @@ theoryofeverything_spr_data:
    .hword 0x24 @ delta x
    .hword 0x1e9 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 525
    .hword 0x0 @ delta x
    .hword 0x1f9 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 526
    .hword 0x0 @ delta x
    .hword 0x209 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 527
    .hword 0x0 @ delta x
    .hword 0x219 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 528
    .hword 0x0 @ delta x
    .hword 0x229 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 529
    .hword 0x0 @ delta x
    .hword 0x239 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 159 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 530
    .hword 0x0 @ delta x
    .hword 0x249 @ y
@@ -3344,9 +3287,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x259 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 144 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 536
    .hword 0x0 @ delta x
    .hword 0x269 @ y
@@ -3443,9 +3385,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x259 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 144 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 552
    .hword 0x14 @ delta x
    .hword 0x2b4 @ y
@@ -3486,9 +3427,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x27d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 144 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 559
    .hword 0x0 @ delta x
    .hword 0x28d @ y
@@ -3544,16 +3484,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 568
    .hword 0x0 @ delta x
    .hword 0x210 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x54a1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 569
    .hword 0x0 @ delta x
    .hword 0x250 @ y
@@ -3597,16 +3535,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x3ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 576
    .hword 0x0 @ delta x
    .hword 0x210 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x6b5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 577
    .hword 0x0 @ delta x
    .hword 0x280 @ y
@@ -3637,16 +3573,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 582
    .hword 0x8 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 583
    .hword 0x0 @ delta x
    .hword 0x250 @ y
@@ -3683,8 +3617,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 589
    .hword 0xc @ delta x
    .hword 0x280 @ y
@@ -3697,8 +3630,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 591
    .hword 0xc @ delta x
    .hword 0x220 @ y
@@ -3733,9 +3665,8 @@ theoryofeverything_spr_data:
    .hword 0xc @ delta x
    .hword 0x220 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 119 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 597
    .hword 0x4 @ delta x
    .hword 0x290 @ y
@@ -3752,17 +3683,15 @@ theoryofeverything_spr_data:
    .hword 0x6 @ delta x
    .hword 0x220 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 120 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 600
    .hword 0xa @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 601
    .hword 0xe @ delta x
    .hword 0x220 @ y
@@ -3793,22 +3722,19 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 606
    .hword 0x16 @ delta x
    .hword 0x220 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 115 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 607
    .hword 0x0 @ delta x
    .hword 0x230 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 119 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 608
    .hword 0x8 @ delta x
    .hword 0x294 @ y
@@ -3831,16 +3757,14 @@ theoryofeverything_spr_data:
    .hword 0x8 @ delta x
    .hword 0x220 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 116 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 612
    .hword 0x0 @ delta x
    .hword 0x230 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 120 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 613
    .hword 0x10 @ delta x
    .hword 0x290 @ y
@@ -3889,16 +3813,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 621
    .hword 0x10 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 622
    .hword 0x5 @ delta x
    .hword 0x278 @ y
@@ -3971,16 +3893,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 634
    .hword 0x10 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 635
    .hword 0xc @ delta x
    .hword 0x250 @ y
@@ -4059,16 +3979,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 648
    .hword 0x10 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 649
    .hword 0x4 @ delta x
    .hword 0x268 @ y
@@ -4123,16 +4041,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 658
    .hword 0x10 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 659
    .hword 0xc @ delta x
    .hword 0x220 @ y
@@ -4223,8 +4139,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 674
    .hword 0x4 @ delta x
    .hword 0x238 @ y
@@ -4250,8 +4165,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 678
    .hword 0x1c @ delta x
    .hword 0x250 @ y
@@ -4306,8 +4220,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 687
    .hword 0xd @ delta x
    .hword 0x260 @ y
@@ -4326,8 +4239,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c16 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 690
    .hword 0x1d @ delta x
    .hword 0x220 @ y
@@ -4407,24 +4319,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 703
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 704
    .hword 0x0 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 705
    .hword 0x0 @ delta x
    .hword 0x250 @ y
@@ -4509,24 +4418,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x43f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 719
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x43f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 720
    .hword 0x0 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 721
    .hword 0x10 @ delta x
    .hword 0x20c @ y
@@ -4599,24 +4505,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 733
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x7ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 734
    .hword 0x0 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3e3 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 735
    .hword 0x0 @ delta x
    .hword 0x270 @ y
@@ -4689,24 +4592,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7c22 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 747
    .hword 0x0 @ delta x
    .hword 0x1f0 @ y
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x7c22 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 748
    .hword 0x0 @ delta x
    .hword 0x200 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 749
    .hword 0x0 @ delta x
    .hword 0x240 @ y
@@ -4773,32 +4673,28 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4b4 @ changes BG for 150 frames
    .hword 0x564 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 760
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0xc1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 761
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x3 @ type
    .hword 0xf6 @ changes OBJ for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 762
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x3 @ type
    .hword 0xf7 @ changes LINE for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 763
    .hword 0x0 @ delta x
    .hword 0x250 @ y
@@ -4857,9 +4753,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x25c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 186 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 773
    .hword 0x0 @ delta x
    .hword 0x260 @ y
@@ -4906,9 +4801,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x2a6 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 781
    .hword 0x0 @ delta x
    .hword 0x2ae @ y
@@ -4991,9 +4885,8 @@ theoryofeverything_spr_data:
    .hword 0x8 @ delta x
    .hword 0x287 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 795
    .hword 0x8 @ delta x
    .hword 0x277 @ y
@@ -5004,9 +4897,8 @@ theoryofeverything_spr_data:
    .hword 0x8 @ delta x
    .hword 0x287 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 797
    .hword 0x18 @ delta x
    .hword 0x240 @ y
@@ -5041,9 +4933,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x297 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 803
    .hword 0x20 @ delta x
    .hword 0x278 @ y
@@ -5054,30 +4945,26 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x288 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 158 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 805
    .hword 0x0 @ delta x
    .hword 0x298 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 806
    .hword 0x0 @ delta x
    .hword 0x2a8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 807
    .hword 0x0 @ delta x
    .hword 0x2b8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 162 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 808
    .hword 0x20 @ delta x
    .hword 0x2b0 @ y
@@ -5134,16 +5021,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x214 @ changes BG for 66 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 817
    .hword 0x0 @ delta x
    .hword 0x230 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 818
    .hword 0x10 @ delta x
    .hword 0x2b0 @ y
@@ -5217,8 +5102,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 830
    .hword 0x0 @ delta x
    .hword 0xa0 @ y
@@ -5370,16 +5254,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 855
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7fe1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 856
    .hword 0x10 @ delta x
    .hword 0x80 @ y
@@ -5404,8 +5286,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 860
    .hword 0x40 @ delta x
    .hword 0x80 @ y
@@ -5448,24 +5329,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 867
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x17e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 868
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 869
    .hword 0x70 @ delta x
    .hword 0x70 @ y
@@ -5502,24 +5380,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 875
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x3fd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 876
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 877
    .hword 0x50 @ delta x
    .hword 0x70 @ y
@@ -5556,24 +5431,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 883
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x15f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 884
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 885
    .hword 0x30 @ delta x
    .hword 0xa0 @ y
@@ -5616,24 +5488,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 892
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 893
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 894
    .hword 0x20 @ delta x
    .hword 0x70 @ y
@@ -5694,56 +5563,49 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 904
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 905
    .hword 0x10 @ delta x
    .hword 0xb8 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 906
    .hword 0x10 @ delta x
    .hword 0x88 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 907
    .hword 0x0 @ delta x
    .hword 0xe8 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 908
    .hword 0x80 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 909
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7fa0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 910
    .hword 0x10 @ delta x
    .hword 0xb8 @ y
@@ -5757,8 +5619,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7c56 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 912
    .hword 0x78 @ delta x
    .hword 0x90 @ y
@@ -5777,16 +5638,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x23e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 915
    .hword 0x10 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 916
    .hword 0x40 @ delta x
    .hword 0xe0 @ y
@@ -5823,16 +5682,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 922
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x3f1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 923
    .hword 0x10 @ delta x
    .hword 0x70 @ y
@@ -5851,8 +5708,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 926
    .hword 0x50 @ delta x
    .hword 0xf0 @ y
@@ -5883,24 +5739,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 931
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 932
    .hword 0x8 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 933
    .hword 0x18 @ delta x
    .hword 0xb0 @ y
@@ -5949,24 +5802,21 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 941
    .hword 0x3 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 942
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 943
    .hword 0xd @ delta x
    .hword 0x70 @ y
@@ -6021,16 +5871,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x641f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 952
    .hword 0x3 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 953
    .hword 0xd @ delta x
    .hword 0xe0 @ y
@@ -6043,8 +5891,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 955
    .hword 0xd @ delta x
    .hword 0x70 @ y
@@ -6117,56 +5964,49 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 967
    .hword 0x3 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 968
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 969
    .hword 0xd @ delta x
    .hword 0x88 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7c35 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 970
    .hword 0x0 @ delta x
    .hword 0xb8 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 971
    .hword 0x0 @ delta x
    .hword 0xe8 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 972
    .hword 0x73 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6c9f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 973
    .hword 0x9 @ delta x
    .hword 0xb8 @ y
@@ -6185,16 +6025,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 976
    .hword 0x3 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x543f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 977
    .hword 0x5d @ delta x
    .hword 0x88 @ y
@@ -6219,32 +6057,28 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 981
    .hword 0x0 @ delta x
    .hword 0xb8 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0xc3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 982
    .hword 0x0 @ delta x
    .hword 0xe8 @ y
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x3803 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 983
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xc6 @ changes OBJ for 24 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 984
    .hword 0x60 @ delta x
    .hword 0xe8 @ y
@@ -6257,8 +6091,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0xf6 @ changes OBJ for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 986
    .hword 0x10 @ delta x
    .hword 0xe8 @ y
@@ -6407,9 +6240,8 @@ theoryofeverything_spr_data:
    .hword 0x30 @ delta x
    .hword 0xf8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1011
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -6426,9 +6258,8 @@ theoryofeverything_spr_data:
    .hword 0x8 @ delta x
    .hword 0xf8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1014
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -6445,9 +6276,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0xf8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1017
    .hword 0x8 @ delta x
    .hword 0xb0 @ y
@@ -6626,9 +6456,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1047
    .hword 0xa @ delta x
    .hword 0x1c0 @ y
@@ -6867,9 +6696,8 @@ theoryofeverything_spr_data:
    .hword 0x0 @ delta x
    .hword 0x108 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1087
    .hword 0x14 @ delta x
    .hword 0x140 @ y
@@ -7154,16 +6982,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x409e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1134
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1135
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -7250,16 +7076,14 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x697f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1149
    .hword 0x10 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x749e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1150
    .hword 0x10 @ delta x
    .hword 0xe4 @ y
@@ -7328,8 +7152,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7d76 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1161
    .hword 0xa @ delta x
    .hword 0x100 @ y
@@ -7348,8 +7171,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7893 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1164
    .hword 0x1a @ delta x
    .hword 0x150 @ y
@@ -7392,8 +7214,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7d6b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1171
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -7404,24 +7225,21 @@ theoryofeverything_spr_data:
    .hword 0x8 @ delta x
    .hword 0xd8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 151 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1173
    .hword 0x8 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7886 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1174
    .hword 0x8 @ delta x
    .hword 0xd8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 152 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1175
    .hword 0x0 @ delta x
    .hword 0xe8 @ y
@@ -7500,8 +7318,7 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x5a4 @ changes BG for 180 frames
    .hword 0x2820 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1188
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -7712,6 +7529,5 @@ theoryofeverything_spr_data:
    .hword 0x3 @ type
    .hword 0x784 @ changes BG for 240 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
    .byte 0xff

@@ -119,16 +119,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x441f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 20
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x3417 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 21
    .hword 0x4 @ delta x
    .hword 0x190 @ y
@@ -218,16 +216,14 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 78 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 36
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 82 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 37
    .hword 0x8 @ delta x
    .hword 0x150 @ y
@@ -282,16 +278,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 46
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 47
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -398,9 +392,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 78 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 65
    .hword 0x24 @ delta x
    .hword 0x1b8 @ y
@@ -479,16 +472,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x5a4 @ changes BG for 180 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 78
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x5a5 @ changes GROUND for 180 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 79
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -625,9 +616,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 78 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 102
    .hword 0x7 @ delta x
    .hword 0x170 @ y
@@ -682,24 +672,21 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x581f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 111
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 112
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xf7 @ changes LINE for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 113
    .hword 0x18 @ delta x
    .hword 0x178 @ y
@@ -860,16 +847,14 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 126 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 140
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 125 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 141
    .hword 0x10 @ delta x
    .hword 0x190 @ y
@@ -1006,16 +991,14 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 126 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 164
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 125 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 165
    .hword 0xc @ delta x
    .hword 0x198 @ y
@@ -1118,8 +1101,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7c09 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 182
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -1503,23 +1485,20 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 126 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 246
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 130 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 247
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 121 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 248
    .hword 0x8 @ delta x
    .hword 0x198 @ y
@@ -1554,23 +1533,20 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x14f @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 125 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 254
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 130 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 255
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x11 @ bg layer 2  flipped vertically 
+   .hword 0x11 @ bg layer 2  flipped vertically z index 0 
    .hword 126 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 256
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -1589,8 +1565,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 259
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -1631,9 +1606,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 112 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 266
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -1670,8 +1644,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x2002 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 272
    .hword 0xf @ delta x
    .hword 0x120 @ y
@@ -1802,9 +1775,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x148 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 294
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -1869,9 +1841,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x156 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 305
    .hword 0x0 @ delta x
    .hword 0x156 @ y
@@ -1942,9 +1913,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x175 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 317
    .hword 0x0 @ delta x
    .hword 0x175 @ y
@@ -1963,8 +1933,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0xd24 @ changes BG for 420 frames
    .hword 0x817 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 320
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -2065,9 +2034,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 337
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -2162,9 +2130,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x185 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 353
    .hword 0x0 @ delta x
    .hword 0x185 @ y
@@ -2217,9 +2184,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x14b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 362
    .hword 0x0 @ delta x
    .hword 0x14b @ y
@@ -2266,9 +2232,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 370
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -2393,9 +2358,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x14b @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 391
    .hword 0x0 @ delta x
    .hword 0x14b @ y
@@ -2456,8 +2420,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 401
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -2470,8 +2433,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 403
    .hword 0x10 @ delta x
    .hword 0x1b4 @ y
@@ -2506,9 +2468,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 96 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 409
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -2527,8 +2488,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 412
    .hword 0x8 @ delta x
    .hword 0x150 @ y
@@ -2541,8 +2501,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 414
    .hword 0x28 @ delta x
    .hword 0x138 @ y
@@ -2567,16 +2526,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 418
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 419
    .hword 0x1e @ delta x
    .hword 0x138 @ y
@@ -2601,16 +2558,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 423
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 424
    .hword 0x1e @ delta x
    .hword 0x140 @ y
@@ -2629,16 +2584,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 427
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 428
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -2681,8 +2634,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 435
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2695,8 +2647,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 437
    .hword 0x0 @ delta x
    .hword 0x15c @ y
@@ -2709,8 +2660,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 439
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2735,8 +2685,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 443
    .hword 0x0 @ delta x
    .hword 0x15c @ y
@@ -2761,16 +2710,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 447
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 448
    .hword 0x0 @ delta x
    .hword 0x17b @ y
@@ -2820,8 +2767,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 456
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -2840,8 +2786,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 459
    .hword 0x0 @ delta x
    .hword 0x13c @ y
@@ -2854,8 +2799,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 461
    .hword 0x0 @ delta x
    .hword 0x13c @ y
@@ -2880,8 +2824,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 465
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -2900,8 +2843,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 468
    .hword 0x0 @ delta x
    .hword 0x198 @ y
@@ -2914,8 +2856,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 470
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -2928,16 +2869,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2819 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 472
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 473
    .hword 0x0 @ delta x
    .hword 0x16d @ y
@@ -2957,8 +2896,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x385f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 476
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -3013,8 +2951,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x180e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 485
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -3093,16 +3030,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 498
    .hword 0x10 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 499
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -3188,8 +3123,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 513
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -3202,8 +3136,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 515
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -3265,8 +3198,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 525
    .hword 0x0 @ delta x
    .hword 0x138 @ y
@@ -3285,8 +3217,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 528
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -3323,8 +3254,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 534
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -3337,8 +3267,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 536
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -3411,8 +3340,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 548
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -3425,16 +3353,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 550
    .hword 0x20 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 551
    .hword 0xc @ delta x
    .hword 0x1a0 @ y
@@ -3453,8 +3379,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 554
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -3491,16 +3416,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 560
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 561
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -3597,16 +3520,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x640d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 577
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3806 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 578
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -3631,8 +3552,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7c8d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 582
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -3687,8 +3607,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3f4 @ changes BG for 126 frames
    .hword 0x1c03 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 591
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -3833,16 +3752,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0xfe1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 615
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x97 @ changes LINE for 18 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 616
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -3967,9 +3884,8 @@ clutterfunk_spr_data:
    .hword 0x37 @ delta x
    .hword 0x172 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 0 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 637
    .hword 0x11 @ delta x
    .hword 0x160 @ y
@@ -4042,8 +3958,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7f20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 649
    .hword 0x0 @ delta x
    .hword 0x178 @ y
@@ -4140,8 +4055,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 665
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4166,8 +4080,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7f20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 669
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -4192,8 +4105,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 673
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -4224,8 +4136,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7f20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 678
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -4256,24 +4167,21 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 683
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x681c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 684
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x67 @ changes LINE for 12 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 685
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -4352,8 +4260,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 698
    .hword 0xc @ delta x
    .hword 0x168 @ y
@@ -4378,8 +4285,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 702
    .hword 0x20 @ delta x
    .hword 0x1a0 @ y
@@ -4410,16 +4316,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 707
    .hword 0x10 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 708
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4456,8 +4360,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 714
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4488,8 +4391,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 719
    .hword 0xc @ delta x
    .hword 0x1b0 @ y
@@ -4526,16 +4428,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 725
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x7060 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 726
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -4554,16 +4454,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 729
    .hword 0x10 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 730
    .hword 0x17 @ delta x
    .hword 0x170 @ y
@@ -4600,8 +4498,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 736
    .hword 0x8 @ delta x
    .hword 0x150 @ y
@@ -4626,8 +4523,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 740
    .hword 0xc @ delta x
    .hword 0x1b0 @ y
@@ -4716,9 +4612,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 755
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -4731,8 +4626,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 757
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -4745,8 +4639,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 759
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -4763,23 +4656,20 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 80 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 762
    .hword 0x10 @ delta x
    .hword 0x110 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 69 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 763
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 66 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 764
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -4796,23 +4686,20 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 78 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 767
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 73 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 768
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 66 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 769
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -4829,16 +4716,14 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x110 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 70 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 772
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 66 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 773
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -4855,9 +4740,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 81 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 776
    .hword 0x10 @ delta x
    .hword 0x150 @ y
@@ -4882,8 +4766,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 780
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -4896,8 +4779,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 782
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -4946,16 +4828,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 790
    .hword 0x10 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 791
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -4974,16 +4854,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 794
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x681c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 795
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -5032,8 +4910,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 803
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -5052,8 +4929,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 806
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -5132,8 +5008,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 819
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -5146,8 +5021,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 821
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -5190,8 +5064,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 828
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -5204,8 +5077,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 830
    .hword 0x8 @ delta x
    .hword 0x128 @ y
@@ -5236,8 +5108,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4c15 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 835
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -5250,8 +5121,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 837
    .hword 0x0 @ delta x
    .hword 0xec @ y
@@ -5288,16 +5158,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 843
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x7060 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 844
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -5310,16 +5178,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 846
    .hword 0x10 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 847
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -5362,16 +5228,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 854
    .hword 0x10 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 855
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -5396,8 +5260,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 859
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -5410,8 +5273,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 861
    .hword 0x10 @ delta x
    .hword 0x140 @ y
@@ -5466,16 +5328,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 870
    .hword 0x10 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 871
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -5519,16 +5379,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x5400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 878
    .hword 0x10 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x3000 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 879
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -5541,16 +5399,14 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 881
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 882
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -5677,8 +5533,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 903
    .hword 0x0 @ delta x
    .hword 0x158 @ y
@@ -5715,8 +5570,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x6c3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 909
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
@@ -5919,9 +5773,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 943
    .hword 0x28 @ delta x
    .hword 0x1b0 @ y
@@ -5952,15 +5805,13 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x7440 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 948
    .hword 0x18 @ delta x
    .hword 0x116 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 183 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 949
    .hword 0x8 @ delta x
    .hword 0x106 @ y
@@ -5977,23 +5828,20 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x116 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 952
    .hword 0x8 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 953
    .hword 0x10 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 954
    .hword 0x10 @ delta x
    .hword 0xb0 @ y
@@ -6022,9 +5870,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 959
    .hword 0x10 @ delta x
    .hword 0xb0 @ y
@@ -6035,9 +5882,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 961
    .hword 0x8 @ delta x
    .hword 0x1a0 @ y
@@ -6048,9 +5894,8 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 963
    .hword 0x8 @ delta x
    .hword 0xd0 @ y
@@ -6115,9 +5960,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 974
    .hword 0x10 @ delta x
    .hword 0xf0 @ y
@@ -6140,9 +5984,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 978
    .hword 0x10 @ delta x
    .hword 0xb0 @ y
@@ -6281,8 +6124,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x7e2 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1001
    .hword 0x10 @ delta x
    .hword 0xf0 @ y
@@ -6347,9 +6189,8 @@ clutterfunk_spr_data:
    .hword 0x8 @ delta x
    .hword 0x118 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 186 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1012
    .hword 0x0 @ delta x
    .hword 0x128 @ y
@@ -6470,8 +6311,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x7bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1032
    .hword 0x10 @ delta x
    .hword 0x170 @ y
@@ -6772,8 +6612,7 @@ clutterfunk_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x41e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1082
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -7150,9 +6989,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1145
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -7175,17 +7013,15 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1149
    .hword 0x8 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x5a4 @ changes BG for 180 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1150
    .hword 0x4 @ delta x
    .hword 0xec @ y
@@ -7202,9 +7038,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xb4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1153
    .hword 0x0 @ delta x
    .hword 0xc4 @ y
@@ -7215,9 +7050,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xec @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1155
    .hword 0xc @ delta x
    .hword 0xf8 @ y
@@ -7240,9 +7074,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1159
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -7253,9 +7086,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xfa @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1161
    .hword 0xc @ delta x
    .hword 0x106 @ y
@@ -7272,9 +7104,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xcc @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1164
    .hword 0x0 @ delta x
    .hword 0xdc @ y
@@ -7285,9 +7116,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x108 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1166
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -7310,9 +7140,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xd8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1170
    .hword 0x0 @ delta x
    .hword 0xe8 @ y
@@ -7323,9 +7152,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1172
    .hword 0xc @ delta x
    .hword 0x120 @ y
@@ -7348,9 +7176,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1176
    .hword 0x0 @ delta x
    .hword 0xf4 @ y
@@ -7361,9 +7188,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1178
    .hword 0xc @ delta x
    .hword 0x12c @ y
@@ -7380,9 +7206,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1181
    .hword 0x0 @ delta x
    .hword 0x104 @ y
@@ -7393,9 +7218,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x12c @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1183
    .hword 0xc @ delta x
    .hword 0x138 @ y
@@ -7418,9 +7242,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1187
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -7431,9 +7254,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x13a @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1189
    .hword 0xc @ delta x
    .hword 0x146 @ y
@@ -7450,9 +7272,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x10c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1192
    .hword 0x0 @ delta x
    .hword 0x11c @ y
@@ -7463,9 +7284,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x148 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1194
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -7488,9 +7308,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x118 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1198
    .hword 0x0 @ delta x
    .hword 0x128 @ y
@@ -7501,9 +7320,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1200
    .hword 0xc @ delta x
    .hword 0x160 @ y
@@ -7526,9 +7344,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1204
    .hword 0x0 @ delta x
    .hword 0x134 @ y
@@ -7539,9 +7356,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1206
    .hword 0xc @ delta x
    .hword 0x16c @ y
@@ -7558,9 +7374,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1209
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7571,9 +7386,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x16c @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1211
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -7596,9 +7410,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1215
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -7609,9 +7422,8 @@ clutterfunk_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1217
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y

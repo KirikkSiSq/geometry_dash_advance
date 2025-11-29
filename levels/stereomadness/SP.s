@@ -11,16 +11,14 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x7c13 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x5c0c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 3
    .hword 0x2e0 @ delta x
    .hword 0x1a0 @ y
@@ -231,32 +229,28 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 38
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x3c5 @ changes GROUND for 120 frames
    .hword 0xc60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 39
    .hword 0x140 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x383f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 40
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x100a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 41
    .hword 0x10 @ delta x
    .hword 0x160 @ y
@@ -409,16 +403,14 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 65
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x6411 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 66
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -642,16 +634,14 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x101e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 102
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0xc11 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 103
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -958,16 +948,14 @@ stereomadness_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 153
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 154
    .hword 0x28 @ delta x
    .hword 0x1b0 @ y
@@ -978,9 +966,8 @@ stereomadness_spr_data:
    .hword 0x18 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 156
    .hword 0x48 @ delta x
    .hword 0x1b0 @ y
@@ -991,9 +978,8 @@ stereomadness_spr_data:
    .hword 0x8 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 158
    .hword 0x48 @ delta x
    .hword 0x1b0 @ y
@@ -1046,9 +1032,8 @@ stereomadness_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 167
    .hword 0x28 @ delta x
    .hword 0x1b0 @ y
@@ -1131,9 +1116,8 @@ stereomadness_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 181
    .hword 0x68 @ delta x
    .hword 0x180 @ y
@@ -1164,16 +1148,14 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x641f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 186
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x1005 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 187
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -1236,9 +1218,8 @@ stereomadness_spr_data:
    .hword 0x20 @ delta x
    .hword 0x11c @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 197
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -1249,9 +1230,8 @@ stereomadness_spr_data:
    .hword 0x10 @ delta x
    .hword 0x11c @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 185 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 199
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -1277,16 +1257,14 @@ stereomadness_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 203
    .hword 0x0 @ delta x
    .hword 0xf8 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 204
    .hword 0x0 @ delta x
    .hword 0x130 @ y

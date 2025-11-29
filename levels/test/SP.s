@@ -33,16 +33,14 @@ test_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 6
    .hword 0x10 @ delta x
    .hword 0x19c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 7
    .hword 0x20 @ delta x
    .hword 0x160 @ y
@@ -143,17 +141,15 @@ test_spr_data:
    .hword 0x18 @ delta x
    .hword 0x17c @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 24
    .hword 0x48 @ delta x
    .hword 0x1b0 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 25
    .hword 0x10 @ delta x
    .hword 0x140 @ y

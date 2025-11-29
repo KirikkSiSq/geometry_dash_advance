@@ -11,16 +11,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x440e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x1404 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 3
    .hword 0x9c @ delta x
    .hword 0x1b8 @ y
@@ -139,8 +137,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7d20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 22
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -165,8 +162,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 26
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -402,8 +398,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x13e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 65
    .hword 0x5 @ delta x
    .hword 0x126 @ y
@@ -482,8 +477,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 78
    .hword 0x6 @ delta x
    .hword 0x170 @ y
@@ -755,8 +749,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x681e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 123
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -835,8 +828,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 136
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -1023,9 +1015,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x13c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 167
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -1042,9 +1033,8 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x13c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 170
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -1073,9 +1063,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x13c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 175
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -1095,8 +1084,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7fd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 178
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -1134,8 +1122,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 184
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -1172,16 +1159,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x2006 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 190
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 191
    .hword 0x20 @ delta x
    .hword 0x108 @ y
@@ -1482,8 +1467,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x7c5e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 241
    .hword 0x8 @ delta x
    .hword 0x118 @ y
@@ -1940,8 +1924,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x101f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 317
    .hword 0x68 @ delta x
    .hword 0x108 @ y
@@ -1966,8 +1949,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x39f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 321
    .hword 0x68 @ delta x
    .hword 0x108 @ y
@@ -1992,8 +1974,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x66 @ changes OBJ for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 325
    .hword 0x58 @ delta x
    .hword 0x108 @ y
@@ -2012,38 +1993,33 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x70e2 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 328
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x4860 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 329
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf6 @ changes OBJ for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 330
    .hword 0x0 @ delta x
    .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 331
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 332
    .hword 0x0 @ delta x
    .hword 0x158 @ y
@@ -2054,58 +2030,50 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 334
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 335
    .hword 0x25 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 246 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 336
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 246 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 337
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 246 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 338
    .hword 0x10 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 259 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 339
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 259 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 340
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 259 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 341
    .hword 0xb @ delta x
    .hword 0x180 @ y
@@ -2116,44 +2084,38 @@ electromanadventures_spr_data:
    .hword 0xb @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 258 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 343
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 258 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 344
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 258 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 345
    .hword 0x10 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 247 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 346
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 247 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 347
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 247 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 348
    .hword 0x4 @ delta x
    .hword 0x136 @ y
@@ -2284,9 +2246,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x13c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 370
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -2303,16 +2264,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 373
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 374
    .hword 0x0 @ delta x
    .hword 0x19e @ y
@@ -2329,9 +2288,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x13c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 377
    .hword 0x0 @ delta x
    .hword 0x14c @ y
@@ -2420,16 +2378,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 392
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 393
    .hword 0xd @ delta x
    .hword 0x164 @ y
@@ -2440,9 +2396,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x16e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 395
    .hword 0x0 @ delta x
    .hword 0x17e @ y
@@ -2455,8 +2410,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x5a4 @ changes BG for 180 frames
    .hword 0x3840 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 397
    .hword 0x1 @ delta x
    .hword 0x18a @ y
@@ -2467,16 +2421,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 399
    .hword 0x0 @ delta x
    .hword 0x1aa @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 400
    .hword 0x20 @ delta x
    .hword 0x161 @ y
@@ -2487,16 +2439,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x171 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 402
    .hword 0x0 @ delta x
    .hword 0x181 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 403
    .hword 0x0 @ delta x
    .hword 0x18b @ y
@@ -2513,9 +2463,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x145 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 406
    .hword 0x0 @ delta x
    .hword 0x155 @ y
@@ -2538,16 +2487,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x171 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 410
    .hword 0x0 @ delta x
    .hword 0x181 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 411
    .hword 0x0 @ delta x
    .hword 0x18b @ y
@@ -2564,16 +2511,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 414
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 415
    .hword 0x0 @ delta x
    .hword 0x164 @ y
@@ -2602,9 +2547,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x11e @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 420
    .hword 0x0 @ delta x
    .hword 0x12e @ y
@@ -2627,16 +2571,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 424
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 425
    .hword 0x0 @ delta x
    .hword 0x164 @ y
@@ -2719,16 +2661,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 439
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 246 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 440
    .hword 0x4 @ delta x
    .hword 0x105 @ y
@@ -2739,9 +2679,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x10f @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 442
    .hword 0x0 @ delta x
    .hword 0x11f @ y
@@ -2752,30 +2691,26 @@ electromanadventures_spr_data:
    .hword 0x4 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 444
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 259 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 445
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 446
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 258 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 447
    .hword 0x8 @ delta x
    .hword 0x130 @ y
@@ -2786,9 +2721,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 449
    .hword 0x4 @ delta x
    .hword 0x108 @ y
@@ -2805,16 +2739,14 @@ electromanadventures_spr_data:
    .hword 0x4 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 247 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 452
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 453
    .hword 0x8 @ delta x
    .hword 0x130 @ y
@@ -2837,30 +2769,26 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 457
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 246 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 458
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 459
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 259 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 460
    .hword 0x4 @ delta x
    .hword 0x108 @ y
@@ -2883,23 +2811,20 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 464
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 258 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 465
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 289 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 466
    .hword 0x8 @ delta x
    .hword 0x130 @ y
@@ -2910,16 +2835,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 247 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 468
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 469
    .hword 0x18 @ delta x
    .hword 0x106 @ y
@@ -2962,23 +2885,20 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x60a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 476
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3040 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 477
    .hword 0x10 @ delta x
    .hword 0x10a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 478
    .hword 0x0 @ delta x
    .hword 0x11b @ y
@@ -3001,9 +2921,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x166 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 482
    .hword 0x20 @ delta x
    .hword 0x140 @ y
@@ -3051,9 +2970,8 @@ electromanadventures_spr_data:
    .hword 0x14 @ delta x
    .hword 0x10a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 490
    .hword 0x0 @ delta x
    .hword 0x11b @ y
@@ -3076,9 +2994,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x166 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 494
    .hword 0x21 @ delta x
    .hword 0x11a @ y
@@ -3091,8 +3008,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 496
    .hword 0x0 @ delta x
    .hword 0x11a @ y
@@ -3111,8 +3027,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x60a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 499
    .hword 0x0 @ delta x
    .hword 0x11a @ y
@@ -3159,9 +3074,8 @@ electromanadventures_spr_data:
    .hword 0x21 @ delta x
    .hword 0x10a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 507
    .hword 0x0 @ delta x
    .hword 0x11b @ y
@@ -3184,9 +3098,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x166 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 511
    .hword 0x20 @ delta x
    .hword 0x10a @ y
@@ -3229,15 +3142,13 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 518
    .hword 0x6 @ delta x
    .hword 0x10a @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 519
    .hword 0x0 @ delta x
    .hword 0x11b @ y
@@ -3260,17 +3171,15 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x146 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 523
    .hword 0x12 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x60a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 524
    .hword 0x5 @ delta x
    .hword 0x156 @ y
@@ -3317,9 +3226,8 @@ electromanadventures_spr_data:
    .hword 0x17 @ delta x
    .hword 0x10a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 532
    .hword 0x0 @ delta x
    .hword 0x11a @ y
@@ -3342,9 +3250,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x136 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 536
    .hword 0x1a @ delta x
    .hword 0x10a @ y
@@ -3405,8 +3312,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 546
    .hword 0x5 @ delta x
    .hword 0x146 @ y
@@ -3423,17 +3329,15 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x156 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 549
    .hword 0x13 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x60a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 550
    .hword 0x1d @ delta x
    .hword 0x140 @ y
@@ -3476,8 +3380,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7d01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 557
    .hword 0x12 @ delta x
    .hword 0x110 @ y
@@ -3502,8 +3405,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x60a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 561
    .hword 0x16 @ delta x
    .hword 0xfc @ y
@@ -3538,30 +3440,26 @@ electromanadventures_spr_data:
    .hword 0x18 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 369 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 567
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 568
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 569
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 570
    .hword 0x10 @ delta x
    .hword 0x11a @ y
@@ -3591,30 +3489,26 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 367 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 575
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 260 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 576
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 577
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 578
    .hword 0x10 @ delta x
    .hword 0x11a @ y
@@ -3625,38 +3519,33 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 370 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 580
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 581
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 582
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 583
    .hword 0x18 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x5481 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 584
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -3685,86 +3574,74 @@ electromanadventures_spr_data:
    .hword 0x15 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 369 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 589
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 590
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 591
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 383 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 592
    .hword 0x10 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 367 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 593
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 260 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 594
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 595
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 596
    .hword 0x10 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 370 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 597
    .hword 0x0 @ delta x
    .hword 0x16a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 598
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 599
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 384 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 600
    .hword 0x2b @ delta x
    .hword 0x160 @ y
@@ -3825,8 +3702,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7443 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 610
    .hword 0xc @ delta x
    .hword 0x150 @ y
@@ -3845,8 +3721,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x5421 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 613
    .hword 0x4 @ delta x
    .hword 0x198 @ y
@@ -3931,8 +3806,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x6827 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 627
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -3957,8 +3831,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x3c24 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 631
    .hword 0x8 @ delta x
    .hword 0x140 @ y
@@ -4043,8 +3916,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x642a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 645
    .hword 0x8 @ delta x
    .hword 0x198 @ y
@@ -4057,8 +3929,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x3005 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 647
    .hword 0x0 @ delta x
    .hword 0x167 @ y
@@ -4119,16 +3990,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x4809 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 657
    .hword 0x18 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x2c25 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 658
    .hword 0x8 @ delta x
    .hword 0x126 @ y
@@ -4195,30 +4064,26 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7078 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 669
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 670
    .hword 0x0 @ delta x
    .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 671
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 282 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 672
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4229,16 +4094,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 674
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 264 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 675
    .hword 0x8 @ delta x
    .hword 0x160 @ y
@@ -4329,8 +4192,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cf5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 690
    .hword 0x8 @ delta x
    .hword 0x140 @ y
@@ -4349,8 +4211,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7073 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 693
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -4465,8 +4326,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cfc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 712
    .hword 0x14 @ delta x
    .hword 0x188 @ y
@@ -4497,8 +4357,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7078 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 717
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -4643,8 +4502,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cf5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 741
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -4693,29 +4551,25 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7073 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 749
    .hword 0xc @ delta x
    .hword 0x118 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 287 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 750
    .hword 0x0 @ delta x
    .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 285 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 751
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 287 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 752
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -4732,23 +4586,20 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 285 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 755
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 287 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 756
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 285 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 757
    .hword 0x8 @ delta x
    .hword 0x130 @ y
@@ -4783,23 +4634,20 @@ electromanadventures_spr_data:
    .hword 0x3 @ delta x
    .hword 0x118 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 288 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 763
    .hword 0x0 @ delta x
    .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 286 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 764
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 288 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 765
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -4816,23 +4664,20 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 286 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 768
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 288 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 769
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 286 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 770
    .hword 0x10 @ delta x
    .hword 0x128 @ y
@@ -4869,8 +4714,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cfc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 776
    .hword 0x8 @ delta x
    .hword 0x178 @ y
@@ -4895,8 +4739,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7078 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 780
    .hword 0x1c @ delta x
    .hword 0x164 @ y
@@ -4933,22 +4776,19 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0xc4 @ changes BG for 24 frames
    .hword 0x5c7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 786
    .hword 0x0 @ delta x
    .hword 0x12a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 787
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 334 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 788
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4959,16 +4799,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 333 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 790
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 791
    .hword 0x30 @ delta x
    .hword 0x13a @ y
@@ -5035,8 +4873,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cf5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 802
    .hword 0x14 @ delta x
    .hword 0x140 @ y
@@ -5067,8 +4904,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7073 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 807
    .hword 0x0 @ delta x
    .hword 0x11c @ y
@@ -5159,8 +4995,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cfc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 822
    .hword 0x8 @ delta x
    .hword 0x190 @ y
@@ -5179,8 +5014,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7078 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 825
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -5301,8 +5135,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cf5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 845
    .hword 0xe @ delta x
    .hword 0x1b4 @ y
@@ -5321,8 +5154,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7073 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 848
    .hword 0x2 @ delta x
    .hword 0x1b0 @ y
@@ -5383,8 +5215,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7cfc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 858
    .hword 0x0 @ delta x
    .hword 0x134 @ y
@@ -5433,8 +5264,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7078 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 866
    .hword 0x8 @ delta x
    .hword 0x134 @ y
@@ -5519,8 +5349,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x500b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 880
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -5537,16 +5366,14 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 883
    .hword 0x6 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 884
    .hword 0x2a @ delta x
    .hword 0x140 @ y
@@ -5575,16 +5402,14 @@ electromanadventures_spr_data:
    .hword 0x20 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 889
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 890
    .hword 0x8 @ delta x
    .hword 0x168 @ y
@@ -5597,15 +5422,13 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c68 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 892
    .hword 0x3 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 893
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -5616,17 +5439,15 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 895
    .hword 0x15 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x5003 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 896
    .hword 0x1b @ delta x
    .hword 0x140 @ y
@@ -5649,16 +5470,14 @@ electromanadventures_spr_data:
    .hword 0x30 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 900
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 901
    .hword 0x8 @ delta x
    .hword 0x158 @ y
@@ -5669,9 +5488,8 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 903
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -5682,9 +5500,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 905
    .hword 0x20 @ delta x
    .hword 0x190 @ y
@@ -5715,22 +5532,19 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c72 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 910
    .hword 0x8 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 911
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 912
    .hword 0x8 @ delta x
    .hword 0x178 @ y
@@ -5743,22 +5557,19 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x500b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 914
    .hword 0x0 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 915
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 916
    .hword 0x14 @ delta x
    .hword 0x174 @ y
@@ -5787,16 +5598,14 @@ electromanadventures_spr_data:
    .hword 0x20 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 921
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 922
    .hword 0x8 @ delta x
    .hword 0x168 @ y
@@ -5807,16 +5616,14 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x14a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 924
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 925
    .hword 0x20 @ delta x
    .hword 0x160 @ y
@@ -5847,30 +5654,26 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c68 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 930
    .hword 0x18 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x5003 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 931
    .hword 0x9 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 932
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 933
    .hword 0x8 @ delta x
    .hword 0x178 @ y
@@ -5881,9 +5684,8 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x15a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 935
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -5894,9 +5696,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 937
    .hword 0x30 @ delta x
    .hword 0x140 @ y
@@ -5909,8 +5710,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c72 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 939
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -5929,15 +5729,13 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x500b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 942
    .hword 0x18 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 943
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -5948,9 +5746,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 945
    .hword 0x8 @ delta x
    .hword 0x158 @ y
@@ -5961,16 +5758,14 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 947
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 948
    .hword 0x20 @ delta x
    .hword 0x160 @ y
@@ -6001,22 +5796,19 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x4813 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 953
    .hword 0x0 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 303 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 954
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 301 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 955
    .hword 0x8 @ delta x
    .hword 0x168 @ y
@@ -6033,16 +5825,14 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x13a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 304 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 958
    .hword 0x0 @ delta x
    .hword 0x196 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 302 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 959
    .hword 0x20 @ delta x
    .hword 0x170 @ y
@@ -6123,8 +5913,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c5a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 972
    .hword 0x8 @ delta x
    .hword 0x186 @ y
@@ -6143,8 +5932,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x4c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 975
    .hword 0x0 @ delta x
    .hword 0x186 @ y
@@ -6289,16 +6077,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c53 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 998
    .hword 0x18 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x4c0b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 999
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -6431,8 +6217,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7c2c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1020
    .hword 0x3 @ delta x
    .hword 0x120 @ y
@@ -6463,8 +6248,7 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x4c06 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1025
    .hword 0xb @ delta x
    .hword 0x176 @ y
@@ -6533,16 +6317,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7801 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1036
    .hword 0x18 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x3c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1037
    .hword 0x8 @ delta x
    .hword 0x160 @ y
@@ -6579,9 +6361,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 369 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1043
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -6598,9 +6379,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 248 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1046
    .hword 0x10 @ delta x
    .hword 0x15a @ y
@@ -6611,16 +6391,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 244 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1048
    .hword 0x0 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 248 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1049
    .hword 0x10 @ delta x
    .hword 0x15a @ y
@@ -6637,16 +6415,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 244 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1052
    .hword 0x0 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 244 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1053
    .hword 0x10 @ delta x
    .hword 0x15a @ y
@@ -6657,16 +6433,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 244 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1055
    .hword 0x0 @ delta x
    .hword 0x19a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 249 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1056
    .hword 0x10 @ delta x
    .hword 0x15a @ y
@@ -6677,9 +6451,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 249 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1058
    .hword 0x10 @ delta x
    .hword 0x160 @ y
@@ -6690,9 +6463,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x17a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 370 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1060
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -6705,16 +6477,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x124 @ changes BG for 36 frames
    .hword 0x70e2 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1062
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0xc5 @ changes GROUND for 24 frames
    .hword 0x4060 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1063
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -6799,16 +6569,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x5e00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1077
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x5e00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1078
    .hword 0x8 @ delta x
    .hword 0x140 @ y
@@ -6887,16 +6655,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0xb01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1091
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0xb01 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1092
    .hword 0x8 @ delta x
    .hword 0xf0 @ y
@@ -7035,16 +6801,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x713 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1115
    .hword 0x0 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x713 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1116
    .hword 0x18 @ delta x
    .hword 0x110 @ y
@@ -7171,16 +6935,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x4f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1137
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x4f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1138
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -7289,16 +7051,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x2038 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1156
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x2038 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1157
    .hword 0x10 @ delta x
    .hword 0x170 @ y
@@ -7354,16 +7114,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x6036 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1166
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x6036 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1167
    .hword 0xb @ delta x
    .hword 0x120 @ y
@@ -7496,16 +7254,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x6025 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1189
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x6025 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1190
    .hword 0x20 @ delta x
    .hword 0x190 @ y
@@ -7590,16 +7346,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1204
    .hword 0x10 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x4920 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1205
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -7665,9 +7419,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1216
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -7692,16 +7445,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0xa40 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1220
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x1be4 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1221
    .hword 0x8 @ delta x
    .hword 0x13c @ y
@@ -7718,9 +7469,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 64 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1224
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -7781,16 +7531,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x6b5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1234
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0xfdf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1235
    .hword 0x20 @ delta x
    .hword 0x150 @ y
@@ -7813,16 +7561,14 @@ electromanadventures_spr_data:
    .hword 0x20 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 69 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1239
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1240
    .hword 0x10 @ delta x
    .hword 0x168 @ y
@@ -7833,39 +7579,34 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1242
    .hword 0x10 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x72 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1243
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x153f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1244
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1245
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1246
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -7888,16 +7629,14 @@ electromanadventures_spr_data:
    .hword 0xc @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1250
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1251
    .hword 0x8 @ delta x
    .hword 0x150 @ y
@@ -7920,16 +7659,14 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1255
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1256
    .hword 0xc @ delta x
    .hword 0x150 @ y
@@ -7952,16 +7689,14 @@ electromanadventures_spr_data:
    .hword 0x4 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1260
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1261
    .hword 0x10 @ delta x
    .hword 0x168 @ y
@@ -7972,16 +7707,14 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1263
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1264
    .hword 0x10 @ delta x
    .hword 0x168 @ y
@@ -7992,9 +7725,8 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 70 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1266
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -8020,16 +7752,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x2812 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1270
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x487f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1271
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -8076,30 +7806,26 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 78 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1279
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 67 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1280
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 147 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1281
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 147 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1282
    .hword 0x8 @ delta x
    .hword 0x188 @ y
@@ -8116,23 +7842,20 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1285
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 157 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1286
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 157 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1287
    .hword 0x8 @ delta x
    .hword 0x180 @ y
@@ -8143,23 +7866,20 @@ electromanadventures_spr_data:
    .hword 0x8 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 65 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1289
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 157 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1290
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 157 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1291
    .hword 0x10 @ delta x
    .hword 0x180 @ y
@@ -8170,23 +7890,20 @@ electromanadventures_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 70 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1293
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 148 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1294
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 148 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1295
    .hword 0x1c @ delta x
    .hword 0x1b4 @ y
@@ -8211,16 +7928,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x480f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1299
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7cba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1300
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -8306,16 +8021,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x4802 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1314
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7ca8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1315
    .hword 0x18 @ delta x
    .hword 0x190 @ y
@@ -8484,16 +8197,14 @@ electromanadventures_spr_data:
    .hword 0x3 @ type
    .hword 0x784 @ changes BG for 240 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1343
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf6 @ changes OBJ for 30 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1344
    .hword 0x18 @ delta x
    .hword 0x1b4 @ y

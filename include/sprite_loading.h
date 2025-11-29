@@ -36,6 +36,7 @@
 #define ZINDEX_MASK 0b111111
 #define PAL_SHIFT 6
 #define PAL_MASK (0b111 << PAL_SHIFT)
+#define BASIC_BLOCK_ZINDEX_SHIFT 5
 
 // Rotating flags (used by saws and objects that rotate continously)
 #define IS_ROTATING_FLAG          (1 << 1)

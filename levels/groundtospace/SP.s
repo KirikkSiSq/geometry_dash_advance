@@ -11,32 +11,28 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x1f44 @ changes BG for 1000 frames
    .hword 0x1400 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x1f45 @ changes GROUND for 1000 frames
    .hword 0x18c6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 3
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 4
    .hword 0xd0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 5
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
@@ -49,8 +45,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 7
    .hword 0x10 @ delta x
    .hword 0x1e0 @ y
@@ -63,16 +58,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 9
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 10
    .hword 0x50 @ delta x
    .hword 0x1c0 @ y
@@ -85,16 +78,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 12
    .hword 0x20 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 13
    .hword 0x10 @ delta x
    .hword 0x1e0 @ y
@@ -113,8 +104,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 16
    .hword 0x10 @ delta x
    .hword 0x1e0 @ y
@@ -127,8 +117,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 18
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -159,8 +148,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 23
    .hword 0x0 @ delta x
    .hword 0x1c0 @ y
@@ -173,8 +161,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 25
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -187,8 +174,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 27
    .hword 0x10 @ delta x
    .hword 0x1d0 @ y
@@ -201,8 +187,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 29
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -215,8 +200,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 31
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -229,8 +213,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 33
    .hword 0x10 @ delta x
    .hword 0x1e0 @ y
@@ -249,16 +232,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 36
    .hword 0x20 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 37
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -277,16 +258,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 40
    .hword 0x20 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 41
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -312,8 +291,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 45
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -327,8 +305,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 47
    .hword 0x20 @ delta x
    .hword 0x170 @ y
@@ -341,8 +318,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 49
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -361,8 +337,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 52
    .hword 0x20 @ delta x
    .hword 0x180 @ y
@@ -375,16 +350,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x2f7c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 54
    .hword 0x20 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xa @ changes 3 for 1 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 55
    .hword 0x50 @ delta x
    .hword 0x140 @ y
@@ -454,8 +427,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7148 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 66
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -839,32 +811,28 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x1e2 @ changes 3 for 60 frames
    .hword 0x49ee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 129
    .hword 0x0 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x1e1 @ changes 2 for 60 frames
    .hword 0x6713 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 130
    .hword 0x0 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x1e0 @ changes 1 for 60 frames
    .hword 0x7799 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 131
    .hword 0x0 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0x7eb2 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 132
    .hword 0x10 @ delta x
    .hword 0xf0 @ y
@@ -1283,8 +1251,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x5d41 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 200
    .hword 0x10 @ delta x
    .hword 0x120 @ y
@@ -1453,8 +1420,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x3 @ changes 4 for 0 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 228
    .hword 0x30 @ delta x
    .hword 0x160 @ y
@@ -1491,16 +1457,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x3 @ changes 4 for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 234
    .hword 0x10 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x1e3 @ changes 4 for 60 frames
    .hword 0x3fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 235
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -1609,48 +1573,42 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x1e4 @ changes BG for 60 frames
    .hword 0xa78 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 253
    .hword 0x0 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x1e0 @ changes 1 for 60 frames
    .hword 0x6b12 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 254
    .hword 0x0 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x1e1 @ changes 2 for 60 frames
    .hword 0x5b13 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 255
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x1e3 @ changes 4 for 60 frames
    .hword 0x2cd0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 256
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x1e3 @ changes 4 for 60 frames
    .hword 0x493a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 257
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x1e5 @ changes GROUND for 60 frames
    .hword 0x39ce @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 258
    .hword 0x10 @ delta x
    .hword 0x140 @ y
@@ -1729,8 +1687,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x964 @ changes BG for 300 frames
    .hword 0x1802 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 271
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -1803,16 +1760,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 283
    .hword 0x8 @ delta x
    .hword 0x190 @ y
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x2 @ touch trigger
+   .hword 0x40 @ doesn't copy any channel touch trigger
 @ Object 284
    .hword 0x8 @ delta x
    .hword 0x150 @ y
@@ -1843,48 +1798,42 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 289
    .hword 0x0 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 290
    .hword 0x10 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 291
    .hword 0x0 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 292
    .hword 0x0 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0xf2 @ changes 3 for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 293
    .hword 0x0 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 294
    .hword 0x30 @ delta x
    .hword 0x148 @ y
@@ -1915,8 +1864,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 299
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -1959,24 +1907,21 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x6739 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 306
    .hword 0x10 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3def @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 307
    .hword 0x30 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x3ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 308
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -2038,8 +1983,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x3e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 318
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -2089,24 +2033,21 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x7fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 326
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0x4f39 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 327
    .hword 0x10 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0x3a73 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 328
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
@@ -2150,8 +2091,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 335
    .hword 0x0 @ delta x
    .hword 0xa0 @ y
@@ -2206,8 +2146,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 344
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -2232,8 +2171,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x7b36 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 348
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -2246,8 +2184,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x75cb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 350
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -2272,8 +2209,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 354
    .hword 0x10 @ delta x
    .hword 0x120 @ y
@@ -2322,8 +2258,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x3ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 362
    .hword 0x0 @ delta x
    .hword 0x70 @ y
@@ -2366,16 +2301,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x3 @ changes 4 for 0 frames
    .hword 0x5299 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 369
    .hword 0x10 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x3e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 370
    .hword 0x0 @ delta x
    .hword 0x60 @ y
@@ -2388,8 +2321,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x3 @ changes 4 for 0 frames
    .hword 0x39df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 372
    .hword 0x30 @ delta x
    .hword 0x120 @ y
@@ -2408,16 +2340,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x6d86 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 375
    .hword 0x0 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0x1ae7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 376
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
@@ -2448,8 +2378,7 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x2d6 @ changes OBJ for 90 frames
    .hword 0x7fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 381
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -2474,16 +2403,14 @@ groundtospace_spr_data:
    .hword 0x3 @ type
    .hword 0x780 @ changes 1 for 240 frames
    .hword 0x1041 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 385
    .hword 0x0 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x781 @ changes 2 for 240 frames
    .hword 0x4a1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 386
    .hword 0x20 @ delta x
    .hword 0x60 @ y

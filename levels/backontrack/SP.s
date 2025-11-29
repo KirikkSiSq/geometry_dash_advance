@@ -113,16 +113,14 @@ backontrack_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x401f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 19
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x2c14 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 20
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -484,16 +482,14 @@ backontrack_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x101f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 80
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x411 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 81
    .hword 0xe4 @ delta x
    .hword 0x1b0 @ y
@@ -650,16 +646,14 @@ backontrack_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 107
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x4809 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 108
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -786,16 +780,14 @@ backontrack_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 129
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3416 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 130
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -1006,16 +998,14 @@ backontrack_spr_data:
    .hword 0x3 @ type
    .hword 0x94 @ changes BG for 18 frames
    .hword 0x7e20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 165
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x95 @ changes GROUND for 18 frames
    .hword 0x6160 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 166
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -1032,9 +1022,8 @@ backontrack_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 169
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -1051,16 +1040,14 @@ backontrack_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 172
    .hword 0x10 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 173
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
@@ -1071,9 +1058,8 @@ backontrack_spr_data:
    .hword 0x28 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 175
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -1084,16 +1070,14 @@ backontrack_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 177
    .hword 0x10 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 178
    .hword 0x10 @ delta x
    .hword 0x170 @ y
@@ -1110,9 +1094,8 @@ backontrack_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 181
    .hword 0xd @ delta x
    .hword 0x1b0 @ y
@@ -1135,9 +1118,8 @@ backontrack_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1ba @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 185
    .hword 0x1b @ delta x
    .hword 0x1b0 @ y

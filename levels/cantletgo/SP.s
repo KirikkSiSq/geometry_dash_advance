@@ -21,16 +21,14 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x8 @ bg layer 1   
+   .hword 0x8 @ bg layer 1   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 4
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 5
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
@@ -301,16 +299,14 @@ cantletgo_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x381c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 50
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x2413 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 51
    .hword 0x30 @ delta x
    .hword 0x1b0 @ y
@@ -519,9 +515,8 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 86
    .hword 0x48 @ delta x
    .hword 0xd0 @ y
@@ -586,9 +581,8 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 97
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
@@ -605,9 +599,8 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 100
    .hword 0x4 @ delta x
    .hword 0x1b0 @ y
@@ -642,9 +635,8 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 182 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 106
    .hword 0x4 @ delta x
    .hword 0xb0 @ y
@@ -663,16 +655,14 @@ cantletgo_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 109
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 110
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -1017,16 +1007,14 @@ cantletgo_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x281d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 167
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x2419 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 168
    .hword 0x38 @ delta x
    .hword 0x1b0 @ y
@@ -1063,8 +1051,7 @@ cantletgo_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x281e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 174
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
@@ -1213,9 +1200,8 @@ cantletgo_spr_data:
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 199
    .hword 0x0 @ delta x
    .hword 0x168 @ y

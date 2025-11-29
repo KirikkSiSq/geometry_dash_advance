@@ -11,16 +11,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x2d4 @ changes BG for 90 frames
    .hword 0x5bc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
    .hword 0x2d5 @ changes GROUND for 90 frames
    .hword 0x3620 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 3
    .hword 0x140 @ delta x
    .hword 0x190 @ y
@@ -73,9 +71,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x19c @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 12
    .hword 0x2b @ delta x
    .hword 0x1b0 @ y
@@ -436,16 +433,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x125 @ changes GROUND for 36 frames
    .hword 0x5020 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 71
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x124 @ changes BG for 36 frames
    .hword 0x7d80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 72
    .hword 0x7d @ delta x
    .hword 0x170 @ y
@@ -714,9 +709,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x15d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 117
    .hword 0x0 @ delta x
    .hword 0x16d @ y
@@ -831,16 +825,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x5c1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 136
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3c13 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 137
    .hword 0x10 @ delta x
    .hword 0x160 @ y
@@ -995,9 +987,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 163
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -1062,9 +1053,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 174
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -1081,9 +1071,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 177
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -1124,9 +1113,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x131 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 184
    .hword 0x0 @ delta x
    .hword 0x141 @ y
@@ -1143,9 +1131,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 187
    .hword 0x0 @ delta x
    .hword 0x19d @ y
@@ -1174,9 +1161,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 192
    .hword 0x0 @ delta x
    .hword 0x134 @ y
@@ -1193,9 +1179,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 195
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -1230,9 +1215,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x11a @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 201
    .hword 0x0 @ delta x
    .hword 0x12a @ y
@@ -1249,9 +1233,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 204
    .hword 0x0 @ delta x
    .hword 0x186 @ y
@@ -1280,16 +1263,14 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 209
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 210
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
@@ -1378,23 +1359,20 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 225
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 226
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x11 @ bg layer 2  flipped vertically 
+   .hword 0x11 @ bg layer 2  flipped vertically z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 227
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -1417,16 +1395,14 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 231
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 232
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -1437,9 +1413,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x11 @ bg layer 2  flipped vertically 
+   .hword 0x11 @ bg layer 2  flipped vertically z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 234
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -1462,23 +1437,20 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 238
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 239
    .hword 0x0 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x13 @ bg layer 2 flipped horizontally flipped vertically 
+   .hword 0x13 @ bg layer 2 flipped horizontally flipped vertically z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 240
    .hword 0x0 @ delta x
    .hword 0x188 @ y
@@ -1817,16 +1789,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 296
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 297
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -1843,9 +1813,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 300
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -2561,16 +2530,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x4013 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 419
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x4013 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 420
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -2653,9 +2620,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 434
    .hword 0x0 @ delta x
    .hword 0x148 @ y
@@ -2744,9 +2710,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 449
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -2799,9 +2764,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 458
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -2915,9 +2879,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 477
    .hword 0x0 @ delta x
    .hword 0x19d @ y
@@ -2934,9 +2897,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x18d @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 480
    .hword 0x0 @ delta x
    .hword 0x19d @ y
@@ -2967,16 +2929,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 485
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3c12 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 486
    .hword 0x0 @ delta x
    .hword 0x16c @ y
@@ -3067,16 +3027,14 @@ timemachine_spr_data:
    .hword 0x8e @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 501
    .hword 0xc @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 502
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
@@ -3087,9 +3045,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 504
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -3106,16 +3063,14 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 507
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 508
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -3132,37 +3087,32 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 511
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 512
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 513
    .hword 0xc @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 514
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 515
    .hword 0x1c @ delta x
    .hword 0x140 @ y
@@ -3179,51 +3129,44 @@ timemachine_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 518
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 519
    .hword 0x10 @ delta x
    .hword 0x181 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 520
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 521
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 522
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 523
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 524
    .hword 0x45 @ delta x
    .hword 0x1b0 @ y
@@ -3254,16 +3197,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 529
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x200 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 530
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -3342,16 +3283,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x784 @ changes BG for 240 frames
    .hword 0x7fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 543
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x785 @ changes GROUND for 240 frames
    .hword 0x5aa0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 544
    .hword 0x28 @ delta x
    .hword 0x1a0 @ y
@@ -3362,9 +3301,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 546
    .hword 0x48 @ delta x
    .hword 0x1a0 @ y
@@ -3387,9 +3325,8 @@ timemachine_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 550
    .hword 0x45 @ delta x
    .hword 0x190 @ y
@@ -3492,16 +3429,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 567
    .hword 0x0 @ delta x
    .hword 0x100 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x280c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 568
    .hword 0x10 @ delta x
    .hword 0x110 @ y
@@ -3678,16 +3613,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3e6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 597
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x224 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 598
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -3968,16 +3901,14 @@ timemachine_spr_data:
    .hword 0x3 @ type
    .hword 0x964 @ changes BG for 300 frames
    .hword 0x7dc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 644
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0x965 @ changes GROUND for 300 frames
    .hword 0x3ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 645
    .hword 0x0 @ delta x
    .hword 0x160 @ y

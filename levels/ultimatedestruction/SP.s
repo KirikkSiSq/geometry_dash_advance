@@ -17,16 +17,14 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 3
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x5031 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 4
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -123,16 +121,14 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1011 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 20
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0xa @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 21
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -371,30 +367,26 @@ ultimatedestruction_spr_data:
    .hword 0x20 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 61
    .hword 0x10 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 62
    .hword 0x10 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 63
    .hword 0x10 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 64
    .hword 0x20 @ delta x
    .hword 0x150 @ y
@@ -411,16 +403,14 @@ ultimatedestruction_spr_data:
    .hword 0x20 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 67
    .hword 0x10 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 68
    .hword 0x8 @ delta x
    .hword 0x1a0 @ y
@@ -431,16 +421,14 @@ ultimatedestruction_spr_data:
    .hword 0x8 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 70
    .hword 0x10 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 71
    .hword 0x10 @ delta x
    .hword 0x1a9 @ y
@@ -451,9 +439,8 @@ ultimatedestruction_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b9 @ y
    .hword 0x2b @ type
-   .hword 0x18 @ bg layer 3   
+   .hword 0x18 @ bg layer 3   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 73
    .hword 0x19 @ delta x
    .hword 0x1b0 @ y
@@ -466,16 +453,14 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1c33 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 75
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x826 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 76
    .hword 0x19 @ delta x
    .hword 0x1b0 @ y
@@ -675,16 +660,14 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 109
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 110
    .hword 0x1a0 @ delta x
    .hword 0x1b0 @ y
@@ -1042,8 +1025,7 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1008 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 169
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -1198,16 +1180,14 @@ ultimatedestruction_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x4016 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 194
    .hword 0x0 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x240b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 195
    .hword 0x0 @ delta x
    .hword 0xf0 @ y

@@ -131,16 +131,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x3f5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 22
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x28d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 23
    .hword 0x70 @ delta x
    .hword 0x160 @ y
@@ -281,16 +279,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0xb44 @ changes BG for 360 frames
    .hword 0x4fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 46
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x3 @ type
    .hword 0xb45 @ changes GROUND for 360 frames
    .hword 0x3a20 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 47
    .hword 0x30 @ delta x
    .hword 0x1a0 @ y
@@ -405,16 +401,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 66
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x3c13 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 67
    .hword 0xa @ delta x
    .hword 0x1b0 @ y
@@ -539,23 +533,20 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x148 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 88
    .hword 0x0 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 89
    .hword 0x0 @ delta x
    .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 90
    .hword 0x20 @ delta x
    .hword 0x1a0 @ y
@@ -668,16 +659,14 @@ polargeist_spr_data:
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 109
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 110
    .hword 0x23 @ delta x
    .hword 0x1b0 @ y
@@ -688,16 +677,14 @@ polargeist_spr_data:
    .hword 0x2d @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 112
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 113
    .hword 0x38 @ delta x
    .hword 0x190 @ y
@@ -714,16 +701,14 @@ polargeist_spr_data:
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 116
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 117
    .hword 0x38 @ delta x
    .hword 0x1b0 @ y
@@ -734,16 +719,14 @@ polargeist_spr_data:
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 119
    .hword 0x10 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 120
    .hword 0x38 @ delta x
    .hword 0x198 @ y
@@ -768,32 +751,28 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 124
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 125
    .hword 0x570 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0x784 @ changes BG for 240 frames
    .hword 0x41c0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 126
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x785 @ changes GROUND for 240 frames
    .hword 0x1ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 127
    .hword 0x40 @ delta x
    .hword 0x130 @ y
@@ -812,16 +791,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7f00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 130
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x59e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 131
    .hword 0x70 @ delta x
    .hword 0x1b0 @ y
@@ -898,9 +875,8 @@ polargeist_spr_data:
    .hword 0x8 @ delta x
    .hword 0x180 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 144
    .hword 0x20 @ delta x
    .hword 0x140 @ y
@@ -911,9 +887,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 146
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -924,9 +899,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 148
    .hword 0x18 @ delta x
    .hword 0x1b0 @ y
@@ -943,9 +917,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 151
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -956,9 +929,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 153
    .hword 0x20 @ delta x
    .hword 0x160 @ y
@@ -969,9 +941,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 155
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -982,9 +953,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 43 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 157
    .hword 0x20 @ delta x
    .hword 0x170 @ y
@@ -995,9 +965,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 159
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -1050,23 +1019,20 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 168
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 169
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 170
    .hword 0x50 @ delta x
    .hword 0x1b0 @ y
@@ -1203,9 +1169,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 193
    .hword 0x20 @ delta x
    .hword 0x168 @ y
@@ -1222,51 +1187,44 @@ polargeist_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 196
    .hword 0x10 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 197
    .hword 0x10 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 198
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 199
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 200
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 201
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 202
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -1277,51 +1235,44 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 204
    .hword 0x10 @ delta x
    .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 205
    .hword 0x0 @ delta x
    .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 206
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 207
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 208
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 209
    .hword 0x10 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 210
    .hword 0x8 @ delta x
    .hword 0x193 @ y
@@ -1338,9 +1289,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2c @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 184 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 213
    .hword 0x2a @ delta x
    .hword 0x171 @ y
@@ -1413,16 +1363,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0x964 @ changes BG for 300 frames
    .hword 0x59a1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 225
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x3 @ type
    .hword 0x965 @ changes GROUND for 300 frames
    .hword 0x3ce1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 226
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -1577,30 +1525,26 @@ polargeist_spr_data:
    .hword 0x12 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 252
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 253
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 254
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 255
    .hword 0x6 @ delta x
    .hword 0x150 @ y
@@ -1611,44 +1555,38 @@ polargeist_spr_data:
    .hword 0xa @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 257
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 258
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 259
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 260
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 261
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 262
    .hword 0x10 @ delta x
    .hword 0x190 @ y
@@ -1659,16 +1597,14 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 4 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 264
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 22 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 265
    .hword 0x10 @ delta x
    .hword 0x190 @ y
@@ -1679,16 +1615,14 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 8 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 267
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
    .hword 0x2b @ type
-   .hword 0x12 @ bg layer 2 flipped horizontally  
+   .hword 0x12 @ bg layer 2 flipped horizontally  z index 0 
    .hword 6 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 268
    .hword 0x16 @ delta x
    .hword 0x1ab @ y
@@ -1705,9 +1639,8 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1b3 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 188 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 271
    .hword 0x8 @ delta x
    .hword 0x1b0 @ y
@@ -1889,16 +1822,14 @@ polargeist_spr_data:
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x1ba0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 301
    .hword 0x0 @ delta x
    .hword 0x140 @ y
    .hword 0x3 @ type
    .hword 0x3c5 @ changes GROUND for 120 frames
    .hword 0x6a0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 302
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -2131,21 +2062,18 @@ polargeist_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 16 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 341
    .hword 0x0 @ delta x
    .hword 0x1a8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 342
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
    .hword 0x2b @ type
-   .hword 0x10 @ bg layer 2   
+   .hword 0x10 @ bg layer 2   z index 0 
    .hword 20 @ metatile ID appareance
-   .hword 0x0 @ z index 0
    .byte 0xff

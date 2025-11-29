@@ -11,8 +11,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x6729 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 2
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -35,9 +34,8 @@ thenightmare_spr_data:
    .hword 0x40 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 26 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 6
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -56,8 +54,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x6492 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 9
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y
@@ -80,25 +77,22 @@ thenightmare_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 27 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 13
    .hword 0x5d @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x3ef @ color
-   .hword 0x11 @ copies {copy_channel}
-   .hword 0x0 @ normal trigger
+   .hword 0x11 @ copies {copy_channel} normal trigger
 @ Object 14
    .hword 0x3 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x259c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 15
    .hword 0x0 @ delta x
    .hword 0x14a @ y
@@ -117,8 +111,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x39ce @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 18
    .hword 0x5d @ delta x
    .hword 0x140 @ y
@@ -131,8 +124,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x7dbf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 20
    .hword 0x20 @ delta x
    .hword 0x180 @ y
@@ -149,17 +141,15 @@ thenightmare_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 27 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 23
    .hword 0x50 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 24
    .hword 0x30 @ delta x
    .hword 0x170 @ y
@@ -170,9 +160,8 @@ thenightmare_spr_data:
    .hword 0x30 @ delta x
    .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 26 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 26
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -185,16 +174,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x0 @ color
-   .hword 0x13 @ copies {copy_channel}
-   .hword 0x0 @ normal trigger
+   .hword 0x13 @ copies {copy_channel} normal trigger
 @ Object 28
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x3f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 29
    .hword 0x0 @ delta x
    .hword 0x1b0 @ y
@@ -207,16 +194,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x305 @ changes GROUND for 96 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 31
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x214 @ changes BG for 66 frames
    .hword 0x210e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 32
    .hword 0x88 @ delta x
    .hword 0x160 @ y
@@ -241,8 +226,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x4010 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 36
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -273,8 +257,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 41
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -286,9 +269,8 @@ thenightmare_spr_data:
    .hword 0x0 @ delta x
    .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 43
    .hword 0x30 @ delta x
    .hword 0x190 @ y
@@ -307,16 +289,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x77be @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 46
    .hword 0x10 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 47
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -353,16 +333,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7bde @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 53
    .hword 0x10 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 54
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -387,16 +365,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x185 @ changes GROUND for 48 frames
    .hword 0x4631 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 58
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x184 @ changes BG for 48 frames
    .hword 0x2c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 59
    .hword 0x10 @ delta x
    .hword 0x160 @ y
@@ -493,40 +469,35 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x77bd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 75
    .hword 0x2 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x141f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 76
    .hword 0xe @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x3c4 @ changes BG for 120 frames
    .hword 0x41f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 77
    .hword 0x30 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x77bd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 78
    .hword 0x2 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x3ef @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 79
    .hword 0x16 @ delta x
    .hword 0x180 @ y
@@ -539,16 +510,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x77bd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 81
    .hword 0x2 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x7f40 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 82
    .hword 0x38 @ delta x
    .hword 0x160 @ y
@@ -561,32 +530,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x77bd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 84
    .hword 0x2 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x7c0b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 85
    .hword 0x42 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x77bd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 86
    .hword 0x2 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 87
    .hword 0x24 @ delta x
    .hword 0x1a0 @ y
@@ -623,32 +588,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 93
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 94
    .hword 0x4 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x155 @ changes GROUND for 42 frames
    .hword 0x4206 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 95
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x154 @ changes BG for 42 frames
    .hword 0x4206 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 96
    .hword 0x6 @ delta x
    .hword 0x160 @ y
@@ -659,17 +620,15 @@ thenightmare_spr_data:
    .hword 0x7c @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 98
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 99
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -692,17 +651,15 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 103
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 104
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -727,15 +684,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 108
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 109
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -748,8 +703,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 111
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -766,17 +720,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 114
    .hword 0x14 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 115
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -801,8 +753,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 119
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -821,8 +772,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 122
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -847,8 +797,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 126
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -859,9 +808,8 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 128
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -880,8 +828,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 131
    .hword 0x20 @ delta x
    .hword 0x120 @ y
@@ -900,15 +847,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 134
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 135
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -927,15 +872,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 138
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 139
    .hword 0x14 @ delta x
    .hword 0x120 @ y
@@ -954,15 +897,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 142
    .hword 0xc @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 143
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -981,8 +922,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 146
    .hword 0x10 @ delta x
    .hword 0x120 @ y
@@ -999,17 +939,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 149
    .hword 0x14 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 150
    .hword 0x20 @ delta x
    .hword 0x120 @ y
@@ -1028,15 +966,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 153
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 154
    .hword 0x14 @ delta x
    .hword 0x150 @ y
@@ -1062,23 +998,20 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x778a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 158
    .hword 0x3 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 159
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 160
    .hword 0x10 @ delta x
    .hword 0x100 @ y
@@ -1097,39 +1030,34 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 163
    .hword 0x9 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x4206 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 164
    .hword 0x13 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 165
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x2469 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 166
    .hword 0x0 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x2469 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 167
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -1148,8 +1076,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 170
    .hword 0x10 @ delta x
    .hword 0x140 @ y
@@ -1174,8 +1101,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 174
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -1192,17 +1118,15 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 177
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 178
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -1227,8 +1151,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 182
    .hword 0x10 @ delta x
    .hword 0x100 @ y
@@ -1245,24 +1168,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 185
    .hword 0x14 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 186
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 187
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -1281,8 +1201,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 190
    .hword 0x10 @ delta x
    .hword 0x100 @ y
@@ -1299,17 +1218,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 193
    .hword 0x14 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 194
    .hword 0x6 @ delta x
    .hword 0x100 @ y
@@ -1328,8 +1245,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 197
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -1346,9 +1262,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 200
    .hword 0x14 @ delta x
    .hword 0x170 @ y
@@ -1361,23 +1276,20 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 202
    .hword 0xc @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x5916 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 203
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 204
    .hword 0x4 @ delta x
    .hword 0x130 @ y
@@ -1396,8 +1308,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 207
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -1410,31 +1321,27 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x2469 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 209
    .hword 0x12 @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 210
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x2d4 @ changes BG for 90 frames
    .hword 0x25f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 211
    .hword 0x0 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 212
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -1739,17 +1646,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 263
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3ef @ color
-   .hword 0x11 @ copies {copy_channel}
-   .hword 0x1 @ blending normal trigger
+   .hword 0x31 @ copies {copy_channel} blending normal trigger
 @ Object 264
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -1760,17 +1665,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 266
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x16df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 267
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
@@ -1795,23 +1698,20 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3ef @ color
-   .hword 0x13 @ copies {copy_channel}
-   .hword 0x1 @ blending normal trigger
+   .hword 0x33 @ copies {copy_channel} blending normal trigger
 @ Object 271
    .hword 0x2 @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 272
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x37fc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 273
    .hword 0x10 @ delta x
    .hword 0xd0 @ y
@@ -1824,8 +1724,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 275
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -1850,8 +1749,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 279
    .hword 0x2c @ delta x
    .hword 0x120 @ y
@@ -1900,8 +1798,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 287
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -1914,8 +1811,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 289
    .hword 0x10 @ delta x
    .hword 0x160 @ y
@@ -1966,16 +1862,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 297
    .hword 0x10 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 298
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -2038,24 +1932,21 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x37df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 308
    .hword 0x0 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 309
    .hword 0x10 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 310
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -2093,1107 +1984,968 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7dff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 316
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 317
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 318
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 319
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 320
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 321
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 322
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 323
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 324
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 325
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 326
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 327
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 328
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 329
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 330
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 331
    .hword 0x1 @ delta x
    .hword 0x160 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 26 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 332
    .hword 0x1 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 333
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 334
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 335
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 336
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 337
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 338
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 339
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 340
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 341
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 342
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 343
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 344
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 345
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 346
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 347
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 348
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 349
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 350
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 351
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 352
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 353
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 354
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 355
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 356
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 357
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 358
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 359
    .hword 0x1 @ delta x
    .hword 0x150 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 27 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 360
    .hword 0x1 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 361
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 362
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 363
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 364
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2fe5 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 365
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 366
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 367
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 368
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 369
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 370
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 371
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 372
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 373
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 374
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 375
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 376
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 377
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 378
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 379
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 380
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 381
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 382
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 383
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 384
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 385
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 386
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 387
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 388
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 389
    .hword 0x1 @ delta x
    .hword 0x160 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 26 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 390
    .hword 0x1 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 391
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 392
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 393
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 394
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 395
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 396
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 397
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 398
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 399
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 400
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 401
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 402
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 403
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 404
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 405
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 406
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 407
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 408
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 409
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 410
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 411
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 412
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7fe3 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 413
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 414
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 415
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 416
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 417
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 418
    .hword 0x1 @ delta x
    .hword 0x150 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 27 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 419
    .hword 0x1 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 420
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 421
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 422
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 423
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 424
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 425
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 426
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 427
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 428
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 429
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 430
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 431
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 432
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 433
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 434
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 435
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 436
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 437
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 438
    .hword 0x2 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 439
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 440
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 441
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 442
    .hword 0x1 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 443
    .hword 0x2 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x681f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 444
    .hword 0x2 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c10 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 445
    .hword 0x2 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7ce0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 446
    .hword 0x2 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 447
    .hword 0x1 @ delta x
    .hword 0x160 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 26 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 448
    .hword 0x1 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x2be0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 449
    .hword 0x2 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3eb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 450
    .hword 0x2 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 451
    .hword 0x1 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x19f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 452
    .hword 0x1 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x965 @ changes GROUND for 300 frames
    .hword 0x89f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 453
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 454
    .hword 0x10 @ delta x
    .hword 0x120 @ y
@@ -3224,16 +2976,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x2aff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 459
    .hword 0x10 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 460
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -3264,16 +3014,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x195f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 465
    .hword 0x10 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 466
    .hword 0x40 @ delta x
    .hword 0x100 @ y
@@ -3286,8 +3034,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x43f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 468
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -3300,8 +3047,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 470
    .hword 0x40 @ delta x
    .hword 0x110 @ y
@@ -3315,16 +3061,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x10df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 472
    .hword 0x10 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 473
    .hword 0x10 @ delta x
    .hword 0x140 @ y
@@ -3337,44 +3081,38 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x274 @ changes BG for 78 frames
    .hword 0x4bfa @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 475
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x275 @ changes GROUND for 78 frames
    .hword 0x47fa @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 476
    .hword 0x2d @ delta x
    .hword 0x101 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3282 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 477
    .hword 0x1 @ delta x
    .hword 0xf1 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3280 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 478
    .hword 0xf @ delta x
    .hword 0x102 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3283 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 479
    .hword 0x1 @ delta x
    .hword 0xf2 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3281 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 480
    .hword 0x2 @ delta x
    .hword 0x110 @ y
@@ -3423,24 +3161,21 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 488
    .hword 0x0 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x5a3d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 489
    .hword 0x0 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 490
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -3465,22 +3200,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 494
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 495
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 496
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -3493,22 +3225,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 498
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 499
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 500
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -3527,22 +3256,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 503
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 504
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 505
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -3555,22 +3281,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 507
    .hword 0xc @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 508
    .hword 0x0 @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 509
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -3589,22 +3312,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 512
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 513
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 514
    .hword 0x4 @ delta x
    .hword 0x130 @ y
@@ -3617,22 +3337,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 516
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 517
    .hword 0x0 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 518
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -3651,22 +3368,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 521
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 522
    .hword 0x0 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 523
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -3679,22 +3393,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 525
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 526
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 527
    .hword 0x4 @ delta x
    .hword 0x130 @ y
@@ -3713,22 +3424,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 530
    .hword 0xc @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 531
    .hword 0x0 @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 532
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -3741,22 +3449,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 534
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 535
    .hword 0x0 @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 536
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -3775,22 +3480,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 539
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 540
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 541
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -3803,22 +3505,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 543
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 544
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 545
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -3837,22 +3536,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 548
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 549
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 550
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -3865,38 +3561,33 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 552
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 553
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 554
    .hword 0x4 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x2e9b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 555
    .hword 0x0 @ delta x
    .hword 0x70 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x3adb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 556
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -3909,15 +3600,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 558
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 559
    .hword 0x4 @ delta x
    .hword 0xc0 @ y
@@ -3954,15 +3643,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 565
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 566
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -3999,15 +3686,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 572
    .hword 0xc @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 573
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -4044,15 +3729,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 579
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 580
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -4089,15 +3772,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 586
    .hword 0xc @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 587
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -4128,15 +3809,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 592
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 593
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -4173,24 +3852,21 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 599
    .hword 0x10 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x36cb @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 600
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 601
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -4203,30 +3879,26 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 603
    .hword 0x1c @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 604
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 605
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 606
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4237,24 +3909,21 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 608
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 609
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e1 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 610
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -4265,24 +3934,21 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 612
    .hword 0x0 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 613
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 614
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -4295,22 +3961,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 616
    .hword 0xc @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 617
    .hword 0x0 @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 618
    .hword 0x4 @ delta x
    .hword 0x180 @ y
@@ -4323,22 +3986,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 620
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 621
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 622
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4351,22 +4011,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 624
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 625
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 626
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4379,22 +4036,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 628
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 629
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 630
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4407,30 +4061,26 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 632
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 633
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 634
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3bb7 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 635
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -4449,22 +4099,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 638
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 639
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 640
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4483,22 +4130,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 643
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 644
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 645
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4511,22 +4155,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 647
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 648
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 649
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4539,22 +4180,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 651
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 652
    .hword 0x0 @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 653
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -4567,22 +4205,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 655
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 656
    .hword 0x0 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 657
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -4595,22 +4230,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 659
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 660
    .hword 0x0 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 661
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -4629,22 +4261,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 664
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 665
    .hword 0x0 @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 666
    .hword 0x4 @ delta x
    .hword 0x140 @ y
@@ -4657,22 +4286,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 668
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 669
    .hword 0x0 @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 670
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -4685,8 +4311,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 672
    .hword 0x0 @ delta x
    .hword 0x15a @ y
@@ -4697,16 +4322,14 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 674
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 675
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4719,22 +4342,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 677
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 678
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 679
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4747,22 +4367,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 681
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 682
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 683
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4781,22 +4398,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 686
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 687
    .hword 0x0 @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 688
    .hword 0x4 @ delta x
    .hword 0x170 @ y
@@ -4809,22 +4423,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 690
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 691
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 692
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4837,22 +4448,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 694
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 695
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 696
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4871,22 +4479,19 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 699
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 700
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 701
    .hword 0x4 @ delta x
    .hword 0x160 @ y
@@ -4899,38 +4504,33 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 703
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 704
    .hword 0x0 @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 705
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x5ee8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 706
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x5289 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 707
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -4943,15 +4543,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x23ee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 709
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 710
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -4994,15 +4592,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7d57 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 717
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 718
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -5045,15 +4641,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x23ee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 725
    .hword 0xc @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 726
    .hword 0x4 @ delta x
    .hword 0xc0 @ y
@@ -5096,15 +4690,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7d57 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 733
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 734
    .hword 0x4 @ delta x
    .hword 0xb0 @ y
@@ -5147,15 +4739,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x23ee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 741
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 742
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
@@ -5198,15 +4788,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7d57 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 749
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 750
    .hword 0x4 @ delta x
    .hword 0x90 @ y
@@ -5249,8 +4837,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x23ee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 757
    .hword 0x10 @ delta x
    .hword 0x80 @ y
@@ -5293,32 +4880,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7d57 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 764
    .hword 0x10 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x393c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 765
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 766
    .hword 0x0 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 767
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -5329,39 +4912,34 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 769
    .hword 0x10 @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 770
    .hword 0x4 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 771
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 772
    .hword 0x4 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x6d89 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 773
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -5378,24 +4956,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 776
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 777
    .hword 0x4 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 778
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
@@ -5412,9 +4987,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 781
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -5425,17 +4999,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 783
    .hword 0x4 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 784
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -5446,9 +5018,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 786
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -5465,17 +5036,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 789
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 790
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
@@ -5492,9 +5061,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 793
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -5505,17 +5073,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 795
    .hword 0x4 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 796
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -5526,9 +5092,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 798
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -5539,17 +5104,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 800
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 801
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -5560,16 +5123,14 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 803
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 804
    .hword 0x4 @ delta x
    .hword 0x130 @ y
@@ -5586,17 +5147,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 807
    .hword 0x4 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 808
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -5607,9 +5166,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 810
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -5620,17 +5178,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 812
    .hword 0x4 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 813
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -5641,9 +5197,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 815
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -5660,24 +5215,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 818
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 819
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 820
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
@@ -5694,9 +5246,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 823
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -5715,8 +5266,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 826
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -5727,9 +5277,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 828
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -5740,17 +5289,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 830
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 831
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -5767,24 +5314,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 834
    .hword 0x0 @ delta x
    .hword 0x104 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 835
    .hword 0x4 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x5d28 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 836
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
@@ -5801,17 +5345,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 839
    .hword 0x4 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 840
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -5828,9 +5370,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 843
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -5841,17 +5382,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 845
    .hword 0x4 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 846
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -5862,9 +5401,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 848
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -5875,17 +5413,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 850
    .hword 0x4 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 851
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -5902,9 +5438,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 854
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -5921,17 +5456,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 857
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 858
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -5942,9 +5475,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 860
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -5961,24 +5493,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 863
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 864
    .hword 0x4 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 865
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -5995,17 +5524,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 868
    .hword 0x4 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x2af6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 869
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -6022,24 +5549,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xf4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 872
    .hword 0x0 @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 873
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 874
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -6056,9 +5580,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xe4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 877
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -6077,8 +5600,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 880
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -6089,9 +5611,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 882
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -6104,8 +5625,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 884
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
@@ -6122,9 +5642,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 887
    .hword 0x4 @ delta x
    .hword 0x130 @ y
@@ -6135,17 +5654,15 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 889
    .hword 0x4 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 890
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -6156,9 +5673,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 892
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -6175,24 +5691,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xc4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 895
    .hword 0x0 @ delta x
    .hword 0x124 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 896
    .hword 0x4 @ delta x
    .hword 0x30 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 897
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
@@ -6209,24 +5722,21 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 900
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 901
    .hword 0x4 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x2b2f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 902
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -6243,62 +5753,54 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 905
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 906
    .hword 0x4 @ delta x
    .hword 0x40 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 907
    .hword 0xc @ delta x
    .hword 0xd4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 908
    .hword 0x0 @ delta x
    .hword 0x114 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 909
    .hword 0x14 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x734a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 910
    .hword 0x0 @ delta x
    .hword 0x20 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x39ca @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 911
    .hword 0x0 @ delta x
    .hword 0x50 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 912
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
@@ -6311,15 +5813,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 914
    .hword 0xc @ delta x
    .hword 0x134 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 915
    .hword 0x4 @ delta x
    .hword 0xb0 @ y
@@ -6362,15 +5862,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 922
    .hword 0xc @ delta x
    .hword 0x144 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 923
    .hword 0x4 @ delta x
    .hword 0xc0 @ y
@@ -6413,15 +5911,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 930
    .hword 0xc @ delta x
    .hword 0x154 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 931
    .hword 0x4 @ delta x
    .hword 0xd0 @ y
@@ -6464,15 +5960,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 938
    .hword 0xc @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 939
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -6515,23 +6009,20 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 946
    .hword 0x20 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 947
    .hword 0xc @ delta x
    .hword 0x164 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 948
    .hword 0x4 @ delta x
    .hword 0xe0 @ y
@@ -6574,15 +6065,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 955
    .hword 0xc @ delta x
    .hword 0x174 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 956
    .hword 0x4 @ delta x
    .hword 0xf0 @ y
@@ -6625,15 +6114,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 963
    .hword 0xc @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 964
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -6664,15 +6151,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 969
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 970
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -6703,15 +6188,13 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 975
    .hword 0xc @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 976
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -6742,32 +6225,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 981
    .hword 0x20 @ delta x
    .hword 0x60 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 982
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x413c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 983
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 984
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -6780,8 +6259,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x741f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 986
    .hword 0x10 @ delta x
    .hword 0x140 @ y
@@ -6812,24 +6290,21 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7c00 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 991
    .hword 0x20 @ delta x
    .hword 0x10 @ y
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 992
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1b2b @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 993
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -6860,8 +6335,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 998
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -6880,8 +6354,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1001
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -6900,8 +6373,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1004
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -6920,16 +6392,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1007
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x50ef @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1008
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -6948,8 +6418,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1011
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -6980,16 +6449,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1016
    .hword 0x10 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x221a @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1017
    .hword 0x0 @ delta x
    .hword 0x168 @ y
@@ -7008,8 +6475,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x81f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1020
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7034,8 +6500,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x541f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1024
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -7048,16 +6513,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c17 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1026
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x4a46 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1027
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7082,8 +6545,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c0f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1031
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
@@ -7102,8 +6564,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7c60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1034
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7128,8 +6589,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x28ba @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1038
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -7148,8 +6608,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x7f80 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1041
    .hword 0x10 @ delta x
    .hword 0x130 @ y
@@ -7168,8 +6627,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x37e0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1044
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7188,16 +6646,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3e9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1047
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x5169 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1048
    .hword 0x0 @ delta x
    .hword 0x180 @ y
@@ -7222,8 +6678,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1052
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7248,32 +6703,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x60 @ changes 1 for 12 frames
    .hword 0x3bf @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1056
    .hword 0x10 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x331f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1057
    .hword 0x10 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x60b9 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1058
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x4934 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1059
    .hword 0x0 @ delta x
    .hword 0x140 @ y
@@ -7298,8 +6749,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x33fe @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1063
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7310,9 +6760,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1065
    .hword 0x4 @ delta x
    .hword 0x100 @ y
@@ -7337,8 +6786,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x53ec @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1069
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7349,9 +6797,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1071
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -7376,8 +6823,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fec @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1075
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7388,9 +6834,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1077
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -7415,8 +6860,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7e2c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1081
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7427,17 +6871,15 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x184 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1083
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7d95 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1084
    .hword 0x0 @ delta x
    .hword 0x100 @ y
@@ -7466,17 +6908,15 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1089
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x719f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1090
    .hword 0x0 @ delta x
    .hword 0x110 @ y
@@ -7505,17 +6945,15 @@ thenightmare_spr_data:
    .hword 0x1c @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1095
    .hword 0x4 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x359f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1096
    .hword 0x0 @ delta x
    .hword 0x120 @ y
@@ -7546,8 +6984,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x32ff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1101
    .hword 0x0 @ delta x
    .hword 0x130 @ y
@@ -7578,8 +7015,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x33fe @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1106
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7590,9 +7026,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x194 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1108
    .hword 0x4 @ delta x
    .hword 0x110 @ y
@@ -7617,8 +7052,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x53ec @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1112
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7629,9 +7063,8 @@ thenightmare_spr_data:
    .hword 0xc @ delta x
    .hword 0x1a4 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 3314 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1114
    .hword 0x4 @ delta x
    .hword 0x120 @ y
@@ -7656,8 +7089,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7fec @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1118
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7688,8 +7120,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x7e2c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1123
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7720,8 +7151,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1128
    .hword 0x0 @ delta x
    .hword 0x1b8 @ y
@@ -7746,16 +7176,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x3dee @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1132
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x1084 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1133
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -7927,16 +7355,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x12c4 @ changes BG for 600 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1160
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x12c5 @ changes GROUND for 600 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1161
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -8402,16 +7828,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x77bc @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1234
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x739c @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1235
    .hword 0x15 @ delta x
    .hword 0x140 @ y
@@ -8450,16 +7874,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xa4 @ changes BG for 20 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1241
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xa5 @ changes GROUND for 20 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1242
    .hword 0xa @ delta x
    .hword 0x150 @ y
@@ -8484,32 +7906,28 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x7ff6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1246
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0x5 @ changes GROUND for 0 frames
    .hword 0x7ff6 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1247
    .hword 0x4 @ delta x
    .hword 0x80 @ y
    .hword 0x3 @ type
    .hword 0x64 @ changes BG for 12 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1248
    .hword 0x0 @ delta x
    .hword 0x90 @ y
    .hword 0x3 @ type
    .hword 0x65 @ changes GROUND for 12 frames
    .hword 0x7fc0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1249
    .hword 0x4 @ delta x
    .hword 0x150 @ y
@@ -8611,16 +8029,14 @@ thenightmare_spr_data:
    .hword 0x57 @ delta x
    .hword 0x130 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1266
    .hword 0x10 @ delta x
    .hword 0x130 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   
+   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1 @ metatile ID appareance
-   .hword 0x0 @ z index 0
 @ Object 1267
    .hword 0x9 @ delta x
    .hword 0x110 @ y
@@ -8829,16 +8245,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1301
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0xf5 @ changes GROUND for 30 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1302
    .hword 0x0 @ delta x
    .hword 0x190 @ y
@@ -8887,8 +8301,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7c11 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1310
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -8913,8 +8326,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7de0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1314
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -8933,8 +8345,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x1fe0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1317
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -8947,8 +8358,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x3fd @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1319
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -8967,8 +8377,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x25f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1322
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -8987,8 +8396,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x101f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1325
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -9001,8 +8409,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x781f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1327
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -9015,8 +8422,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1329
    .hword 0x0 @ delta x
    .hword 0x160 @ y
@@ -9035,16 +8441,14 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1332
    .hword 0x0 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1333
    .hword 0x8 @ delta x
    .hword 0x170 @ y
@@ -9057,8 +8461,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x30 @ changes 1 for 6 frames
    .hword 0x7fff @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x1 @ blending normal trigger
+   .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 1335
    .hword 0x0 @ delta x
    .hword 0x170 @ y
@@ -9077,8 +8480,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x31f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1338
    .hword 0x17 @ delta x
    .hword 0x150 @ y
@@ -9103,8 +8505,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x3f8 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1342
    .hword 0x30 @ delta x
    .hword 0x180 @ y
@@ -9117,8 +8518,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x7c0d @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1344
    .hword 0x16 @ delta x
    .hword 0x140 @ y
@@ -9143,8 +8543,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x7c1e @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1348
    .hword 0x2f @ delta x
    .hword 0x170 @ y
@@ -9157,8 +8556,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7fa0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1350
    .hword 0x13 @ delta x
    .hword 0x130 @ y
@@ -9183,8 +8581,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x7d60 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1354
    .hword 0x2c @ delta x
    .hword 0x160 @ y
@@ -9197,8 +8594,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x1f @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1356
    .hword 0x11 @ delta x
    .hword 0x120 @ y
@@ -9223,8 +8619,7 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x1df @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1360
    .hword 0x5 @ delta x
    .hword 0x199 @ y
@@ -9243,14 +8638,12 @@ thenightmare_spr_data:
    .hword 0x3 @ type
    .hword 0x34 @ changes BG for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 1363
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0x35 @ changes GROUND for 6 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel
-   .hword 0x0 @ normal trigger
+   .hword 0x0 @ doesn't copy any channel normal trigger
    .byte 0xff
