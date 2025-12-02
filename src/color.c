@@ -64,15 +64,25 @@ INLINE void blend_bg_and_obj(COLOR *dst, u32 pal) {
 
 INLINE void blend_bg_and_col(COLOR *dst, u32 pal) {
     u32 index = (pal - COL_CHN_PAL) >> 4;
-    if(col_channels_flags[index] & COL_CHANNEL_BLENDING_FLAG) {
-        COLOR blended_color = blend_colors(palette_buffer[pal + 0x01], col_channels_color[index]);
-        dst[COL_ID_COLOR + pal] = blended_color;
-    }
-
     u32 blend_value = 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
-    for (u32 col = 0; col < 5; col++) {
-        clr_blend(&dst[pal + 0x01], &dst[COL_ID_COLOR + pal], &dst[BG_COL_BLENDING + col + pal], 1, blend_value);
-        blend_value += 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
+    if(col_channels_flags[index] & COL_CHANNEL_BLENDING_FLAG) {
+        COLOR black = 0;
+        for (u32 col = 0; col < 5; col++) {
+            COLOR blend_with_black = 0;
+            clr_blend(&black, &col_channels_color[index], &blend_with_black, 1, blend_value);
+            
+            COLOR blended_color = blend_colors(blend_with_black, dst[pal + 0x01]);
+            dst[BG_COL_BLENDING + col + pal] = blended_color;
+
+            blend_value += 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
+        }
+
+        dst[COL_ID_COLOR + pal] = blend_colors(col_channels_color[index], dst[pal + 0x01]); // Blend full color
+    } else {
+        for (u32 col = 0; col < 5; col++) {
+            clr_blend(&dst[pal + 0x01], &dst[COL_ID_COLOR + pal], &dst[BG_COL_BLENDING + col + pal], 1, blend_value);
+            blend_value += 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
+        }
     }
 }
 
@@ -182,15 +192,23 @@ void set_bg_color(COLOR *dst, COLOR color) {
 void update_lbg_palette(COLOR *dst) {
     // Get LBG color
     COLOR lbg = calculate_lbg(dst[BG_PAL + BG_COLOR], dst[PLAYER_SPR_PAL + P1_COLOR]);
-    dst[LIGHTER_BG_PAL + COL_ID_COLOR] = blend_colors(lbg, dst[BG_PAL + BG_COLOR]);
     dst[LIGHTER_BG_PAL + DARK_COLOR] = dst[BG_COLOR + 4];
-
+    
     // Blend both bg and lbg
+    COLOR black = 0;
     u32 blend_value = 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
     for (u32 col = 0; col < 5; col++) {
-        clr_blend(&dst[BG_PAL + BG_COLOR], &dst[LIGHTER_BG_PAL + COL_ID_COLOR], &dst[LIGHTER_BG_PAL + BG_COL_BLENDING + col], 1, blend_value);
+        COLOR blend_with_black = 0;
+        clr_blend(&black, &lbg, &blend_with_black, 1, blend_value);
+        
+        COLOR blended_color = blend_colors(blend_with_black, dst[BG_PAL + BG_COLOR]);
+        dst[LIGHTER_BG_PAL + BG_COL_BLENDING + col] = blended_color;
+
         blend_value += 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
     }
+
+    dst[LIGHTER_BG_PAL + COL_ID_COLOR] = blend_colors(lbg, dst[BG_PAL + BG_COLOR]); // Blend full color
+    
 
     // Adjust brighter color
     adjust_brighter_color(dst, LIGHTER_BG_PAL);
