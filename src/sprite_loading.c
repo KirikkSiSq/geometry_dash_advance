@@ -307,11 +307,19 @@ void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3) {
 s32 calculate_amplitude(FIXED rms) {
     static FIXED prev = 0;
     static FIXED pulse = 0;
+    static FIXED avg_delta = 0;
 
     FIXED delta = rms - prev;
+    FIXED abs_delta = delta >= 0 ? delta : -delta;
 
-    if (delta > float2fx(0.2f)) {
-        pulse += Sqrt(int2fx(delta)) * 4;
+    // Low-pass filter the delta
+    avg_delta = avg_delta + fxmul((abs_delta - avg_delta), float2fx(0.1f));
+
+    // Dynamic threshold
+    FIXED thresh = fxmul(avg_delta, float2fx(1.5f));  // tune multiplier
+
+    if (abs_delta > thresh) {
+        pulse += Sqrt(int2fx(abs_delta)) * 4;
     }
 
     pulse = fxmul(pulse, AMP_I_DECAY);
