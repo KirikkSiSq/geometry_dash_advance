@@ -300,7 +300,30 @@ void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3) {
 #define OUT_MIN 0xa8
 
 #define MIXING_BUFFER_SHORT_SIZE (s32)(sizeof(mixing_buffer) / 2)
-#define MIXING_BUFFER_SHORT_SIZE (s32)(sizeof(mixing_buffer) / 2)
+
+#define AMP_DECAY float2fx(0.05f)
+#define AMP_I_DECAY (float2fx(1.f) - AMP_DECAY)
+
+s32 calculate_amplitude(FIXED rms) {
+    static FIXED prev = 0;
+    static FIXED pulse = 0;
+
+    FIXED delta = rms - prev;
+
+    if (delta > float2fx(1.2f)) {
+        pulse += Sqrt(int2fx(delta)) * 4;
+    }
+
+    pulse = fxmul(pulse, AMP_I_DECAY);
+
+    if (pulse > int2fx(1)) pulse = int2fx(1);
+    if (pulse < float2fx(0.01f)) pulse = float2fx(0.01f);
+
+    prev = rms;
+    
+    return pulse;
+}
+
 void scale_pulsing_objects() {
     obj_aff_identity(&obj_aff_buffer[AFF_SLOT_PULSING]);
     u16 *mix_buffer_ptr = (u16 *) mixing_buffer;
@@ -311,18 +334,12 @@ void scale_pulsing_objects() {
         counter += mix_buffer_ptr[value];
     }
 
-    // Subtract min
-    counter -= IN_MIN * MIXING_BUFFER_SHORT_SIZE;
-    if (counter < 0) counter = 0;
+    FIXED normalization = int2fx(counter) / MIXING_BUFFER_SHORT_SIZE;
 
-    // Get value from 0 to 1
-    s32 multiplier = FIXED_DIV(TO_FIXED(counter), TO_FIXED((IN_MAX - IN_MIN) * MIXING_BUFFER_SHORT_SIZE));
+    FIXED rms = Sqrt(int2fx(normalization));
 
-    // Multiply by range
-    u32 calculated_range = FROM_FIXED(FIXED_MUL(multiplier, TO_FIXED(OUT_MAX - OUT_MIN)));
+    FIXED final_value = calculate_amplitude(rms);
 
-    u32 final_value = OUT_MIN + calculated_range;
-    if (final_value > OUT_MAX) final_value = OUT_MAX;
     obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING], final_value, final_value);
 }
 
