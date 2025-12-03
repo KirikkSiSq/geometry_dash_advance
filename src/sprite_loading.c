@@ -310,7 +310,7 @@ s32 calculate_amplitude(FIXED rms) {
 
     FIXED delta = rms - prev;
 
-    if (delta > float2fx(0.4f)) {
+    if (delta > float2fx(0.2f)) {
         pulse += Sqrt(int2fx(delta)) * 4;
     }
 
