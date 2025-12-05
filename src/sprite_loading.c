@@ -294,40 +294,42 @@ void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3) {
     }
 }
 
-#define IN_MAX 0x900
-#define IN_MIN 0x100
-#define OUT_MAX 0x100
-#define OUT_MIN 0xa8
-
 #define MIXING_BUFFER_SHORT_SIZE (s32)(sizeof(mixing_buffer) / 2)
 
 #define AMP_DECAY float2fx(0.05f)
 #define AMP_I_DECAY (float2fx(1.f) - AMP_DECAY)
 
+#define RMS_THRESH_MULTIPLIER float2fx(1.5f)
+
 s32 calculate_amplitude(FIXED rms) {
     static FIXED prev = 0;
     static FIXED pulse = 0;
     static FIXED avg_delta = 0;
+    static FIXED prev_rms = 0;
 
     FIXED delta = rms - prev;
-    FIXED abs_delta = delta >= 0 ? delta : -delta;
+    FIXED abs_delta = ABS(delta);
 
     // Low-pass filter the delta
     avg_delta = avg_delta + fxmul((abs_delta - avg_delta), float2fx(0.1f));
 
-    // Dynamic threshold
-    FIXED thresh = fxmul(avg_delta, float2fx(1.5f));  // tune multiplier
-
-    if (abs_delta > thresh) {
-        pulse += Sqrt(int2fx(abs_delta)) * 4;
+    // Detect note change: large RMS increase indicates a new note
+    FIXED rms_delta = rms - prev_rms;
+    FIXED abs_rms_delta = ABS(rms_delta);
+    FIXED rms_thresh = fxmul(avg_delta, RMS_THRESH_MULTIPLIER);
+    
+    if (abs_rms_delta > rms_thresh && rms_delta > 0) {
+        // Note changed, do pulse
+        pulse = int2fx(1);
     }
 
     pulse = fxmul(pulse, AMP_I_DECAY);
 
     if (pulse > int2fx(1)) pulse = int2fx(1);
-    if (pulse < float2fx(0.01f)) pulse = float2fx(0.01f);
+    if (pulse < float2fx(0.1f)) pulse = float2fx(0.1f);
 
     prev = rms;
+    prev_rms = rms;
     
     return pulse;
 }
@@ -337,14 +339,14 @@ void scale_pulsing_objects() {
     u16 *mix_buffer_ptr = (u16 *) mixing_buffer;
 
     // Get sum
-    s32 counter = 0;
-    for (s32 value = 0; value < MIXING_BUFFER_SHORT_SIZE; value++) {
-        counter += mix_buffer_ptr[value];
+    u32 sum = 0;
+    for (int i = 0; i < MIXING_BUFFER_SHORT_SIZE; i++) {
+        s32 v = (s16)mix_buffer_ptr[i];
+        sum += (v * v) >> 8;   // Scaling to avoid overflow
     }
 
-    FIXED normalization = int2fx(counter) / MIXING_BUFFER_SHORT_SIZE;
-
-    FIXED rms = Sqrt(int2fx(normalization));
+    u32 mean = sum / MIXING_BUFFER_SHORT_SIZE;
+    FIXED rms = Sqrt(int2fx(mean));
 
     FIXED final_value = calculate_amplitude(rms);
 
