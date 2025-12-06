@@ -172,11 +172,11 @@ FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b) {
     return fexp(expo);
 }
 
-FIXED_16 repeat(FIXED_16 a, u16 length) {
-    FIXED_16 div   = a / length;
-    FIXED_16 div_floor = div & 0xFFFF0000;  // truncate fractional bits
+u32 repeat(u32 a, u32 length) {
+    u32 div   = a / length;
+    u32 div_floor = div & 0xFFFF0000;  // truncate fractional bits
 
-    FIXED_16 result = a - div_floor * length;
+    s64 result = a - ((u64) div_floor) * length;
 
     if (result < 0)      result = 0;
     if (result > TO_FIXED(length)) result = TO_FIXED(length);
@@ -184,11 +184,11 @@ FIXED_16 repeat(FIXED_16 a, u16 length) {
     return result;
 }
 
-FIXED_16 slerp(FIXED_16 a, FIXED_16 b, FIXED_16 ratio) {
-    FIXED_16 delta =  repeat(b - a, 360);
+u32 slerp(u32 a, u32 b, u32 ratio) {
+    s64 delta = repeat(b - a, (1 << 16));
 
-    if (delta > TO_FIXED(180))
-        delta -= TO_FIXED(360);
+    if (delta > TO_FIXED((1 << 15)))
+        delta -= TO_FIXED((1 << 16));
 
     return a + FIXED_MUL(delta, ratio);
 }
