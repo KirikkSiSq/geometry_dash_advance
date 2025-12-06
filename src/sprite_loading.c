@@ -15,7 +15,7 @@ u16 *sprite_pointer;
 u64 last_sprite_x;
 
 // Rotation values for each saw
-u16 saw_rotation[2];
+u16 saw_rotation[4];
 
 struct ObjectSlot object_buffer[MAX_OBJECTS];
 
@@ -165,7 +165,7 @@ ARM_CODE void load_objects(u32 load_chr) {
 
                     // Rotate flag is LSB of obj_width
                     if (obj_width & 1) {
-                        // Get block position evenness for rotate direction
+                        // Get random bit for rotate direction
                         u32 rot_id = ((qran() & 1) ? ROTATING_CLOCKWISE : ROTATING_COUNTERCLOCKWISE);
                         new_object.attrib2 |= IS_ROTATING_FLAG;
                         new_object.attrib2 |= rot_id;
@@ -207,7 +207,7 @@ s32 find_affine_slot(u16 rotation) {
     return -1;
 }
 
-ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative_y, u8 hflip, u8 vflip, u8 priority) {
+ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative_y, u8 hflip, u8 vflip, u8 priority, s32 index) {
     // Get VRAM tile ID
     u32 chr_rom_offset = obj_chr_offset[curr_object.type][0];
     s16 palette = -1;
@@ -242,9 +242,14 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
     // Handle continuous rotating objects separately
     if (curr_object.attrib2 & IS_ROTATING_FLAG) {
         u32 saw_rot_id = (curr_object.attrib2 & ROTATING_DIRECTION_BIT) ? AFF_SLOT_CLOCKWISE : AFF_SLOT_COUNTERCLOCKWISE;
+        
+        if (!object_buffer[index].has_collision) {
+            saw_rot_id += AFF_SLOT_CLOCKWISE_SLOW - AFF_SLOT_CLOCKWISE;
+        }
+        
         oam_affine_metaspr(relative_x, relative_y, obj_sprites[curr_object.type], saw_rotation[saw_rot_id - AFF_SLOT_CLOCKWISE], saw_rot_id, 0, tile_id, palette, priority, curr_object.z_index, FALSE, disable_blending);
         obj_aff_identity(&obj_aff_buffer[saw_rot_id]);
-        obj_aff_rotscale(&obj_aff_buffer[saw_rot_id], mirror_scaling, float2fx(1.0), saw_rotation[saw_rot_id - 2]);
+        obj_aff_rotscale(&obj_aff_buffer[saw_rot_id], mirror_scaling, float2fx(1.0), saw_rotation[saw_rot_id - AFF_SLOT_CLOCKWISE]);
     } else if (curr_object.attrib1 & ENABLE_ROTATION_FLAG) {
         u16 rotation = curr_object.rotation;
         
@@ -336,6 +341,7 @@ s32 calculate_amplitude(FIXED rms) {
 
 void scale_pulsing_objects() {
     obj_aff_identity(&obj_aff_buffer[AFF_SLOT_PULSING]);
+    obj_aff_identity(&obj_aff_buffer[AFF_SLOT_PULSING_ORB]);
     u16 *mix_buffer_ptr = (u16 *) mixing_buffer;
 
     // Get sum
@@ -351,12 +357,17 @@ void scale_pulsing_objects() {
     FIXED final_value = calculate_amplitude(rms);
 
     obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING], final_value, final_value);
+
+    if (final_value < float2fx(0.6f)) final_value = float2fx(0.6f);
+    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING_ORB], final_value, final_value);
 }
 
 #define SAW_SPEED 0x400
 void rotate_saws() {
     saw_rotation[0] += SAW_SPEED;
     saw_rotation[1] -= SAW_SPEED;
+    saw_rotation[2] += SAW_SPEED / 2;
+    saw_rotation[3] -= SAW_SPEED / 2;
 }
 
 ARM_CODE void display_objects() {
@@ -398,7 +409,7 @@ ARM_CODE void display_objects() {
                     if (relative_x < SCREEN_WIDTH + 32) { 
                         // If the object is inside the screen vertically, display it
                         if (relative_y > -48 && relative_y < SCREEN_HEIGHT + 48) {
-                            do_display(curr_object, relative_x, relative_y, hflip, vflip, priority);
+                            do_display(curr_object, relative_x, relative_y, hflip, vflip, priority, index);
                         }
                     }
                 }

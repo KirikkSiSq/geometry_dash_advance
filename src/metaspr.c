@@ -839,7 +839,7 @@ const u16 dualPortalBlueSpr[] = {
 
 const u16 yellowOrbSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(1),
     0, // x
     0, // y
@@ -879,7 +879,7 @@ const u16 yellowPadSpr[] = {
 
 const u16 blueOrbSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(2),
     0, // x
     0, // y
@@ -919,7 +919,7 @@ const u16 bluePadSpr[] = {
 
 const u16 pinkOrbSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(3),
     0, // x
     0, // y
@@ -1090,7 +1090,7 @@ const u16 bgChainsBigSpr[] = {
 
 const u16 largePulsingCircleSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
     0, // x
     -16, // y
@@ -1109,7 +1109,7 @@ const u16 largePulsingCircleSpr[] = {
 };
 const u16 mediumPulsingCircleSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
     0,  // x
     -8, // y
@@ -1128,7 +1128,7 @@ const u16 mediumPulsingCircleSpr[] = {
 };
 const u16 smallPulsingCircleSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
     0, // x
     0, // y
@@ -1147,7 +1147,7 @@ const u16 smallPulsingCircleSpr[] = {
 
 const u16 pulsingObjectSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(4),
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P2),
     0, // x
     0, // y

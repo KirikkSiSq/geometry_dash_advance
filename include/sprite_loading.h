@@ -7,14 +7,17 @@
 #ifndef SPR_LOADING_H
 #define SPR_LOADING_H
 
-#define NUM_ROT_SLOTS 27 // 5 are reserved to saws, music pulsing circles, and both players
+#define NUM_ROT_SLOTS 24 // 8 are reserved to saws, music pulsing circles, and both players
 #define NUM_RESERVED_ROT_SLOTS 32 - NUM_ROT_SLOTS 
 
 #define AFF_SLOT_P1 0
 #define AFF_SLOT_P2 1
 #define AFF_SLOT_CLOCKWISE 2
 #define AFF_SLOT_COUNTERCLOCKWISE 3
-#define AFF_SLOT_PULSING 4
+#define AFF_SLOT_CLOCKWISE_SLOW 4
+#define AFF_SLOT_COUNTERCLOCKWISE_SLOW 5
+#define AFF_SLOT_PULSING 6
+#define AFF_SLOT_PULSING_ORB 7
 
 #define H_FLIP_FLAG (1 << 1)
 #define V_FLIP_FLAG (1 << 0)
