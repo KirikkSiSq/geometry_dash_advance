@@ -637,6 +637,8 @@ void draw_player() {
     // Draw only if on screen vertically
     if (curr_player.relative_player_y > -48 && curr_player.relative_player_y < SCREEN_HEIGHT + 48) {
         s8 sign = 1;
+        
+        u16 rotation;
 
         // Get player sprite depending
         const u16 *player_sprite = (curr_player_id == ID_PLAYER_1) ? player1Spr : player2Spr;
@@ -644,11 +646,16 @@ void draw_player() {
         if (curr_player.gamemode != GAMEMODE_SHIP) {
             FIXED lerp_value = (curr_player.gamemode == GAMEMODE_WAVE ? float2fx(1.75) : float2fx(2));
             curr_player.lerped_cube_rotation = lerp_angle(curr_player.lerped_cube_rotation, curr_player.cube_rotation, lerp_value, curr_player.gamemode != GAMEMODE_WAVE);
+
+            rotation = curr_player.lerped_cube_rotation;
         } else {
             FIXED_16 lerped = TO_FIXED(curr_player.lerped_cube_rotation);
             FIXED_16 normal = TO_FIXED(curr_player.cube_rotation);
 
             curr_player.lerped_cube_rotation = FROM_FIXED(slerp(lerped, normal, FLOAT_TO_FIXED(0.2f)));
+
+            if (ABS((s16)curr_player.lerped_cube_rotation) < 0x100) rotation = 0;
+            else rotation = curr_player.lerped_cube_rotation;
         }
         
         u8 priority = (cutscene_frame > TOTAL_CUTSCENE_FRAMES - 20) ? 2 : 0;
@@ -716,9 +723,9 @@ void draw_player() {
 
         /// Change sprite size depending on player size and screen mirror status
         if (curr_player.player_size == SIZE_BIG) {
-            obj_aff_rotscale(&obj_aff_buffer[curr_player_id], mirror_scaling, float2fx(1.0) * sign, curr_player.lerped_cube_rotation);
+            obj_aff_rotscale(&obj_aff_buffer[curr_player_id], mirror_scaling, float2fx(1.0) * sign, rotation);
         } else {
-            obj_aff_rotscale(&obj_aff_buffer[curr_player_id], scale_inv(fxmul(mirror_scaling, float2fx(MINI_SIZE))), scale_inv(float2fx(MINI_SIZE) * sign), curr_player.lerped_cube_rotation); 
+            obj_aff_rotscale(&obj_aff_buffer[curr_player_id], scale_inv(fxmul(mirror_scaling, float2fx(MINI_SIZE))), scale_inv(float2fx(MINI_SIZE) * sign), rotation); 
         }
     }
 }
