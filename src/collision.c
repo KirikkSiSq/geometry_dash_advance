@@ -1900,10 +1900,10 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
 #define EJECTION_TYPE_VERT 2
 
 s32 check_slope_eject_type(struct circle_t circle, struct triangle_t triangle) {
-    if (check_distance_circle_hipotenuse(circle, triangle)) {
-        return EJECTION_TYPE_HIPO;
-    } else if (check_distance_circle_horizontal_edge(circle, triangle)) {
+    if (check_distance_circle_horizontal_edge(circle, triangle)) {
         return EJECTION_TYPE_HORZ;
+    } else if (check_distance_circle_hipotenuse(circle, triangle)) {
+        return EJECTION_TYPE_HIPO;
     } else if (check_distance_circle_vertical_edge(circle, triangle)){
         return EJECTION_TYPE_VERT;
     } else {
@@ -2016,6 +2016,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
 #else
             player_death = TRUE;
 #endif
+            return TRUE;
         }
         // Set the player speed so it goes along the slope
         FIXED_16 speed_multiplier = FIXED_MUL(curr_player.player_x_speed, curr_player.slope_speed_multiplier);
