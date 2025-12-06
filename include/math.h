@@ -8,3 +8,7 @@ s32 snap_to_45(s32 current_rotation);
 u64 approach_value_asymptotic(u64 current, u64 target, u32 multiplier, u32 max_adjustment);
 u64 approach_value(u64 current, u64 target, s32 inc, s32 dec);
 s16 lerp_angle(s16 current, s16 target, FIXED divisor, u8 cap_angle);
+FIXED_16 slerp(FIXED_16 a, FIXED_16 b, FIXED_16 ratio);
+FIXED_LONG_16 fexp(FIXED_LONG_16 x);
+FIXED_16 fln(FIXED_16 s);
+FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b);

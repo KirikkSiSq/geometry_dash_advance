@@ -129,3 +129,66 @@ u64 approach_value(u64 current, u64 target, s32 inc, s32 dec) {
     }
     return current;
 }
+
+// 3rd order polynomial aprox
+FIXED_LONG_16 fexp(FIXED_LONG_16 x) {
+    // x^2, x^3
+    FIXED_LONG_16 x2 = FIXED_MUL(x, x);       // x^2
+    FIXED_LONG_16 x3 = FIXED_MUL(x2, x);      // x^3
+
+    // x^2 / 2
+    FIXED_LONG_16 t2 = x2 / 2;
+
+    // x^3 / 6
+    FIXED_LONG_16 t3 = x3 / 6;
+
+    // 1 + x + x^2/2 + x^3/6
+    return TO_FIXED(1) + x + t2 + t3;
+}
+
+FIXED_16 fln(FIXED_16 s) {
+    FIXED_16 t = s - TO_FIXED(1);
+
+    // (3 * t - 6)
+    FIXED_16 three_t = 3 * t;
+    FIXED_16 p = three_t - TO_FIXED(6);
+
+    // (6 + t * (3 * t - 6))
+    FIXED_LONG_16 tp = FIXED_MUL(t, p);
+    FIXED_16 inner = TO_FIXED(6) + tp;
+
+    // t * (6 + t * (3 * t - 6))
+    return FIXED_MUL(t, inner);
+}
+
+FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b) {
+    // ln(a)
+    FIXED_16 ln_a = fln(a);
+
+    // ln(a) * b
+    FIXED_LONG_16 expo = FIXED_MUL(ln_a, b);
+
+    // exp(ln(a) * b)
+    return fexp(expo);
+}
+
+FIXED_16 repeat(FIXED_16 a, u16 length) {
+    FIXED_16 div   = a / length;
+    FIXED_16 div_floor = div & 0xFFFF0000;  // truncate fractional bits
+
+    FIXED_16 result = a - div_floor * length;
+
+    if (result < 0)      result = 0;
+    if (result > TO_FIXED(length)) result = TO_FIXED(length);
+
+    return result;
+}
+
+FIXED_16 slerp(FIXED_16 a, FIXED_16 b, FIXED_16 ratio) {
+    FIXED_16 delta =  repeat(b - a, 360);
+
+    if (delta > TO_FIXED(180))
+        delta -= TO_FIXED(360);
+
+    return a + FIXED_MUL(delta, ratio);
+}

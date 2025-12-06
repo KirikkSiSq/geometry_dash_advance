@@ -641,7 +641,23 @@ void draw_player() {
         // Get player sprite depending
         const u16 *player_sprite = (curr_player_id == ID_PLAYER_1) ? player1Spr : player2Spr;
 
-        curr_player.lerped_cube_rotation = lerp_angle(curr_player.lerped_cube_rotation, curr_player.cube_rotation, (curr_player.gamemode == GAMEMODE_WAVE ? float2fx(1.75) : float2fx(2)), curr_player.gamemode != GAMEMODE_WAVE);
+        if (curr_player.gamemode != GAMEMODE_SHIP) {
+            FIXED lerp_value = (curr_player.gamemode == GAMEMODE_WAVE ? float2fx(1.75) : float2fx(2));
+            curr_player.lerped_cube_rotation = lerp_angle(curr_player.lerped_cube_rotation, curr_player.cube_rotation, lerp_value, curr_player.gamemode != GAMEMODE_WAVE);
+        } else {
+            // Mathz
+
+            // 360 / 1<<16
+            const FIXED_16 factor = TO_FIXED(360) / (1 << 16);
+
+            // 1<<16 / 360
+            const FIXED_16 inv_factor = TO_FIXED(1 << 16) / 360;
+
+            FIXED_16 lerped = FIXED_MUL(TO_FIXED(curr_player.lerped_cube_rotation), factor);
+            FIXED_16 normal = FIXED_MUL(TO_FIXED(curr_player.cube_rotation), factor);
+
+            curr_player.lerped_cube_rotation = FROM_FIXED(FIXED_MUL(slerp(lerped, normal, FLOAT_TO_FIXED(0.2f)), inv_factor));
+        }
         
         u8 priority = (cutscene_frame > TOTAL_CUTSCENE_FRAMES - 20) ? 2 : 0;
 
