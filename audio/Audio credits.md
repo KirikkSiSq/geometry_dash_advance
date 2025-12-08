@@ -26,6 +26,7 @@
 
 | Song | Author | Covered by |
 |---|---|---|
+|Detious - Golden Haze|DeadRewind|Sotos_24|
 |Ground to Space|SeaGlowingPro|Orionconstel|
 |Rose|Cornandbeans|Orionconstel|
 |Every End|Dimrain47|Orionconstel|
