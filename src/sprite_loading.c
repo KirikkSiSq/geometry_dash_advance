@@ -233,7 +233,9 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
     u32 chr_rom_tile_num = obj_chr_offset[curr_object.type][1];
     s16 tile_id = get_tile_id(chr_rom_offset, chr_rom_tile_num);
 
-    if (curr_object.type >= FADING_SPIKE_H && curr_object.type <= FADING_MEDIUM_SPIKE_V) {
+    if ((curr_object.type >= FADING_SPIKE_H && curr_object.type <= FADING_MEDIUM_SPIKE_V) ||
+        curr_object.type == FADING_MINISPIKE_H || curr_object.type == FADING_MINISPIKE_V
+    ) {
         u32 fade = get_sprite_fade_index(curr_object);
 
         tile_id += fade * (chr_rom_tile_num / 4);

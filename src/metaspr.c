@@ -1289,6 +1289,28 @@ const u16 mediumSpike_H[] = {
     0xffff,
 };
 
+const u16 minispike_V[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(15),
+    4, // x
+    8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 minispike_H[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(15),
+    0, // x
+    4, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
 const u16 coloredSpike_V[] = {
     ATTR0_4BPP | ATTR0_SQUARE,
     ATTR1_SIZE_16x16,
@@ -1350,6 +1372,28 @@ const u16 coloredMediumSpike_H[] = {
     ATTR2_PALBANK(13),
     0, // x
     0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredMinispike_V[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(13),
+    4, // x
+    8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+    0xffff,
+};
+
+const u16 coloredMinispike_H[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(13),
+    0, // x
+    4, // y
     PRIO_IDOFF(4, 0, 0), // id offset
     CENTER(8, 8),
     0xffff,
@@ -1820,7 +1864,16 @@ ROM_DATA const u16 *obj_sprites[] = {
 
     bushDecoBig,
     bgChainsSpr,
-    bushDecoTiny
+    bushDecoTiny,
+
+    pulsingObjectSpr, // Hexagon
+
+    minispike_V,
+    minispike_H,
+    coloredMinispike_V,
+    coloredMinispike_H,
+    minispike_V,
+    minispike_H,
 };
 
 #undef P1
@@ -2038,6 +2091,18 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("BIG_1_9_BUSH", 0x800, 0x10)
     CHR_SLOT("MEDIUM_1_9_BUSH", 0x810, 0x8)
     CHR_SLOT("SMALL_1_9_BUSH", 0x818, 0x4)
+
+    CHR_SLOT("PULSING_HEXAGON", 0x950, 0x4)
+
+    CHR_SLOT("MINISPIKE_V", 0x954, 0x1)
+    CHR_SLOT("MINISPIKE_H", 0x955, 0x1)
+    
+    CHR_SLOT("COLORED_MINISPIKE_V", 0x956, 0x1)
+    CHR_SLOT("COLORED_MINISPIKE_H", 0x957, 0x1)
+    
+    CHR_SLOT("FADING_MINISPIKE_V", 0x958, 0x4)
+    CHR_SLOT("FADING_MINISPIKE_H", 0x95c, 0x4)
+
 };
 #undef CHR_SLOT
 

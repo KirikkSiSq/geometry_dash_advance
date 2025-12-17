@@ -665,7 +665,20 @@ const jmp_table routines_jump_table[] = {
 
     do_nothing,
     do_nothing,
+    do_nothing,   
+    
     do_nothing,    
+    
+    kill_player,
+    kill_player,
+
+    kill_player,
+    kill_player,
+
+    kill_player,
+    kill_player,
+
+    
 };
 
 // In pixels
@@ -866,6 +879,17 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("BIG_1_9_BUSH", 0, 0, 0, 0, 0, 0)
     Object_Hitbox_Rectangle("MEDIUM_1_9_BUSH", 0, 0, 0, 0, 0, 0)
     Object_Hitbox_Rectangle("SMALL_1_9_BUSH", 0, 0, 0, 0, 0, 0)
+
+    Object_Hitbox_Rectangle("PULSING_HEXAGON", 0, 0, 0, 0, 0, 0)
+    
+    Object_Hitbox_Rectangle("MINISPIKE_V", 2, 3, 7, 12, 8, 8)
+    Object_Hitbox_Rectangle("MINISPIKE_H", 3, 2, 1, 7, 8, 8)
+    
+    Object_Hitbox_Rectangle("COLORED_MINISPIKE_V", 2, 3, 7, 12, 8, 8)
+    Object_Hitbox_Rectangle("COLORED_MINISPIKE_H", 3, 2, 1, 7, 8, 8)
+    
+    Object_Hitbox_Rectangle("FADING_MINISPIKE_V", 2, 3, 7, 12, 8, 8)
+    Object_Hitbox_Rectangle("FADING_MINISPIKE_H", 3, 2, 1, 7, 8, 8)
 };
 
 #undef Object_Hitbox

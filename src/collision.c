@@ -1525,6 +1525,202 @@ void col_ground_wavy_spike_edge_rt(u32 x, u32 y, u32 width, u32 height, u32 spk_
     }
 }
 
+void minispike_up_tl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x03, spk_y + 0x04, 0x02, 0x03
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void minispike_up_top(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x + 0x04, spk_y);
+}
+
+void minispike_up_tr(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x + 0x08, spk_y);
+}
+
+void minispike_up_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x, spk_y + 0x08);
+}
+
+void minispike_up_bot(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x + 0x04, spk_y + 0x08);
+}
+
+void minispike_up_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x + 0x08, spk_y + 0x08);
+}
+
+void minispike_down_tl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x03, spk_y + 0x01, 0x02, 0x03
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void minispike_down_top(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x + 0x04, spk_y);
+}
+
+void minispike_down_tr(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x + 0x08, spk_y);
+}
+
+void minispike_down_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x, spk_y + 0x08);
+}
+
+void minispike_down_bot(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x + 0x04, spk_y + 0x08);
+}
+
+void minispike_down_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x + 0x08, spk_y + 0x08);
+}
+
+void minispike_right_lt(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x01, spk_y + 0x03, 0x03, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void minispike_right_left(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x, spk_y + 0x04);
+}
+
+void minispike_right_lb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x, spk_y + 0x08);
+}
+
+void minispike_right_rt(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x + 0x08, spk_y);
+}
+
+void minispike_right_right(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x + 0x08, spk_y + 0x04);
+}
+
+void minispike_right_rb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x + 0x08, spk_y + 0x08);
+}
+
+void minispike_left_lt(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x04, spk_y + 0x03, 0x03, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void minispike_left_left(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x, spk_y + 0x04);
+}
+
+void minispike_left_lb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x, spk_y + 0x08);
+}
+
+void minispike_left_rt(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x + 0x08, spk_y);
+}
+
+void minispike_left_right(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x + 0x08, spk_y + 0x04);
+}
+
+void minispike_left_rb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x + 0x08, spk_y + 0x08);
+}
+
+void minispike_up_2_top(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x, spk_y);
+    minispike_up_tr(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_up_2_bot(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_bl(x, y, width, height, spk_x, spk_y);
+    minispike_up_br(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_up_2_tl_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tl(x, y, width, height, spk_x, spk_y);
+    minispike_up_br(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_up_2_tr_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_up_tr(x, y, width, height, spk_x, spk_y);
+    minispike_up_bl(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_down_2_top(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x, spk_y);
+    minispike_down_tr(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_down_2_bot(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_bl(x, y, width, height, spk_x, spk_y);
+    minispike_down_br(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_down_2_tl_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tl(x, y, width, height, spk_x, spk_y);
+    minispike_down_br(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_down_2_tr_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_down_tr(x, y, width, height, spk_x, spk_y);
+    minispike_down_bl(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_right_2_left(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x, spk_y);
+    minispike_right_lb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_right_2_right(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_rt(x, y, width, height, spk_x, spk_y);
+    minispike_right_rb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_right_2_lt_rb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_lt(x, y, width, height, spk_x, spk_y);
+    minispike_right_rb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_right_2_rt_lb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_right_rt(x, y, width, height, spk_x, spk_y);
+    minispike_right_lb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_left_2_left(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x, spk_y);
+    minispike_left_lb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_left_2_right(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_rt(x, y, width, height, spk_x, spk_y);
+    minispike_left_rb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_left_2_lt_rb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_lt(x, y, width, height, spk_x, spk_y);
+    minispike_left_rb(x, y, width, height, spk_x, spk_y);
+}
+
+void minispike_left_2_rt_lb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    minispike_left_rt(x, y, width, height, spk_x, spk_y);
+    minispike_left_lb(x, y, width, height, spk_x, spk_y);
+}
+
 void not_an_spike(UNUSED u32 x, UNUSED u32 y, UNUSED u32 width, UNUSED u32 height, UNUSED u32 spk_x, UNUSED u32 spk_y) {
     // not an spike so do nothing
 }
@@ -1633,46 +1829,98 @@ const jmp_table spike_coll_jump_table[] = {
     not_an_spike, // COL_SLOPE_45_UP_UD
     not_an_spike, // COL_SLOPE_45_DOWN_UD
     
-    not_an_spike, // COL_SLOPE_22_UP_1,
-    not_an_spike, // COL_SLOPE_22_UP_2,
-    not_an_spike, // COL_SLOPE_22_DOWN,
-    not_an_spike, // COL_SLOPE_22_DOWN_2,
-    not_an_spike, // COL_SLOPE_22_UP_UD,
-    not_an_spike, // COL_SLOPE_22_UP_UD_2,
-    not_an_spike, // COL_SLOPE_22_DOWN_UD,
-    not_an_spike, // COL_SLOPE_22_DOWN_UD_2,
+    not_an_spike, // COL_SLOPE_22_UP_1
+    not_an_spike, // COL_SLOPE_22_UP_2
+    not_an_spike, // COL_SLOPE_22_DOWN
+    not_an_spike, // COL_SLOPE_22_DOWN_2
+    not_an_spike, // COL_SLOPE_22_UP_UD
+    not_an_spike, // COL_SLOPE_22_UP_UD_2
+    not_an_spike, // COL_SLOPE_22_DOWN_UD
+    not_an_spike, // COL_SLOPE_22_DOWN_UD_2
 
-    not_an_spike, // COL_SLOPE_66_UP_1,
-    not_an_spike, // COL_SLOPE_66_UP_2,
-    not_an_spike, // COL_SLOPE_66_DOWN,
-    not_an_spike, // COL_SLOPE_66_DOWN_2,
-    not_an_spike, // COL_SLOPE_66_UP_UD,
-    not_an_spike, // COL_SLOPE_66_UP_UD_2,
-    not_an_spike, // COL_SLOPE_66_DOWN_UD,
-    not_an_spike, // COL_SLOPE_66_DOWN_UD_2,
+    not_an_spike, // COL_SLOPE_66_UP_1
+    not_an_spike, // COL_SLOPE_66_UP_2
+    not_an_spike, // COL_SLOPE_66_DOWN
+    not_an_spike, // COL_SLOPE_66_DOWN_2
+    not_an_spike, // COL_SLOPE_66_UP_UD
+    not_an_spike, // COL_SLOPE_66_UP_UD_2
+    not_an_spike, // COL_SLOPE_66_DOWN_UD
+    not_an_spike, // COL_SLOPE_66_DOWN_UD_2
     
     not_an_spike, // COL_SPIKE_SLOPE_45_UP
     not_an_spike, // COL_SPIKE_SLOPE_45_DOWN
     not_an_spike, // COL_SPIKE_SLOPE_45_UP_UD
     not_an_spike, // COL_SPIKE_SLOPE_45_DOWN_UD
     
-    not_an_spike, // COL_SPIKE_SLOPE_22_UP_1,
-    not_an_spike, // COL_SPIKE_SLOPE_22_UP_2,
-    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN,
-    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_2,
-    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD,
-    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD_2,
-    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD,
-    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD_2,
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_1
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_2
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_2
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD
+    not_an_spike, // COL_SPIKE_SLOPE_22_UP_UD_2
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD
+    not_an_spike, // COL_SPIKE_SLOPE_22_DOWN_UD_2
 
-    not_an_spike, // COL_SPIKE_SLOPE_66_UP_1,
-    not_an_spike, // COL_SPIKE_SLOPE_66_UP_2,
-    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN,
-    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_2,
-    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD,
-    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD_2,
-    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD,
-    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD_2,
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_1
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_2
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_2
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD
+    not_an_spike, // COL_SPIKE_SLOPE_66_UP_UD_2
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD
+    not_an_spike, // COL_SPIKE_SLOPE_66_DOWN_UD_2
+
+    minispike_up_tl,  // MINISPIKE_UP_TL
+    minispike_up_top, // MINISPIKE_UP_TOP
+    minispike_up_tr,  // MINISPIKE_UP_TR
+
+    minispike_up_bl,  // MINISPIKE_UP_BL
+    minispike_up_bot, // MINISPIKE_UP_BOTTOM
+    minispike_up_br,  // MINISPIKE_UP_BR
+
+    minispike_down_tl,  // MINISPIKE_DOWN_TL
+    minispike_down_top, // MINISPIKE_DOWN_TOP
+    minispike_down_tr,  // MINISPIKE_DOWN_TR
+
+    minispike_down_bl,  // MINISPIKE_DOWN_BL
+    minispike_down_bot, // MINISPIKE_DOWN_BOTTOM
+    minispike_down_br,  // MINISPIKE_DOWN_BR
+
+    minispike_right_lt,   // MINISPIKE_RIGTH_LT
+    minispike_right_left, // MINISPIKE_RIGTH_LEFT
+    minispike_right_lb,   // MINISPIKE_RIGTH_LB
+
+    minispike_right_rt,    // MINISPIKE_RIGHT_RT
+    minispike_right_right, // MINISPIKE_RIGHT_RIGHT
+    minispike_right_rb,    // MINISPIKE_RIGHT_RB
+
+    minispike_left_lt,   // MINISPIKE_LEFT_LT
+    minispike_left_left, // MINISPIKE_LEFT_LEFT
+    minispike_left_lb,   // MINISPIKE_LEFT_LB
+
+    minispike_left_rt,    // MINISPIKE_LEFT_RT
+    minispike_left_right, // MINISPIKE_LEFT_RIGHT
+    minispike_left_rb,    // MINISPIKE_LEFT_RB
+
+    minispike_up_2_top,   // MINISPIKE_UP_2_TOP
+    minispike_up_2_bot,   // MINISPIKE_UP_2_BOTTOM
+    minispike_up_2_tl_br, // MINISPIKE_UP_2_TL_BR
+    minispike_up_2_tr_bl, // MINISPIKE_UP_2_TR_BL
+
+    minispike_down_2_top,   // MINISPIKE_DOWN_2_TOP
+    minispike_down_2_bot,   // MINISPIKE_DOWN_2_BOTTOM
+    minispike_down_2_tl_br, // MINISPIKE_DOWN_2_TL_BR
+    minispike_down_2_tr_bl, // MINISPIKE_DOWN_2_TR_BL
+
+    minispike_right_2_left,  // MINISPIKE_RIGHT_2_LEFT
+    minispike_right_2_right, // MINISPIKE_RIGHT_2_RIGHT
+    minispike_right_2_lt_rb, // MINISPIKE_RIGHT_2_LT_RB
+    minispike_right_2_rt_lb, // MINISPIKE_RIGHT_2_RT_LB
+
+    minispike_left_2_left,  // MINISPIKE_LEFT_2_LEFT
+    minispike_left_2_right, // MINISPIKE_LEFT_2_RIGHT
+    minispike_left_2_lt_rb, // MINISPIKE_LEFT_2_LT_RB
+    minispike_left_2_rt_lb, // MINISPIKE_LEFT_2_RT_LB
 };
 
 // This function iterates through spikes that the player is touching and applies collision to it

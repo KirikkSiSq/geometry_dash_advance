@@ -656,8 +656,7 @@ void unmirror_screen() {
 }
 
 ARM_CODE void swap_screen_dir() {
-    // LEVEL_LAYERS + 1 because the background also has to be mirrored
-    for (s32 layer = 0; layer < LEVEL_LAYERS + 1; layer++) {
+    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
         // Copy tilemap into buffer
         SCR_ENTRY *mirror_screen_buffer = (SCR_ENTRY *) &vram_copy_buffer;
         
@@ -905,6 +904,11 @@ void modify_fade_block_flipped(u16 block_id, s32 calculated_x, s32 calculated_y,
 #define FIRST_FADING_METATILE FADING_BLOCK_ID
 #define LAST_FADING_METATILE FADING_MINIBLOCK_ID
 
+#define FIRST_FADING_MINISPIKE 7824
+#define LAST_FADING_MINISPIKE  7871
+
+#define TABLE_SUBTRACT (FIRST_FADING_MINISPIKE - LAST_FADING_METATILE - 1)
+
 // Block
 
 const u16 fading_block_frames[][4] = {
@@ -1011,6 +1015,329 @@ const u16 fading_medium_spike_right_frames[][4] = {
     { TILE(0x14f, 0, H, 0), TILE(0x14e, 0, H, 0), TILE(0x14f, 0, H, V), TILE(0x14e, 0, H, V), },
 };
 
+// Minispike
+
+//    MINISPIKE_UP_TL
+const u16 fading_minispike_up_tl[][4] = {
+    { TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+};
+
+//    MINISPIKE_UP_TOP
+const u16 fading_minispike_up_top[][4] = {
+    { TILE(0x326, 0, 0, 0), TILE(0x326, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x327, 0, 0, 0), TILE(0x327, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x328, 0, 0, 0), TILE(0x328, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+    { TILE(0x329, 0, 0, 0), TILE(0x329, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0) },
+};
+
+//    MINISPIKE_UP_TR
+const u16 fading_minispike_up_tr[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_UP_BL
+const u16 fading_minispike_up_bl[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_UP_BOTTOM
+const u16 fading_minispike_up_bot[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x326, 0, 0, 0), TILE(0x326, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x327, 0, 0, 0), TILE(0x327, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x328, 0, 0, 0), TILE(0x328, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x329, 0, 0, 0), TILE(0x329, 0, H, 0), },
+};
+
+//    MINISPIKE_UP_BR
+const u16 fading_minispike_up_br[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_TL
+const u16 fading_minispike_down_tl[][4] = {
+    { TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_TOP
+const u16 fading_minispike_down_top[][4] = {
+    { TILE(0x326, 0, 0, V), TILE(0x326, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x327, 0, 0, V), TILE(0x327, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x328, 0, 0, V), TILE(0x328, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x329, 0, 0, V), TILE(0x329, 0, H, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_TR
+const u16 fading_minispike_down_tr[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_BL
+const u16 fading_minispike_down_bl[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_BOTTOM
+const u16 fading_minispike_down_bot[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x326, 0, 0, V), TILE(0x326, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x327, 0, 0, V), TILE(0x327, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x328, 0, 0, V), TILE(0x328, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x329, 0, 0, V), TILE(0x329, 0, H, V), },
+};
+
+//    MINISPIKE_DOWN_BR,
+const u16 fading_minispike_down_br[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), },
+};
+
+//    MINISPIKE_RIGTH_LT
+const u16 fading_minispike_right_lt[][4] = {
+    { TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGTH_LEFT
+const u16 fading_minispike_right_left[][4] = {
+    { TILE(0x32a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32a, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32b, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32c, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32d, 0, 0, V), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGTH_LB
+const u16 fading_minispike_right_lb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_RT
+const u16 fading_minispike_right_rt[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_RIGHT
+const u16 fading_minispike_right_right[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x32a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32a, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32b, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32c, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x32d, 0, 0, V), },
+};
+
+//    MINISPIKE_RIGHT_RB
+const u16 fading_minispike_right_rb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_LT
+const u16 fading_minispike_left_lt[][4] = {
+    { TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_LEFT
+const u16 fading_minispike_left_left[][4] = {
+    { TILE(0x32a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32a, 0, H, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32b, 0, H, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32c, 0, H, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x32d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32d, 0, H, V), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_LB
+const u16 fading_minispike_left_lb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_RT
+const u16 fading_minispike_left_rt[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_RIGHT
+const u16 fading_minispike_left_right[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x32a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32a, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32b, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32c, 0, H, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x32d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x32d, 0, H, V), },
+};
+
+//    MINISPIKE_LEFT_RB
+const u16 fading_minispike_left_rb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), },
+};
+
+//    MINISPIKE_UP_2_TOP
+const u16 fading_minispike_up_2_top[][4] = {
+    { TILE(0x316, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x317, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x318, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x319, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_UP_2_BOTTOM
+const u16 fading_minispike_up_2_bot[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x316, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x317, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x318, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x319, 0, 0, 0), },
+};
+
+//    MINISPIKE_UP_2_TL_BR
+const u16 fading_minispike_up_2_tl_br[][4] = {
+    { TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), },
+    { TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), },
+    { TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), },
+    { TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), },
+};
+
+//    MINISPIKE_UP_2_TR_BL
+const u16 fading_minispike_up_2_tr_bl[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x316, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x317, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x318, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x319, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_2_TOP
+const u16 fading_minispike_down_2_top[][4] = {
+    { TILE(0x316, 0, 0, V), TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x317, 0, 0, V), TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x318, 0, 0, V), TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x319, 0, 0, V), TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_DOWN_2_BOTTOM
+const u16 fading_minispike_down_2_bot[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), TILE(0x316, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), TILE(0x317, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), TILE(0x318, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), TILE(0x319, 0, 0, V), },
+};
+
+//    MINISPIKE_DOWN_2_TL_BR
+const u16 fading_minispike_down_2_tl_br[][4] = {
+    { TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), },
+    { TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), },
+    { TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), },
+    { TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), },
+};
+
+//    MINISPIKE_DOWN_2_TR_BL
+const u16 fading_minispike_down_2_tr_bl[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x316, 0, 0, V), TILE(0x316, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x317, 0, 0, V), TILE(0x317, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x318, 0, 0, V), TILE(0x318, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x319, 0, 0, V), TILE(0x319, 0, 0, V), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_2_LEFT
+const u16 fading_minispike_right_2_left[][4] = {
+    { TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_2_RIGHT
+const u16 fading_minispike_right_2_right[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_2_LT_RB
+const u16 fading_minispike_right_2_lt_rb[][4] = {
+    { TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), },
+    { TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), },
+    { TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), },
+    { TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), },
+};
+
+//    MINISPIKE_RIGHT_2_RT_LB
+const u16 fading_minispike_right_2_rt_lb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x31a, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x31b, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x31c, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x31d, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_2_LEFT
+const u16 fading_minispike_left_2_left[][4] = {
+    { TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), },
+};
+
+//    MINISPIKE_LEFT_2_RIGHT
+const u16 fading_minispike_left_2_right[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), },
+};
+
+//    MINISPIKE_LEFT_2_LT_RB
+const u16 fading_minispike_left_2_lt_rb[][4] = {
+    { TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), },
+    { TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), },
+    { TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), },
+    { TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), },
+};
+
+//    MINISPIKE_LEFT_2_RT_LB
+const u16 fading_minispike_left_2_rt_lb[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x31a, 0, H, 0), TILE(0x31a, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31b, 0, H, 0), TILE(0x31b, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31c, 0, H, 0), TILE(0x31c, 0, H, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x31d, 0, H, 0), TILE(0x31d, 0, H, 0), TILE(0x000, 0, 0, 0), },
+};
+
+
 const u16 (*fading_table[])[4] = {
     fading_block_frames,
     fading_spike_up_frames,
@@ -1026,6 +1353,70 @@ const u16 (*fading_table[])[4] = {
     fading_medium_spike_left_frames,
     fading_medium_spike_right_frames,
     fading_miniblock_frames,
+
+    // 7000-ish metatiles later
+
+    fading_minispike_up_tl,
+    fading_minispike_up_top,
+    fading_minispike_up_tr,
+
+    fading_minispike_up_bl,
+    fading_minispike_up_bot,
+    fading_minispike_up_br,
+
+    fading_minispike_down_tl,
+    fading_minispike_down_top,
+    fading_minispike_down_tr,
+
+    fading_minispike_down_bl,
+    fading_minispike_down_bot,
+    fading_minispike_down_br,
+
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+
+    fading_minispike_right_lt,
+    fading_minispike_right_left,
+    fading_minispike_right_lb,
+
+    fading_minispike_right_rt,
+    fading_minispike_right_right,
+    fading_minispike_right_rb,
+
+    fading_minispike_left_lt,
+    fading_minispike_left_left,
+    fading_minispike_left_lb,
+
+    fading_minispike_left_rt,
+    fading_minispike_left_right,
+    fading_minispike_left_rb,
+
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+
+    fading_minispike_up_2_top,
+    fading_minispike_up_2_bot,
+    fading_minispike_up_2_tl_br,
+    fading_minispike_up_2_tr_bl,
+
+    fading_minispike_down_2_top,
+    fading_minispike_down_2_bot,
+    fading_minispike_down_2_tl_br,
+    fading_minispike_down_2_tr_bl,
+
+    fading_minispike_right_2_left,
+    fading_minispike_right_2_right,
+    fading_minispike_right_2_lt_rb,
+    fading_minispike_right_2_rt_lb,
+
+    fading_minispike_left_2_left,
+    fading_minispike_left_2_right,
+    fading_minispike_left_2_lt_rb,
+    fading_minispike_left_2_rt_lb,
 };
 
 #undef TILE
@@ -1034,7 +1425,6 @@ const u16 (*fading_table[])[4] = {
 
 const u16 fade_frame_table[] = {
     0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x03, 0x03, 0x02, 0x02, 0x01, 0x00, 0x00, 0x01, 
-    
 };
 
 ARM_CODE void handle_fading_blocks() {
@@ -1078,6 +1468,13 @@ ARM_CODE void handle_fading_blocks() {
                     // Modify the specified block graphics
                     if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
                     else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
+                } else if (block_id >= FIRST_FADING_MINISPIKE&& block_id <= LAST_FADING_MINISPIKE) { // Minispikes
+                    // Get tile y
+                    s32 calculated_y = (metatile_y << 1) & 0b11110;
+
+                    // Modify the specified block graphics
+                    if (screen_mirrored) modify_fade_block_flipped(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
+                    else modify_fade_block(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
                 }
             }
         }
