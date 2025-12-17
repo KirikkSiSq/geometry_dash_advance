@@ -20,24 +20,24 @@ u16 saw_rotation[4];
 struct ObjectSlot object_buffer[MAX_OBJECTS];
 
 
-s32 get_tile_id(u32 chr_offset, u8 tile_num) {
+s32 get_tile_id(u32 chr_offset) {
     s32 i;
-    for (i = 0; i < MAX_OBJECTS; i++) {
+    for (i = 0; i < MAX_CHR_SLOTS; i++) {
         struct ObjectCHRSlot curr_slot = chr_slots[i];
 
-        if (curr_slot.rom_offset == chr_offset && curr_slot.tile_num == tile_num) {
+        if (curr_slot.rom_offset == chr_offset) {
             return curr_slot.vram_offset;
         }
     }
     return -1;
 }
 
-s32 get_chr_slot_id(u32 rom_offset, u8 tile_num) {
+s32 get_chr_slot_id(u32 rom_offset) {
     s32 id;
-    for (id = 0; id < MAX_OBJECTS; id++) {
+    for (id = 0; id < MAX_CHR_SLOTS; id++) {
         struct ObjectCHRSlot curr_slot = chr_slots[id];
         
-        if (curr_slot.rom_offset == rom_offset && curr_slot.tile_num == tile_num) {
+        if (curr_slot.rom_offset == rom_offset) {
             // This object is already loaded, exit
             return id;
         }
@@ -46,25 +46,23 @@ s32 get_chr_slot_id(u32 rom_offset, u8 tile_num) {
     return -1;
 }
 
-s32 get_free_chr_slot_id(u32 rom_offset, u8 tile_num) {
+s32 get_free_chr_slot_id(u32 rom_offset) {
     s32 id;
+    s32 available = -1;
     // Check for already existant slots
-    for (id = 0; id < MAX_OBJECTS; id++) {
+    for (id = 0; id < MAX_CHR_SLOTS; id++) {
         struct ObjectCHRSlot curr_slot = chr_slots[id];
-    
-        if (curr_slot.rom_offset == rom_offset && curr_slot.tile_num == tile_num) {
+        if (available < 0 && !curr_slot.occupied) {
+            available = id;
+        }
+
+        if (curr_slot.rom_offset == rom_offset) {
             // This object is already loaded, exit
             return id;
         }
     }
 
-    // If nothing was found, get an available slot
-    for (id = 0; id < MAX_OBJECTS; id++) {
-        struct ObjectCHRSlot curr_slot = chr_slots[id];
-        if (!curr_slot.occupied) {
-            return id;
-        }
-    }
+    if (available >= 0) return available;
 
     return -1;
 }
@@ -231,11 +229,10 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
     }
     
     u32 chr_rom_tile_num = obj_chr_offset[curr_object.type][1];
-    s16 tile_id = get_tile_id(chr_rom_offset, chr_rom_tile_num);
+    s16 tile_id = get_tile_id(chr_rom_offset);
 
-    if ((curr_object.type >= FADING_SPIKE_H && curr_object.type <= FADING_MEDIUM_SPIKE_V) ||
-        curr_object.type == FADING_MINISPIKE_H || curr_object.type == FADING_MINISPIKE_V
-    ) {
+    // Check for fade
+    if (chr_rom_tile_num & 0x80000000) {
         u32 fade = get_sprite_fade_index(curr_object);
 
         tile_id += fade * (chr_rom_tile_num / 4);
@@ -284,7 +281,7 @@ void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3) {
     u32 tile_num = obj_chr_offset[type][1];
     
     // Get next free slot ID, or in case there is already an slot with the same data, use it
-    s32 id = get_free_chr_slot_id(rom_offset, tile_num);
+    s32 id = get_free_chr_slot_id(rom_offset);
 
     // If we got a new slot, then setup and upload it into the buffer, so the chr data can be copied to VRAM in the next frame
     if (id >= 0 && !chr_slots[id].occupied) {
@@ -392,8 +389,7 @@ ARM_CODE void display_objects() {
                 if (chr_rom_offset == SPRITE_CHR_COPY_FROM_METATILE) {
                     chr_rom_offset = 0x80000000 | curr_object.attrib3;
                 }
-                u32 chr_rom_tile_num = obj_chr_offset[curr_object.type][1];
-                s32 chr_id = get_chr_slot_id(chr_rom_offset, chr_rom_tile_num);
+                s32 chr_id = get_chr_slot_id(chr_rom_offset);
                 
                 if (chr_id >= 0) {
                     // Keep chr on VRAM

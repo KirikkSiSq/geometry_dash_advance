@@ -5,6 +5,7 @@
 /* LEVEL */
 // Max number of loaded objects
 #define MAX_OBJECTS 96
+#define MAX_CHR_SLOTS 48
 
 // Max level height in blocks (level height is variable)
 #define MAX_LEVEL_HEIGHT 128

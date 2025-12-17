@@ -299,7 +299,7 @@ void reset_variables() {
     memset16(trail_enabled, 0x0000, sizeof(trail_enabled) / sizeof(u16));
 
     memset32(level_buffer, 0x0000, sizeof(level_buffer) / sizeof(u32));
-    memset32(chr_slots, 0x0000, (sizeof(struct ObjectCHRSlot) * MAX_OBJECTS) / sizeof(u32));
+    memset32(chr_slots, 0x0000, (sizeof(struct ObjectCHRSlot) * MAX_CHR_SLOTS) / sizeof(u32));
     memset16(loaded_object_buffer, 0xffff, sizeof(loaded_object_buffer) / sizeof(s16));
     memset16(unloaded_object_buffer, 0xffff, sizeof(unloaded_object_buffer) / sizeof(s16));
     memset32(object_buffer, 0x0000, (sizeof(struct ObjectSlot) * MAX_OBJECTS) / sizeof(u32));
@@ -323,7 +323,7 @@ void reset_variables() {
     }
 
     // Empty chr slots
-    for (u32 index = 0; index < MAX_OBJECTS; index++) {
+    for (u32 index = 0; index < MAX_CHR_SLOTS; index++) {
         object_buffer[index].occupied = FALSE;
         chr_slots[index].rom_offset = 0xffffffff;
     }
@@ -1431,51 +1431,51 @@ ARM_CODE void handle_fading_blocks() {
     u32 scroll_x_origin = (scroll_x >> SUBPIXEL_BITS);
     u32 scroll_y_origin = (scroll_y >> SUBPIXEL_BITS);
 
-    for (s32 layer = 0; layer < 2; layer++) {
-        for (s32 x = 0; x < (16 * 16); x += 16) {
-            // Get the x position in pixels
-            u32 x_pos = scroll_x_origin + x;
+    s32 layer = global_timer & 1;
 
-            // Get metatile x
-            s32 metatile_x = (x_pos >> 4) & 0x1f;
+    for (s32 x = 0; x < (16 * 16); x += 16) {
+        // Get the x position in pixels
+        u32 x_pos = scroll_x_origin + x;
 
-            // Get tile x
-            s32 calculated_x = (metatile_x << 1) & 0b11110;
+        // Get metatile x
+        s32 metatile_x = (x_pos >> 4) & 0x1f;
 
-            if (screen_mirrored) {
-                // Flip position
-                calculated_x = (SCREENBLOCK_W - 2) - calculated_x;
-            }
+        // Get tile x
+        s32 calculated_x = (metatile_x << 1) & 0b11110;
 
-            // Calculate frame ID 
-            u32 frame_id = fade_frame_table[x >> 4];
+        if (screen_mirrored) {
+            // Flip position
+            calculated_x = (SCREENBLOCK_W - 2) - calculated_x;
+        }
 
-            for (s32 y = 0; y < (11 * 16); y += 16) {
-                // Get the y position in pixels
-                u32 y_pos = scroll_y_origin + y;
+        // Calculate frame ID 
+        u32 frame_id = fade_frame_table[x >> 4];
 
-                // Get metatile y
-                s32 metatile_y = (y_pos >> 4);
-                
-                // Get metatile from the buffer
-                u16 block_id = level_buffer[layer][metatile_x + (metatile_y * LEVEL_BUFFER_WIDTH)];
-                
-                // Check if the metatile is on the fading ID range
-                if (block_id >= FIRST_FADING_METATILE && block_id <= LAST_FADING_METATILE) {
-                    // Get tile y
-                    s32 calculated_y = (metatile_y << 1) & 0b11110;
+        for (s32 y = 0; y < (11 * 16); y += 16) {
+            // Get the y position in pixels
+            u32 y_pos = scroll_y_origin + y;
 
-                    // Modify the specified block graphics
-                    if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
-                    else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
-                } else if (block_id >= FIRST_FADING_MINISPIKE&& block_id <= LAST_FADING_MINISPIKE) { // Minispikes
-                    // Get tile y
-                    s32 calculated_y = (metatile_y << 1) & 0b11110;
+            // Get metatile y
+            s32 metatile_y = (y_pos >> 4);
+            
+            // Get metatile from the buffer
+            u16 block_id = level_buffer[layer][metatile_x + (metatile_y * LEVEL_BUFFER_WIDTH)];
+            
+            // Check if the metatile is on the fading ID range
+            if (block_id >= FIRST_FADING_METATILE && block_id <= LAST_FADING_METATILE) {
+                // Get tile y
+                s32 calculated_y = (metatile_y << 1) & 0b11110;
 
-                    // Modify the specified block graphics
-                    if (screen_mirrored) modify_fade_block_flipped(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
-                    else modify_fade_block(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
-                }
+                // Modify the specified block graphics
+                if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
+                else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
+            } else if (block_id >= FIRST_FADING_MINISPIKE&& block_id <= LAST_FADING_MINISPIKE) { // Minispikes
+                // Get tile y
+                s32 calculated_y = (metatile_y << 1) & 0b11110;
+
+                // Modify the specified block graphics
+                if (screen_mirrored) modify_fade_block_flipped(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
+                else modify_fade_block(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
             }
         }
     }

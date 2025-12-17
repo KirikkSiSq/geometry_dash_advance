@@ -1880,6 +1880,7 @@ ROM_DATA const u16 *obj_sprites[] = {
 #undef P2
 
 #define CHR_SLOT(name, rom, vram) {rom, vram},
+#define FADE_SLOT(name, rom, vram) {rom, 0x80000000 | vram},
 
 const u32 obj_chr_offset[][2] = {
     CHR_SLOT("NONE", SPRITE_NO_CHR,0)
@@ -2072,12 +2073,12 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("COLORED_MEDIUM_SPIKE_V", 0x518, 0x4)
     CHR_SLOT("COLORED_MEDIUM_SPIKE_H", 0x5ac, 0x4)
 
-    CHR_SLOT("FADING_SPIKE_V", 0x7b0, 0x10)
-    CHR_SLOT("FADING_SPIKE_H", 0x7c0, 0x10)
-    CHR_SLOT("FADING_HALF_SPIKE_V", 0x7f0, 0x8)
-    CHR_SLOT("FADING_HALF_SPIKE_H", 0x7f8, 0x8)
-    CHR_SLOT("FADING_MEDIUM_SPIKE_V", 0x7d0, 0x10)
-    CHR_SLOT("FADING_MEDIUM_SPIKE_H", 0x7e0, 0x10)
+    FADE_SLOT("FADING_SPIKE_V", 0x7b0, 0x10)
+    FADE_SLOT("FADING_SPIKE_H", 0x7c0, 0x10)
+    FADE_SLOT("FADING_HALF_SPIKE_V", 0x7f0, 0x8)
+    FADE_SLOT("FADING_HALF_SPIKE_H", 0x7f8, 0x8)
+    FADE_SLOT("FADING_MEDIUM_SPIKE_V", 0x7d0, 0x10)
+    FADE_SLOT("FADING_MEDIUM_SPIKE_H", 0x7e0, 0x10)
     
     CHR_SLOT("BIG_1_8_SAW", 0x820, 0x40)
     CHR_SLOT("MEDIUM_1_8_SAW", 0x860, 0x10)
@@ -2100,8 +2101,8 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("COLORED_MINISPIKE_V", 0x956, 0x1)
     CHR_SLOT("COLORED_MINISPIKE_H", 0x957, 0x1)
     
-    CHR_SLOT("FADING_MINISPIKE_V", 0x958, 0x4)
-    CHR_SLOT("FADING_MINISPIKE_H", 0x95c, 0x4)
+    FADE_SLOT("FADING_MINISPIKE_V", 0x958, 0x4)
+    FADE_SLOT("FADING_MINISPIKE_H", 0x95c, 0x4)
 
 };
 #undef CHR_SLOT

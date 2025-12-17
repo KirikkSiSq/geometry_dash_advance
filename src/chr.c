@@ -304,7 +304,7 @@ ARM_CODE void deoccupy_chr_slots() {
     // If an object has been loaded in this frame, return to avoid desyncs
     if (loaded_object_buffer_offset > 0) return;
 
-    for (s32 i = 0; i < MAX_OBJECTS; i++) {
+    for (s32 i = 0; i < MAX_CHR_SLOTS; i++) {
         u8 was_occupied = chr_slots[i].occupied;
         u32 rom_offset = chr_slots[i].rom_offset;
         u32 vram_offset = chr_slots[i].vram_offset;
@@ -322,7 +322,7 @@ ARM_CODE void deoccupy_chr_slots() {
 
             // Start moving the VRAM offset of objects with an offset greater than this object's offset. Note this is only for OAM objects,
             // actual CHR needs to be updated on the next frame to avoid a single frame of garbage
-            for (s32 j = 0; j < MAX_OBJECTS; j++) {
+            for (s32 j = 0; j < MAX_CHR_SLOTS; j++) {
                 u32 curr_vram_offset = chr_slots[j].vram_offset;
                 // If this object's VRAM offset is greater than the unloaded object's, then it needs to be moved
                 if (curr_vram_offset > vram_offset) {

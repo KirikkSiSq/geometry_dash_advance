@@ -57,7 +57,7 @@ void vblank_handler() {
 
         if (update_flags & CLEAR_OAM_BUFFER) {
             // Clear OAM
-            memset32(shadow_oam, ATTR0_HIDE, 256);
+            memset32(shadow_oam, ATTR0_HIDE, nextSpr << 1);
             // Clear rotation buffer
             memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
         }
@@ -79,7 +79,6 @@ void vblank_handler() {
 
     // Run sound
     mmFrame();
-    
 }
 
 IWRAM_CODE void hang() {

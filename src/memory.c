@@ -79,7 +79,7 @@ u32 global_timer;
 u16 next_free_tile_id = START_OF_OBJECT_CHR;
 u16 old_next_free_tile_id;
 
-struct ObjectCHRSlot chr_slots[MAX_OBJECTS];
+struct ObjectCHRSlot chr_slots[MAX_CHR_SLOTS];
 
 // Buffers for loading and unloading VRAM tiles for objects
 EWRAM_DATA u16 loaded_object_buffer_offset;

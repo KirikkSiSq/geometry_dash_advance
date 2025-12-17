@@ -88,7 +88,7 @@ extern struct ObjectSlot object_buffer[MAX_OBJECTS];
 IWRAM_CODE void load_objects(u32 load_chr);
 IWRAM_CODE void display_objects();
 
-s32 get_chr_slot_id(u32 rom_offset, u8 tile_num);
+s32 get_chr_slot_id(u32 rom_offset);
 
 void scale_pulsing_objects();
 void rotate_saws();
