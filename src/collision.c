@@ -33,19 +33,14 @@ void collision_cube() {
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
+    collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
+
+    
 #ifdef DEBUG
     if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
-#endif
 
-    collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
-
-    // Check sprite spikes
-    coll_x = (curr_player.player_x >> SUBPIXEL_BITS);
-    coll_y = (curr_player.player_y >> SUBPIXEL_BITS);
-    
-#ifdef DEBUG
     if (!noclip) collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 #else
     collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
@@ -198,12 +193,7 @@ void collision_ship_ball_ufo() {
     if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
-#endif
-    
-    // Check sprite spikes
-    coll_x = (curr_player.player_x >> SUBPIXEL_BITS);
-    coll_y = (curr_player.player_y >> SUBPIXEL_BITS);
-#ifdef DEBUG
+
     if (!noclip) collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 #else
     collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
@@ -297,12 +287,7 @@ void collision_wave() {
     if (hitbox_display) {
         draw_hitbox_points(coll_x, coll_y, curr_player.player_width, curr_player.player_height, FALSE);
     }
-#endif
 
-    // Check sprite spikes
-    coll_x = (curr_player.player_x >> SUBPIXEL_BITS);
-    coll_y = (curr_player.player_y >> SUBPIXEL_BITS);
-#ifdef DEBUG
     if (!noclip) collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
 #else
     collide_with_obj_spikes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
@@ -1003,14 +988,15 @@ ARM_CODE u32 run_coll(u32 x, u32 y, u32 layer, u8 side) {
 
 #define COLLISION_DISTANCE 48
 
-ARM_CODE s32 check_collision_distance(struct ObjectSlot curr_object) {
-    s32 player_x_pixels = curr_player.player_x >> SUBPIXEL_BITS;
-    s32 player_y_pixels = curr_player.player_y >> SUBPIXEL_BITS;
+ARM_CODE s32 check_collision_distance(struct ObjectSlot curr_object, s32 player_x_pixels, s32 player_y_pixels) {
     return (s32) curr_object.object.x > player_x_pixels - COLLISION_DISTANCE && (s32) curr_object.object.x < player_x_pixels + COLLISION_DISTANCE &&
            (s32) curr_object.object.y > player_y_pixels - COLLISION_DISTANCE && (s32) curr_object.object.y < player_y_pixels + COLLISION_DISTANCE;
 }
 
 ARM_CODE void do_collision_with_objects() {
+    s32 player_x_pixels = curr_player.player_x >> SUBPIXEL_BITS;
+    s32 player_y_pixels = curr_player.player_y >> SUBPIXEL_BITS;
+
     for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
         // Check collision only if the slot is occupied
         struct ObjectSlot curr_object = object_buffer[slot];
@@ -1019,7 +1005,7 @@ ARM_CODE void do_collision_with_objects() {
             // If is occupied and it hasn't been activated yet, continue
             if (curr_object.occupied && curr_object.activated[curr_player_id] == FALSE) {
                 // If it is behind the collision distance, skip
-                if (check_collision_distance(curr_object)) {
+                if (check_collision_distance(curr_object, player_x_pixels, player_y_pixels)) {
                     check_obj_collision(slot); 
                 }
             }
