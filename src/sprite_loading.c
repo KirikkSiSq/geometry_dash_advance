@@ -208,7 +208,7 @@ s32 find_affine_slot(u16 rotation) {
 ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative_y, u8 hflip, u8 vflip, u8 priority, s32 index) {
     // Get VRAM tile ID
     u32 chr_rom_offset = obj_chr_offset[curr_object.type][0];
-    s16 palette = -1;
+    s32 palette = -1;
     
     if (chr_rom_offset == SPRITE_CHR_COPY_FROM_METATILE) {
         chr_rom_offset = 0x80000000 | curr_object.attrib3;
@@ -229,7 +229,7 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
     }
     
     u32 chr_rom_tile_num = obj_chr_offset[curr_object.type][1];
-    s16 tile_id = get_tile_id(chr_rom_offset);
+    s32 tile_id = get_tile_id(chr_rom_offset);
 
     // Check for fade
     if (chr_rom_tile_num & 0x80000000) {
@@ -380,10 +380,10 @@ ARM_CODE void display_objects() {
                 s32 relative_x = curr_object.x - ((scroll_x >> SUBPIXEL_BITS) & 0xffffffff);
                 s32 relative_y = curr_object.y - ((scroll_y >> SUBPIXEL_BITS) & 0xffff);
 
-                u8 hflip = (curr_object.attrib1 & H_FLIP_FLAG) >> 1;
-                u8 vflip = curr_object.attrib1 & V_FLIP_FLAG;
+                s32 hflip = (curr_object.attrib1 & H_FLIP_FLAG) >> 1;
+                s32 vflip = curr_object.attrib1 & V_FLIP_FLAG;
 
-                u8 priority = (curr_object.attrib1 & PRIORITY_FLAG) >> PRIORITY_FLAG_SHIFT;
+                s32 priority = (curr_object.attrib1 & PRIORITY_FLAG) >> PRIORITY_FLAG_SHIFT;
 
                 u32 chr_rom_offset = obj_chr_offset[curr_object.type][0];
                 if (chr_rom_offset == SPRITE_CHR_COPY_FROM_METATILE) {
@@ -432,7 +432,7 @@ ARM_CODE void display_objects() {
 
 void do_collision(struct ObjectSlot *objectSlot) {
     // Check collision type and run code related to it
-    u16 obj_type = objectSlot->object.type;
+    s32 obj_type = objectSlot->object.type;
     
     // Make sure we don't index the table out of bounds
     if (obj_type >= OBJ_COUNT) obj_type = 0;
@@ -441,20 +441,17 @@ void do_collision(struct ObjectSlot *objectSlot) {
     routines_jump_table[obj_type](objectSlot);
 }
 
-/// @brief 
-/// @param index 
-/// @return 
 ARM_CODE void check_obj_collision(u32 index) {
     struct Object curr_object = object_buffer[index].object;
 
-    u16 obj_width = obj_hitbox[curr_object.type][0];
-    u16 obj_height = obj_hitbox[curr_object.type][1];
+    s32 obj_width = obj_hitbox[curr_object.type][0];
+    s32 obj_height = obj_hitbox[curr_object.type][1];
 
-    s16 offset_x = obj_hitbox[curr_object.type][2];
-    s16 offset_y = obj_hitbox[curr_object.type][3];
+    s32 offset_x = obj_hitbox[curr_object.type][2];
+    s32 offset_y = obj_hitbox[curr_object.type][3];
 
-    s16 center_x = obj_hitbox[curr_object.type][4];
-    s16 center_y = obj_hitbox[curr_object.type][5];
+    s32 center_x = obj_hitbox[curr_object.type][4];
+    s32 center_y = obj_hitbox[curr_object.type][5];
 
     if (!(curr_object.attrib1 & ENABLE_ROTATION_FLAG)) {
         if (curr_object.attrib1 & H_FLIP_FLAG) {

@@ -2188,15 +2188,15 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
             attribute1,   // ATTR1
             attribute2);  // ATTR2
         
-        u8 wh_index = ((data[i] & ATTR0_SHAPE_MASK) >> 12) | ((data[i + 1] & ATTR1_SIZE_MASK) >> 14);
+        s32 wh_index = ((data[i] & ATTR0_SHAPE_MASK) >> 12) | ((data[i + 1] & ATTR1_SIZE_MASK) >> 14);
         
-        u8 width = spr_width_height_table[wh_index << 1];
-        u8 height = spr_width_height_table[(wh_index << 1) + 1];
+        s32 width = spr_width_height_table[wh_index << 1];
+        s32 height = spr_width_height_table[(wh_index << 1) + 1];
         
         s16 offset_x = data[i + 3];
         s16 offset_y = data[i + 4];
-        s8 center_x = data[i + 6] >> 8;
-        s8 center_y = data[i + 6] & 0xff;
+        s32 center_x = data[i + 6] >> 8;
+        s32 center_y = data[i + 6] & 0xff;
 
         if (hflip) {
             offset_x = center_x - (offset_x - center_x + width); 
@@ -2306,13 +2306,13 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
 
         u8 wh_index = (shape) | ((data[i + 1] & ATTR1_SIZE_MASK) >> 14);
 
-        u8 width = spr_width_height_table[wh_index << 1];
-        u8 height = spr_width_height_table[(wh_index << 1) + 1];
+        s32 width = spr_width_height_table[wh_index << 1];
+        s32 height = spr_width_height_table[(wh_index << 1) + 1];
        
         s16 offset_x = data[i + 3];
         s16 offset_y = data[i + 4];
-        s8 center_x = data[i + 6] >> 8;
-        s8 center_y = data[i + 6] & 0xff;
+        s32 center_x = data[i + 6] >> 8;
+        s32 center_y = data[i + 6] & 0xff;
 
         // Trigonometric functions give a 20:12 fixed value
         s32 sin_theta = lu_sin(rotation); 
