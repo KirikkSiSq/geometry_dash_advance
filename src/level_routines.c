@@ -8,6 +8,7 @@
 #include "physics_defines.h"
 #include "../levels/includes.h"
 #include "icon_kit.h"
+#include "math.h"
 
 #define TOP_SCROLL_Y 0x24
 #define BOTTOM_SCROLL_Y SCREEN_HEIGHT-0x24
@@ -728,19 +729,13 @@ void calculate_trans_window_pos() {
 }
 
 void draw_percentage(u32 x, u32 y, u32 percentage, const u16* number_sprite, u16 priority) {
-    if (percentage >= 100) {
-        oam_metaspr(x,      y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + 1, -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 8,  y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + 0, -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 16, y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + 0, -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 24, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
-    } else if (percentage >= 10) {
-        oam_metaspr(x + 4,  y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + (percentage / 10), -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 12, y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + (percentage % 10), -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 20, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
-    } else {
-        oam_metaspr(x + 8,  y, number_sprite, FALSE, FALSE, FIRST_NUMBER_ID + percentage, -1, priority, 0, TRUE, FALSE);
-        oam_metaspr(x + 16, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
-    }
+    u32 digits = get_n_digits(percentage);
+    u32 pixels = (digits + 1) * 8;
+
+    u32 percentage_pos = x + (pixels / 2) + 8;
+
+    oam_metaspr(percentage_pos, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
+    draw_sprite_number(percentage_pos - 8, y, percentage, number_sprite, priority);
 }
 
 u32 get_level_progress() {

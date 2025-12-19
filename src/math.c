@@ -213,3 +213,35 @@ COLOR blend_clr(const COLOR clra, const COLOR clrb, u32 alpha) {
 
     return clr;
 }
+
+u32 get_n_digits(const u32 value) {
+    u32 value_temp = value;
+    int digits = 0;
+
+    // Count the digits
+    do {
+        value_temp /= 10;
+        // Count this digit
+        digits++;
+    } while (value_temp > 0);
+    return digits;
+}
+
+// Returns the next character x pos (useful for icons)
+u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority) {
+    u32 x_pos_temp = x;
+    u32 value_temp = value;
+
+    do {
+        u32 digit = value_temp % 10;
+
+        // Print digit
+        oam_metaspr(x_pos_temp, y, number_metasprite, FALSE, FALSE, FIRST_NUMBER_ID + digit, -1, priority, 0, TRUE, FALSE);
+        
+        value_temp /= 10;
+        // Move 8 pixels to the left
+        x_pos_temp -= 8;
+    } while (value_temp > 0);
+
+    return x_pos_temp;
+}

@@ -442,7 +442,7 @@ void put_level_info_sprites(u16 level_id) {
     draw_progress_bar(PROGRESS_BAR_POS_X, PRACTICE_PROGRESS_BAR_POS_Y, adjacent_sb, page ^ 1, adjacent_properties->practice_progress, 100, BAR_WIDTH_PX, BAR_TYPE_PRACTICE_MODE);
 }
 
-#define STAR_COUNT_POS_X 164
+#define STAR_COUNT_POS_X 172
 #define STAR_COUNT_POS_Y 28
 void put_star_number(u16 level_id, u16 page) {
     // Obtain relatives
@@ -450,18 +450,12 @@ void put_star_number(u16 level_id, u16 page) {
     s32 relative_x = (offset_x + STAR_COUNT_POS_X) - ((scroll_x >> SUBPIXEL_BITS) & 0x1ff);
 
     // Put star sprite
-    oam_metaspr(relative_x + 16, STAR_COUNT_POS_Y, menuStarSpr, FALSE, FALSE, 0, -1, 2, 0, TRUE, FALSE);
+    oam_metaspr(relative_x + 8, STAR_COUNT_POS_Y, menuStarSpr, FALSE, FALSE, 0, -1, 2, 0, TRUE, FALSE);
     
     u32 *properties_pointer = (u32*) level_defines[level_id][LEVEL_PROPERTIES_INDEX];
     u32 stars = properties_pointer[LEVEL_STARS_NUM];
 
-    // Put sprites depending on digits
-    if (stars >= 10) {
-        oam_metaspr(relative_x, STAR_COUNT_POS_Y, menuNumberSpr, FALSE, FALSE, FIRST_NUMBER_ID + (stars / 10), -1, 2, 0, TRUE, FALSE);
-        oam_metaspr(relative_x + 8, STAR_COUNT_POS_Y, menuNumberSpr, FALSE, FALSE, FIRST_NUMBER_ID + (stars % 10), -1, 2, 0, TRUE, FALSE);
-    } else {
-        oam_metaspr(relative_x + 8, STAR_COUNT_POS_Y, menuNumberSpr, FALSE, FALSE, FIRST_NUMBER_ID + stars, -1, 2, 0, TRUE, FALSE);
-    }
+    draw_sprite_number(relative_x, STAR_COUNT_POS_Y, stars, menuNumberSpr, 2);
 }
 
 #define MENU_COIN_X 154
