@@ -4,6 +4,7 @@
 #include "chr.h"
 #include "level_select.h"
 #include "mgba_log.h"
+#include "math.h"
 
 #define NUM_FACES 6
 const COLOR face_colors[][2] = {
@@ -57,19 +58,18 @@ INLINE void copy_bg_pal_to_spr(COLOR *dst, u32 pal) {
 
 INLINE void blend_bg_and_obj(COLOR *dst, u32 pal) {
     // Blend both BG and OBJ colors and put it on palette slot 0x08, 0x09 and 0x0a
-    clr_blend(&dst[pal + BG_COLOR], &dst[OBJ_COLOR + pal], &dst[BG_OBJ_BLENDING_1 + pal], 1, 0x03);
-    clr_blend(&dst[pal + BG_COLOR], &dst[OBJ_COLOR + pal], &dst[BG_OBJ_BLENDING_2 + pal], 1, 0x0a);
-    clr_blend(&dst[pal + BG_COLOR], &dst[OBJ_COLOR + pal], &dst[BG_OBJ_BLENDING_3 + pal], 1, 0x10);
+    dst[BG_OBJ_BLENDING_1 + pal] = blend_clr(dst[pal + BG_COLOR], dst[OBJ_COLOR + pal], 0x03);
+    dst[BG_OBJ_BLENDING_2 + pal] = blend_clr(dst[pal + BG_COLOR], dst[OBJ_COLOR + pal], 0x0a);
+    dst[BG_OBJ_BLENDING_3 + pal] = blend_clr(dst[pal + BG_COLOR], dst[OBJ_COLOR + pal], 0x10);
 }
 
 INLINE void blend_bg_and_col(COLOR *dst, u32 pal) {
     u32 index = (pal - COL_CHN_PAL) >> 4;
     u32 blend_value = 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
     if(col_channels_flags[index] & COL_CHANNEL_BLENDING_FLAG) {
-        COLOR black = 0;
         for (u32 col = 0; col < 5; col++) {
             COLOR blend_with_black = 0;
-            clr_blend(&black, &col_channels_color[index], &blend_with_black, 1, blend_value);
+            blend_with_black = blend_clr(0, col_channels_color[index], blend_value);
             
             COLOR blended_color = blend_colors(blend_with_black, dst[pal + 0x01]);
             dst[BG_COL_BLENDING + col + pal] = blended_color;
@@ -80,7 +80,7 @@ INLINE void blend_bg_and_col(COLOR *dst, u32 pal) {
         dst[COL_ID_COLOR + pal] = blend_colors(col_channels_color[index], dst[pal + 0x01]); // Blend full color
     } else {
         for (u32 col = 0; col < 5; col++) {
-            clr_blend(&dst[pal + 0x01], &dst[COL_ID_COLOR + pal], &dst[BG_COL_BLENDING + col + pal], 1, blend_value);
+            dst[BG_COL_BLENDING + col + pal] = blend_clr(dst[pal + 0x01], dst[COL_ID_COLOR + pal], blend_value);
             blend_value += 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
         }
     }
@@ -88,36 +88,35 @@ INLINE void blend_bg_and_col(COLOR *dst, u32 pal) {
 
 void blend_p1_with_bg(COLOR *dst) {
     // Blend P1
-    clr_blend(&dst[PLAYER_BG_PAL + P1_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P1_COLOR - 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_BG_PAL + P1_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P1_COLOR - 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_BG_PAL + P1_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P1_COLOR - 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_BG_PAL + P1_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P1_COLOR - 4], 1, 0x19);
+    dst[PLAYER_BG_PAL + P1_COLOR - 1] = blend_clr(dst[PLAYER_BG_PAL + P1_COLOR], dst[BG_PAL + BG_COLOR], 0x06);
+    dst[PLAYER_BG_PAL + P1_COLOR - 2] = blend_clr(dst[PLAYER_BG_PAL + P1_COLOR], dst[BG_PAL + BG_COLOR], 0x0c);
+    dst[PLAYER_BG_PAL + P1_COLOR - 3] = blend_clr(dst[PLAYER_BG_PAL + P1_COLOR], dst[BG_PAL + BG_COLOR], 0x13);
+    dst[PLAYER_BG_PAL + P1_COLOR - 4] = blend_clr(dst[PLAYER_BG_PAL + P1_COLOR], dst[BG_PAL + BG_COLOR], 0x19);
 }
 
 void blend_p2_with_bg(COLOR *dst) {
     // Blend P1
-    clr_blend(&dst[PLAYER_BG_PAL + P2_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P2_COLOR + 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_BG_PAL + P2_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P2_COLOR + 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_BG_PAL + P2_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P2_COLOR + 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_BG_PAL + P2_COLOR], &dst[BG_PAL + BG_COLOR], &dst[PLAYER_BG_PAL + P2_COLOR + 4], 1, 0x19);
+    dst[PLAYER_BG_PAL + P2_COLOR + 1] = blend_clr(dst[PLAYER_BG_PAL + P2_COLOR], dst[BG_PAL + BG_COLOR], 0x06);
+    dst[PLAYER_BG_PAL + P2_COLOR + 2] = blend_clr(dst[PLAYER_BG_PAL + P2_COLOR], dst[BG_PAL + BG_COLOR], 0x0c);
+    dst[PLAYER_BG_PAL + P2_COLOR + 3] = blend_clr(dst[PLAYER_BG_PAL + P2_COLOR], dst[BG_PAL + BG_COLOR], 0x13);
+    dst[PLAYER_BG_PAL + P2_COLOR + 4] = blend_clr(dst[PLAYER_BG_PAL + P2_COLOR], dst[BG_PAL + BG_COLOR], 0x19);
 }
 
 void blend_p1_with_p2(COLOR *dst) {
     // Blend P1
-    clr_blend(&dst[P1_COLOR], &dst[P2_COLOR], &dst[P1_COLOR + 1], 1, 0x0c);
-    clr_blend(&dst[P1_COLOR], &dst[P2_COLOR], &dst[P2_COLOR - 1], 1, 0x14);
+    dst[P1_COLOR + 1] = blend_clr(dst[P1_COLOR], dst[P2_COLOR], 0x0c);
+    dst[P2_COLOR - 1] = blend_clr(dst[P1_COLOR], dst[P2_COLOR], 0x14);
 }
 
 void menu_set_bg_color(COLOR *dst, COLOR color) {
     dst[0x00] = color;
     dst[BG_PAL + BG_COLOR] = color;
     dst[0x121] = color;
-    
-    COLOR black = 0;
+
     // Fade to black
     u32 blend_value = 0x1f / (7 - 2 + 1);
     for (u32 index = 2; index < 7; index++) {
-        clr_blend(&dst[BG_PAL + BG_COLOR], &black, &dst[index], 1, blend_value);
+        dst[index] = blend_clr(dst[BG_PAL + BG_COLOR], 0, blend_value);
         blend_value += 0x1f / (7 - 2 + 1);
     }
 
@@ -141,13 +140,11 @@ void set_bg_color(COLOR *dst, COLOR color) {
     
     // Adjust brighter color
     adjust_brighter_color(dst, BG_PAL);
-
-    COLOR black = 0;
     
     // Fade to black
     u32 blend_value = 0x1f / (7 - 2 + 1);
     for (u32 index = 2; index < 7; index++) {
-        clr_blend(&dst[BG_PAL + BG_COLOR], &black, &dst[index], 1, blend_value);
+        dst[index] = blend_clr(dst[BG_PAL + BG_COLOR], 0, blend_value);
         blend_value += 0x1f / (7 - 2 + 1);
     }
 
@@ -174,7 +171,7 @@ void set_bg_color(COLOR *dst, COLOR color) {
     }
     
     // Portal colors also have a glow on them
-    clr_blend(&dst[BG_COLOR], &dst[PORTAL_WHITE_COLOR], &dst[PORTAL_GLOW_COLOR], 1, 0x0f);
+    dst[PORTAL_GLOW_COLOR] = blend_clr(dst[BG_COLOR], dst[PORTAL_WHITE_COLOR], 0x0f);
 
     u32 loops = (PORTAL_GLOW_COLOR + 0x10) + ((NUM_PORTAL_PALETTES - 1) << 4);
     for (u32 pal = (PORTAL_GLOW_COLOR + 0x10) ; pal < loops; pal += 0x10) {
@@ -195,11 +192,10 @@ void update_lbg_palette(COLOR *dst) {
     dst[LIGHTER_BG_PAL + DARK_COLOR] = dst[BG_COLOR + 4];
     
     // Blend both bg and lbg
-    COLOR black = 0;
     u32 blend_value = 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
     for (u32 col = 0; col < 5; col++) {
         COLOR blend_with_black = 0;
-        clr_blend(&black, &lbg, &blend_with_black, 1, blend_value);
+        blend_with_black = blend_clr(0, lbg, blend_value);
         
         COLOR blended_color = blend_colors(blend_with_black, dst[BG_PAL + BG_COLOR]);
         dst[LIGHTER_BG_PAL + BG_COL_BLENDING + col] = blended_color;
@@ -221,13 +217,11 @@ void update_lbg_palette(COLOR *dst) {
 }
 
 void adjust_brighter_color(COLOR *dst, u32 pal) {
-    clr_blend(&dst[BG_PAL + BG_COLOR], &dst[PORTAL_WHITE_COLOR], &dst[pal + BRIGHTER_COLOR], 1, 0x0a);
-    clr_blend(&dst[BG_PAL + BG_COLOR], &dst[PORTAL_WHITE_COLOR], &dst[pal + BRIGHTER_COLOR + 1], 1, 0x10);
+    dst[pal + BRIGHTER_COLOR]     = blend_clr(dst[BG_PAL + BG_COLOR], dst[PORTAL_WHITE_COLOR], 0x0a);
+    dst[pal + BRIGHTER_COLOR + 1] = blend_clr(dst[BG_PAL + BG_COLOR], dst[PORTAL_WHITE_COLOR], 0x10);
 }
 
 void set_player_colors(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
-    COLOR black = 0x0000;
-
     // Modify sprite colors
     dst[PLAYER_SPR_PAL + P1_COLOR] = p1;
     dst[PLAYER_SPR_PAL + P2_COLOR] = p2;
@@ -239,16 +233,16 @@ void set_player_colors(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
     dst[PLAYER_BG_PAL + PLAYER_GLOW_COLOR] = glow;
 
     // Blend P1
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 4], 1, 0x19);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 1] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x06);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 2] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x0c);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 3] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x13);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 4] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x19);
 
     // Blend P2
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 4], 1, 0x19);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 1] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x06);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 2] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x0c);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 3] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x13);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 4] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x19);
 
     COLOR p1_mod = (p1 == CLR_BLACK) ? CLR_WHITE : p1;
     COLOR p2_mod = (p2 == CLR_BLACK) ? CLR_WHITE : p2;
@@ -256,17 +250,17 @@ void set_player_colors(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
     // SPR PALS
     // P1
     dst[P1_SPR_PAL + COL_ID_COLOR] = p1_mod;
-    clr_blend(&p1_mod, &black, &dst[P1_SPR_PAL + COL_ID_COLOR - 1], 1, 0x06);
-    clr_blend(&p1_mod, &black, &dst[P1_SPR_PAL + COL_ID_COLOR - 2], 1, 0x0c);
-    clr_blend(&p1_mod, &black, &dst[P1_SPR_PAL + COL_ID_COLOR - 3], 1, 0x13);
-    clr_blend(&p1_mod, &black, &dst[P1_SPR_PAL + COL_ID_COLOR - 4], 1, 0x19);
+    dst[P1_SPR_PAL + COL_ID_COLOR - 1] = blend_clr(p1_mod, 0, 0x06);
+    dst[P1_SPR_PAL + COL_ID_COLOR - 2] = blend_clr(p1_mod, 0, 0x0c);
+    dst[P1_SPR_PAL + COL_ID_COLOR - 3] = blend_clr(p1_mod, 0, 0x13);
+    dst[P1_SPR_PAL + COL_ID_COLOR - 4] = blend_clr(p1_mod, 0, 0x19);
     
     // P2
     dst[P2_SPR_PAL + COL_ID_COLOR] = p2_mod;
-    clr_blend(&p2_mod, &black, &dst[P2_SPR_PAL + COL_ID_COLOR - 1], 1, 0x06);
-    clr_blend(&p2_mod, &black, &dst[P2_SPR_PAL + COL_ID_COLOR - 2], 1, 0x0c);
-    clr_blend(&p2_mod, &black, &dst[P2_SPR_PAL + COL_ID_COLOR - 3], 1, 0x13);
-    clr_blend(&p2_mod, &black, &dst[P2_SPR_PAL + COL_ID_COLOR - 4], 1, 0x19);
+    dst[P2_SPR_PAL + COL_ID_COLOR - 1] = blend_clr(p2_mod, 0, 0x06);
+    dst[P2_SPR_PAL + COL_ID_COLOR - 2] = blend_clr(p2_mod, 0, 0x0c);
+    dst[P2_SPR_PAL + COL_ID_COLOR - 3] = blend_clr(p2_mod, 0, 0x13);
+    dst[P2_SPR_PAL + COL_ID_COLOR - 4] = blend_clr(p2_mod, 0, 0x19);
 
     // Blend P1 with P2
     blend_p1_with_p2(&dst[PLAYER_SPR_PAL]);
@@ -278,24 +272,22 @@ void set_player_colors(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
 }
 
 void set_player_colors_spr(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
-    COLOR black = 0x0000;
-
     // Modify sprite colors
     dst[PLAYER_SPR_PAL + P1_COLOR] = p1;
     dst[PLAYER_SPR_PAL + P2_COLOR] = p2;
     dst[PLAYER_SPR_PAL + PLAYER_GLOW_COLOR] = glow;
 
     // Blend P1
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_SPR_PAL + P1_COLOR], &black, &dst[PLAYER_SPR_PAL + P1_COLOR - 4], 1, 0x19);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 1] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x06);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 2] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x0c);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 3] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x13);
+    dst[PLAYER_SPR_PAL + P1_COLOR - 4] = blend_clr(dst[PLAYER_SPR_PAL + P1_COLOR], 0, 0x19);
 
     // Blend P2
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 1], 1, 0x06);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 2], 1, 0x0c);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 3], 1, 0x13);
-    clr_blend(&dst[PLAYER_SPR_PAL + P2_COLOR], &black, &dst[PLAYER_SPR_PAL + P2_COLOR + 4], 1, 0x19);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 1] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x06);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 2] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x0c);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 3] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x13);
+    dst[PLAYER_SPR_PAL + P2_COLOR + 4] = blend_clr(dst[PLAYER_SPR_PAL + P2_COLOR], 0, 0x19);
 
     // Blend P1 with P2
     blend_p1_with_p2(&dst[PLAYER_SPR_PAL]);
@@ -365,12 +357,10 @@ void set_ground_color(COLOR *dst, COLOR color) {
     // Set ground color
     dst[GROUND_PAL + GROUND_COLOR] = color;
 
-    COLOR black = 0;
-
     // Fade to black
     u32 blend_value = 0x1f / (7 - 2 + 1);
     for (u32 index = 2; index < 7; index++) {
-        clr_blend(&dst[GROUND_PAL + GROUND_COLOR], &black, &dst[index + GROUND_PAL], 1, blend_value);
+        dst[index + GROUND_PAL] = blend_clr(dst[GROUND_PAL + GROUND_COLOR], 0, blend_value);
         blend_value += 0x1f / (7 - 2 + 1);
     }
 }
@@ -484,7 +474,7 @@ void set_face_palettes(COLOR *dst) {
         else dst[pal + 0x0d] = CLR_RED;
 
         for (s32 id = FIRST_FACE_COLOR; id <= LAST_FACE_COLOR; id++) {
-            clr_blend(&face_colors[difficulty][0], &face_colors[difficulty][1], &dst[pal + id], 1, value);
+            dst[pal + id] = blend_clr(face_colors[difficulty][0], face_colors[difficulty][1], value);
             value += 0x1f / (LAST_FACE_COLOR - FIRST_FACE_COLOR + 1);
         }
         difficulty++;

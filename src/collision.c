@@ -34,7 +34,6 @@ void collision_cube() {
     coll_y = (curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1);
 
     collide_with_map_slopes(coll_x, coll_y, curr_player.player_width, curr_player.player_height);
-
     
 #ifdef DEBUG
     if (hitbox_display) {
@@ -1000,16 +999,17 @@ ARM_CODE void do_collision_with_objects() {
     for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
         // Check collision only if the slot is occupied
         struct ObjectSlot curr_object = object_buffer[slot];
-        // If it has collision, continue. Check if this object is a touch col trigger, if so, check collision
-        if (curr_object.has_collision || (curr_object.object.type == COL_TRIGGER && curr_object.object.attrib3 & COL_TRIGGER_ATTRIB3_TOUCH_MASK)) {   
-            // If is occupied and it hasn't been activated yet, continue
-            if (curr_object.occupied && curr_object.activated[curr_player_id] == FALSE) {
-                // If it is behind the collision distance, skip
-                if (check_collision_distance(curr_object, player_x_pixels, player_y_pixels)) {
+        // If its not occupied and it is behind the collision distance, skip
+        if (curr_object.occupied && check_collision_distance(curr_object, player_x_pixels, player_y_pixels)) {
+            // If it hasn't been activated yet, continue
+            if (curr_object.activated[curr_player_id] == FALSE) {
+                // If it has collision, continue. Check if this object is a touch col trigger, if so, check collision
+                if (curr_object.has_collision || (curr_object.object.type == COL_TRIGGER && curr_object.object.attrib3 & COL_TRIGGER_ATTRIB3_TOUCH_MASK)) {   
                     check_obj_collision(slot); 
                 }
             }
         }
+        
     }
 }
 
@@ -1144,6 +1144,11 @@ ARM_CODE s32 is_colliding_rotated_fixed(
     s32 rot2_center_x, s32 rot2_center_y,                 // Rotation center point
     u16 angle2)                                           // Rotation angle (0-FFFF)
 {
+
+    // Quick exit
+    s32 big = MAX(w1, h1) + MAX(w2, h2);
+    if (ABS(x1 - x2) > big || ABS(y1 - y2) > big) return FALSE;
+
     // Calculate sin/cos for both rectangles
     s32 sin1 = lu_sin(angle1);
     s32 cos1 = lu_cos(angle1);

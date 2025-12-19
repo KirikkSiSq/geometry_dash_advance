@@ -2171,9 +2171,7 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
         }
 
         // Disable blending if expecified
-        if (disable_blending) {
-            attribute0 &= ~ATTR0_BLEND;
-        }
+        attribute0 &= disable_blending ? ~ATTR0_BLEND : 0xFFFF;
 
         u8 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
 
@@ -2257,6 +2255,7 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         u8 shape = (attribute0 & ATTR0_SHAPE_MASK) >> 12;
 
         u8 should_use_double_size = dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
+        
         // Set double size flag if especified, not square and rotation is not a multiple of 90º
         if (should_use_double_size) {
             attribute0 |= ATTR0_AFF_DBL;
@@ -2288,9 +2287,7 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         }
 
         // Disable blending if expecified
-        if (disable_blending) {
-            attribute0 &= ~ATTR0_BLEND;
-        }
+        attribute0 &= disable_blending ? ~ATTR0_BLEND : 0xFFFF;
 
         u8 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
 

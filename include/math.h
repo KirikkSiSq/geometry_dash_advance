@@ -12,3 +12,4 @@ u32 slerp(u32 a, u32 b, u32 ratio);
 FIXED_LONG_16 fexp(FIXED_LONG_16 x);
 FIXED_16 fln(FIXED_16 s);
 FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b);
+COLOR blend_clr(const COLOR clra, const COLOR clrb, u32 alpha);
