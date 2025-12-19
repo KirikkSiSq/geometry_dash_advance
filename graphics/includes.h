@@ -19,6 +19,7 @@ extern TILE square_background_chr[256];
 extern TILE circle_background_chr[512];
 extern TILE line_background_chr[512];
 extern TILE checkerboard_background_chr[512];
+extern TILE hexagon_background_chr[512];
 
 extern unsigned char level_select_l0_tilemap[1280];
 extern unsigned char level_select_l1_tilemap[1280];
@@ -31,3 +32,4 @@ extern unsigned char level_complete_l3_tilemap[1280];
 extern unsigned char circle_background_tilemap[2048];
 extern unsigned char line_background_tilemap[2048];
 extern unsigned char checkerboard_background_tilemap[2048];
+extern unsigned char hexagon_background_tilemap[2048];
