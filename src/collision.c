@@ -366,7 +366,7 @@ void collision_wave() {
 }
 
 ARM_CODE u32 obtain_level_buffer_index(u32 x, u32 y) {
-    u32 block_x = (x >> 4) & 0x1f; // Get block x in buffer (0-31)
+    u32 block_x = (x >> 4) & (LEVEL_BUFFER_WIDTH - 1); // Get block x in buffer (0-31)
     u32 block_y = y >> 4;          // Get block y in buffer, not capped for easy level vertical extension
 
     return block_x + block_y * LEVEL_BUFFER_WIDTH;
@@ -1712,6 +1712,78 @@ void minispike_left_2_rt_lb(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 
     minispike_left_lb(x, y, width, height, spk_x, spk_y);
 }
 
+void sloped_minispikes_tr(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x08, spk_y + 0x03, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_tl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x06, spk_y + 0x03, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x08, spk_y + 0x0b, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x06, spk_y + 0x0b, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_corner_tr(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x, spk_y + 0x0b, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_corner_tl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x0e, spk_y + 0x0b, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_corner_br(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x, spk_y + 0x03, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
+void sloped_minispikes_corner_bl(u32 x, u32 y, u32 width, u32 height, u32 spk_x, u32 spk_y) {
+    if (is_colliding(
+        x, y, width, height,
+        spk_x + 0x0e, spk_y + 0x03, 0x02, 0x02
+    )) {
+        player_death = TRUE;
+    }
+}
+
 void not_an_spike(UNUSED u32 x, UNUSED u32 y, UNUSED u32 width, UNUSED u32 height, UNUSED u32 spk_x, UNUSED u32 spk_y) {
     // not an spike so do nothing
 }
@@ -1912,6 +1984,16 @@ const jmp_table spike_coll_jump_table[] = {
     minispike_left_2_right, // MINISPIKE_LEFT_2_RIGHT
     minispike_left_2_lt_rb, // MINISPIKE_LEFT_2_LT_RB
     minispike_left_2_rt_lb, // MINISPIKE_LEFT_2_RT_LB
+
+    sloped_minispikes_tr, // SLOPED_MINISPIKES_TR
+    sloped_minispikes_tl, // SLOPED_MINISPIKES_TL
+    sloped_minispikes_br, // SLOPED_MINISPIKES_BR
+    sloped_minispikes_bl, // SLOPED_MINISPIKES_BL
+
+    sloped_minispikes_corner_tr, // SLOPED_MINISPIKES_CORNER_TR
+    sloped_minispikes_corner_tl, // SLOPED_MINISPIKES_CORNER_TL
+    sloped_minispikes_corner_br, // SLOPED_MINISPIKES_CORNER_BR
+    sloped_minispikes_corner_bl, // SLOPED_MINISPIKES_CORNER_BL
 };
 
 // This function iterates through spikes that the player is touching and applies collision to it
