@@ -267,6 +267,9 @@ void run_animated_sprites() {
     u32 orb_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 4);
     memcpy32(&tile_mem_obj[0][ORB_PARTICLE_VRAM_ID], &animated_sprites[orb_particle_id + ORB_OFFSET], (sizeof(TILE) / sizeof(u32)) * 16);
 
+    u32 portal_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 3);
+    memcpy32(&tile_mem_obj[0][PORTAL_PARTICLE_VRAM_ID], &animated_sprites[portal_particle_id + PORTAL_OFFSET], (sizeof(TILE) / sizeof(u32)) * 8);
+
     animated_sprite_timer += 1;
 }
 
