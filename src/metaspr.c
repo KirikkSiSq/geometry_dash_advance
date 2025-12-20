@@ -2177,9 +2177,9 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
 
         // Set priority into this array for sorting
         if (zindex) {
-            obj_priorities[nextSpr] = (bg_layer << 6) | (zindex & 0b111111);
+            obj_priorities[nextSpr] = (bg_layer << 5) | (zindex & 0b11111);
         } else {
-            obj_priorities[nextSpr] = (bg_layer << 6) | ((data[i + 5] & PRIORITY_MASK) >> ATTR2_PRIO_SHIFT);
+            obj_priorities[nextSpr] = (bg_layer << 5) | ((data[i + 5] & PRIORITY_MASK) >> ATTR2_PRIO_SHIFT);
         }
 
         // Set attributes
@@ -2293,9 +2293,9 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
 
         // Set priority into this array for sorting
         if (zindex) {
-            obj_priorities[nextSpr] = (bg_layer << 6) | (zindex & 0b111111);
+            obj_priorities[nextSpr] = (bg_layer << 5) | (zindex & 0b11111);
         } else {
-            obj_priorities[nextSpr] = (bg_layer << 6) | ((data[i + 5] & PRIORITY_MASK) >> ATTR2_PRIO_SHIFT);
+            obj_priorities[nextSpr] = (bg_layer << 5) | ((data[i + 5] & PRIORITY_MASK) >> ATTR2_PRIO_SHIFT);
         }
 
         // Set attributes

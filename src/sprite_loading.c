@@ -515,7 +515,7 @@ ARM_CODE void check_obj_collision(u32 index) {
 }
 
 
-#define NUMBER_OF_SORT_VALUES 256
+#define NUMBER_OF_SORT_VALUES (1 << 7)
 
 // Uses counting sort
 ARM_CODE void sort_oam_by_prio() {

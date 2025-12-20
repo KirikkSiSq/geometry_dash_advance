@@ -222,8 +222,8 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                     priority = (int(prop['value']) + 1) % 4
                                 elif prop['name'] == 'z index':
                                     zindex = int(prop['value']) + 1
-                                    if zindex < 1 or zindex > 63: 
-                                        raise Exception(f"Encountered invalid setting in pos {x/16}, {y/16}. Z index must be in the range 0 to 62.") 
+                                    if zindex < 1 or zindex > 31: 
+                                        raise Exception(f"Encountered invalid setting in pos {x/16}, {y/16}. Z index must be in the range 0 to 30.") 
                                 elif prop['name'] == 'color channel':
                                     pal_name = prop['value']
                                     if pal_name not in possible_spr_color_channels:
