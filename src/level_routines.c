@@ -1468,7 +1468,7 @@ ARM_CODE void handle_fading_blocks() {
                 // Modify the specified block graphics
                 if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
                 else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
-            } else if (block_id >= FIRST_FADING_MINISPIKE&& block_id <= LAST_FADING_MINISPIKE) { // Minispikes
+            } else if (block_id >= FIRST_FADING_MINISPIKE && block_id <= LAST_FADING_MINISPIKE) { // Minispikes
                 // Get tile y
                 s32 calculated_y = (metatile_y << 1) & 0b11110;
 

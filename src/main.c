@@ -33,16 +33,12 @@ void vblank_handler() {
             obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
         }
 
-        if (update_flags & UPDATE_SCROLL) {
-            // If screen is mirrored, flip screen position so it goes left instead of right
-            update_scroll();
-            // Run scroll routines
-            screen_scroll_load();
-        }
-
         if (update_flags & UPDATE_VRAM) {
             // Run color stuff
             run_col_trigger_changes();
+            
+            // Handle fading blocks
+            handle_fading_blocks();
             
             // Update animated sprites
             run_animated_sprites();
@@ -52,8 +48,13 @@ void vblank_handler() {
 
             handle_gamemode_uploads();
 
-            // Handle fading blocks
-            handle_fading_blocks();
+        }
+
+        if (update_flags & UPDATE_SCROLL) {
+            // If screen is mirrored, flip screen position so it goes left instead of right
+            update_scroll();
+            // Run scroll routines
+            screen_scroll_load();
         }
 
         if (update_flags & CLEAR_OAM_BUFFER) {
