@@ -167,7 +167,7 @@ void screen_scroll_load() {
     }
 }
 
-ARM_CODE void practice_scroll_load() {
+void practice_scroll_load() {
     // If the scroll x value changed block position, decompress a new column in both layers
     if (decompressed_column != ((scroll_x >> (4+SUBPIXEL_BITS)) & 0xff)) {
         decompress_column(0);
@@ -405,7 +405,7 @@ void load_level(u32 level_ID) {
     decompressed_column = 0;
     
     // Load objects if starting from 0%
-    if (checkpoint_count == 0) load_objects(TRUE); 
+    if (checkpoint_count == 0) load_objects(TRUE, TRUE); 
 }
 
 void set_background(u16 background_ID) {
@@ -1683,7 +1683,7 @@ void restore_practice_vars() {
     u8 sprite_unloaded = TRUE;
     while (sprite_unloaded) {
         sprite_unloaded = FALSE;
-        load_objects(FALSE);
+        load_objects(FALSE, TRUE);
 
         for (s32 index = 0; index < MAX_OBJECTS; index++) {
             struct Object curr_object = object_buffer[index].object;

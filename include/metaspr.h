@@ -4,7 +4,7 @@
 #define SPRITE_NO_CHR (u32)(-1)
 
 #define TILE_OFFSET_MASK 0x1ff
-#define PRIORITY_MASK 0xfc00
+#define PRIORITY_MASK 0x7c00
 #define DLB_SCALE_MASK 0x0200
 
 #define PRIORITY_DONT_DISABLE_0 (1 << 3)

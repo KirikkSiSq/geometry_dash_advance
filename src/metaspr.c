@@ -2173,7 +2173,7 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
         // Disable blending if expecified
         attribute0 &= disable_blending ? ~ATTR0_BLEND : 0xFFFF;
 
-        u8 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
+        s32 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
 
         // Set priority into this array for sorting
         if (zindex) {
@@ -2252,9 +2252,9 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         u16 attribute1 = data[i + 1];
         u16 attribute2 = data[i + 2];
 
-        u8 shape = (attribute0 & ATTR0_SHAPE_MASK) >> 12;
+        s32 shape = (attribute0 & ATTR0_SHAPE_MASK) >> 12;
 
-        u8 should_use_double_size = dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
+        s32 should_use_double_size = dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
         
         // Set double size flag if especified, not square and rotation is not a multiple of 90º
         if (should_use_double_size) {
@@ -2289,7 +2289,7 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         // Disable blending if expecified
         attribute0 &= disable_blending ? ~ATTR0_BLEND : 0xFFFF;
 
-        u8 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
+        s32 bg_layer = (attribute2 & ATTR2_PRIO_MASK) >> ATTR2_PRIO_SHIFT;
 
         // Set priority into this array for sorting
         if (zindex) {
@@ -2304,7 +2304,7 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
             attribute1,  // ATTR1
             attribute2); // ATTR2
 
-        u8 wh_index = (shape) | ((data[i + 1] & ATTR1_SIZE_MASK) >> 14);
+        s32 wh_index = (shape) | ((data[i + 1] & ATTR1_SIZE_MASK) >> 14);
 
         s32 width = spr_width_height_table[wh_index << 1];
         s32 height = spr_width_height_table[(wh_index << 1) + 1];

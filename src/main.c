@@ -19,6 +19,7 @@ void vblank_handler() {
 
     // Only use the update handler on a level
     if (game_state == STATE_PLAYING && frame_finished) {
+        frame_finished = FALSE;
         if (!player_death) mirror_transition();
 
         if (swap_queue) swap_screen_dir();
@@ -326,7 +327,6 @@ void game_loop() {
 
 void level_loop() {
     while (1) { 
-        frame_finished = FALSE;
         key_poll();
 
         // If pressed start, pause the game
@@ -399,7 +399,7 @@ void level_loop() {
         player_code();
 
         // Run object routines
-        load_objects(TRUE);
+        load_objects(TRUE, FALSE);
         deoccupy_chr_slots();
         display_objects();
         rotate_saws();

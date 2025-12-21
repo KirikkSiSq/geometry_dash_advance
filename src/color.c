@@ -293,7 +293,7 @@ void set_player_colors_spr(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
     blend_p1_with_p2(&dst[PLAYER_SPR_PAL]);
 }
 
-ARM_CODE COLOR calculate_lbg(COLOR bg, COLOR p1) {
+COLOR calculate_lbg(COLOR bg, COLOR p1) {
     // Get RGB structs
     struct RGB555 bg_rgb;
     struct RGB555 p1_rgb;
@@ -484,7 +484,7 @@ void set_face_palettes(COLOR *dst) {
 #define MAX_3(a,b,c) ((a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c));
 #define MIN_3(a,b,c) ((a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c));
 
-ARM_CODE struct HSV rgb_to_hsv(struct RGB555 rgb) {
+struct HSV rgb_to_hsv(struct RGB555 rgb) {
     struct HSV hsv_return;
     FIXED_16 r = TO_FIXED(rgb.red) / 31;
     FIXED_16 g = TO_FIXED(rgb.green) / 31;
@@ -530,7 +530,7 @@ ARM_CODE struct HSV rgb_to_hsv(struct RGB555 rgb) {
 }   
 
 #define MAX_MULT_VALUE (FIXED_MULTIPLIER - 1)
-ARM_CODE struct RGB555 hsv_to_rgb(struct HSV hsv) {
+struct RGB555 hsv_to_rgb(struct HSV hsv) {
     struct RGB555 rgb_struct;
     if (hsv.saturation == 0) {
         u8 value_5 = FROM_FIXED(hsv.value * 31);

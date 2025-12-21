@@ -85,7 +85,7 @@ extern u64 last_sprite_x;
 extern struct ObjectSlot object_buffer[MAX_OBJECTS];
 
 
-IWRAM_CODE void load_objects(u32 load_chr);
+void load_objects(u32 load_chr, u32 loading_level);
 IWRAM_CODE void display_objects();
 
 s32 get_chr_slot_id(u32 rom_offset);

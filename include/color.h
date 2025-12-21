@@ -71,9 +71,9 @@ extern const COLOR menu_bg_colors[9];
 extern const u16 pal_bg_to_spr[8];
 extern const u16 pal_bg_to_spr_index[8];
 
-ARM_CODE struct HSV rgb_to_hsv(struct RGB555 rgb);
-ARM_CODE struct RGB555 hsv_to_rgb(struct HSV hsv);
-ARM_CODE COLOR calculate_lbg(COLOR bg, COLOR p1);
+struct HSV rgb_to_hsv(struct RGB555 rgb);
+struct RGB555 hsv_to_rgb(struct HSV hsv);
+COLOR calculate_lbg(COLOR bg, COLOR p1);
 
 void update_lbg_palette(COLOR *dst);
 void set_bg_color(COLOR *dst, COLOR color);

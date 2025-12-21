@@ -67,7 +67,7 @@ s32 get_free_chr_slot_id(u32 rom_offset) {
     return -1;
 }
 
-ARM_CODE void load_objects(u32 load_chr) {
+void load_objects(u32 load_chr, u32 loading_level) {
     // Save there
     if (load_chr) old_next_free_tile_id = next_free_tile_id;
     for (s32 index = 0; index < MAX_OBJECTS; index++) {
@@ -179,6 +179,8 @@ ARM_CODE void load_objects(u32 load_chr) {
                 object_buffer[index].activated[ID_PLAYER_1] = FALSE;
                 object_buffer[index].activated[ID_PLAYER_2] = FALSE;
                 object_buffer[index].object = new_object;
+
+                if (!loading_level) return;
             }
         }
     }
@@ -521,13 +523,11 @@ ARM_CODE void check_obj_collision(u32 index) {
 ARM_CODE void sort_oam_by_prio() {
     u32 count[NUMBER_OF_SORT_VALUES] = { 0 };
     OAM_SPR *oam_buffer = (OAM_SPR *) &vram_copy_buffer;
-    u8 *priority_buffer = (u8 *) (&vram_copy_buffer) + 1024;
     memcpy32(oam_buffer, shadow_oam, sizeof(shadow_oam) / 4);
-    memcpy32(priority_buffer, obj_priorities, sizeof(obj_priorities) / 4);
     
     // Count occurrences of each key
     for (s32 i = 0; i < nextSpr; i++) {
-        u32 key = priority_buffer[i];
+        u32 key = obj_priorities[i];
         count[key]++;
     }
 
@@ -538,12 +538,11 @@ ARM_CODE void sort_oam_by_prio() {
 
     // Place elements in sorted order
     for (s32 i = nextSpr - 1; i >= 0; i--) {
-        u32 key = priority_buffer[i];
+        u32 key = obj_priorities[i];
         u32 pos = count[key] - 1;
         shadow_oam[pos].attr0 = oam_buffer[i].attr0;
         shadow_oam[pos].attr1 = oam_buffer[i].attr1;
         shadow_oam[pos].attr2 = oam_buffer[i].attr2;
-        obj_priorities[pos] = priority_buffer[i];
         count[key]--;
     }
 }

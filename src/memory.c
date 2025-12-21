@@ -101,7 +101,7 @@ u8 vram_copy_buffer[2048];
 s8 transition_frame;
 
 // This is used as a fail safe in case that execution takes longer than 1 frame
-u8 frame_finished = 0;
+volatile u8 frame_finished = 0;
 
 // LEVEL COMPLETE CUTSCENE VARIABLES
 // 0 : no cutscene | 1 : cutscene playing

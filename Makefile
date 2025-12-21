@@ -68,13 +68,16 @@ BUILDDIR	:= build
 #
 
 # Compiler flags (all languages)
-ALLFLAGS	:= -Wall -Wextra -g3 -gdwarf-4 -O2 \
+ALLFLAGS	:= -Wall -Wextra -g0 -gdwarf-4 \
 		-ffunction-sections -fdata-sections \
 		-masm-syntax-unified \
 		-D_DEFAULT_SOURCE
 
 # C compiler flags
-CFLAGS		:= -std=c99 -mthumb-interwork 
+CFLAGS		:= -std=c99 -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb-interwork \
+          -O2 -fomit-frame-pointer -fno-strict-aliasing \
+          -ffunction-sections -fdata-sections \
+          -Wall -Wextra
 
 # C++ compiler flags
 CXXFLAGS	:= -std=c++20 -fno-rtti -fno-exceptions
@@ -83,7 +86,7 @@ CXXFLAGS	:= -std=c++20 -fno-rtti -fno-exceptions
 ASFLAGS		:=
 
 # Linker flags (as passed to GCC)
-LDFLAGS		:= -mthumb-interwork \
+LDFLAGS		:= -mthumb-interwork -Wl,--gc-sections \
 		$(if $(filter %_mb,$(PROJECT)),-specs=gba_mb.specs,-specs=gba.specs)
 
 # Uncomment this if you want to use Link Time Optimization
