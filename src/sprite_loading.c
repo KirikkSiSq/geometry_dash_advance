@@ -180,7 +180,7 @@ void load_objects(u32 load_chr, u32 loading_level) {
                 object_buffer[index].activated[ID_PLAYER_2] = FALSE;
                 object_buffer[index].object = new_object;
 
-                if (!loading_level) return;
+                if (!loading_level && new_object.type != COL_TRIGGER) return;
             }
         }
     }

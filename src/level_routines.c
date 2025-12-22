@@ -231,26 +231,30 @@ ARM_CODE void decompress_column(u32 layer) {
 }
 
 void set_initial_color(COLOR bg_color, COLOR ground_color, COLOR col1_color, COLOR col2_color, COLOR col3_color, COLOR col4_color, COLOR obj_color) {
-    set_bg_color(palette_buffer, bg_color);
     col_channels_color[BG_CHANNEL] = bg_color;
+    set_bg_color(palette_buffer, bg_color);
 
-    set_ground_color(palette_buffer, ground_color);
     col_channels_color[GROUND_CHANNEL] = ground_color;
+    set_ground_color(palette_buffer, ground_color);
 
-    set_color_channel_color(palette_buffer, col1_color, COL_1);
     col_channels_color[COL_1] = col1_color;
+    col_channels_flags[COL_1] = 0;
+    set_color_channel_color(palette_buffer, col1_color, COL_1);
     
-    set_color_channel_color(palette_buffer, col2_color, COL_2);
     col_channels_color[COL_2] = col2_color;
+    col_channels_flags[COL_2] = 0;
+    set_color_channel_color(palette_buffer, col2_color, COL_2);
     
-    set_color_channel_color(palette_buffer, col3_color, COL_3);
     col_channels_color[COL_3] = col3_color;
+    col_channels_flags[COL_3] = 0;
+    set_color_channel_color(palette_buffer, col3_color, COL_3);
     
-    set_color_channel_color(palette_buffer, col4_color, COL_4);
     col_channels_color[COL_4] = col4_color;
+    col_channels_flags[COL_4] = 0;
+    set_color_channel_color(palette_buffer, col4_color, COL_4);
 
-    set_obj_color(palette_buffer, obj_color);
     col_channels_color[OBJ_CHANNEL] = obj_color;
+    set_obj_color(palette_buffer, obj_color);
 
     col_channels_color[LINE_CHANNEL] = obj_color;
 
@@ -1430,51 +1434,51 @@ ARM_CODE void handle_fading_blocks() {
     u32 scroll_x_origin = (scroll_x >> SUBPIXEL_BITS);
     u32 scroll_y_origin = (scroll_y >> SUBPIXEL_BITS);
 
-    s32 layer = global_timer & 1;
+    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+        for (s32 x = 0; x < (16 * 16); x += 16) {
+            // Get the x position in pixels
+            u32 x_pos = scroll_x_origin + x;
 
-    for (s32 x = 0; x < (16 * 16); x += 16) {
-        // Get the x position in pixels
-        u32 x_pos = scroll_x_origin + x;
+            // Get metatile x
+            s32 metatile_x = (x_pos >> 4) & (LEVEL_BUFFER_WIDTH - 1);
 
-        // Get metatile x
-        s32 metatile_x = (x_pos >> 4) & (LEVEL_BUFFER_WIDTH - 1);
+            // Get tile x
+            s32 calculated_x = (metatile_x << 1) & 0b11110;
 
-        // Get tile x
-        s32 calculated_x = (metatile_x << 1) & 0b11110;
+            if (screen_mirrored) {
+                // Flip position
+                calculated_x = (SCREENBLOCK_W - 2) - calculated_x;
+            }
 
-        if (screen_mirrored) {
-            // Flip position
-            calculated_x = (SCREENBLOCK_W - 2) - calculated_x;
-        }
+            // Calculate frame ID 
+            u32 frame_id = fade_frame_table[x >> 4];
 
-        // Calculate frame ID 
-        u32 frame_id = fade_frame_table[x >> 4];
+            for (s32 y = 0; y < (11 * 16); y += 16) {
+                // Get the y position in pixels
+                u32 y_pos = scroll_y_origin + y;
 
-        for (s32 y = 0; y < (11 * 16); y += 16) {
-            // Get the y position in pixels
-            u32 y_pos = scroll_y_origin + y;
+                // Get metatile y
+                s32 metatile_y = (y_pos >> 4);
+                
+                // Get metatile from the buffer
+                u16 block_id = level_buffer[layer][metatile_x + (metatile_y * LEVEL_BUFFER_WIDTH)];
+                
+                // Check if the metatile is on the fading ID range
+                if (block_id >= FIRST_FADING_METATILE && block_id <= LAST_FADING_METATILE) {
+                    // Get tile y
+                    s32 calculated_y = (metatile_y << 1) & 0b11110;
 
-            // Get metatile y
-            s32 metatile_y = (y_pos >> 4);
-            
-            // Get metatile from the buffer
-            u16 block_id = level_buffer[layer][metatile_x + (metatile_y * LEVEL_BUFFER_WIDTH)];
-            
-            // Check if the metatile is on the fading ID range
-            if (block_id >= FIRST_FADING_METATILE && block_id <= LAST_FADING_METATILE) {
-                // Get tile y
-                s32 calculated_y = (metatile_y << 1) & 0b11110;
+                    // Modify the specified block graphics
+                    if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
+                    else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
+                } else if (block_id >= FIRST_FADING_MINISPIKE && block_id <= LAST_FADING_MINISPIKE) { // Minispikes
+                    // Get tile y
+                    s32 calculated_y = (metatile_y << 1) & 0b11110;
 
-                // Modify the specified block graphics
-                if (screen_mirrored) modify_fade_block_flipped(block_id, calculated_x, calculated_y, layer, frame_id);
-                else modify_fade_block(block_id, calculated_x, calculated_y, layer, frame_id);
-            } else if (block_id >= FIRST_FADING_MINISPIKE && block_id <= LAST_FADING_MINISPIKE) { // Minispikes
-                // Get tile y
-                s32 calculated_y = (metatile_y << 1) & 0b11110;
-
-                // Modify the specified block graphics
-                if (screen_mirrored) modify_fade_block_flipped(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
-                else modify_fade_block(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
+                    // Modify the specified block graphics
+                    if (screen_mirrored) modify_fade_block_flipped(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
+                    else modify_fade_block(block_id - TABLE_SUBTRACT, calculated_x, calculated_y, layer, frame_id);
+                }
             }
         }
     }

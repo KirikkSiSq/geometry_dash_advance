@@ -32,6 +32,13 @@ void vblank_handler() {
             obj_copy(oam_mem, shadow_oam, 128);
             obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
         }
+        
+        if (update_flags & UPDATE_SCROLL) {
+            // If screen is mirrored, flip screen position so it goes left instead of right
+            update_scroll();
+            // Run scroll routines
+            screen_scroll_load();
+        }
 
         if (update_flags & UPDATE_VRAM) {
             // Run color stuff
@@ -47,14 +54,6 @@ void vblank_handler() {
             memcpy32(pal_bg_mem, palette_buffer, 256);
 
             handle_gamemode_uploads();
-
-        }
-
-        if (update_flags & UPDATE_SCROLL) {
-            // If screen is mirrored, flip screen position so it goes left instead of right
-            update_scroll();
-            // Run scroll routines
-            screen_scroll_load();
         }
 
         if (update_flags & CLEAR_OAM_BUFFER) {
