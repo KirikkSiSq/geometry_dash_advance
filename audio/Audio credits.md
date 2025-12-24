@@ -21,6 +21,7 @@
 |Clubstep|DJ-Nate|Orionconstel|
 |Electroman Adventures|Waterflame|Orionconstel|
 |Electrodynamix|DJ-Nate|Orionconstel|
+|Hexagon Force|Waterflame|Sotos_24|
 
 ## Custom Music
 
