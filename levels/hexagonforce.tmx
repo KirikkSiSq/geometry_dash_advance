@@ -12,7 +12,7 @@
   <property name="Gamemode" type="int" value="0"/>
   <property name="Ground Type" type="int" value="4"/>
   <property name="Level name" value="HEXAGON FORCE"/>
-  <property name="Song" value="STEREOMA"/>
+  <property name="Song" value="HEXAGON"/>
   <property name="Speed" type="int" value="1"/>
   <property name="Stars" type="int" value="12"/>
  </properties>
