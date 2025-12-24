@@ -30,6 +30,7 @@ If you want to access to developer builds, you can download the latest nightly b
 |[SeaGlowingPro](https://github.com/SeaGlowingPro)|levels|
 |[banana6000](https://github.com/xXFamidashFan69Xx)|graphics, levels and metatiles|
 |Nicolestarlight|music|
+|[Sotos_24](https://github.com/Soteris24)|music|
 |Redgd|graphics|
 
 ## Music credits
