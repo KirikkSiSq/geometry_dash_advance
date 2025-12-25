@@ -78,7 +78,7 @@ void increment_column() {
     if (curr_column >= LEVEL_BUFFER_WIDTH) curr_column = 0;
 }
 
-void scroll_H(u32 layer, s32 mt_count) {
+ARM_CODE void scroll_H(u32 layer, s32 mt_count) {
     for (s32 mt = 0; mt < mt_count; mt += 1) {
         for (s32 vtile = 0; vtile < 2; vtile++) {
             // Get metatile positions from seam
@@ -108,7 +108,7 @@ void scroll_H(u32 layer, s32 mt_count) {
     }   
 }
 
-void scroll_V(u32 layer) {
+ARM_CODE void scroll_V(u32 layer) {
     for (s32 htile = 0; htile < 31; htile += 1) {
         // Get metatile positions from seam
         s32 metatile_x = (seam_x >> 4) & (LEVEL_BUFFER_WIDTH - 1);

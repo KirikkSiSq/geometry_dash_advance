@@ -20,7 +20,7 @@ u16 saw_rotation[4];
 struct ObjectSlot object_buffer[MAX_OBJECTS];
 
 
-s32 get_tile_id(u32 chr_offset) {
+ARM_CODE s32 get_tile_id(u32 chr_offset) {
     s32 i;
     for (i = 0; i < MAX_CHR_SLOTS; i++) {
         struct ObjectCHRSlot curr_slot = chr_slots[i];
@@ -32,7 +32,7 @@ s32 get_tile_id(u32 chr_offset) {
     return -1;
 }
 
-s32 get_chr_slot_id(u32 rom_offset) {
+ARM_CODE s32 get_chr_slot_id(u32 rom_offset) {
     s32 id;
     for (id = 0; id < MAX_CHR_SLOTS; id++) {
         struct ObjectCHRSlot curr_slot = chr_slots[id];
@@ -46,7 +46,7 @@ s32 get_chr_slot_id(u32 rom_offset) {
     return -1;
 }
 
-s32 get_free_chr_slot_id(u32 rom_offset) {
+ARM_CODE s32 get_free_chr_slot_id(u32 rom_offset) {
     s32 id;
     s32 available = -1;
     // Check for already existant slots
@@ -188,7 +188,7 @@ void load_objects(u32 load_chr, u32 loading_level) {
 
 void do_collision(struct ObjectSlot *objectSlot);
 
-s32 find_affine_slot(u16 rotation) {
+ARM_CODE s32 find_affine_slot(u16 rotation) {
     // Search for already existing values
     for (s32 slot = 0; slot < NUM_ROT_SLOTS; slot++) {
         u16 curr_rot = rotation_buffer[slot];
@@ -307,7 +307,7 @@ void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3) {
 
 #define RMS_THRESH_MULTIPLIER float2fx(1.5f)
 
-s32 calculate_amplitude(FIXED rms) {
+ARM_CODE s32 calculate_amplitude(FIXED rms) {
     static FIXED prev = 0;
     static FIXED pulse = 0;
     static FIXED avg_delta = 0;
@@ -340,7 +340,7 @@ s32 calculate_amplitude(FIXED rms) {
     return pulse;
 }
 
-void scale_pulsing_objects() {
+ARM_CODE void scale_pulsing_objects() {
     obj_aff_identity(&obj_aff_buffer[AFF_SLOT_PULSING]);
     obj_aff_identity(&obj_aff_buffer[AFF_SLOT_PULSING_ORB]);
     u16 *mix_buffer_ptr = (u16 *) mixing_buffer;

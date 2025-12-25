@@ -193,27 +193,6 @@ u32 slerp(u32 a, u32 b, u32 ratio) {
     return a + FIXED_MUL(delta, ratio);
 }
 
-COLOR blend_clr(const COLOR clra, const COLOR clrb, u32 alpha) {
-	u32 clr;
-	u32 parta, partb, part;
-	const u32 rbmask= (RED_MASK|BLUE_MASK), gmask= GREEN_MASK;
-	const u32 rbhalf= 0x4010, ghalf= 0x0200;
-		
-    // Red and blue
-    parta= clra & rbmask;
-    partb= clrb & rbmask;
-    part = (partb-parta)*alpha + parta*32 + rbhalf;
-    clr  = (part/32 ) & rbmask;
-
-    // Green
-    parta= clra & gmask;
-    partb= clrb & gmask;
-    part = (partb-parta)*alpha + parta*32 + ghalf;
-    clr |= (part/32 ) & gmask;
-
-    return clr;
-}
-
 u32 get_n_digits(const u32 value) {
     u32 value_temp = value;
     int digits = 0;

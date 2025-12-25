@@ -291,7 +291,7 @@ ARM_CODE s32 is_colliding_rotated_fixed(
     s32 rot2_center_x, s32 rot2_center_y,                 // Rotation center point
     u16 angle2                                            // Rotation angle (0-FFFF)
 );                                           
-u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer);
+ARM_CODE u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer);
 ARM_CODE u32 obtain_level_buffer_index(u32 x, u32 y);
 ARM_CODE u16 obtain_block(u32 x, u32 y, u32 layer);
 ARM_CODE void collide_with_obj_spikes(u32 x, u32 y, u32 width, u32 height);

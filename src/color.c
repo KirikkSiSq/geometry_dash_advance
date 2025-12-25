@@ -595,9 +595,9 @@ COLOR blend_colors(COLOR col1, COLOR col2) {
     BGR_TO_STRUCT(col2, col2_struct)
 
     // Add color components
-    u8 red = col1_struct.red + col2_struct.red;
-    u8 green = col1_struct.green + col2_struct.green;
-    u8 blue = col1_struct.blue + col2_struct.blue;
+    u32 red = col1_struct.red + col2_struct.red;
+    u32 green = col1_struct.green + col2_struct.green;
+    u32 blue = col1_struct.blue + col2_struct.blue;
 
     // Cap to max number
     if (red > 31)   red = 31;
@@ -605,5 +605,5 @@ COLOR blend_colors(COLOR col1, COLOR col2) {
     if (blue > 31)  blue = 31;
 
     // Return new color
-    return RGB15_SAFE(red, green, blue);
+    return RGB15(red, green, blue);
 }

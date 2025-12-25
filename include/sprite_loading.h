@@ -88,9 +88,9 @@ extern struct ObjectSlot object_buffer[MAX_OBJECTS];
 void load_objects(u32 load_chr, u32 loading_level);
 IWRAM_CODE void display_objects();
 
-s32 get_chr_slot_id(u32 rom_offset);
+IWRAM_CODE s32 get_chr_slot_id(u32 rom_offset);
 
-void scale_pulsing_objects();
+IWRAM_CODE void scale_pulsing_objects();
 void rotate_saws();
 void object_tile_data_load(u16 object_type);
 

@@ -2152,22 +2152,22 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
 
         // Set tile id if not set already by sprite data
         if (!(attribute2 & ATTR2_ID_MASK)) {
-            attribute2 |= (offset & ATTR2_ID_MASK);
+            BFN_SET(attribute2, offset, ATTR2_ID);
         }
 
         // Set priority if modified
         if (!(priority & PRIORITY_DONT_MODIFY_PRIO)) {
-            attribute2 = (attribute2 & ~ATTR2_PRIO_MASK) | ((priority << ATTR2_PRIO_SHIFT) & ATTR2_PRIO_MASK);
+            BFN_SET(attribute2, priority, ATTR2_PRIO); 
         }
 
         // Convert priority 0 to 1 if not flagged
         if (!(attribute2 & ATTR2_PRIO_MASK) && !(priority & PRIORITY_DONT_DISABLE_0)) {
-            attribute2 = (attribute2 & ~ATTR2_PRIO_MASK) | (1 << ATTR2_PRIO_SHIFT);
+            BFN_SET(attribute2, 1, ATTR2_PRIO); 
         }
 
         // Set palette if positive
         if (palette >= 0) {
-            attribute2 = (attribute2 & ~ATTR2_PALBANK_MASK) | ((palette << ATTR2_PALBANK_SHIFT) & ATTR2_PALBANK_MASK);
+            BFN_SET(attribute2, palette, ATTR2_PALBANK); 
         }
 
         // Disable blending if expecified
@@ -2230,6 +2230,7 @@ ARM_CODE void oam_metaspr(u16 x, u8 y, const u16 *data, u8 hflip, u8 vflip, u16 
         i += 7;
     }
 }
+
 ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 aff_id, u8 dbl, u16 tile_id, s16 palette, u8 priority, u8 zindex, u8 disable_mirror, u8 disable_blending) {
     u32 i = 0;
     u16 offset;
@@ -2273,17 +2274,17 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
 
         // Set priority if modified
         if (!(priority & PRIORITY_DONT_MODIFY_PRIO)) {
-            attribute2 = (attribute2 & ~ATTR2_PRIO_MASK) | ((priority << ATTR2_PRIO_SHIFT) & ATTR2_PRIO_MASK);
+            BFN_SET(attribute2, priority, ATTR2_PRIO); 
         }
 
         // Convert priority 0 to 1 if not flagged
         if (!(attribute2 & ATTR2_PRIO_MASK) && !(priority & PRIORITY_DONT_DISABLE_0)) {
-            attribute2 = (attribute2 & ~ATTR2_PRIO_MASK) | (1 << ATTR2_PRIO_SHIFT);
+            BFN_SET(attribute2, 1, ATTR2_PRIO); 
         }
 
         // Set palette if positive
         if (palette >= 0) {
-            attribute2 = (attribute2 & ~ATTR2_PALBANK_MASK) | ((palette << ATTR2_PALBANK_SHIFT) & ATTR2_PALBANK_MASK);
+            BFN_SET(attribute2, palette, ATTR2_PALBANK); 
         }
 
         // Disable blending if expecified
@@ -2325,8 +2326,8 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         s32 relative_y_centered = relative_y + (height >> 1);
         
         // Divide by 4096 to get back to pixels
-        s32 rotated_x = ((s64)(relative_x_centered * cos_theta) - (s64)(relative_y_centered * sin_theta)) / 4096;
-        s32 rotated_y = ((s64)(relative_y_centered * cos_theta) + (s64)(relative_x_centered * sin_theta)) / 4096;
+        s32 rotated_x = ((s32)(relative_x_centered * cos_theta) - (s32)(relative_y_centered * sin_theta)) / 4096;
+        s32 rotated_y = ((s32)(relative_y_centered * cos_theta) + (s32)(relative_x_centered * sin_theta)) / 4096;
 
         s32 total_x = x + (center_x - (width >> 1)) + rotated_x - (should_use_double_size ? (width >> 1) : 0);
         s32 total_y = y + (center_y - (height >> 1)) + rotated_y - (should_use_double_size ? (height >> 1) : 0);
