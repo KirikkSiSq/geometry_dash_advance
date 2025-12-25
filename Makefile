@@ -41,7 +41,7 @@ AUDIO_FILES	:= audio/*.xm audio/*.s3m audio/Sfx/*.wav
 GRAPHICS	:=
 
 # Source files to compile
-SOURCES		:= graphics/*.s $(shell find levels -name '*.s') $(shell find levels -name '*.c') $(shell find src -name '*.c') lib/*.s $(shell find graphics -name '*.c')
+SOURCES		:= graphics/*.s $(shell find levels -name '*.s') $(shell find levels -name '*.c') $(shell find src -name '*.c') src/*.s lib/*.s $(shell find graphics -name '*.c')
 
 # Include directories
 INCLUDES	:= include include/menus

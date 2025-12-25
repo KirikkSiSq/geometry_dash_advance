@@ -220,7 +220,7 @@ void cube_gamemode() {
 
     // If the cube is on the air and not on slope, rotate, else, snap to nearest 
     if (!(curr_player.snap_cube_rotation || curr_player.slope_counter)) {
-        curr_player.cube_rotation -= 0x500 * sign * mirror_sign * rotation_sign / num_steps;
+        curr_player.cube_rotation -= step_divide(0x500 * sign * mirror_sign * rotation_sign, num_steps);
     } else {
         // If player is on slope, snap the rotation to it, else, snap to normal ground
         if (curr_player.slope_counter) {
@@ -257,8 +257,8 @@ void cube_gamemode() {
     if (current_step < num_steps - 1) {
         // Apply part of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed / num_steps;
-        curr_player.player_y += curr_player.player_y_speed / num_steps;
+        curr_player.player_x += step_divide(curr_player.player_x_speed, num_steps);
+        curr_player.player_y += step_divide(curr_player.player_y_speed, num_steps);
 
         // Do gravity
         do_cube_gravity();
@@ -274,8 +274,8 @@ void cube_gamemode() {
     } else {
         // Apply last part of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
-        curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
+        curr_player.player_x += curr_player.player_x_speed - ((step_divide(curr_player.player_x_speed, num_steps)) * (num_steps - 1));
+        curr_player.player_y += curr_player.player_y_speed - ((step_divide(curr_player.player_y_speed, num_steps)) * (num_steps - 1));
     
         // Do gravity
         do_cube_gravity();
@@ -329,8 +329,8 @@ void ship_gamemode() {
     if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed / num_steps;
-        curr_player.player_y += curr_player.player_y_speed / num_steps;
+        curr_player.player_x += step_divide(curr_player.player_x_speed, num_steps);
+        curr_player.player_y += step_divide(curr_player.player_y_speed, num_steps);
         
         // Do gravity
         do_ship_gravity(max_y_speed, max_y_speed_holding);
@@ -343,8 +343,8 @@ void ship_gamemode() {
     } else {
         // Apply last half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
-        curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
+        curr_player.player_x += curr_player.player_x_speed - ((step_divide(curr_player.player_x_speed, num_steps)) * (num_steps - 1));
+        curr_player.player_y += curr_player.player_y_speed - ((step_divide(curr_player.player_y_speed, num_steps)) * (num_steps - 1));
 
         // Do gravity
         do_ship_gravity(max_y_speed, max_y_speed_holding);
@@ -371,15 +371,15 @@ void ball_gamemode() {
     s8 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
     s8 mirror_sign = screen_mirrored ? -1 : 1;
 
-    curr_player.cube_rotation -= (curr_player.player_x_speed >> 8) * curr_player.ball_rotation_direction * mirror_sign / num_steps;
+    curr_player.cube_rotation -= step_divide((curr_player.player_x_speed >> 8) * curr_player.ball_rotation_direction * mirror_sign, num_steps);
 
     curr_player.player_y_speed = CLAMP(curr_player.player_y_speed, -BALL_MAX_Y_SPEED, BALL_MAX_Y_SPEED);
 
     if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed / num_steps;
-        curr_player.player_y += curr_player.player_y_speed / num_steps;
+        curr_player.player_x += step_divide(curr_player.player_x_speed, num_steps);
+        curr_player.player_y += step_divide(curr_player.player_y_speed, num_steps);
 
         // Do gravity
         do_ball_gravity();
@@ -392,8 +392,8 @@ void ball_gamemode() {
     } else {
         // Apply last half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
-        curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
+        curr_player.player_x += curr_player.player_x_speed - ((step_divide(curr_player.player_x_speed, num_steps)) * (num_steps - 1));
+        curr_player.player_y += curr_player.player_y_speed - ((step_divide(curr_player.player_y_speed, num_steps)) * (num_steps - 1));
         // Do gravity
         do_ball_gravity();
         
@@ -452,8 +452,8 @@ void ufo_gamemode() {
     if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed / num_steps;
-        curr_player.player_y += curr_player.player_y_speed / num_steps;
+        curr_player.player_x += step_divide(curr_player.player_x_speed, num_steps);
+        curr_player.player_y += step_divide(curr_player.player_y_speed, num_steps);
 
         // Do gravity
         do_ufo_gravity(max_y_speed);
@@ -466,8 +466,8 @@ void ufo_gamemode() {
     } else {
         // Apply last half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
-        curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
+        curr_player.player_x += curr_player.player_x_speed - ((step_divide(curr_player.player_x_speed, num_steps)) * (num_steps - 1));
+        curr_player.player_y += curr_player.player_y_speed - ((step_divide(curr_player.player_y_speed, num_steps)) * (num_steps - 1));
         
         // Do gravity
         do_ufo_gravity(max_y_speed);
@@ -515,8 +515,8 @@ void wave_gamemode() {
     if (current_step < num_steps - 1) {
         // Apply half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed / num_steps;
-        curr_player.player_y += curr_player.player_y_speed / num_steps;
+        curr_player.player_x += step_divide(curr_player.player_x_speed, num_steps);
+        curr_player.player_y += step_divide(curr_player.player_y_speed, num_steps);
         
         // Do collision with objects
         do_collision_with_objects();
@@ -528,8 +528,8 @@ void wave_gamemode() {
     } else {
         // Apply last half of speed
         // Update player x and y
-        curr_player.player_x += curr_player.player_x_speed - ((curr_player.player_x_speed / num_steps) * (num_steps - 1));
-        curr_player.player_y += curr_player.player_y_speed - ((curr_player.player_y_speed / num_steps) * (num_steps - 1));
+        curr_player.player_x += curr_player.player_x_speed - ((step_divide(curr_player.player_x_speed, num_steps)) * (num_steps - 1));
+        curr_player.player_y += curr_player.player_y_speed - ((step_divide(curr_player.player_y_speed, num_steps)) * (num_steps - 1));
     
         // Do collision with objects
         do_collision_with_objects();
@@ -549,10 +549,10 @@ void do_cube_gravity() {
 
     // Depending on which direction the curr_player.gravity points, apply curr_player.gravity and cap speed in one direction or in the other
     if (curr_player.gravity_dir) {
-        curr_player.player_y_speed -= curr_player.gravity / num_steps;
+        curr_player.player_y_speed -= step_divide(curr_player.gravity, num_steps);
         if (curr_player.player_y_speed < -CUBE_MAX_Y_SPEED) curr_player.player_y_speed = -CUBE_MAX_Y_SPEED;
     } else {
-        curr_player.player_y_speed += curr_player.gravity / num_steps;
+        curr_player.player_y_speed += step_divide(curr_player.gravity, num_steps);
         if (curr_player.player_y_speed > CUBE_MAX_Y_SPEED) curr_player.player_y_speed = CUBE_MAX_Y_SPEED;
     }
 }
@@ -576,18 +576,18 @@ void do_ship_gravity(s32 max_y_speed, s32 max_y_speed_holding) {
     
     if (holding) {
         if (curr_player.gravity_dir == GRAVITY_DOWN) {
-            curr_player.player_y_speed -= curr_player.gravity / num_steps;
+            curr_player.player_y_speed -= step_divide(curr_player.gravity, num_steps);
             if (curr_player.player_y_speed < -max_y_speed_holding) curr_player.player_y_speed = -max_y_speed_holding;  
         } else {    
-            curr_player.player_y_speed += curr_player.gravity / num_steps;
+            curr_player.player_y_speed += step_divide(curr_player.gravity, num_steps);
             if (curr_player.player_y_speed > max_y_speed_holding) curr_player.player_y_speed = max_y_speed_holding;  
         }
     } else {
         if (curr_player.gravity_dir == GRAVITY_DOWN) {
-            curr_player.player_y_speed += curr_player.gravity / num_steps;
+            curr_player.player_y_speed += step_divide(curr_player.gravity, num_steps);
             if (curr_player.player_y_speed > max_y_speed) curr_player.player_y_speed = max_y_speed;    
         } else {    
-            curr_player.player_y_speed -= curr_player.gravity / num_steps;
+            curr_player.player_y_speed -= step_divide(curr_player.gravity, num_steps);
             if (curr_player.player_y_speed < -max_y_speed) curr_player.player_y_speed = -max_y_speed;
         }
     }
@@ -597,7 +597,7 @@ void do_ball_gravity() {
     update_falling();
 
     s8 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
-    curr_player.player_y_speed += (curr_player.gravity / num_steps) * sign;
+    curr_player.player_y_speed += (step_divide(curr_player.gravity, num_steps)) * sign;
 }
 
 void do_ufo_gravity(s32 max_y_speed) {
@@ -611,10 +611,10 @@ void do_ufo_gravity(s32 max_y_speed) {
 
     // Depending on which direction the curr_player.gravity points, apply curr_player.gravity and cap speed in one direction or in the other
     if (curr_player.gravity_dir) {
-        curr_player.player_y_speed -= curr_player.gravity / num_steps;
+        curr_player.player_y_speed -= step_divide(curr_player.gravity, num_steps);
         if (curr_player.player_y_speed < -max_y_speed) curr_player.player_y_speed = -max_y_speed;
     } else {
-        curr_player.player_y_speed += curr_player.gravity / num_steps;
+        curr_player.player_y_speed += step_divide(curr_player.gravity, num_steps);
         if (curr_player.player_y_speed > max_y_speed) curr_player.player_y_speed = max_y_speed;
     }
 }

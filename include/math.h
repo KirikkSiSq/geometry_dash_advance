@@ -15,3 +15,4 @@ FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b);
 COLOR blend_clr(const COLOR clra, const COLOR clrb, u32 alpha);
 u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority);
 u32 get_n_digits(const u32 value);
+IWRAM_CODE s32 step_divide(s32 value, s32 steps);
