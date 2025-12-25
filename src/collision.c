@@ -948,7 +948,7 @@ ARM_CODE s32 collision_with_block_obj(u32 x, u32 y, u8 side) {
             u32 mod_y = y - obj_y;
 
             // Set old player y pos to get the displacement later
-            u64 old_player_y = curr_player.player_y;
+            u32 old_player_y = curr_player.player_y;
             
             u32 returned = col_type_lookup(col_type, mod_x, mod_y, side, 3);
             
@@ -2018,7 +2018,7 @@ ARM_CODE void collide_with_map_spikes(u32 x, u32 y, u32 width, u32 height, u8 la
 }
 
 struct circle_t {
-    s64 cx, cy; // Top-left corner
+    s32 cx, cy; // Top-left corner
     u32 radius; // Side length
 };
 

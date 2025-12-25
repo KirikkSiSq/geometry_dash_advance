@@ -33,8 +33,8 @@ u32 *level_pointer[LEVEL_LAYERS];
 // Scroll variables
 // in subpixels
 u64 scroll_x = 0;
-u64 scroll_y = 0;
-s64 intended_scroll_y = 0;
+u32 scroll_y = 0;
+s32 intended_scroll_y = 0;
 
 u32 target_scroll_y = 0;
 
@@ -149,3 +149,6 @@ u8 in_practice_mode;
 u32 checkpoint_count;
 u32 checkpoint_pointer;
 EWRAM_DATA struct PracticeCheckpoint checkpoints[NUM_PRACTICE_CHECKPOINTS];
+
+u32 player_profile;
+u32 display_profile;

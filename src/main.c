@@ -10,6 +10,7 @@
 #include "title_screen.h"
 #include "sound_test.h"
 #include "icon_kit.h"
+#include "math.h"
 
 void game_loop();
 u32 paused_routines();
@@ -328,6 +329,9 @@ void game_loop() {
 void level_loop() {
     while (1) { 
         key_poll();
+        
+        // Reset next sprite index
+        nextSpr = 0;
 
         // If pressed start, pause the game
         if (key_hit(KEY_START) && !complete_cutscene) {
@@ -376,13 +380,11 @@ void level_loop() {
             if (key_hit(KEY_DOWN)) {
                 hitbox_display ^= 1;
             }
+            
+            draw_sprite_number(232, 120, player_profile, numberSpr, 0);
+            draw_sprite_number(232, 128, display_profile, numberSpr, 0);
         }
-#endif
 
-        // Reset next sprite index
-        nextSpr = 0;
-
-#ifdef DEBUG
         if (noclip) oam_metaspr(0, 0, noclipSpr, 0, 0, 0, -1, 0, 0, TRUE, FALSE); 
 #endif
 

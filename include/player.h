@@ -50,8 +50,8 @@ enum PlayerID {
 struct Player {
     // Position variables, in subpixels
     s64 player_x; // gota love giant levels
-    s64 player_y;
-    s64 old_player_y;
+    s32 player_y;
+    s32 old_player_y;
     s32 player_y_diff;
 
     // Player dimensions, in pixels

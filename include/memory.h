@@ -61,8 +61,8 @@ extern u32 curr_level_width;
 extern u32 *level_pointer[LEVEL_LAYERS];
 
 extern u64 scroll_x;
-extern u64 scroll_y;
-extern s64 intended_scroll_y;
+extern u32 scroll_y;
+extern s32 intended_scroll_y;
 
 extern u32 target_scroll_y;
 
@@ -149,8 +149,8 @@ struct PracticeCheckpoint {
     struct Player player2;
     
     u64 scroll_x;
-    u64 scroll_y;
-    s64 intended_scroll_y;
+    u32 scroll_y;
+    s32 intended_scroll_y;
     u32 target_scroll_y;
 
     u8 screen_mirrored;
@@ -187,3 +187,6 @@ extern EWRAM_DATA u8 trail_length[PLAYER_COUNT];
 extern u32 checkpoint_count;
 extern u32 checkpoint_pointer;
 extern EWRAM_DATA struct PracticeCheckpoint checkpoints[NUM_PRACTICE_CHECKPOINTS];
+
+extern u32 player_profile;
+extern u32 display_profile;

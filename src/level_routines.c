@@ -1527,6 +1527,7 @@ void draw_both_players() {
 
 // Main player code
 void player_code() {
+    profile_start();
     // Set speed for both players
     set_player_speed();
 
@@ -1566,6 +1567,7 @@ void player_code() {
 
         player_2 = curr_player;
     }
+    player_profile = profile_stop();
 }
 
 void store_practice_vars() {

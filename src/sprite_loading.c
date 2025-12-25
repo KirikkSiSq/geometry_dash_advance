@@ -372,6 +372,7 @@ void rotate_saws() {
 }
 
 ARM_CODE void display_objects() {
+    profile_start();
     for (s32 index = 0; index < MAX_OBJECTS; index++) {
         if (object_buffer[index].occupied) {
             struct Object curr_object = object_buffer[index].object;
@@ -430,6 +431,7 @@ ARM_CODE void display_objects() {
             }
         }
     }
+    display_profile = profile_stop();
 }
 
 void do_collision(struct ObjectSlot *objectSlot) {
