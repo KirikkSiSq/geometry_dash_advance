@@ -1,7 +1,7 @@
 #include "save.h"
 #include "defines.h"
 
-struct SaveBlock save_data;
+EWRAM_DATA struct SaveBlock save_data;
 
 void memcpy8(volatile unsigned char *dst, const volatile unsigned char *src, size_t length) {
     for (;length > 0;--length) *dst++ = *src++;

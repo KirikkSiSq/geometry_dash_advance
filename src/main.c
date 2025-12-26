@@ -383,8 +383,8 @@ void level_loop() {
                 hitbox_display ^= 1;
             }
             
-            //draw_sprite_number(232, 120, player_profile, numberSpr, 0);
-            //draw_sprite_number(232, 128, display_profile, numberSpr, 0);
+            draw_sprite_number(232, 120, player_profile, numberSpr, 0);
+            draw_sprite_number(232, 128, display_profile, numberSpr, 0);
         }
 
         if (noclip) oam_metaspr(0, 0, noclipSpr, 0, 0, 0, -1, 0, 0, TRUE, FALSE); 

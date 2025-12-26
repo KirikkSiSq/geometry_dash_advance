@@ -193,7 +193,7 @@ u32 slerp(u32 a, u32 b, u32 ratio) {
     return a + FIXED_MUL(delta, ratio);
 }
 
-u32 get_n_digits(const u32 value) {
+ARM_CODE u32 get_n_digits(const u32 value) {
     u32 value_temp = value;
     int digits = 0;
 
@@ -207,7 +207,7 @@ u32 get_n_digits(const u32 value) {
 }
 
 // Returns the next character x pos (useful for icons)
-u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority) {
+ARM_CODE u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority) {
     u32 x_pos_temp = x;
     u32 value_temp = value;
 

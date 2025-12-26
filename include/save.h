@@ -34,7 +34,7 @@ struct SaveBlock {
     struct SaveLevelData saved_levels[LEVEL_COUNT];
 };
 
-extern struct SaveBlock save_data;
+extern EWRAM_DATA struct SaveBlock save_data;
 
 void memcpy8(volatile unsigned char *dst, const volatile unsigned char *src, size_t length);
 void memset8(volatile unsigned char *dst, unsigned char val, size_t length);
