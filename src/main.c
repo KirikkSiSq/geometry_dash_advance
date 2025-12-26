@@ -393,8 +393,6 @@ void level_loop() {
         // Draw level progress
         draw_percentage(108, 8, get_level_progress(), numberSpr, 0);
 
-        draw_attempt_counter();
-
         if (player_death) {
             mmEffect(SFX_EXPLOSION);
             set_new_best(get_level_progress(), in_practice_mode);
@@ -410,6 +408,7 @@ void level_loop() {
         display_objects();
         rotate_saws();
         scale_pulsing_objects();
+        draw_attempt_counter();
 
         if (in_practice_mode) {
             if (key_hit(KEY_L)) {
