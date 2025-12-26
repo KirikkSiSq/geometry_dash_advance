@@ -2116,10 +2116,26 @@ void get_vertical_edge(struct triangle_t triangle, s32 *x, s32 *y1, s32 *y2) {
     }
 }
 
-s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t triangle) {
+s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t triangle) {    
     s32 hipo_x1, hipo_y1, hipo_x2, hipo_y2;
 
     get_hipotenuse(triangle, &hipo_x1, &hipo_y1, &hipo_x2, &hipo_y2);
+
+    if (slope_horizontal_dir[triangle.type] < 0) {
+        s32 top_y;
+        s32 step = slope_step[triangle.type];
+        if (step > 0) {
+            top_y = MIN(hipo_y1, hipo_y2);
+        } else {
+            top_y = MAX(hipo_y1, hipo_y2);
+        }
+
+        s32 player_bottom_y = circle.cy + (circle.radius * step);
+
+        if (ABS(player_bottom_y - top_y) < 2) {
+            return 0;
+        }
+    }
 
     if (triangle.hurts) {
         s32 going_down = slope_horizontal_dir[triangle.type];
@@ -2438,13 +2454,12 @@ ARM_CODE u32 collide_with_obj_slopes(struct circle_t *player);
 // This function iterates through slopes that the player is touching and applies collision to it
 u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
     struct circle_t player;
-    player.radius = (height >> 1) - 1;
+    player.radius = (height >> 1);
     player.cx = x + (width >> 1);
     player.cy = y + (height >> 1);
 
     // Make wave hitbox 2 pixels bigger
     if (curr_player.gamemode == GAMEMODE_WAVE) player.radius += 2;
-    else if (curr_player.gamemode == GAMEMODE_SHIP) player.radius -= 1;
 
     // Try to collide with sprite slopes only in the first layer check
     if (collide_with_obj_slopes(&player)) {
