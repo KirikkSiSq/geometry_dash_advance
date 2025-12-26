@@ -897,4 +897,47 @@ test2_spr_data:
    .hword 0x10 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
+@ Object 148
+   .hword 0x10 @ delta x
+   .hword 0xd0 @ y
+   .hword 0x3 @ type
+   .hword 0xa4 @ changes BG for 20 frames
+   .hword 0x7ea0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 149
+   .hword 0x10 @ delta x
+   .hword 0x1a0 @ y
+   .hword 0x49 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 150
+   .hword 0x4 @ delta x
+   .hword 0x1a0 @ y
+   .hword 0xe @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 151
+   .hword 0x2c @ delta x
+   .hword 0x1a0 @ y
+   .hword 0x1 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 152
+   .hword 0x1f0 @ delta x
+   .hword 0x130 @ y
+   .hword 0xf @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 153
+   .hword 0x0 @ delta x
+   .hword 0x168 @ y
+   .hword 0xf @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 154
+   .hword 0x0 @ delta x
+   .hword 0x1a0 @ y
+   .hword 0xf @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
    .byte 0xff

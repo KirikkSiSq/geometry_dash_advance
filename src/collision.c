@@ -2036,41 +2036,28 @@ struct triangle_t {
 };
 
 const s32 slope_step[];
+const s32 slope_horizontal_dir[];
 
-void getLine(s32 x1, s32 y1, s32 x2, s32 y2, s32 *a, s32 *b, s32 *c){
-       // (x- p1X) / (p2X - p1X) = (y - p1Y) / (p2Y - p1Y) 
-       *a = y1 - y2;
-       *b = x2 - x1;
-       *c = x1 * y2 - x2 * y1;
-}
+ARM_CODE s32 find_squared_distance_to_line(s32 point_x, s32 point_y, s32 x1, s32 y1, s32 x2, s32 y2) {
+    s32 dx = x2 - x1;
+    s32 dy = y2 - y1;
+    s32 segment_length_sq = dx * dx + dy * dy;
 
-s32 find_squared_distance_to_line(s32 point_x, s32 point_y, s32 x1, s32 y1, s32 x2, s32 y2) {
-    const s32 dx = x2 - x1;
-    const s32 dy = y2 - y1;
-    const s32 segment_length_sq = dx * dx + dy * dy;
+    s32 px = point_x - x1;
+    s32 py = point_y - y1;
+    s32 t = px * dx + py * dy;
 
-    // Early exit if segment is a point
-    if (segment_length_sq == 0) {
-        const s32 dx_p = point_x - x1;
-        const s32 dy_p = point_y - y1;
-        return dx_p * dx_p + dy_p * dy_p;
-    }
+    s32 ap_sq = px * px + py * py;
 
-    const s32 px = point_x - x1;
-    const s32 py = point_y - y1;
-    const s32 t = px * dx + py * dy;  // Projection parameter (scaled by segment_length_sq)
-
-    // Clamp t to [0, segment_length_sq]
     if (t <= 0) {
-        return px * px + py * py;  // Closest to (x1, y1)
+        return ap_sq;  // Closest to (x1, y1)
     } else if (t >= segment_length_sq) {
-        const s32 dx_p = point_x - x2;
-        const s32 dy_p = point_y - y2;
+        s32 dx_p = point_x - x2;
+        s32 dy_p = point_y - y2;
         return dx_p * dx_p + dy_p * dy_p;  // Closest to (x2, y2)
     } else {
         // Compute squared distance using algebraic optimization
-        const s32 ap_sq = px * px + py * py;
-        const s32 numerator = ap_sq * segment_length_sq - t * t;
+        s32 numerator = ap_sq * segment_length_sq - t * t;
         return numerator / segment_length_sq;
     }
 }
@@ -2134,7 +2121,12 @@ s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t t
 
     get_hipotenuse(triangle, &hipo_x1, &hipo_y1, &hipo_x2, &hipo_y2);
 
-    if (triangle.hurts) circle.radius += 3;
+    if (triangle.hurts) {
+        s32 going_down = slope_horizontal_dir[triangle.type];
+
+        hipo_x1 -= 2 * going_down;
+        hipo_x2 -= 2 * going_down;
+    }
 
     return (u32) find_squared_distance_to_line(circle.cx, circle.cy, hipo_x1, hipo_y1, hipo_x2, hipo_y2) <= circle.radius * circle.radius;
 }
@@ -2278,6 +2270,31 @@ const s32 slope_step[] = {
     1,  // COL_SLOPE_66_DOWN_2
     -1, // COL_SLOPE_66_UP_UD_1
     -1, // COL_SLOPE_66_UP_UD_2
+    -1, // COL_SLOPE_66_DOWN_UD_1
+    -1, // COL_SLOPE_66_DOWN_UD_2
+};
+
+const s32 slope_horizontal_dir[] = {
+    1,  // COL_SLOPE_45_UP
+    -1, // COL_SLOPE_45_DOWN
+    1,  // COL_SLOPE_45_UP_UD
+    -1, // COL_SLOPE_45_DOWN_UD
+
+    1,  // COL_SLOPE_22_UP_1
+    1,  // COL_SLOPE_22_UP_2
+    -1, // COL_SLOPE_22_DOWN_1
+    -1, // COL_SLOPE_22_DOWN_2
+    1,  // COL_SLOPE_22_UP_UD_1
+    1,  // COL_SLOPE_22_UP_UD_2
+    -1, // COL_SLOPE_22_DOWN_UD_1
+    -1, // COL_SLOPE_22_DOWN_UD_2
+
+    1,  // COL_SLOPE_66_UP_1
+    1,  // COL_SLOPE_66_UP_2
+    -1, // COL_SLOPE_66_DOWN_1
+    -1, // COL_SLOPE_66_DOWN_2
+    1,  // COL_SLOPE_66_UP_UD_1
+    1,  // COL_SLOPE_66_UP_UD_2
     -1, // COL_SLOPE_66_DOWN_UD_1
     -1, // COL_SLOPE_66_DOWN_UD_2
 };
