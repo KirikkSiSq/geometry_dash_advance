@@ -56,7 +56,7 @@ ARM_CODE s32 get_free_chr_slot_id(u32 rom_offset) {
             available = id;
         }
 
-        if (curr_slot.rom_offset == rom_offset) {
+        if (curr_slot.occupied == TRUE && curr_slot.rom_offset == rom_offset) {
             // This object is already loaded, exit
             return id;
         }
