@@ -341,6 +341,8 @@ void reset_variables() {
 
     rotate_saws();
     scale_pulsing_objects();
+
+    set_attempt_x();
 }
 
 void load_level(u32 level_ID) {
@@ -462,6 +464,7 @@ void transition_update_spr() {
     obj_copy(oam_mem, shadow_oam, 128);
     obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
     draw_percentage(108, 8, get_level_progress(), numberSpr, 0);
+    draw_attempt_counter();
     draw_both_players();
     display_objects();
     rotate_saws();
@@ -510,6 +513,7 @@ void fade_in_level() {
     key_poll();
     nextSpr = 0;
     draw_percentage(108, 8, get_level_progress(), numberSpr, 0);
+    draw_attempt_counter();
     
     update_flags = UPDATE_ALL;
 }
@@ -549,6 +553,7 @@ void reset_level() {
     
     nextSpr = 0;
     draw_percentage(108, 8, get_level_progress(), numberSpr, 0);
+    draw_attempt_counter();
     draw_both_players();
     display_objects();
     rotate_saws();
@@ -557,6 +562,8 @@ void reset_level() {
 
     // Sort OAM
     sort_oam_by_prio();
+
+    attempt_count++;
 
     // Wait a bit before fading
     for (s32 frame = 0; frame < 30; frame++) {
@@ -736,6 +743,11 @@ void calculate_trans_window_pos() {
     REG_WIN0H = (left << 8) | right;
 }
 
+void set_attempt_x() {
+    attempt_x = (scroll_x >> SUBPIXEL_BITS) + 80;
+    attempt_y = (scroll_y >> SUBPIXEL_BITS) + 60;
+}
+
 void draw_percentage(u32 x, u32 y, u32 percentage, const u16* number_sprite, u16 priority) {
     u32 digits = get_n_digits(percentage);
     u32 pixels = (digits + 1) * 8;
@@ -744,6 +756,17 @@ void draw_percentage(u32 x, u32 y, u32 percentage, const u16* number_sprite, u16
 
     oam_metaspr(percentage_pos, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
     draw_sprite_number(percentage_pos - 8, y, percentage, number_sprite, priority);
+}
+
+void draw_attempt_counter() {
+    s32 relative_x = attempt_x - ((scroll_x >> SUBPIXEL_BITS) & 0xffffffff);
+    s32 relative_y = attempt_y - ((scroll_y >> SUBPIXEL_BITS) & 0xffff);
+    if (relative_x > -160) {
+        s32 digit_pixels = (get_n_digits(attempt_count) - 1) * 8;
+
+        oam_metaspr(relative_x, relative_y, attemptSpr, 0, 0, -1, -1, 0, 0, TRUE, FALSE);
+        draw_sprite_number(relative_x + 64 + digit_pixels, relative_y, attempt_count, numberSpr, 0);
+    }
 }
 
 u32 get_level_progress() {
@@ -1736,6 +1759,7 @@ void restore_practice_vars() {
     memcpy16(col_channels_color, curr_checkpoint.col_channels_color, sizeof(col_channels_color) / 2);
 
     update_scroll();
+    set_attempt_x();
 }
 
 void delete_last_checkpoint() {

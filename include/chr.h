@@ -36,7 +36,7 @@ extern u16 *color_selection_table[];
 extern const COLOR button_glyph_pal[3];
 
 void run_animated_sprites();
-void deoccupy_chr_slots();
+ARM_CODE void deoccupy_chr_slots();
 void load_chr_in_buffer();
 void unload_chr_in_buffer();
 ARM_CODE void flip_player_colors(u8 *dst, u8 *src, u8 tile_num);

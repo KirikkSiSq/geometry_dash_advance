@@ -15,6 +15,7 @@ extern u8 nextSpr;
 #ifdef DEBUG
 extern const u16 noclipSpr[];
 #endif
+extern const u16 attemptSpr[];
 
 extern const u16 hitboxPoint[];
 

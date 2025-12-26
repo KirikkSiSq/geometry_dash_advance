@@ -13,22 +13,16 @@ u8 nextSpr = 0;
 
 #ifdef DEBUG
 const u16 noclipSpr[] = {
+    // NOCL
     ATTR0_4BPP | ATTR0_WIDE,
-    ATTR1_SIZE_16x8,
+    ATTR1_SIZE_32x8,
     ATTR2_PALBANK(5) | ATTR2_ID(992),
     0,
     0,
     PRIO_IDOFF(0, 0, 0), // id offset
     0,
 
-    ATTR0_4BPP | ATTR0_WIDE,
-    ATTR1_SIZE_16x8,
-    ATTR2_PALBANK(5) | ATTR2_ID(994),
-    16,
-    0,
-    PRIO_IDOFF(0, 0, 0), // id offset
-    0,
-
+    // IP
     ATTR0_4BPP | ATTR0_WIDE,
     ATTR1_SIZE_16x8,
     ATTR2_PALBANK(5) | ATTR2_ID(996),
@@ -40,6 +34,55 @@ const u16 noclipSpr[] = {
     0xffff
 };
 #endif
+
+const u16 attemptSpr[] = {
+    // AT
+    ATTR0_4BPP | ATTR0_WIDE,
+    ATTR1_SIZE_16x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(1009),
+    0,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    0,
+
+    // T
+    ATTR0_4BPP | ATTR0_WIDE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(1010),
+    16,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    0,
+
+    // EM
+    ATTR0_4BPP | ATTR0_WIDE,
+    ATTR1_SIZE_16x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(1011),
+    24,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    0,
+
+    // P
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(997),
+    40,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    0,
+
+    // T
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_8x8,
+    ATTR2_PALBANK(5) | ATTR2_ID(1010),
+    48,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    0,
+
+    0xffff
+};
 
 const u16 practiceCheckpoint[] = {
     ATTR0_4BPP | ATTR0_SQUARE,

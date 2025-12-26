@@ -319,6 +319,8 @@ void game_loop() {
     copy_pulsing_sprite();
 
     load_level(loaded_level_id);
+    
+    attempt_count = 1;
 
     frame_finished = TRUE;
     fade_in_level();
@@ -381,8 +383,8 @@ void level_loop() {
                 hitbox_display ^= 1;
             }
             
-            draw_sprite_number(232, 120, player_profile, numberSpr, 0);
-            draw_sprite_number(232, 128, display_profile, numberSpr, 0);
+            //draw_sprite_number(232, 120, player_profile, numberSpr, 0);
+            //draw_sprite_number(232, 128, display_profile, numberSpr, 0);
         }
 
         if (noclip) oam_metaspr(0, 0, noclipSpr, 0, 0, 0, -1, 0, 0, TRUE, FALSE); 
@@ -390,6 +392,8 @@ void level_loop() {
 
         // Draw level progress
         draw_percentage(108, 8, get_level_progress(), numberSpr, 0);
+
+        draw_attempt_counter();
 
         if (player_death) {
             mmEffect(SFX_EXPLOSION);

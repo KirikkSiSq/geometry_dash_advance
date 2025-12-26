@@ -38,6 +38,10 @@ s32 intended_scroll_y = 0;
 
 u32 target_scroll_y = 0;
 
+u32 attempt_x = 0;
+u32 attempt_y = 0;
+u32 attempt_count = 0;
+
 // 0 : up | 1 : down
 s8 scroll_y_dir = 0;
 

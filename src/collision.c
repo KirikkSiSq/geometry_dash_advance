@@ -1113,7 +1113,7 @@ ARM_CODE u32 is_colliding_circle_square(u32 x1, u32 y1, u32 w1, u32 h1, u32 cx2,
 #define Q12_DIV(a, b) (((a) << Q12_SHIFT) / (b))
 
 // Helper function to get minimum of an array
-s32 get_min(s32* arr, s32 count) {
+ARM_CODE s32 get_min(s32* arr, s32 count) {
     s32 min = arr[0];
     for(s32 i = 1; i < count; i++) {
         if(arr[i] < min) min = arr[i];
@@ -1122,7 +1122,7 @@ s32 get_min(s32* arr, s32 count) {
 }
 
 // Helper function to get maximum of an array
-s32 get_max(s32* arr, s32 count) {
+ARM_CODE s32 get_max(s32* arr, s32 count) {
     s32 max = arr[0];
     for(s32 i = 1; i < count; i++) {
         if(arr[i] > max) max = arr[i];
@@ -1131,7 +1131,7 @@ s32 get_max(s32* arr, s32 count) {
 }
 
 // Helper function to project a point onto an axis
-s32 project_point(s32 point_x, s32 point_y, s32 axis_x, s32 axis_y) {
+ARM_CODE s32 project_point(s32 point_x, s32 point_y, s32 axis_x, s32 axis_y) {
     return Q12_MULT(point_x, axis_x) + Q12_MULT(point_y, axis_y);
 }
 

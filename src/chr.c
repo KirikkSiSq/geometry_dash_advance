@@ -273,7 +273,7 @@ void run_animated_sprites() {
     animated_sprite_timer += 1;
 }
 
-void tile_h_flip(u8 *pointer) {
+ARM_CODE void tile_h_flip(u8 *pointer) {
     u8 *tile_ptr = pointer;
     u8 *dst_ptr = tile_ptr + sizeof(TILE);
 
@@ -289,7 +289,7 @@ void tile_h_flip(u8 *pointer) {
     }
 }
 
-void tile_v_flip(u8 *pointer) {
+ARM_CODE void tile_v_flip(u8 *pointer) {
     u8 *tile_ptr = pointer;
     u8 *dst_ptr = tile_ptr + sizeof(TILE);
 
@@ -311,11 +311,11 @@ ARM_CODE void deoccupy_chr_slots() {
         u8 was_occupied = chr_slots[i].occupied;
         u32 rom_offset = chr_slots[i].rom_offset;
         u32 vram_offset = chr_slots[i].vram_offset;
-        u8 tile_num = chr_slots[i].tile_num;
+        u32 tile_num = chr_slots[i].tile_num;
 
         // If the slot is already deocuppied (that is, by no existing object updating the occupation), then proceed to setup unloading.
         // Also check if the slot has already been unloaded
-        if (!was_occupied && rom_offset != 0xffffffff) {
+        if (was_occupied == CHR_SLOT_UNLOADING && rom_offset != 0xffffffff) {
             unloaded_object_buffer[unloaded_object_buffer_offset] = i;     
             unloaded_object_buffer_offset++;
 
@@ -340,7 +340,7 @@ ARM_CODE void deoccupy_chr_slots() {
         }
 
         // Deoccupy, objects that are still loaded and use this slot will occupy it back later on this frame
-        chr_slots[i].occupied = FALSE;
+        if (chr_slots[i].occupied) chr_slots[i].occupied = CHR_SLOT_UNLOADING;
     }
 }
 

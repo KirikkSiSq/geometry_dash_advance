@@ -15,6 +15,8 @@
 typedef s64 FIXED_LONG_16;
 typedef s32 FIXED_16;
 
+#define CHR_SLOT_UNLOADING 2
+
 #define FIXED_SHIFT 16
 #define FIXED_MULTIPLIER (1 << FIXED_SHIFT)
 #define FLOAT_TO_FIXED(f) ((FIXED_LONG_16)((f)*FIXED_MULTIPLIER))
@@ -34,7 +36,7 @@ typedef s32 FIXED_16;
 typedef OBJ_ATTR OAM_SPR;
 #define UNUSED __unused
 #define FALLTHROUGH __attribute__ ((fallthrough));
-
+#define MAX_OPTIMIZE __attribute__((optimize(3)))
 #define ARM_CODE __attribute__((target("arm"), section(".iwram"), long_call))
 #define ROM_DATA __attribute__((section(".rodata,\"a\",%progbits @")))
 
@@ -65,6 +67,10 @@ extern u32 scroll_y;
 extern s32 intended_scroll_y;
 
 extern u32 target_scroll_y;
+
+extern u32 attempt_x;
+extern u32 attempt_y;
+extern u32 attempt_count;
 
 extern s8 scroll_y_dir;
 

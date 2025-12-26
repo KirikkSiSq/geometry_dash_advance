@@ -61,10 +61,8 @@ ARM_CODE s32 get_free_chr_slot_id(u32 rom_offset) {
             return id;
         }
     }
-
-    if (available >= 0) return available;
-
-    return -1;
+    
+    return available;
 }
 
 void load_objects(u32 load_chr, u32 loading_level) {
