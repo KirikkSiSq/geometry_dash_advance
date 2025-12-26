@@ -2117,6 +2117,7 @@ void get_vertical_edge(struct triangle_t triangle, s32 *x, s32 *y1, s32 *y2) {
 }
 
 s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t triangle) {    
+    if (curr_player.horizontal_slope_counter) return 0;
     s32 hipo_x1, hipo_y1, hipo_x2, hipo_y2;
 
     get_hipotenuse(triangle, &hipo_x1, &hipo_y1, &hipo_x2, &hipo_y2);
@@ -2158,7 +2159,10 @@ s32 check_distance_circle_horizontal_edge(struct circle_t circle, struct triangl
 
     get_horizontal_edge(triangle, &edge_x1, &edge_x2, &edge_y);
 
-    return (u32) find_squared_distance_to_line(circle.cx, circle.cy, edge_x1, edge_y, edge_x2, edge_y) <= circle.radius * circle.radius;
+    u32 distance = ABS(circle.cy - edge_y);
+
+    if (slope_horizontal_dir[triangle.type] > 0 && circle.cx < MIN(edge_x1, edge_x2)) return (u32) find_squared_distance_to_line(circle.cx, circle.cy, edge_x1, edge_y, edge_x2, edge_y) <= circle.radius * circle.radius;
+    return distance <= circle.radius;
 }
 
 s32 check_distance_circle_vertical_edge(struct circle_t circle, struct triangle_t triangle) {
@@ -2186,6 +2190,22 @@ s32 get_step(struct circle_t circle, struct triangle_t triangle) {
 
 #define NO_SLOPE_COLL_DETECTED (1 << 31)
 
+#define EJECTION_TYPE_HIPO 1
+#define EJECTION_TYPE_HORZ 2
+#define EJECTION_TYPE_VERT 3
+
+s32 check_slope_eject_type(struct circle_t circle, struct triangle_t triangle) {
+    if (check_distance_circle_horizontal_edge(circle, triangle)) {
+        return EJECTION_TYPE_HORZ;
+    } else if (check_distance_circle_hipotenuse(circle, triangle)) {
+        return EJECTION_TYPE_HIPO;
+    } else if (check_distance_circle_vertical_edge(circle, triangle)){
+        return EJECTION_TYPE_VERT;
+    } else {
+        return 0;
+    }
+}
+
 // Function to check collision between square and triangle
 s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
     s32 ejection = 0;
@@ -2207,7 +2227,9 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
 #endif
 
     s32 step = get_step(circle, triangle);
-    if (check_distance_circle_hipotenuse(circle, triangle)) {
+    s32 type = check_slope_eject_type(circle, triangle);
+    
+    if (type == EJECTION_TYPE_HIPO) {
         // Colliding with the hipotenuse
         while (check_distance_circle_hipotenuse(circle, triangle)) {
             circle.cy -= step;
@@ -2215,7 +2237,7 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
         }
 
         return ejection;
-    } else if (check_distance_circle_horizontal_edge(circle, triangle)) {
+    } else if (type == EJECTION_TYPE_HORZ) {
         // Colliding with the horizontal edge
         while (check_distance_circle_horizontal_edge(circle, triangle)) {
             circle.cy -= step;
@@ -2223,27 +2245,11 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
         }
 
         return ejection + step;
-    } else if (check_distance_circle_vertical_edge(circle, triangle)) {
+    } else if (type == EJECTION_TYPE_VERT) {
         return 0;
     }
 
     return NO_SLOPE_COLL_DETECTED;
-}
-
-#define EJECTION_TYPE_HIPO 1
-#define EJECTION_TYPE_HORZ 2
-#define EJECTION_TYPE_VERT 2
-
-s32 check_slope_eject_type(struct circle_t circle, struct triangle_t triangle) {
-    if (check_distance_circle_horizontal_edge(circle, triangle)) {
-        return EJECTION_TYPE_HORZ;
-    } else if (check_distance_circle_hipotenuse(circle, triangle)) {
-        return EJECTION_TYPE_HIPO;
-    } else if (check_distance_circle_vertical_edge(circle, triangle)){
-        return EJECTION_TYPE_VERT;
-    } else {
-        return 0;
-    }
 }
 
 const FIXED_16 slope_speed_multiplier[] = {
@@ -2329,13 +2335,17 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     player_internal_hitbox.cy = player->cy;
 
     // Die if the internal hitbox collides with the vertical edge
-    if (check_slope_eject_type(player_internal_hitbox, slope) == EJECTION_TYPE_VERT) {
-        #ifdef DEBUG
+    if (ejection_type == EJECTION_TYPE_VERT) {
+        if (check_slope_eject_type(player_internal_hitbox, slope) == EJECTION_TYPE_VERT) {
+#ifdef DEBUG
             if (!noclip) player_death = TRUE;
-        #else
+#else
             player_death = TRUE;
-        #endif
+#endif
+        }
+        return FALSE;
     }
+    
 
     s32 step = get_step(*player, slope);
 
@@ -2435,6 +2445,8 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
 
         curr_player.inverse_rotation_flag = TRUE;
         curr_player.slope_type = type;
+    } else if (ejection_type == EJECTION_TYPE_HORZ) {
+        curr_player.horizontal_slope_counter = 1;
     }
 
     return FALSE;

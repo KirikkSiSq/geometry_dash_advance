@@ -90,6 +90,7 @@ struct Player {
     // TRUE if player is on slope
     u8 on_slope;
     u8 slope_counter;
+    u8 horizontal_slope_counter;
     FIXED slope_speed_multiplier;
 
     // 0 : not buffering, 1 : buffering
