@@ -2132,6 +2132,12 @@ s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t t
 }
 
 s32 check_distance_circle_horizontal_edge(struct circle_t circle, struct triangle_t triangle) {
+    s32 step = slope_step[triangle.type];
+    s32 direction = (curr_player.player_y_speed > 0 ? 1 : -1);
+
+    // Make player not collide with horizontal edge if vspeed is not going to it
+    if (step == direction) return 0;
+
     s32 edge_x1, edge_x2, edge_y;
 
     get_horizontal_edge(triangle, &edge_x1, &edge_x2, &edge_y);
