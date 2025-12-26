@@ -1364,7 +1364,7 @@ const u16 fading_minispike_left_2_rt_lb[][4] = {
 };
 
 
-const u16 (*fading_table[])[4] = {
+ROM_DATA const u16 (*fading_table[])[4] = {
     fading_block_frames,
     fading_spike_up_frames,
     fading_spike_down_frames,

@@ -516,7 +516,7 @@ void copy_pulsing_sprite() {
 }
 
 
-const TILE *icon_kit[] = {
+ROM_DATA const TILE *icon_kit[] = {
     cubes,
     ships,
     balls,

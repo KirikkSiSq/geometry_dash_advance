@@ -163,7 +163,7 @@ void player_main() {
 
 #define scale_inv(s) ((1<<24)/s)>>8
 
-FIXED_16 jump_speed_mult[SPEED_COUNT] = {
+ROM_DATA const FIXED_16 jump_speed_mult[SPEED_COUNT] = {
     FLOAT_TO_FIXED(0.95),  // 0.5x
     FLOAT_TO_FIXED(1),    // 1x
     FLOAT_TO_FIXED(1.02), // 2x
