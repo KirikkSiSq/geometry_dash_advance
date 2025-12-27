@@ -2002,8 +2002,8 @@ ARM_CODE void collide_with_map_spikes(u32 x, u32 y, u32 width, u32 height, u8 la
     // As the cube won't be bigger than a single 16x16 metatile, the cube can touch up to 4 metatiles
     for (u32 side = 0; side < 4; side++) {
         // Get offset from the starting block
-        u32 x_offset = (side & 1) ? 0x10 : 0;
-        u32 y_offset = (side & 2) ? 0x10 : 0;
+        u32 x_offset = (side & 2) ? 0x10 : 0;
+        u32 y_offset = (side & 1) ? 0x10 : 0;
 
         u32 col_type = obtain_collision_type(x + x_offset, y + y_offset, layer);
 
@@ -2157,13 +2157,21 @@ s32 check_distance_circle_horizontal_edge(struct circle_t circle, struct triangl
 
     get_horizontal_edge(triangle, &edge_x1, &edge_x2, &edge_y);
 
+    // Without this check the down line is infinite in length
+    if (circle.cx + (s32) circle.radius <= MIN(edge_x1, edge_x2) ||
+        circle.cx - (s32) circle.radius >= MAX(edge_x1, edge_x2)) {
+            return FALSE;
+    }
+
+    s32 difference = circle.up_y - triangle.down_y;
+
     // Check if player is on snap y pos
     if (step < 0) {
-        if (circle.up_y - triangle.down_y < 4) {
+        if (0 <= difference && difference < 4) {
             return TRUE;
         }
     } else {
-        if (triangle.down_y - circle.up_y < 4) {
+        if (0 <= -difference && -difference < 4) {
             return TRUE;
         }
     }
@@ -2178,13 +2186,6 @@ s32 check_distance_circle_vertical_edge(struct circle_t circle, struct triangle_
 
     return (u32) find_squared_distance_to_line(circle.cx, circle.cy, edge_x, edge_y1, edge_x, edge_y2) <= circle.radius * circle.radius;
 }
-
-s32 get_step(struct circle_t circle, struct triangle_t triangle) {
-    s32 step = slope_step[triangle.type];
-
-    return step;
-}
-
 
 #define NO_SLOPE_COLL_DETECTED (1 << 31)
 
@@ -2224,7 +2225,7 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
         }
 #endif
 
-    s32 step = get_step(circle, triangle);
+    s32 step = slope_step[triangle.type];
     s32 type = check_slope_eject_type(circle, triangle);
     
     if (type == EJECTION_TYPE_HIPO) {
@@ -2240,7 +2241,7 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
         s32 new_y = triangle.down_y + circle.radius * slope_step[triangle.type];
         s32 difference = new_y - circle.cy;
 
-        circle.cy -= difference;
+        circle.cy += difference;
         ejection = difference;
 
         return ejection;
@@ -2353,7 +2354,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     }
     
 
-    s32 step = get_step(*player, slope);
+    s32 step = slope_step[slope.type];
 
     // If the player is a cube, then ignore ceiling slopes
     if (curr_player.gamemode == GAMEMODE_CUBE) {
@@ -2511,6 +2512,8 @@ u32 collide_with_map_slopes(u64 x, u32 y, u32 width, u32 height) {
             // Get offset from the starting block
             u32 x_offset = (side & 1) ? 0x10 : 0;
             u32 y_offset = (side & 2) ? 0x10 : 0;
+
+            if (curr_player.player_y_speed < 0) y_offset = 0x10 - y_offset; 
 
             u32 col_type = obtain_collision_type(x + x_offset, y + y_offset, layer);
 
@@ -2811,8 +2814,8 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
-            slope.up_y = slope_y;
-            slope.down_y = slope_y + 0x20;
+            slope.up_y = slope_y - 0x10;
+            slope.down_y = slope_y + 0x10;
 
             player->up_y   = player->cy - player->radius;
             player->down_y = player->cy + player->radius;
@@ -2830,8 +2833,8 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
-            slope.up_y = slope_y;
-            slope.down_y = slope_y + 0x20;
+            slope.up_y = slope_y - 0x10;
+            slope.down_y = slope_y + 0x10;
 
             player->up_y   = player->cy - player->radius;
             player->down_y = player->cy + player->radius;
@@ -2868,8 +2871,8 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x;
             slope.p3.y = slope_y - 0x10;
             
-            slope.up_y = slope_y + 0x20;
-            slope.down_y = slope_y;
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y - 0x10;
 
             player->up_y   = player->cy + player->radius;
             player->down_y = player->cy - player->radius;
@@ -2925,8 +2928,8 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y - 0x10;
             
-            slope.up_y = slope_y + 0x20;
-            slope.down_y = slope_y;
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y - 0x10;
 
             player->up_y   = player->cy + player->radius;
             player->down_y = player->cy - player->radius;
