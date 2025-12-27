@@ -2182,11 +2182,7 @@ s32 check_distance_circle_vertical_edge(struct circle_t circle, struct triangle_
 s32 get_step(struct circle_t circle, struct triangle_t triangle) {
     s32 step = slope_step[triangle.type];
 
-    if (check_distance_circle_hipotenuse(circle, triangle)) {
-        return step;
-    } else {
-        return -step;
-    }
+    return step;
 }
 
 
@@ -2336,6 +2332,13 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     player_internal_hitbox.radius = (curr_player.player_size == SIZE_BIG ? 2 : 1);
     player_internal_hitbox.cx = player->cx;
     player_internal_hitbox.cy = player->cy;
+    if (slope_step[slope.type] > 0) {
+        player_internal_hitbox.up_y   = player_internal_hitbox.cy - player_internal_hitbox.radius;
+        player_internal_hitbox.down_y = player_internal_hitbox.cy + player_internal_hitbox.radius;
+    } else {
+        player_internal_hitbox.up_y   = player_internal_hitbox.cy + player_internal_hitbox.radius;
+        player_internal_hitbox.down_y = player_internal_hitbox.cy - player_internal_hitbox.radius;
+    }
 
     // Die if the internal hitbox collides with the vertical edge
     if (ejection_type == EJECTION_TYPE_VERT) {
