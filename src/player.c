@@ -24,22 +24,6 @@ u8 speed_id = SPEED_X1;
 // Dual status
 u8 dual = DUAL_OFF;
 
-const u16 ship_rot_multiplier[] = {
-    0x400,  // x0.5
-    0x380,  // x1
-    0x300,  // x2
-    0x280,  // x3
-    0x200,  // x4
-};
-
-const u16 ball_rot_multiplier[] = {
-    0x100,  // x0.5
-    0x250,  // x1
-    0x380,  // x2
-    0x430,  // x3
-    0x5a0,  // x4
-};
-
 // Draw player
 u8 x_offset;
 u8 y_offset;
@@ -97,6 +81,7 @@ void player_main() {
             curr_player.player_buffering = NO_ORB_BUFFER;
         }
 
+        curr_player.old_player_x = curr_player.player_x;
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
 
@@ -125,6 +110,7 @@ void player_main() {
 
         curr_player.disable_jumping = FALSE;
 
+        curr_player.player_x_diff = curr_player.player_x - curr_player.old_player_x;
         curr_player.player_y_diff = curr_player.player_y - curr_player.old_player_y;
         
         if (curr_player.slope_counter) {
@@ -322,7 +308,7 @@ void ship_gamemode() {
     if (curr_player.snap_cube_rotation) {
         curr_player.cube_rotation = 0;
     } else {
-        curr_player.cube_rotation = ArcTan2(curr_player.player_x_speed >> 8, curr_player.player_y_speed >> 8) * mirror_sign;
+        curr_player.cube_rotation = ArcTan2(curr_player.player_x_diff >> 8, curr_player.player_y_diff >> 8) * mirror_sign;
     }
     
     curr_player.snap_cube_rotation = FALSE;

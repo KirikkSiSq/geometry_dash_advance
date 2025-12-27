@@ -185,7 +185,7 @@ void do_menu_color_transition() {
         u16 frames      = col_trigger_buffer[0][COL_TRIG_BUFF_TOTAL_FRAMES];
         u16 curr_frame  = col_trigger_buffer[0][COL_TRIG_BUFF_CURRENT_FRAMES];
 
-        u32 lerp_value = (TO_FIXED(curr_frame) / (frames - 1)); // Division, scary stuff
+        u32 lerp_value = (TO_FIXED(curr_frame) / (frames - 1)); //  GBA DOESN'T HAVE DIVISION !!!!!
         COLOR lerped_color = lerp_color(old_color, new_color, lerp_value);
 
         // Set BG color

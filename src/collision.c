@@ -2019,7 +2019,9 @@ ARM_CODE void collide_with_map_spikes(u32 x, u32 y, u32 width, u32 height, u8 la
 
 struct circle_t {
     s32 cx, cy; // Top-left corner
-    u32 radius; // Side length
+    u32 radius; // Radius
+    s32 up_y;
+    s32 down_y;
 };
 
 struct point_t {
@@ -2033,6 +2035,8 @@ struct triangle_t {
     struct point_t p3;
     u16 type;
     u8 hurts;
+    s32 up_y;
+    s32 down_y;
 };
 
 const s32 slope_step[];
@@ -2117,27 +2121,21 @@ void get_vertical_edge(struct triangle_t triangle, s32 *x, s32 *y1, s32 *y2) {
 }
 
 s32 check_distance_circle_hipotenuse(struct circle_t circle, struct triangle_t triangle) {    
+    // Skip if not on horizontal coll
     if (curr_player.horizontal_slope_counter) return 0;
+    
     s32 hipo_x1, hipo_y1, hipo_x2, hipo_y2;
 
     get_hipotenuse(triangle, &hipo_x1, &hipo_y1, &hipo_x2, &hipo_y2);
 
+    // For downwards slopes, ignore the top 2 pixels
     if (slope_horizontal_dir[triangle.type] < 0) {
-        s32 top_y;
-        s32 step = slope_step[triangle.type];
-        if (step > 0) {
-            top_y = MIN(hipo_y1, hipo_y2);
-        } else {
-            top_y = MAX(hipo_y1, hipo_y2);
-        }
-
-        s32 player_bottom_y = circle.cy + (circle.radius * step);
-
-        if (ABS(player_bottom_y - top_y) < 2) {
+        if (ABS(circle.down_y - triangle.up_y) < 2) {
             return 0;
         }
     }
 
+    // If spike slope, move outwards horizontally 2 pixels the hitbox
     if (triangle.hurts) {
         s32 going_down = slope_horizontal_dir[triangle.type];
 
@@ -2153,16 +2151,24 @@ s32 check_distance_circle_horizontal_edge(struct circle_t circle, struct triangl
     s32 direction = (curr_player.player_y_speed > 0 ? 1 : -1);
 
     // Make player not collide with horizontal edge if vspeed is not going to it
-    if (step == direction) return 0;
+    if (step == direction) return FALSE;
 
     s32 edge_x1, edge_x2, edge_y;
 
     get_horizontal_edge(triangle, &edge_x1, &edge_x2, &edge_y);
 
-    u32 distance = ABS(circle.cy - edge_y);
-
-    if (slope_horizontal_dir[triangle.type] > 0 && circle.cx < MIN(edge_x1, edge_x2)) return (u32) find_squared_distance_to_line(circle.cx, circle.cy, edge_x1, edge_y, edge_x2, edge_y) <= circle.radius * circle.radius;
-    return distance <= circle.radius;
+    // Check if player is on snap y pos
+    if (step < 0) {
+        if (circle.up_y - triangle.down_y < 4) {
+            return TRUE;
+        }
+    } else {
+        if (triangle.down_y - circle.up_y < 4) {
+            return TRUE;
+        }
+    }
+    
+    return FALSE;
 }
 
 s32 check_distance_circle_vertical_edge(struct circle_t circle, struct triangle_t triangle) {
@@ -2173,12 +2179,8 @@ s32 check_distance_circle_vertical_edge(struct circle_t circle, struct triangle_
     return (u32) find_squared_distance_to_line(circle.cx, circle.cy, edge_x, edge_y1, edge_x, edge_y2) <= circle.radius * circle.radius;
 }
 
-s32 get_step_call(struct triangle_t triangle) {
-    return slope_step[triangle.type];
-}
-
 s32 get_step(struct circle_t circle, struct triangle_t triangle) {
-    s32 step = get_step_call(triangle);
+    s32 step = slope_step[triangle.type];
 
     if (check_distance_circle_hipotenuse(circle, triangle)) {
         return step;
@@ -2238,13 +2240,14 @@ s32 check_slope_collision(struct circle_t circle, struct triangle_t triangle) {
 
         return ejection;
     } else if (type == EJECTION_TYPE_HORZ) {
-        // Colliding with the horizontal edge
-        while (check_distance_circle_horizontal_edge(circle, triangle)) {
-            circle.cy -= step;
-            ejection -= step;
-        }
+        // Calculate displacement
+        s32 new_y = triangle.down_y + circle.radius * slope_step[triangle.type];
+        s32 difference = new_y - circle.cy;
 
-        return ejection + step;
+        circle.cy -= difference;
+        ejection = difference;
+
+        return ejection;
     } else if (type == EJECTION_TYPE_VERT) {
         return 0;
     }
@@ -2401,28 +2404,38 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     // Eject player
     curr_player.player_y += TO_FIXED(eject);
     curr_player.player_y &= ~0xffff;
-    curr_player.player_y |= (step == 1) ? 0xffff : 0;
+    curr_player.player_y |= (step == 1) ? 0xffff : 0; // This thing idk why but it doesn't work if not like that :vglue:
     player->cy += eject;
 
     // If ball and 66.5 degree slope, halve speed
-    if (curr_player.gamemode == GAMEMODE_BALL) {
-        if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
-            curr_player.player_y_speed /= 2;
-        }
-    } else if (curr_player.gamemode == GAMEMODE_WAVE) {
-        // Kill if wave
-        #ifdef DEBUG
-            if (!noclip) player_death = TRUE;
-        #else
-            player_death = TRUE;
-        #endif
-    } else if (curr_player.gamemode == GAMEMODE_UFO) {
-        if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
-            curr_player.player_y_speed = curr_player.player_y_speed / 4 * 3;
-        }
+    switch (curr_player.gamemode) {
+        case GAMEMODE_BALL:
+            if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
+                curr_player.player_y_speed /= 2;
+            }
+            break;
+
+        case GAMEMODE_WAVE:
+            // Kill if wave
+            #ifdef DEBUG
+                if (!noclip) player_death = TRUE;
+            #else
+                player_death = TRUE;
+            #endif
+            break;
+        case GAMEMODE_UFO:
+            if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
+                // y speed *= 0.75
+                curr_player.player_y_speed = curr_player.player_y_speed / 4 * 3;
+            }
+            break;
+        case GAMEMODE_SHIP:
+            // y speed *= 0.875
+            curr_player.player_y_speed = curr_player.player_y_speed / 16 * 14;
+            break;
     }
     
-    // Sync if desynced
+    // Sync dual if desynced
     if (player_1.slope_speed_multiplier + 0x4000 == player_2.slope_speed_multiplier) {
         curr_player.slope_speed_multiplier = player_1.slope_speed_multiplier = player_2.slope_speed_multiplier;
     } else if (player_2.slope_speed_multiplier + 0x4000 == player_1.slope_speed_multiplier) {
@@ -2529,6 +2542,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
+
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
             
             SLOPE_CHECK(DEGREES_45)
             break;
@@ -2543,6 +2562,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
 
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+
             SLOPE_CHECK(DEGREES_45_DOWN)
             break;
 
@@ -2555,6 +2580,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x;
             slope.p3.y = slope_y;
+
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_45_UD)
             break;
@@ -2568,6 +2599,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y;
+
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_45_UD_DOWN)
             break;
@@ -2584,6 +2621,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x20;
             slope.p3.y = slope_y + 0x10;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_26_5)
             break;
 
@@ -2598,6 +2641,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_26_5)
             break;
 
@@ -2610,6 +2659,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x20;
             slope.p3.y = slope_y + 0x10;
+
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
             
             SLOPE_CHECK(DEGREES_26_5_DOWN)
             break;
@@ -2625,6 +2680,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x10;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_26_5_DOWN)
             break;
 
@@ -2637,6 +2698,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x;
             slope.p3.y = slope_y;
+            
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_26_5_UD)
             break;
@@ -2651,6 +2718,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x - 0x10;
             slope.p3.y = slope_y;
             
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
+            
             SLOPE_CHECK(DEGREES_26_5_UD)
             break;
 
@@ -2663,6 +2736,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x20;
             slope.p3.y = slope_y;
+            
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_26_5_UD_DOWN)
             break;
@@ -2677,6 +2756,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y;
+            
+            slope.up_y = slope_y + 0x10;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_26_5_UD_DOWN)
             break;
@@ -2693,6 +2778,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x20;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x20;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_63_5)
             break;
 
@@ -2707,6 +2798,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x20;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_63_5)
             break;
 
@@ -2720,6 +2817,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x10;
             
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x20;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
+            
             SLOPE_CHECK(DEGREES_63_5_DOWN)
             break;
 
@@ -2732,6 +2835,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y + 0x20;
+
+            slope.up_y = slope_y;
+            slope.down_y = slope_y + 0x20;
+
+            player->up_y   = player->cy - player->radius;
+            player->down_y = player->cy + player->radius;
             
             SLOPE_CHECK(DEGREES_63_5_DOWN)
             break;
@@ -2746,6 +2855,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x;
             slope.p3.y = slope_y - 0x10;
             
+            slope.up_y = slope_y + 0x20;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
+            
             SLOPE_CHECK(DEGREES_63_5_UD)
             break;
 
@@ -2758,6 +2873,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x;
             slope.p3.y = slope_y;
+            
+            slope.up_y = slope_y + 0x20;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_63_5_UD)
             break;
@@ -2772,6 +2893,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y;
             
+            slope.up_y = slope_y + 0x20;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
+            
             SLOPE_CHECK(DEGREES_63_5_UD_DOWN)
             break;
 
@@ -2784,6 +2911,12 @@ s32 slope_type_check(u32 slope_x, u32 slope_y, u32 col_type, struct circle_t *pl
 
             slope.p3.x = slope_x + 0x10;
             slope.p3.y = slope_y - 0x10;
+            
+            slope.up_y = slope_y + 0x20;
+            slope.down_y = slope_y;
+
+            player->up_y   = player->cy + player->radius;
+            player->down_y = player->cy - player->radius;
             
             SLOPE_CHECK(DEGREES_63_5_UD_DOWN)   
             break;

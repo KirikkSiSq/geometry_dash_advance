@@ -384,7 +384,7 @@ void set_color_channel_color(COLOR *dst, COLOR color, u32 channel) {
 
 
 // Lerp between two BGR555 colors. Time is a value between 0 and 65536 (both inclusive) and it is a fixed point value so 0 = 0.0, 32768 = 0.5 and 65536 = 1.0
-u16 lerp_color(COLOR color1, COLOR color2, FIXED time) {
+ARM_CODE u16 lerp_color(COLOR color1, COLOR color2, FIXED time) {
     // Cap value to 1.0
     if (time > TO_FIXED(1)) time = TO_FIXED(1);
 

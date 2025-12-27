@@ -51,7 +51,10 @@ struct Player {
     // Position variables, in subpixels
     s64 player_x; // gota love giant levels
     s32 player_y;
+    s32 old_player_x;
     s32 old_player_y;
+    
+    s32 player_x_diff;
     s32 player_y_diff;
 
     // Player dimensions, in pixels
