@@ -2377,6 +2377,8 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
         }
     }
 
+    s32 final_speed = 0;
+
     // If collided with the horizontal edge, skip
     if (ejection_type == EJECTION_TYPE_HIPO) {
         // Die if spike slope
@@ -2395,7 +2397,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
         FIXED_16 speed_multiplier = FIXED_MUL(curr_player.player_x_speed, curr_player.slope_speed_multiplier);
         // Set to 1.0 if the slope goes down
         if (type >= DEGREES_45_DOWN) speed_multiplier = curr_player.player_x_speed;
-        curr_player.player_y_speed = FIXED_MUL(slope_speed_multiplier[col_type - COL_SLOPE_START], speed_multiplier);
+        final_speed = FIXED_MUL(slope_speed_multiplier[col_type - COL_SLOPE_START], speed_multiplier);
     } else {
         curr_player.player_y_speed = 0;
         curr_player.snap_cube_rotation = TRUE;
@@ -2411,7 +2413,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     switch (curr_player.gamemode) {
         case GAMEMODE_BALL:
             if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
-                curr_player.player_y_speed /= 2;
+                final_speed /= 2;
             }
             break;
 
@@ -2426,12 +2428,12 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
         case GAMEMODE_UFO:
             if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
                 // y speed *= 0.75
-                curr_player.player_y_speed = curr_player.player_y_speed / 4 * 3;
+                final_speed = final_speed / 4 * 3;
             }
             break;
         case GAMEMODE_SHIP:
             // y speed *= 0.875
-            curr_player.player_y_speed = curr_player.player_y_speed / 16 * 14;
+            final_speed = final_speed / 16 * 14;
             break;
     }
     
@@ -2461,6 +2463,14 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     } else if (ejection_type == EJECTION_TYPE_HORZ) {
         curr_player.horizontal_slope_counter = 1;
     }
+
+    // Set speed
+    if (slope_step[slope.type] < 0) {
+        if (curr_player.player_y_speed < final_speed) curr_player.player_y_speed = final_speed;
+    } else {
+        if (curr_player.player_y_speed > final_speed) curr_player.player_y_speed = final_speed;
+    }
+    
 
     return FALSE;
 }
