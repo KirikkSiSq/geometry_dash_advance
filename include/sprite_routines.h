@@ -229,6 +229,8 @@ enum ObjTypes {
     COLORED_MINISPIKE_H,
     FADING_MINISPIKE_V,
     FADING_MINISPIKE_H,
+    
+    GREEN_ORB,
 
     OBJ_COUNT
 };

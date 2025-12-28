@@ -1000,6 +1000,26 @@ const u16 pinkPadSpr[] = {
     0xffff
 };
 
+const u16 greenOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(4),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(4) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
 // Deco 
 
 const u16 bigBgDecoSpr[] = {
@@ -1917,6 +1937,8 @@ ROM_DATA const u16 *obj_sprites[] = {
     coloredMinispike_H,
     minispike_V,
     minispike_H,
+
+    greenOrbSpr,
 };
 
 #undef P1
@@ -2147,6 +2169,7 @@ const u32 obj_chr_offset[][2] = {
     FADE_SLOT("FADING_MINISPIKE_V", 0x958, 0x4)
     FADE_SLOT("FADING_MINISPIKE_H", 0x95c, 0x4)
 
+    CHR_SLOT("GREEN_ORB", 0x130, 0x4)
 };
 #undef CHR_SLOT
 

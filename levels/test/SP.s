@@ -701,4 +701,28 @@ test_spr_data:
    .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 16384 @ rotation
+@ Object 115
+   .hword 0x50 @ delta x
+   .hword 0x1a0 @ y
+   .hword 0x2 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 116
+   .hword 0x80 @ delta x
+   .hword 0x190 @ y
+   .hword 0x9 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 117
+   .hword 0x30 @ delta x
+   .hword 0x170 @ y
+   .hword 0xa0 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 118
+   .hword 0x30 @ delta x
+   .hword 0x190 @ y
+   .hword 0xa0 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
    .byte 0xff
