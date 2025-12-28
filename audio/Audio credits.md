@@ -4,23 +4,23 @@
 
 | Song | Author | Covered by |
 |---|---|---|
-|Main Menu|RobTop|ElAngel378 & Orionconstel|
-|Practice|OcularNebula-Stay Inside Me|Orionconstel|
-|Stereo Madness|Forever Bound|ElAngel378|
-|Back On Track|DJVI|ElAngel378|
-|Polargeist|Step|Orionconstel|
-|Dry Out|DJVI|Orionconstel & ElAngel378|
-|Base After Base|DJVI|ElAngel378|
-|Can't Let Go|DJVI|ElAngel378|
-|Jumper|Waterflame|Orionconstel|
-|Time Machine|Waterflame|Nicolestarlight and Orionconstel|
-|Cycles|DJVI|Orionconstel and ElAngel378|
+|Main Menu|RobTop|ElAngel378 & orionConstel|
+|Practice|OcularNebula-Stay Inside Me|orionConstel & okujassu|
+|Stereo Madness|Forever Bound|orionConstel & ElAngel378|
+|Back On Track|DJVI|ElAngel378 & Crafty Jumper|
+|Polargeist|Step|orionConstel|
+|Dry Out|DJVI|Orionconstel, ElAngel378 & okujassu|
+|Base After Base|DJVI|orionConstel, ElAngel378 & okujassu|
+|Can't Let Go|DJVI|orionConstel, ElAngel378 & okujassu|
+|Jumper|Waterflame|orionConstel & okujassu|
+|Time Machine|Waterflame|Nicolestarlight & orionConstel|
+|Cycles|DJVI|orionConstel, ElAngel378 & okujassu|
 |xStep|DJVI|Nicolestarlight|
-|Clutterfunk|Waterflame|Orionconstel|
-|Theory of Everything|DJ-Nate|Orionconstel|
-|Clubstep|DJ-Nate|Orionconstel|
-|Electroman Adventures|Waterflame|Orionconstel|
-|Electrodynamix|DJ-Nate|Orionconstel|
+|Clutterfunk|Waterflame|orionConstel, ElAngel378 & cloud54|
+|Theory of Everything|DJ-Nate|orionConstel, ElAngel378 & okujassu|
+|Electroman Adventures|Waterflame|orionConstel|
+|Clubstep|DJ-Nate|orionConstel|
+|Electrodynamix|DJ-Nate|orionConstel|
 |Hexagon Force|Waterflame|Sotos_24|
 
 ## Custom Music
