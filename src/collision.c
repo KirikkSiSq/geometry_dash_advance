@@ -1009,7 +1009,6 @@ ARM_CODE void do_collision_with_objects() {
                 }
             }
         }
-        
     }
 }
 
@@ -2357,7 +2356,7 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
     s32 step = slope_step[slope.type];
 
     // If the player is a cube, then ignore ceiling slopes
-    if (curr_player.gamemode == GAMEMODE_CUBE) {
+    if (curr_player.gamemode == GAMEMODE_CUBE && !curr_player.should_check_ceiling) {
         if (curr_player.gravity_dir == GRAVITY_DOWN && step == -1) {
             // Die if the internal hitbox collides with an slope
             if (check_slope_collision(player_internal_hitbox, slope) != NO_SLOPE_COLL_DETECTED) {
@@ -2975,4 +2974,389 @@ ARM_CODE u32 collide_with_obj_slopes(struct circle_t *player) {
         }
     }
     return FALSE;
+}
+
+s32 collision_in_x(s32 x1, s32 w1, s32 x2, s32 w2) {
+    if (x1 + w1 < x2) {
+        return FALSE;
+    }
+    if (x1 >= x2 + w2) {
+        return FALSE;
+    }
+    return TRUE;
+}
+
+s32 spider_collision_object(u32 index) {
+    struct Object curr_object = object_buffer[index].object;
+
+    s32 obj_width = obj_hitbox[curr_object.type][0];
+    s32 offset_x = obj_hitbox[curr_object.type][2];
+    s32 center_x = obj_hitbox[curr_object.type][4];
+
+    if (!(curr_object.attrib1 & ENABLE_ROTATION_FLAG)) {
+        if (curr_object.attrib1 & H_FLIP_FLAG) {
+            offset_x = center_x - (offset_x - center_x + obj_width); 
+        }
+    }
+
+    u32 obj_x = curr_object.x + offset_x;
+
+    u32 ply_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+    
+    if (curr_object.attrib2 & CIRCLE_HITBOX_FLAG) {
+        // Obj width contains the hitbox radius
+        u32 obj_radius = obj_width;
+
+        if (collision_in_x(
+            ply_x, curr_player.player_width,  
+            obj_x, obj_radius
+        )) {
+            if (routines_jump_table[curr_object.type] == kill_player) return TRUE;
+            return FALSE;
+        } 
+    } else {
+        // Check if a collision has happened
+        if (collision_in_x(
+            ply_x, curr_player.player_width,  
+            obj_x, obj_width
+        )) {
+            if (routines_jump_table[curr_object.type] == kill_player) return TRUE;
+            return FALSE;
+        } 
+    }  
+    return FALSE;
+}
+
+#define CLOSEST_TYPE_SPIKE 0
+#define CLOSEST_TYPE_BLOCK 1
+#define CLOSEST_TYPE_METATILE 2
+
+void teleport_up_spider() {
+    s32 player_x_pixels = curr_player.player_x >> SUBPIXEL_BITS;
+    s32 player_y_pixels = curr_player.player_y >> SUBPIXEL_BITS;
+
+    s32 closest_slot = -1;
+    s32 player_distance = curr_player.player_width;
+    s32 closest_slot_type = -1;
+    s32 closest_slot_mt_y = -1;
+
+    for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
+        // Check collision only if the slot is occupied
+        struct ObjectSlot curr_object = object_buffer[slot];
+        struct Object object = curr_object.object;
+        // If its not occupied and it is not close horizontally to the player or below the player, skip
+        if (curr_object.occupied 
+            && (s32) object.x > player_x_pixels - player_distance 
+            && (s32) object.x < player_x_pixels + player_distance
+            && object.y       < player_y_pixels) {
+            // If it has collision, continue
+            if (curr_object.has_collision) {   
+                // Metatile sprite
+                if (object.type == BASIC_BLOCK_OBJ) {
+                    u16 metatile_ID = object.attrib3;
+
+                    u16 collision = metatiles[metatile_ID][4];
+
+                    // Next slot if no coll
+                    if (collision == COL_NONE) continue;
+                    if (collision >= COL_SLOPE_START && collision <= COL_SLOPE_END) {
+                        collision = COL_FULL; // Works like full because i said so
+                    }
+                    
+                    u32 obj_width = obj_hitbox[object.type][0];
+
+                    // Check if it would collide horizontally
+                    if (collision_in_x(player_x_pixels, curr_player.player_width, object.x, obj_width)) {
+                        if (collision < COL_TYPES_COUNT) {
+                            // Now check for spikes
+                            spike_coll_jump_table[collision](player_x_pixels, object.y, curr_player.player_width, curr_player.player_height, object.x, object.y);
+
+                            // Collided with an spike/saw if player died, remove death and add
+                            if (player_death) {
+                                player_death = FALSE;
+
+                                if (closest_slot < 0) {
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_SPIKE;
+                                } else if (object_buffer[closest_slot].object.y < object.y) {
+                                    // Object is closer to player
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_SPIKE;
+                                }
+
+                                // Check next slot
+                                continue;
+                            }
+
+                            // Either didn't collide with the spike or simply not an spike, now check blocks
+                            u32 mod_x = curr_player.player_x - object.x;
+                            
+                            for (s32 mod_y = 0; mod_y < 16; mod_y++) {
+                                u32 returned = col_type_lookup(collision, mod_x, mod_y, TOP, 3);
+                                
+                                // Continue if no collision
+                                if (!returned) continue;
+
+                                // Has collided
+                                if (closest_slot < 0) {
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    break;
+                                } else if (object_buffer[closest_slot].object.y < object.y) {
+                                    // Object is closer to player
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    break;
+                                }
+                            }
+                            
+                            // Check next slot
+                            continue;
+                        }
+                    }
+                } else {
+                    if (spider_collision_object(slot)) {
+                        if (closest_slot < 0) {
+                            closest_slot = slot;
+                            closest_slot_type = CLOSEST_TYPE_SPIKE;
+                        } else if (object_buffer[closest_slot].object.y < object.y) {
+                            // Object is closer to player
+                            closest_slot = slot;
+                            closest_slot_type = CLOSEST_TYPE_SPIKE;
+                        }
+
+                        // Check next slot
+                        continue;
+                    }
+                }
+            }
+        }
+    }
+
+    // We have checked all sprites now, now lets check for metatiles
+    coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+    coll_y = (curr_player.player_y >> SUBPIXEL_BITS) & ~0xF; // Remove pixels
+
+    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+        for (s32 y = 0; y < 16; y++) {
+            s32 block_y = coll_y - (y << 4);
+            for (s32 x = 0; x < 2; x++) {
+                s32 block_x = coll_x + (curr_player.player_width * x);
+                u32 mod_x = block_x & 0xF;
+                    
+                u16 collision = obtain_collision_type(block_x, block_y, layer);
+                
+                if (collision != COL_NONE) {
+                    for (s32 mod_y = 0; mod_y < 16; mod_y++) {
+                        u32 returned = col_type_lookup(collision, mod_x, mod_y, TOP, layer);
+                        
+                        // Continue if no collision
+                        if (!returned) continue;
+
+                        // Has collided
+                        if (closest_slot < 0 && closest_slot_mt_y < 0) {
+                            closest_slot_mt_y = block_y;
+                            closest_slot_type = CLOSEST_TYPE_METATILE;
+                            break;
+                        } else if (closest_slot_type != CLOSEST_TYPE_METATILE) {
+                            if (object_buffer[closest_slot].object.y < block_y) {
+                                // Metatile is closer than object to player
+                                closest_slot_mt_y = block_y;
+                                closest_slot_type = CLOSEST_TYPE_METATILE;
+                                break;
+                            }
+                        } else if (closest_slot_mt_y < block_y) {
+                            // Metatile is closer than metatile to player
+                            closest_slot_mt_y = block_y;
+                            break;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
+        curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
+        do_ejection(0x10 + eject_top, TOP);
+        return;
+    }
+
+    if (closest_slot < 0) return;
+
+    struct ObjectSlot closest_object = object_buffer[closest_slot];
+    struct Object object = closest_object.object;
+
+    if (closest_slot_type == CLOSEST_TYPE_SPIKE) {
+        curr_player.player_y = object.y << SUBPIXEL_BITS;
+        player_death = TRUE;
+    } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
+        curr_player.player_y = object.y << SUBPIXEL_BITS;
+        do_ejection(0x10 + eject_top, TOP);
+    } 
+}
+
+void teleport_down_spider() {
+    s32 player_x_pixels = curr_player.player_x >> SUBPIXEL_BITS;
+    s32 player_y_pixels = curr_player.player_y >> SUBPIXEL_BITS;
+
+    s32 closest_slot = -1;
+    s32 player_distance = curr_player.player_width;
+    s32 closest_slot_type = -1;
+    s32 closest_slot_mt_y = -1;
+
+    // First we check objects
+    for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
+        struct ObjectSlot curr_object = object_buffer[slot];
+        struct Object object = curr_object.object;
+
+        if (curr_object.occupied 
+            && (s32) object.x > player_x_pixels - player_distance 
+            && (s32) object.x < player_x_pixels + player_distance
+            && object.y       > player_y_pixels) {
+            // If it has collision, continue
+            if (curr_object.has_collision) {   
+                // Metatile sprite
+                if (object.type == BASIC_BLOCK_OBJ) {
+                    u16 metatile_ID = object.attrib3;
+
+                    u16 collision = metatiles[metatile_ID][4];
+
+                    // Next slot if no coll
+                    if (collision == COL_NONE) continue;
+                    if (collision >= COL_SLOPE_START && collision <= COL_SLOPE_END) {
+                        collision = COL_FULL; // Works like full because i said so
+                    }
+                    
+                    u32 obj_width = obj_hitbox[object.type][0];
+
+                    // Check if it would collide horizontally
+                    if (collision_in_x(player_x_pixels, curr_player.player_width, object.x, obj_width)) {
+                        if (collision < COL_TYPES_COUNT) {
+                            // Now check for spikes
+                            spike_coll_jump_table[collision](player_x_pixels, object.y, curr_player.player_width, curr_player.player_height, object.x, object.y);
+
+                            // Collided with an spike/saw if player died, remove death and add
+                            if (player_death) {
+                                player_death = FALSE;
+
+                                if (closest_slot < 0) {
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_SPIKE;
+                                } else if (object_buffer[closest_slot].object.y > object.y) {
+                                    // Object is closer to player
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_SPIKE;
+                                }
+
+                                // Check next slot
+                                continue;
+                            }
+
+                            // Either didn't collide with the spike or simply not an spike, now check blocks
+                            u32 mod_x = curr_player.player_x - object.x;
+                            
+                            for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
+                                u32 returned = col_type_lookup(collision, mod_x, mod_y, BOTTOM, 3);
+                                
+                                // Continue if no collision
+                                if (!returned) continue;
+
+                                // Has collided
+                                if (closest_slot < 0) {
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    break;
+                                } else if (object_buffer[closest_slot].object.y > object.y) {
+                                    // Object is closer to player
+                                    closest_slot = slot;
+                                    closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    break;
+                                }
+                            }
+                            
+                            // Check next slot
+                            continue;
+                        }
+                    }
+                } else {
+                    if (spider_collision_object(slot)) {
+                        if (closest_slot < 0) {
+                            closest_slot = slot;
+                            closest_slot_type = CLOSEST_TYPE_SPIKE;
+                        } else if (object_buffer[closest_slot].object.y > object.y) {
+                            // Object is closer to player
+                            closest_slot = slot;
+                            closest_slot_type = CLOSEST_TYPE_SPIKE;
+                        }
+
+                        // Check next slot
+                        continue;
+                    }
+                }
+            }
+        }
+    }
+
+    // We have checked all sprites now, now lets check for metatiles
+    coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
+    coll_y = (curr_player.player_y >> SUBPIXEL_BITS) & ~0xF; // Remove pixels
+
+    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+        for (s32 y = 0; y < 15; y++) {
+            s32 block_y = coll_y + (y << 4);
+            for (s32 x = 0; x < 2; x++) {
+                s32 block_x = coll_x + (curr_player.player_width * x);
+                u32 mod_x = block_x & 0xF;
+                    
+                u16 collision = obtain_collision_type(block_x, block_y, layer);
+                
+                if (collision != COL_NONE) {
+                    for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
+                        u32 returned = col_type_lookup(collision, mod_x, mod_y, BOTTOM, layer);
+                        
+                        // Continue if no collision
+                        if (!returned) continue;
+
+                        // Has collided
+                        if (closest_slot < 0 && closest_slot_mt_y < 0) {
+                            closest_slot_mt_y = block_y;
+                            closest_slot_type = CLOSEST_TYPE_METATILE;
+                            break;
+                        } else if (closest_slot_type != CLOSEST_TYPE_METATILE) {
+                            if (object_buffer[closest_slot].object.y > block_y) {
+                                // Metatile is closer than object to player
+                                closest_slot_mt_y = block_y;
+                                closest_slot_type = CLOSEST_TYPE_METATILE;
+                                break;
+                            }
+                        } else if (closest_slot_mt_y > block_y) {
+                            // Metatile is closer than metatile to player
+                            closest_slot_mt_y = block_y;
+                            break;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
+        curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
+        do_ejection(0x10 + eject_bottom, BOTTOM);
+        return;
+    }
+
+    if (closest_slot < 0) return;
+
+    struct ObjectSlot closest_object = object_buffer[closest_slot];
+    struct Object object = closest_object.object;
+
+    if (closest_slot_type == CLOSEST_TYPE_SPIKE) {
+        curr_player.player_y = object.y << SUBPIXEL_BITS;
+        player_death = TRUE;
+    } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
+        curr_player.player_y = object.y << SUBPIXEL_BITS;
+        do_ejection(0x10 + eject_bottom, BOTTOM);
+    } 
 }

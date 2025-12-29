@@ -84,8 +84,29 @@ void player_main() {
         curr_player.old_player_x = curr_player.player_x;
         curr_player.old_player_y = curr_player.player_y;
         curr_player.old_player_y_speed = curr_player.player_y_speed;
-
+        s32 dashing_y;
         for (current_step = 0; current_step < num_steps; current_step++) {
+            dashing_y = curr_player.player_y;
+            
+
+            if (curr_player.dashing) {
+                // Calculate y movement
+                s32 tan = tan_calc(curr_player.dashing_rot);
+                s32 calculated_y = FIXED_MUL(step_divide(curr_player.player_x_speed, num_steps), (tan << 4));
+                curr_player.player_y = dashing_y + calculated_y; // it is Q12 so make it Q16
+
+                curr_player.player_y_speed = 0;
+                curr_player.should_check_ceiling = TRUE;
+
+                // Put there so normal gravity makes no effect
+                dashing_y = curr_player.player_y;
+
+                // If let go A and UP then stop dashing
+                if (!key_is_down(KEY_A | KEY_UP)) {
+                    curr_player.dashing = FALSE;
+                }
+            }
+            
             // Gamemode specific routines
             switch (curr_player.gamemode) {
                 case GAMEMODE_CUBE:
@@ -178,7 +199,7 @@ void cube_gamemode() {
     u32 jumped = FALSE;
    
     // If on floor and holding A or UP, jump
-    if (!curr_player.disable_jumping && curr_player.on_floor && key_is_down(KEY_A | KEY_UP)) {
+    if (!curr_player.disable_jumping && curr_player.on_floor && key_is_down(KEY_A | KEY_UP && !curr_player.came_from_spider_orb)) {
         if (key_hit(KEY_A | KEY_UP)) {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_FIRST_JUMP_SPEED : CUBE_MINI_FIRST_JUMP_SPEED) * sign;     
         } else {
@@ -195,6 +216,10 @@ void cube_gamemode() {
         curr_player.inverse_rotation_flag = FALSE;
     }
 
+    if (curr_player.came_from_spider_orb && !key_is_down(KEY_A | KEY_UP)) {
+        curr_player.came_from_spider_orb = FALSE;
+    }
+
     // If player just launched from an slope, set gravity to 0 depending on slope, this makes the cube start falling later
     if (!curr_player.on_floor && curr_player.slope_counter) {
         switch (curr_player.slope_type) {
@@ -208,7 +233,7 @@ void cube_gamemode() {
     }
 
     // If the cube is on the air and not on slope, rotate, else, snap to nearest 
-    if (!(curr_player.snap_cube_rotation || curr_player.slope_counter)) {
+    if (!(curr_player.snap_cube_rotation || curr_player.slope_counter) || curr_player.dashing) {
         curr_player.cube_rotation -= step_divide(0x500 * sign * mirror_sign * rotation_sign, num_steps);
     } else {
         // If player is on slope, snap the rotation to it, else, snap to normal ground

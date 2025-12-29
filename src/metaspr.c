@@ -390,6 +390,14 @@ const u16 shipPortalSpr[] = {
     PRIO_IDOFF(4, 0, 8), // id offset
     CENTER(8, 8),
 
+    ATTR0_4BPP | ATTR0_TALL,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(1) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -12, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
+    CENTER(8, 8),
+
     0xffff
 };
 
@@ -1012,6 +1020,106 @@ const u16 greenOrbSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
     ATTR1_SIZE_32x32,
     ATTR2_PALBANK(4) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 greenDashOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(4),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(4) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 pinkDashOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(3),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(3) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 spiderOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(3),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(3) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 blackOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(5),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(5) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 redOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(6),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(6) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
     -4, // x
     -4, // y
     PRIO_IDOFF(5, 0, 0), // id offset
@@ -1939,6 +2047,14 @@ ROM_DATA const u16 *obj_sprites[] = {
     minispike_H,
 
     greenOrbSpr,
+
+    greenDashOrbSpr,
+    pinkDashOrbSpr,
+    blackOrbSpr,
+    redOrbSpr,
+
+    spiderOrbSpr, // up
+    spiderOrbSpr, // down
 };
 
 #undef P1
@@ -1972,7 +2088,7 @@ const u32 obj_chr_offset[][2] = {
 
     CHR_SLOT("BLUE_ORB", 0x130, 0x4)
     CHR_SLOT("BLUE_PAD", 0x140, 0x4)
-    CHR_SLOT("PINK_ORB", 0x130, 0x4)
+    CHR_SLOT("PINK_ORB", 0x12c, 0x4)
     CHR_SLOT("PINK_PAD", 0x140, 0x4)
 
     CHR_SLOT("PULSING_CIRCLE", 0x120, 0x4)
@@ -2169,7 +2285,15 @@ const u32 obj_chr_offset[][2] = {
     FADE_SLOT("FADING_MINISPIKE_V", 0x958, 0x4)
     FADE_SLOT("FADING_MINISPIKE_H", 0x95c, 0x4)
 
-    CHR_SLOT("GREEN_ORB", 0x130, 0x4)
+    CHR_SLOT("GREEN_ORB", 0x970, 0x4)
+    CHR_SLOT("GREEN_DASH_ORB", 0x960, 0x10)
+    CHR_SLOT("PINK_DASH_ORB", 0x960, 0x10)
+    CHR_SLOT("BLACK_ORB", 0x974, 0x4)
+    CHR_SLOT("RED_ORB", 0x130, 0x4)
+
+    CHR_SLOT("UP_SPIDER_ORB", 0x980, 0x10)
+    CHR_SLOT("UP_SPIDER_ORB", 0x990, 0x10)
+
 };
 #undef CHR_SLOT
 

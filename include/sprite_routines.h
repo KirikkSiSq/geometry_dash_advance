@@ -14,6 +14,7 @@
 typedef void (*jmp_table)();
 extern const jmp_table routines_jump_table[];
 extern const s16 obj_hitbox[][6];
+void kill_player(struct ObjectSlot *objectSlot);
 
 enum ObjTypes {
     NONE,
@@ -231,6 +232,15 @@ enum ObjTypes {
     FADING_MINISPIKE_H,
     
     GREEN_ORB,
+
+    GREEN_DASH_ORB,
+    PINK_DASH_ORB,
+
+    BLACK_ORB,
+    RED_ORB,
+
+    UP_SPIDER_ORB,
+    DOWN_SPIDER_ORB,
 
     OBJ_COUNT
 };

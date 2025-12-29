@@ -192,6 +192,16 @@ u32 slerp(u32 a, u32 b, u32 ratio) {
 
     return a + FIXED_MUL(delta, ratio);
 }
+#define Q12_DIV(a, b) (((a) << 12) / (b))
+ARM_CODE s32 tan_calc(u32 angle) {
+    s32 cos = lu_cos(angle);
+
+    // Avoid division by 0
+    if (cos == 0) return 0;
+    
+    return Q12_DIV(lu_sin(angle), cos);
+}
+#undef Q12_DIV
 
 ARM_CODE u32 get_n_digits(const u32 value) {
     u32 value_temp = value;

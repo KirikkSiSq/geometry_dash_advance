@@ -98,6 +98,7 @@ struct Player {
 
     // 0 : not buffering, 1 : buffering
     u8 player_buffering;
+    u8 came_from_spider_orb;
 
     // Current player gamemode
     u8 gamemode;
@@ -108,6 +109,9 @@ struct Player {
 
     // - : left | + : right
     s8 ball_rotation_direction;
+
+    u8 dashing;
+    u16 dashing_rot;
 
     // Initial position of player for the curve. In pixels
     u64 cutscene_initial_player_x;

@@ -296,3 +296,5 @@ ARM_CODE u32 obtain_level_buffer_index(u32 x, u32 y);
 ARM_CODE u16 obtain_block(u32 x, u32 y, u32 layer);
 ARM_CODE void collide_with_obj_spikes(u32 x, u32 y, u32 width, u32 height);
 ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type);
+void teleport_up_spider();
+void teleport_down_spider();
