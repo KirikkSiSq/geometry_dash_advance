@@ -10,7 +10,7 @@ const unsigned int test2_properties[] = {
  /*OBJ color*/     0x7fff,
  /*gamemode*/      0,
  /*speed*/         1,
- /*level height*/  27,
+ /*level height*/  120,
  /*level width*/   895,
  /*song*/          MOD_STEREOMA,
  /*name length*/   5,

@@ -34,6 +34,9 @@ void fade_out_level();
 void fade_in_level();
 void fade_in_menu();
 
+ARM_CODE void scroll_H(u32 layer, s32 mt_count);
+ARM_CODE void scroll_V(u32 layer);
+
 void scroll_screen_vertically();
 void scroll_screen_horizontally();
 void set_target_y_scroll(u32 object_y);

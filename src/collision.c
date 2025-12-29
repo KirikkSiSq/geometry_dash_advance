@@ -3338,6 +3338,9 @@ void teleport_down_spider() {
                 u32 mod_x = block_x & 0xF;
                     
                 u16 collision = obtain_collision_type(block_x, block_y, layer);
+                if (collision >= COL_SLOPE_START && collision <= COL_SLOPE_END) {
+                    collision = COL_FULL; // Works like full because i said so
+                }
                 
                 if (collision != COL_NONE) {
                     for (s32 mod_y = 0; mod_y < 16; mod_y++) {
@@ -3378,7 +3381,7 @@ void teleport_down_spider() {
 
     if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
         curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
-        do_ejection(closest_slot_mod_y + eject_bottom, BOTTOM);
+        do_ejection(0x10 - closest_slot_mod_y + eject_bottom, BOTTOM);
         return;
     }
 
@@ -3392,6 +3395,6 @@ void teleport_down_spider() {
         player_death = TRUE;
     } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
         curr_player.player_y = object.y << SUBPIXEL_BITS;
-        do_ejection(closest_slot_mod_y + eject_bottom, BOTTOM);
+        do_ejection((0x10 - closest_slot_mod_y) + eject_bottom, BOTTOM);
     } 
 }

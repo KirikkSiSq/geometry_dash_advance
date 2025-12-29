@@ -492,7 +492,20 @@ void up_spider_orb(struct ObjectSlot *objectSlot) {
         curr_player.came_from_spider_orb = TRUE;
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
-            intended_scroll_y = curr_player.player_y + (120 << SUBPIXEL_BITS);
+            intended_scroll_y = MAX(curr_player.player_y - (80 << SUBPIXEL_BITS), 0);
+            scroll_y = intended_scroll_y;
+            
+            for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+                seam_y = (scroll_y >> SUBPIXEL_BITS);
+                for (s32 i = 0; i < 14; i++) {
+                    // Draw this column
+                    for (s32 j = 0; j < 2; j++) {
+                        seam_x = (scroll_x >> SUBPIXEL_BITS);
+                        scroll_V(layer);
+                        seam_y += 8;
+                    }
+                }   
+            }
         }
     
         curr_player.ball_rotation_direction = sign;
@@ -514,7 +527,20 @@ void down_spider_orb(struct ObjectSlot *objectSlot) {
         curr_player.came_from_spider_orb = TRUE;
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
-            intended_scroll_y = curr_player.player_y + (120 << SUBPIXEL_BITS);
+            intended_scroll_y = MIN(curr_player.player_y - (80 << SUBPIXEL_BITS), BOTTOM_SCROLL_LIMIT);
+            scroll_y = intended_scroll_y;
+            
+            for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+                seam_y = (scroll_y >> SUBPIXEL_BITS);
+                for (s32 i = 0; i < 14; i++) {
+                    // Draw this column
+                    for (s32 j = 0; j < 2; j++) {
+                        seam_x = (scroll_x >> SUBPIXEL_BITS);
+                        scroll_V(layer);
+                        seam_y += 8;
+                    }
+                }   
+            }
         }
     
         curr_player.ball_rotation_direction = sign;
