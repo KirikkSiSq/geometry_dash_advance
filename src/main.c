@@ -35,10 +35,15 @@ void vblank_handler() {
         }
         
         if (update_flags & UPDATE_SCROLL) {
-            // If screen is mirrored, flip screen position so it goes left instead of right
-            update_scroll();
-            // Run scroll routines
-            screen_scroll_load();
+            if (update_flags & REFRESH_SCREEN) {
+                load_camera_screen();
+                update_flags &= ~REFRESH_SCREEN;
+            } else {
+                // If screen is mirrored, flip screen position so it goes left instead of right
+                update_scroll();
+                // Run scroll routines
+                screen_scroll_load();
+            }
         }
 
         if (update_flags & UPDATE_VRAM) {

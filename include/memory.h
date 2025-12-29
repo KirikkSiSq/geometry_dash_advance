@@ -104,6 +104,7 @@ enum UpdateFlags {
     CLEAR_OAM_BUFFER    = (1 << 1),
     UPDATE_VRAM         = (1 << 2),
     UPDATE_SCROLL       = (1 << 3),
+    REFRESH_SCREEN      = (1 << 4),
 };
 
 #define UPDATE_ALL UPDATE_OAM | UPDATE_VRAM | UPDATE_SCROLL | CLEAR_OAM_BUFFER

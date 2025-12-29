@@ -1954,3 +1954,17 @@ u32 handle_key_holding(u16 keys) {
 
     return FALSE;
 }
+
+ARM_CODE void load_camera_screen() {
+    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
+        seam_y = (scroll_y >> SUBPIXEL_BITS);
+        for (s32 i = 0; i < 14; i++) {
+            // Draw this column
+            for (s32 j = 0; j < 2; j++) {
+                seam_x = (scroll_x >> SUBPIXEL_BITS);
+                scroll_V(layer);
+                seam_y += 8;
+            }
+        }   
+    }
+}
