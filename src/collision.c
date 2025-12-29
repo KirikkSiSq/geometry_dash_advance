@@ -3039,6 +3039,7 @@ void teleport_up_spider() {
     s32 player_distance = curr_player.player_width;
     s32 closest_slot_type = -1;
     s32 closest_slot_mt_y = -1;
+    s32 closest_slot_mod_y = -1;
 
     for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
         // Check collision only if the slot is occupied
@@ -3090,8 +3091,7 @@ void teleport_up_spider() {
 
                             // Either didn't collide with the spike or simply not an spike, now check blocks
                             u32 mod_x = curr_player.player_x - object.x;
-                            
-                            for (s32 mod_y = 0; mod_y < 16; mod_y++) {
+                            for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
                                 u32 returned = col_type_lookup(collision, mod_x, mod_y, TOP, 3);
                                 
                                 // Continue if no collision
@@ -3101,11 +3101,13 @@ void teleport_up_spider() {
                                 if (closest_slot < 0) {
                                     closest_slot = slot;
                                     closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    closest_slot_mod_y = mod_y;
                                     break;
                                 } else if (object_buffer[closest_slot].object.y < object.y) {
                                     // Object is closer to player
                                     closest_slot = slot;
                                     closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    closest_slot_mod_y = mod_y;
                                     break;
                                 }
                             }
@@ -3135,19 +3137,25 @@ void teleport_up_spider() {
 
     // We have checked all sprites now, now lets check for metatiles
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
-    coll_y = (curr_player.player_y >> SUBPIXEL_BITS) & ~0xF; // Remove pixels
+    coll_y = ((curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1)) & 0xFFFFFFF0; // Remove pixels
 
-    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
-        for (s32 y = 0; y < 16; y++) {
-            s32 block_y = coll_y - (y << 4);
-            for (s32 x = 0; x < 2; x++) {
+    curr_player.changed_size_frames = TRUE; // Set this so max eject is ignored
+    s32 block_y = coll_y;
+    while (block_y > 0) {
+        block_y -= 0x10;
+        
+        for (s32 x = 0; x < 2; x++) {
+            for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
                 s32 block_x = coll_x + (curr_player.player_width * x);
                 u32 mod_x = block_x & 0xF;
                     
                 u16 collision = obtain_collision_type(block_x, block_y, layer);
+                if (collision >= COL_SLOPE_START && collision <= COL_SLOPE_END) {
+                    collision = COL_FULL; // Works like full because i said so
+                }
                 
                 if (collision != COL_NONE) {
-                    for (s32 mod_y = 0; mod_y < 16; mod_y++) {
+                    for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
                         u32 returned = col_type_lookup(collision, mod_x, mod_y, TOP, layer);
                         
                         // Continue if no collision
@@ -3157,28 +3165,40 @@ void teleport_up_spider() {
                         if (closest_slot < 0 && closest_slot_mt_y < 0) {
                             closest_slot_mt_y = block_y;
                             closest_slot_type = CLOSEST_TYPE_METATILE;
-                            break;
+                            closest_slot_mod_y = mod_y;
+                            goto exit;
                         } else if (closest_slot_type != CLOSEST_TYPE_METATILE) {
                             if (object_buffer[closest_slot].object.y < block_y) {
                                 // Metatile is closer than object to player
                                 closest_slot_mt_y = block_y;
                                 closest_slot_type = CLOSEST_TYPE_METATILE;
-                                break;
+                                closest_slot_mod_y = mod_y;
+                                goto exit;
                             }
                         } else if (closest_slot_mt_y < block_y) {
                             // Metatile is closer than metatile to player
                             closest_slot_mt_y = block_y;
-                            break;
+                            closest_slot_mod_y = mod_y;
+                            goto exit;
                         } 
+                        
+                        // Its not needed to check anymore
+                        goto exit;
                     }
                 }
             }
         }
     }
+    
+    // Outside level
+    curr_player.player_y = -0x200000;
+    player_death = TRUE;
+    return;
+    exit:
 
     if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
         curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
-        do_ejection(0x10 + eject_top, TOP);
+        do_ejection(closest_slot_mod_y + eject_top, TOP);
         return;
     }
 
@@ -3192,7 +3212,7 @@ void teleport_up_spider() {
         player_death = TRUE;
     } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
         curr_player.player_y = object.y << SUBPIXEL_BITS;
-        do_ejection(0x10 + eject_top, TOP);
+        do_ejection(closest_slot_mod_y + eject_top, TOP);
     } 
 }
 
@@ -3204,6 +3224,7 @@ void teleport_down_spider() {
     s32 player_distance = curr_player.player_width;
     s32 closest_slot_type = -1;
     s32 closest_slot_mt_y = -1;
+    s32 closest_slot_mod_y = -1;
 
     // First we check objects
     for (s32 slot = 0; slot < MAX_OBJECTS; slot++) {
@@ -3256,7 +3277,7 @@ void teleport_down_spider() {
                             // Either didn't collide with the spike or simply not an spike, now check blocks
                             u32 mod_x = curr_player.player_x - object.x;
                             
-                            for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
+                            for (s32 mod_y = 0; mod_y < 16; mod_y++) {
                                 u32 returned = col_type_lookup(collision, mod_x, mod_y, BOTTOM, 3);
                                 
                                 // Continue if no collision
@@ -3266,11 +3287,13 @@ void teleport_down_spider() {
                                 if (closest_slot < 0) {
                                     closest_slot = slot;
                                     closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    closest_slot_mod_y = mod_y;
                                     break;
                                 } else if (object_buffer[closest_slot].object.y > object.y) {
                                     // Object is closer to player
                                     closest_slot = slot;
                                     closest_slot_type = CLOSEST_TYPE_BLOCK;
+                                    closest_slot_mod_y = mod_y;
                                     break;
                                 }
                             }
@@ -3300,19 +3323,24 @@ void teleport_down_spider() {
 
     // We have checked all sprites now, now lets check for metatiles
     coll_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
-    coll_y = (curr_player.player_y >> SUBPIXEL_BITS) & ~0xF; // Remove pixels
+    coll_y = ((curr_player.player_y >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_height) >> 1)) & 0xFFFFFFF0; // Remove pixels
 
-    for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
-        for (s32 y = 0; y < 15; y++) {
-            s32 block_y = coll_y + (y << 4);
-            for (s32 x = 0; x < 2; x++) {
+    curr_player.changed_size_frames = TRUE; // Set this so max eject is ignored
+    
+    s32 block_y = coll_y;
+    s32 max = MAX_LEVEL_HEIGHT << 4;
+    while (block_y < max) {
+        block_y += 0x10;
+        
+        for (s32 x = 0; x < 2; x++) {
+            for (s32 layer = 0; layer < LEVEL_LAYERS; layer++) {
                 s32 block_x = coll_x + (curr_player.player_width * x);
                 u32 mod_x = block_x & 0xF;
                     
                 u16 collision = obtain_collision_type(block_x, block_y, layer);
                 
                 if (collision != COL_NONE) {
-                    for (s32 mod_y = 15; mod_y >= 0; mod_y--) {
+                    for (s32 mod_y = 0; mod_y < 16; mod_y++) {
                         u32 returned = col_type_lookup(collision, mod_x, mod_y, BOTTOM, layer);
                         
                         // Continue if no collision
@@ -3322,28 +3350,35 @@ void teleport_down_spider() {
                         if (closest_slot < 0 && closest_slot_mt_y < 0) {
                             closest_slot_mt_y = block_y;
                             closest_slot_type = CLOSEST_TYPE_METATILE;
-                            break;
+                            closest_slot_mod_y = mod_y;
+                            goto exit;
                         } else if (closest_slot_type != CLOSEST_TYPE_METATILE) {
                             if (object_buffer[closest_slot].object.y > block_y) {
                                 // Metatile is closer than object to player
                                 closest_slot_mt_y = block_y;
                                 closest_slot_type = CLOSEST_TYPE_METATILE;
-                                break;
+                                closest_slot_mod_y = mod_y;
+                            goto exit;
                             }
                         } else if (closest_slot_mt_y > block_y) {
                             // Metatile is closer than metatile to player
                             closest_slot_mt_y = block_y;
-                            break;
+                            closest_slot_mod_y = mod_y;
+                            goto exit;
                         } 
+
+                        // Its not needed to check anymore
+                        goto exit;
                     }
                 }
             }
         }
     }
+    exit:
 
     if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
         curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
-        do_ejection(0x10 + eject_bottom, BOTTOM);
+        do_ejection(closest_slot_mod_y + eject_bottom, BOTTOM);
         return;
     }
 
@@ -3357,6 +3392,6 @@ void teleport_down_spider() {
         player_death = TRUE;
     } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
         curr_player.player_y = object.y << SUBPIXEL_BITS;
-        do_ejection(0x10 + eject_bottom, BOTTOM);
+        do_ejection(closest_slot_mod_y + eject_bottom, BOTTOM);
     } 
 }
