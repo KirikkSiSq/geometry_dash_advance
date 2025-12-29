@@ -494,8 +494,9 @@ void up_spider_orb(struct ObjectSlot *objectSlot) {
         if (curr_player.gamemode == GAMEMODE_CUBE) {
             intended_scroll_y = MAX(curr_player.player_y - (80 << SUBPIXEL_BITS), 0);
             scroll_y = intended_scroll_y;
-            
-            update_flags |= REFRESH_SCREEN;
+        
+            if (player_death) load_camera_screen();
+            else update_flags |= REFRESH_SCREEN;
         }
     
         curr_player.ball_rotation_direction = sign;
@@ -518,9 +519,10 @@ void down_spider_orb(struct ObjectSlot *objectSlot) {
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
             intended_scroll_y = MIN(curr_player.player_y - (80 << SUBPIXEL_BITS), BOTTOM_SCROLL_LIMIT);
-            scroll_y = intended_scroll_y;
-
-            update_flags |= REFRESH_SCREEN;
+            scroll_y = intended_scroll_y;    
+        
+            if (player_death) load_camera_screen();
+            else update_flags |= REFRESH_SCREEN;
         }
     
         curr_player.ball_rotation_direction = sign;
