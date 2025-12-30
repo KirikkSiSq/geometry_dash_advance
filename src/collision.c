@@ -3004,8 +3004,10 @@ s32 spider_collision_object(u32 index) {
     u32 ply_x = (curr_player.player_x >> SUBPIXEL_BITS) + ((0x10 - curr_player.player_width) >> 1);
     
     if (curr_object.attrib2 & CIRCLE_HITBOX_FLAG) {
-        // Obj width contains the hitbox radius
-        u32 obj_radius = obj_width;
+        // Obj height contains the hitbox radius
+        s32 obj_height = obj_hitbox[curr_object.type][1];
+
+        u32 obj_radius = obj_height;
 
         if (collision_in_x(
             ply_x, curr_player.player_width,  

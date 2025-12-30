@@ -2077,6 +2077,8 @@ ROM_DATA const u16 *obj_sprites[] = {
     spiderOrbSpr, // down
 
     redPadSpr,
+
+    pinkPadSpr, // Spider pad
 };
 
 #undef P1
@@ -2317,8 +2319,7 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("UP_SPIDER_ORB", 0x990, 0x10)
     
     CHR_SLOT("RED_PAD", 0x9A0, 0x4)
-
-
+    CHR_SLOT("SPIDER_PAD", 0x9A4, 0x4)
 };
 #undef CHR_SLOT
 

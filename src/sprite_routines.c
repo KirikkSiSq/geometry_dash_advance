@@ -580,56 +580,88 @@ void pink_dash_orb(struct ObjectSlot *objectSlot) {
     }
 }
 
+
+void spider_pad_orb_teleport_up(struct ObjectSlot *objectSlot) {
+    s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
+    curr_player.inverse_rotation_flag = FALSE;
+
+    curr_player.gravity_dir = GRAVITY_UP;
+    curr_player.player_y_speed = 0;
+    teleport_up_spider();
+
+    curr_player.came_from_spider_orb = TRUE;
+
+    if (curr_player.gamemode == GAMEMODE_CUBE) {
+        intended_scroll_y = MAX(curr_player.player_y - (80 << SUBPIXEL_BITS), 0);
+        scroll_y = intended_scroll_y;
+    
+        if (player_death) load_camera_screen();
+        else update_flags |= REFRESH_SCREEN;
+    }
+
+    curr_player.ball_rotation_direction = sign;
+
+    objectSlot->activated[curr_player_id] = TRUE;
+    curr_player.on_floor = TRUE;
+}
+
+void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
+    s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
+    curr_player.inverse_rotation_flag = FALSE;
+
+    curr_player.gravity_dir = GRAVITY_DOWN;
+    curr_player.player_y_speed = 0;
+    teleport_down_spider();
+
+    curr_player.came_from_spider_orb = TRUE;
+
+    if (curr_player.gamemode == GAMEMODE_CUBE) {
+        intended_scroll_y = MIN(curr_player.player_y - (80 << SUBPIXEL_BITS), BOTTOM_SCROLL_LIMIT);
+        scroll_y = intended_scroll_y;    
+    
+        if (player_death) load_camera_screen();
+        else update_flags |= REFRESH_SCREEN;
+    }
+
+    curr_player.ball_rotation_direction = sign;
+
+    objectSlot->activated[curr_player_id] = TRUE;
+    curr_player.on_floor = TRUE;
+}
+
 void up_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
-        s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
-        curr_player.inverse_rotation_flag = FALSE;
-
-        curr_player.gravity_dir = GRAVITY_UP;
-        curr_player.player_y_speed = 0;
-        teleport_up_spider();
-
-        curr_player.came_from_spider_orb = TRUE;
-
-        if (curr_player.gamemode == GAMEMODE_CUBE) {
-            intended_scroll_y = MAX(curr_player.player_y - (80 << SUBPIXEL_BITS), 0);
-            scroll_y = intended_scroll_y;
-        
-            if (player_death) load_camera_screen();
-            else update_flags |= REFRESH_SCREEN;
-        }
-    
-        curr_player.ball_rotation_direction = sign;
-
-        objectSlot->activated[curr_player_id] = TRUE;
-        curr_player.on_floor = TRUE;
+        spider_pad_orb_teleport_up(objectSlot);
         curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
+
 void down_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
-        s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
-        curr_player.inverse_rotation_flag = FALSE;
-
-        curr_player.gravity_dir = GRAVITY_DOWN;
-        curr_player.player_y_speed = 0;
-        teleport_down_spider();
-
-        curr_player.came_from_spider_orb = TRUE;
-
-        if (curr_player.gamemode == GAMEMODE_CUBE) {
-            intended_scroll_y = MIN(curr_player.player_y - (80 << SUBPIXEL_BITS), BOTTOM_SCROLL_LIMIT);
-            scroll_y = intended_scroll_y;    
-        
-            if (player_death) load_camera_screen();
-            else update_flags |= REFRESH_SCREEN;
-        }
-    
-        curr_player.ball_rotation_direction = sign;
-
-        objectSlot->activated[curr_player_id] = TRUE;
-        curr_player.on_floor = TRUE;
+        spider_pad_orb_teleport_down(objectSlot);
         curr_player.player_buffering = ORB_BUFFER_END;
+    }
+}
+
+void spider_pad(struct ObjectSlot *objectSlot) {
+    u32 enabled_rotation = (objectSlot->object.attrib1 & ENABLE_ROTATION_FLAG);
+    if (!enabled_rotation) {
+        // Object is not rotated
+        if ((objectSlot->object.attrib1 & V_FLIP_FLAG)) {
+            spider_pad_orb_teleport_down(objectSlot);
+        } else {
+            spider_pad_orb_teleport_up(objectSlot);
+        }
+    } else {
+        // Object is rotated
+        u16 rotation = (objectSlot->object.rotation);
+        if (rotation > 0x4000 && rotation < 0xc000) {
+            // Object rotation is between 90 and 270 degrees
+            spider_pad_orb_teleport_down(objectSlot);
+        } else {
+            // Object rotation is less than 90 or greater than 270 degrees
+            spider_pad_orb_teleport_up(objectSlot);
+        }
     }
 }
 
@@ -927,6 +959,7 @@ const jmp_table routines_jump_table[] = {
     down_spider_orb,
 
     red_pad,
+    spider_pad,
 };
 
 // In pixels
@@ -1149,6 +1182,7 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("DOWN_SPIDER_ORB", 20, 20, -2, -2, 8, 8)
 
     Object_Hitbox_Rectangle("RED_PAD", 16, 3, 0, 13, 8, 8)
+    Object_Hitbox_Rectangle("SPIDER_PAD", 16, 4, 0, 12, 8, 8)
 };
 
 #undef Object_Hitbox

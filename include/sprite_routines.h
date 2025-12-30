@@ -243,6 +243,7 @@ enum ObjTypes {
     DOWN_SPIDER_ORB,
 
     RED_PAD,
+    SPIDER_PAD,
 
     OBJ_COUNT
 };

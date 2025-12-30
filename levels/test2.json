@@ -2596,8 +2596,8 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":448,
-                 "y":1824
+                 "x":431.5,
+                 "y":1808.5
                 }, 
                 {
                  "gid":16550,
@@ -2628,6 +2628,54 @@
                  "width":16,
                  "x":464,
                  "y":1776
+                }, 
+                {
+                 "gid":16553,
+                 "height":16,
+                 "id":848,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"vflip",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":576,
+                 "y":1776
+                }, 
+                {
+                 "gid":16553,
+                 "height":16,
+                 "id":849,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"vflip",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1200,
+                 "y":32
+                }, 
+                {
+                 "gid":16553,
+                 "height":16,
+                 "id":852,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":464,
+                 "y":1880
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2636,7 +2684,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":848,
+ "nextobjectid":853,
  "orientation":"orthogonal",
  "properties":[
         {
