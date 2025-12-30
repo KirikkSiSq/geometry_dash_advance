@@ -333,7 +333,9 @@ void ship_gamemode() {
 
     if (curr_player.snap_cube_rotation) {
         curr_player.cube_rotation = 0;
-    } else {
+    } else if (curr_player.dashing) {
+        curr_player.cube_rotation = curr_player.dashing_rot;
+    } else { 
         curr_player.cube_rotation = ArcTan2(curr_player.player_x_diff >> 8, curr_player.player_y_diff >> 8) * mirror_sign;
     }
     
@@ -713,7 +715,7 @@ void draw_player() {
                 s32 slot = AFF_SLOT_DASH_FIRE_P1 + curr_player_id;
 
                 // Draw affine sprite
-                oam_affine_metaspr(curr_player.relative_player_x - x_offset, curr_player.relative_player_y - y_offset, dashFireSpr, rotation, slot + NUM_RESERVED_ROT_SLOTS, 
+                oam_affine_metaspr(curr_player.relative_player_x - 8, curr_player.relative_player_y - 8, dashFireSpr, rotation, slot + NUM_RESERVED_ROT_SLOTS, 
                     1, 0, -1, 2, 0, FALSE, FALSE);
                 obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
                 obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], scale_inv(fxmul(mirror_scaling, curr_player.dashing_anim_scale)), scale_inv(curr_player.dashing_anim_scale), -rotation);

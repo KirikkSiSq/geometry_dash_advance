@@ -26,162 +26,162 @@ test2_spr_data:
    .hword 0x0 @ z index 0
 @ Object 4
    .hword 0x30 @ delta x
-   .hword 0x710 @ y
-   .hword 0xa1 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 5
-   .hword 0x0 @ delta x
    .hword 0x770 @ y
    .hword 0xa1 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 6
+@ Object 5
    .hword 0x30 @ delta x
    .hword 0x770 @ y
    .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 7
+@ Object 6
    .hword 0x10 @ delta x
    .hword 0x710 @ y
    .hword 0xa3 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 8
+@ Object 7
    .hword 0x20 @ delta x
    .hword 0x770 @ y
    .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 9
+@ Object 8
    .hword 0x20 @ delta x
    .hword 0x710 @ y
    .hword 0xa1 @ type
    .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 60802 @ rotation
-@ Object 10
+@ Object 9
    .hword 0x10 @ delta x
    .hword 0x738 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 2 @ metatile ID appareance
-@ Object 11
+@ Object 10
    .hword 0x0 @ delta x
    .hword 0x770 @ y
    .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 12
+@ Object 11
    .hword 0x10 @ delta x
    .hword 0x690 @ y
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0x3e0 @ color
    .hword 0x11 @ copies {copy_channel} normal trigger
-@ Object 13
+@ Object 12
    .hword 0x0 @ delta x
    .hword 0x6a0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3e0 @ color
    .hword 0x31 @ copies {copy_channel} blending normal trigger
-@ Object 14
+@ Object 13
    .hword 0x0 @ delta x
    .hword 0x6c0 @ y
    .hword 0x3 @ type
    .hword 0x6 @ changes OBJ for 0 frames
    .hword 0x3e0 @ color
    .hword 0x11 @ copies {copy_channel} normal trigger
-@ Object 15
+@ Object 14
    .hword 0x0 @ delta x
    .hword 0x6e0 @ y
    .hword 0x3 @ type
    .hword 0x4 @ changes BG for 0 frames
    .hword 0x581a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 16
+@ Object 15
    .hword 0x0 @ delta x
    .hword 0x710 @ y
    .hword 0xa6 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 17
+@ Object 16
    .hword 0x10 @ delta x
    .hword 0x690 @ y
    .hword 0x3 @ type
    .hword 0x91 @ changes 2 for 18 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 18
+@ Object 17
    .hword 0x0 @ delta x
    .hword 0x6a0 @ y
    .hword 0x3 @ type
    .hword 0x90 @ changes 1 for 18 frames
    .hword 0x0 @ color
    .hword 0x20 @ doesn't copy any channel blending normal trigger
-@ Object 19
+@ Object 18
    .hword 0x0 @ delta x
    .hword 0x6c0 @ y
    .hword 0x3 @ type
    .hword 0x96 @ changes OBJ for 18 frames
    .hword 0x7fff @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 20
+@ Object 19
    .hword 0x0 @ delta x
    .hword 0x6e0 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 21
+@ Object 20
    .hword 0x20 @ delta x
    .hword 0x700 @ y
    .hword 0xa2 @ type
    .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 13835 @ rotation
-@ Object 22
+@ Object 21
    .hword 0x4 @ delta x
    .hword 0x730 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 23 @ metatile ID appareance
-@ Object 23
+@ Object 22
    .hword 0x0 @ delta x
    .hword 0x730 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 23 @ metatile ID appareance
-@ Object 24
+@ Object 23
    .hword 0xc @ delta x
    .hword 0x6f0 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 23 @ metatile ID appareance
-@ Object 25
+@ Object 24
    .hword 0x0 @ delta x
    .hword 0x770 @ y
    .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 26
+@ Object 25
    .hword 0xc @ delta x
    .hword 0x730 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 23 @ metatile ID appareance
-@ Object 27
+@ Object 26
    .hword 0x14 @ delta x
    .hword 0x710 @ y
    .hword 0xa4 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 28
+@ Object 27
    .hword 0x30 @ delta x
    .hword 0x730 @ y
    .hword 0x1e @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 28
+   .hword 0x0 @ delta x
+   .hword 0x770 @ y
+   .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 29
@@ -191,122 +191,123 @@ test2_spr_data:
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 30
-   .hword 0x0 @ delta x
-   .hword 0x770 @ y
-   .hword 0xa5 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 31
    .hword 0x1f @ delta x
    .hword 0x710 @ y
    .hword 0xa6 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 32
+@ Object 31
    .hword 0x21 @ delta x
    .hword 0x6f0 @ y
    .hword 0xa7 @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
-@ Object 33
+@ Object 32
    .hword 0x0 @ delta x
    .hword 0x758 @ y
    .hword 0xa8 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 34
+@ Object 33
    .hword 0x30 @ delta x
    .hword 0x760 @ y
    .hword 0xa5 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 35
+@ Object 34
    .hword 0x10 @ delta x
    .hword 0x770 @ y
    .hword 0x35 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 36
+@ Object 35
    .hword 0x0 @ delta x
    .hword 0x770 @ y
    .hword 0x1d @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 37
+@ Object 36
    .hword 0x10 @ delta x
    .hword 0x760 @ y
    .hword 0x63 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 38
+@ Object 37
    .hword 0x0 @ delta x
    .hword 0x760 @ y
    .hword 0x60 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 39
+@ Object 38
    .hword 0x0 @ delta x
    .hword 0x770 @ y
    .hword 0x1 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 40
+@ Object 39
    .hword 0x20 @ delta x
    .hword 0x6f0 @ y
    .hword 0xa8 @ type
    .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
-@ Object 41
+@ Object 40
    .hword 0x0 @ delta x
    .hword 0x720 @ y
    .hword 0x62 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 42
+@ Object 41
    .hword 0x0 @ delta x
    .hword 0x720 @ y
    .hword 0x5f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 43
+@ Object 42
    .hword 0x0 @ delta x
    .hword 0x784 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 1488 @ metatile ID appareance
+@ Object 43
+   .hword 0x10 @ delta x
+   .hword 0x774 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 1492 @ metatile ID appareance
 @ Object 44
    .hword 0x10 @ delta x
    .hword 0x774 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
-   .hword 1492 @ metatile ID appareance
+   .hword 1493 @ metatile ID appareance
 @ Object 45
    .hword 0x10 @ delta x
-   .hword 0x774 @ y
+   .hword 0x764 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
-   .hword 1493 @ metatile ID appareance
+   .hword 1492 @ metatile ID appareance
 @ Object 46
    .hword 0x10 @ delta x
    .hword 0x764 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
-   .hword 1492 @ metatile ID appareance
-@ Object 47
-   .hword 0x10 @ delta x
-   .hword 0x764 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
    .hword 1493 @ metatile ID appareance
-@ Object 48
+@ Object 47
    .hword 0x1a @ delta x
    .hword 0x736 @ y
    .hword 0x83 @ type
    .hword 0x24 @ bg layer 4 rotated   
    .hword 0xc0 @ z index 0 pal 3
    .hword 40960 @ rotation
+@ Object 48
+   .hword 0x16 @ delta x
+   .hword 0x40 @ y
+   .hword 0xa1 @ type
+   .hword 0x24 @ bg layer 4 rotated   
+   .hword 0x0 @ z index 0
+   .hword 49152 @ rotation
 @ Object 49
-   .hword 0x26 @ delta x
+   .hword 0x10 @ delta x
    .hword 0x778 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
