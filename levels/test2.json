@@ -2610,6 +2610,24 @@
                  "width":16,
                  "x":512,
                  "y":1888
+                }, 
+                {
+                 "gid":16552,
+                 "height":16,
+                 "id":847,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"vflip",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":464,
+                 "y":1776
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2618,7 +2636,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":847,
+ "nextobjectid":848,
  "orientation":"orthogonal",
  "properties":[
         {

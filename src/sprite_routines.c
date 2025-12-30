@@ -16,23 +16,113 @@ enum GamemodeOrbsPads {
     BLUE_PAD_INDEX,
     GREEN_ORB_INDEX,
     BLACK_ORB_INDEX,
+    RED_ORB_INDEX,
+    RED_PAD_INDEX,
 
     ORB_PAD_COUNT
 };
 
 const s32 orb_pad_bounces[][GAMEMODE_COUNT][ORB_PAD_COUNT] = {
     { // Big
-        /* Cube */ {CUBE_YELLOW_ORB_JUMP_SPEED, CUBE_YELLOW_PAD_JUMP_SPEED, CUBE_PINK_ORB_JUMP_SPEED, CUBE_PINK_PAD_JUMP_SPEED, CUBE_BLUE_ORB_INITIAL_SPEED, CUBE_BLUE_PAD_INITIAL_SPEED, CUBE_YELLOW_ORB_JUMP_SPEED      , -CUBE_MAX_Y_SPEED},
-        /* Ship */ {SHIP_YELLOW_ORB_JUMP_SPEED, SHIP_YELLOW_PAD_JUMP_SPEED, SHIP_PINK_ORB_JUMP_SPEED, SHIP_PINK_PAD_JUMP_SPEED, SHIP_BLUE_ORB_INITIAL_SPEED, SHIP_BLUE_PAD_INITIAL_SPEED, SHIP_YELLOW_ORB_JUMP_SPEED * 0.7, -SHIP_MAX_Y_SPEED_HOLDING},
-        /* Ball */ {BALL_YELLOW_ORB_JUMP_SPEED, BALL_YELLOW_PAD_JUMP_SPEED, BALL_PINK_ORB_JUMP_SPEED, BALL_PINK_PAD_JUMP_SPEED, BALL_BLUE_ORB_INITIAL_SPEED, BALL_BLUE_PAD_INITIAL_SPEED, BALL_YELLOW_ORB_JUMP_SPEED      , -BALL_MAX_Y_SPEED},
-        /* Ufo */  {UFO_YELLOW_ORB_JUMP_SPEED,  UFO_YELLOW_PAD_JUMP_SPEED,  UFO_PINK_ORB_JUMP_SPEED,  UFO_PINK_PAD_JUMP_SPEED,  UFO_BLUE_ORB_INITIAL_SPEED,  UFO_BLUE_PAD_INITIAL_SPEED,  UFO_YELLOW_ORB_JUMP_SPEED       , -UFO_MAX_Y_SPEED},
-        /* Wave */ {0, 0, 0, 0, 0, 0, 0, 0},
+        /* Cube */ {
+            CUBE_YELLOW_ORB_JUMP_SPEED, 
+            CUBE_YELLOW_PAD_JUMP_SPEED, 
+            CUBE_PINK_ORB_JUMP_SPEED, 
+            CUBE_PINK_PAD_JUMP_SPEED, 
+            CUBE_BLUE_ORB_INITIAL_SPEED,
+            CUBE_BLUE_PAD_INITIAL_SPEED, 
+            CUBE_YELLOW_ORB_JUMP_SPEED, 
+            -CUBE_MAX_Y_SPEED, 
+            CUBE_RED_ORB_JUMP_SPEED,
+            CUBE_RED_PAD_JUMP_SPEED
+        },
+        /* Ship */ {
+            SHIP_YELLOW_ORB_JUMP_SPEED, 
+            SHIP_YELLOW_PAD_JUMP_SPEED, 
+            SHIP_PINK_ORB_JUMP_SPEED, 
+            SHIP_PINK_PAD_JUMP_SPEED, 
+            SHIP_BLUE_ORB_INITIAL_SPEED, 
+            SHIP_BLUE_PAD_INITIAL_SPEED, 
+            SHIP_YELLOW_ORB_JUMP_SPEED * 0.7, 
+            -SHIP_MAX_Y_SPEED_HOLDING, 
+            SHIP_RED_ORB_JUMP_SPEED,
+            SHIP_RED_PAD_JUMP_SPEED
+        },
+        /* Ball */ {
+            BALL_YELLOW_ORB_JUMP_SPEED, 
+            BALL_YELLOW_PAD_JUMP_SPEED, 
+            BALL_PINK_ORB_JUMP_SPEED, 
+            BALL_PINK_PAD_JUMP_SPEED, 
+            BALL_BLUE_ORB_INITIAL_SPEED, 
+            BALL_BLUE_PAD_INITIAL_SPEED,
+            BALL_YELLOW_ORB_JUMP_SPEED, 
+            -BALL_MAX_Y_SPEED, 
+            BALL_RED_ORB_JUMP_SPEED,
+            BALL_RED_PAD_JUMP_SPEED
+            },
+        /* Ufo */  {
+            UFO_YELLOW_ORB_JUMP_SPEED,  
+            UFO_YELLOW_PAD_JUMP_SPEED,  
+            UFO_PINK_ORB_JUMP_SPEED,  
+            UFO_PINK_PAD_JUMP_SPEED,  
+            UFO_BLUE_ORB_INITIAL_SPEED,  
+            UFO_BLUE_PAD_INITIAL_SPEED,  
+            UFO_YELLOW_ORB_JUMP_SPEED, 
+            -UFO_MAX_Y_SPEED, 
+            UFO_RED_ORB_JUMP_SPEED,
+            UFO_RED_PAD_JUMP_SPEED
+        },
+        /* Wave */ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     }, { // Mini
-        /* Cube */ {CUBE_MINI_YELLOW_ORB_JUMP_SPEED, CUBE_MINI_YELLOW_PAD_JUMP_SPEED, CUBE_MINI_PINK_ORB_JUMP_SPEED, CUBE_MINI_PINK_PAD_JUMP_SPEED, CUBE_BLUE_ORB_INITIAL_SPEED * 0.8, CUBE_BLUE_PAD_INITIAL_SPEED * 0.8, CUBE_MINI_YELLOW_ORB_JUMP_SPEED      , -CUBE_MAX_Y_SPEED},
-        /* Ship */ {SHIP_MINI_YELLOW_ORB_JUMP_SPEED, SHIP_MINI_YELLOW_PAD_JUMP_SPEED, SHIP_MINI_PINK_ORB_JUMP_SPEED, SHIP_MINI_PINK_PAD_JUMP_SPEED, SHIP_BLUE_ORB_INITIAL_SPEED * 0.8, SHIP_BLUE_PAD_INITIAL_SPEED * 0.8, SHIP_MINI_YELLOW_ORB_JUMP_SPEED * 0.7, -SHIP_MAX_Y_SPEED_HOLDING},
-        /* Ball */ {BALL_MINI_YELLOW_ORB_JUMP_SPEED, BALL_MINI_YELLOW_PAD_JUMP_SPEED, BALL_MINI_PINK_ORB_JUMP_SPEED, BALL_MINI_PINK_PAD_JUMP_SPEED, BALL_BLUE_ORB_INITIAL_SPEED * 0.8, BALL_BLUE_PAD_INITIAL_SPEED * 0.8, BALL_MINI_YELLOW_ORB_JUMP_SPEED      , -BALL_MAX_Y_SPEED},
-        /* Ufo */  {UFO_MINI_YELLOW_ORB_JUMP_SPEED,  UFO_MINI_YELLOW_PAD_JUMP_SPEED,  UFO_MINI_PINK_ORB_JUMP_SPEED,  UFO_MINI_PINK_PAD_JUMP_SPEED,  UFO_BLUE_ORB_INITIAL_SPEED  * 0.8, UFO_BLUE_PAD_INITIAL_SPEED  * 0.8, UFO_MINI_YELLOW_ORB_JUMP_SPEED       , -UFO_MAX_Y_SPEED},
-        /* Wave */ {0, 0, 0, 0, 0, 0, 0, 0},
+        /* Cube */ {
+            CUBE_MINI_YELLOW_ORB_JUMP_SPEED, 
+            CUBE_MINI_YELLOW_PAD_JUMP_SPEED, 
+            CUBE_MINI_PINK_ORB_JUMP_SPEED, 
+            CUBE_MINI_PINK_PAD_JUMP_SPEED, 
+            CUBE_BLUE_ORB_INITIAL_SPEED * 0.8, 
+            CUBE_BLUE_PAD_INITIAL_SPEED * 0.8, 
+            CUBE_MINI_YELLOW_ORB_JUMP_SPEED, 
+            -CUBE_MAX_Y_SPEED, 
+            CUBE_MINI_RED_ORB_JUMP_SPEED,
+            CUBE_MINI_RED_PAD_JUMP_SPEED
+        },
+        /* Ship */ {
+            SHIP_MINI_YELLOW_ORB_JUMP_SPEED, 
+            SHIP_MINI_YELLOW_PAD_JUMP_SPEED, 
+            SHIP_MINI_PINK_ORB_JUMP_SPEED, 
+            SHIP_MINI_PINK_PAD_JUMP_SPEED, 
+            SHIP_BLUE_ORB_INITIAL_SPEED * 0.8, 
+            SHIP_BLUE_PAD_INITIAL_SPEED * 0.8, 
+            SHIP_MINI_YELLOW_ORB_JUMP_SPEED * 0.7, 
+            -SHIP_MAX_Y_SPEED_HOLDING, 
+            SHIP_MINI_RED_ORB_JUMP_SPEED,
+            SHIP_MINI_RED_PAD_JUMP_SPEED
+        },
+        /* Ball */ {
+            BALL_MINI_YELLOW_ORB_JUMP_SPEED, 
+            BALL_MINI_YELLOW_PAD_JUMP_SPEED, 
+            BALL_MINI_PINK_ORB_JUMP_SPEED, 
+            BALL_MINI_PINK_PAD_JUMP_SPEED, 
+            BALL_BLUE_ORB_INITIAL_SPEED * 0.8, 
+            BALL_BLUE_PAD_INITIAL_SPEED * 0.8, 
+            BALL_MINI_YELLOW_ORB_JUMP_SPEED, 
+            -BALL_MAX_Y_SPEED, 
+            BALL_MINI_RED_ORB_JUMP_SPEED,
+            BALL_MINI_RED_PAD_JUMP_SPEED
+        },
+        /* Ufo */  {
+            UFO_MINI_YELLOW_ORB_JUMP_SPEED,  
+            UFO_MINI_YELLOW_PAD_JUMP_SPEED,  
+            UFO_MINI_PINK_ORB_JUMP_SPEED,  
+            UFO_MINI_PINK_PAD_JUMP_SPEED,  
+            UFO_BLUE_ORB_INITIAL_SPEED  * 0.8, 
+            UFO_BLUE_PAD_INITIAL_SPEED  * 0.8, 
+            UFO_MINI_YELLOW_ORB_JUMP_SPEED, 
+            -UFO_MAX_Y_SPEED, 
+            UFO_MINI_RED_ORB_JUMP_SPEED,
+            UFO_MINI_RED_PAD_JUMP_SPEED
+        },
+        /* Wave */ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     }
 };
 
@@ -435,7 +525,7 @@ void black_orb(struct ObjectSlot *objectSlot) {
 void red_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
         s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? 1 : -1;
-        curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][YELLOW_ORB_INDEX] * sign;
+        curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][RED_ORB_INDEX] * sign;
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
 
@@ -445,6 +535,16 @@ void red_orb(struct ObjectSlot *objectSlot) {
         curr_player.on_floor = FALSE;
         curr_player.player_buffering = ORB_BUFFER_END;
     }
+}
+
+void red_pad(struct ObjectSlot *objectSlot) {
+    s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? 1 : -1;
+    curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][RED_PAD_INDEX] * sign;
+    curr_player.inverse_rotation_flag = FALSE;
+    curr_player.trail_on = TRUE;
+    curr_player.airborne_jumped = TRUE;
+    curr_player.on_floor = FALSE;
+    objectSlot->activated[curr_player_id] = TRUE;
 }
 
 void green_dash_orb(struct ObjectSlot *objectSlot) {
@@ -825,6 +925,8 @@ const jmp_table routines_jump_table[] = {
 
     up_spider_orb,
     down_spider_orb,
+
+    red_pad,
 };
 
 // In pixels
@@ -1046,6 +1148,7 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("UP_SPIDER_ORB", 20, 20, -2, -2, 8, 8)
     Object_Hitbox_Rectangle("DOWN_SPIDER_ORB", 20, 20, -2, -2, 8, 8)
 
+    Object_Hitbox_Rectangle("RED_PAD", 16, 3, 0, 13, 8, 8)
 };
 
 #undef Object_Hitbox

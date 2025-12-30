@@ -1128,6 +1128,26 @@ const u16 redOrbSpr[] = {
     0xffff
 };
 
+const u16 redPadSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(6),
+    0, // x
+    0, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(6) | ATTR2_ID(PAD_PARTICLE_VRAM_ID),
+    0, // x
+    0, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
 // Deco 
 
 const u16 bigBgDecoSpr[] = {
@@ -2055,6 +2075,8 @@ ROM_DATA const u16 *obj_sprites[] = {
 
     spiderOrbSpr, // up
     spiderOrbSpr, // down
+
+    redPadSpr,
 };
 
 #undef P1
@@ -2087,7 +2109,7 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("YELLOW_GRAVITY_PORTAL", 0x30, 0x1c)
 
     CHR_SLOT("BLUE_ORB", 0x130, 0x4)
-    CHR_SLOT("BLUE_PAD", 0x140, 0x4)
+    CHR_SLOT("BLUE_PAD", 0x9A0, 0x4)
     CHR_SLOT("PINK_ORB", 0x12c, 0x4)
     CHR_SLOT("PINK_PAD", 0x140, 0x4)
 
@@ -2293,6 +2315,9 @@ const u32 obj_chr_offset[][2] = {
 
     CHR_SLOT("UP_SPIDER_ORB", 0x980, 0x10)
     CHR_SLOT("UP_SPIDER_ORB", 0x990, 0x10)
+    
+    CHR_SLOT("RED_PAD", 0x9A0, 0x4)
+
 
 };
 #undef CHR_SLOT
