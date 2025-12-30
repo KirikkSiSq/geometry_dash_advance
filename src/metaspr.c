@@ -1159,6 +1159,46 @@ const u16 redPadSpr[] = {
     0xffff
 };
 
+const u16 orangeTPOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(6),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(6) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 blueTPOrbSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
+    ATTR2_PALBANK(2),
+    -8, // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
+    ATTR2_PALBANK(2) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
+    -4, // x
+    -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
 // Deco 
 
 const u16 bigBgDecoSpr[] = {
@@ -2090,6 +2130,8 @@ ROM_DATA const u16 *obj_sprites[] = {
     redPadSpr,
 
     pinkPadSpr, // Spider pad
+    blueTPOrbSpr,
+    orangeTPOrbSpr,
 };
 
 #undef P1
@@ -2331,6 +2373,9 @@ const u32 obj_chr_offset[][2] = {
     
     CHR_SLOT("RED_PAD", 0x9A0, 0x4)
     CHR_SLOT("SPIDER_PAD", 0x9A4, 0x4)
+    CHR_SLOT("BLUE_TP_ORB", 0x9B0, 0x10)
+    CHR_SLOT("ORANGE_TP_ORB", 0x9B0, 0x10)
+
 };
 #undef CHR_SLOT
 

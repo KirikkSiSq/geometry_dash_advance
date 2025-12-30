@@ -245,6 +245,9 @@ enum ObjTypes {
     RED_PAD,
     SPIDER_PAD,
 
+    BLUE_TP_ORB,
+    ORANGE_TP_ORB,
+
     OBJ_COUNT
 };
 

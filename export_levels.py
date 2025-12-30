@@ -274,6 +274,39 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                 byte_counter += 2
                             byte_counter += 4
                             coin_counter += 1
+                        elif gid == 169:
+                            # Blue teleport orb sprite
+                            # P -> priority        Y -> orange orb y offset
+                            # H -> horizontal flip Z -> z index (0-62)
+                            # V -> vertical flip   p -> palette
+                            # hword 4: 0000 0000 00PP P0HV 
+                            # hword 5: 0000 00pp ppZZ ZZZZ
+                            # hword 6: YYYY YYYY YYYY YYYY
+
+                            offset = None
+                            for obj_search in sorted_objects:
+                                x_search = int(obj_search['x'])
+                                gid_search = int(obj_search['gid'])
+                                gid_search &= 0x0fffffff
+                                if gid_search > 16384:
+                                    gid_search = int(obj_search['gid']) - 16385  # Sprite
+                                else:
+                                    saved_metatile_id = gid_search - 1
+                                    gid_search = 43
+                                    
+                                gid_search &= 0x0fffffff
+
+                                if gid_search == 170 and x == x_search:
+                                    offset = y - int(obj_search['y'])
+
+                            if offset is None:
+                                raise Exception(f"No orange teleport orb object in pos {x/16} for blue teleport orb in {x/16} {y/16}. Please make sure they are pixel aligned (use arrow keys).")  
+
+
+                            out_file.write(f"   .hword {hex(((priority & 0x7) << 3) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"rotated" if enable_rotation else "non rotated"} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} \n")
+                            out_file.write(f"   .hword {hex(zindex | (pal << 6))} @ z index {zindex}{f" pal {pal}" if pal != 0 else ""}\n")
+                            out_file.write(f"   .hword {offset} @ orange orb offset\n")
+                            byte_counter += 6
                         else:
                             # Normal sprite
                             # P -> priority        A -> 16 bit angle   E -> enable rotation

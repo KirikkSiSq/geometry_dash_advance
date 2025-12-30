@@ -125,6 +125,19 @@ void load_objects(u32 load_chr, u32 loading_level) {
                         // Upload chr if needed
                         if (load_chr) setup_graphics_upload(new_object.type, index, new_object.attrib3);
                         break;
+                    case BLUE_TP_ORB:
+                        new_object.attrib1 = *sprite_pointer;
+                        new_object.attrib2 = 0;
+                        sprite_pointer++;
+                        new_object.z_index = *sprite_pointer;
+                        sprite_pointer++;
+                        new_object.attrib3 = *sprite_pointer;
+                        sprite_pointer++;
+                        new_object.rotation = 0;
+                        
+                        // Upload chr if needed
+                        if (load_chr) setup_graphics_upload(new_object.type, index, 0);
+                        break;
                     default:
                         // Load flip values
                         new_object.attrib1 = *sprite_pointer;

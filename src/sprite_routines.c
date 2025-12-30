@@ -676,6 +676,31 @@ void spider_pad(struct ObjectSlot *objectSlot) {
     }
 }
 
+void blue_tp_orb(struct ObjectSlot *objectSlot) {
+    if (curr_player.player_buffering == ORB_BUFFER_READY) {
+        curr_player.inverse_rotation_flag = FALSE;
+
+        curr_player.player_y_speed = 0;
+        curr_player.player_y = (objectSlot->object.y - objectSlot->object.attrib3) << SUBPIXEL_BITS;
+        curr_player.old_player_y = curr_player.player_y;
+
+        if (curr_player.gamemode == GAMEMODE_CUBE) {
+            u32 new_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
+            if (ABS((s32)(new_scroll_y - scroll_y)) > 0x70 << SUBPIXEL_BITS) {
+                intended_scroll_y = new_scroll_y;
+                scroll_y = new_scroll_y;    
+
+                if (player_death) load_camera_screen();
+                else update_flags |= REFRESH_SCREEN;
+            }
+        }
+
+
+        objectSlot->activated[curr_player_id] = TRUE;
+        curr_player.player_buffering = ORB_BUFFER_END;
+    }
+}
+
 void block(UNUSED struct ObjectSlot *objectSlot) {
     // Check if this object is already in the buffer
     for (s32 i = block_object_buffer_offset; i > 0; i--) {
@@ -971,6 +996,10 @@ const jmp_table routines_jump_table[] = {
 
     red_pad,
     spider_pad,
+
+    blue_tp_orb,
+
+    do_nothing,
 };
 
 // In pixels
@@ -1194,6 +1223,9 @@ const s16 obj_hitbox[][6] = {
 
     Object_Hitbox_Rectangle("RED_PAD", 16, 3, 0, 13, 8, 8)
     Object_Hitbox_Rectangle("SPIDER_PAD", 16, 4, 0, 12, 8, 8)
+    Object_Hitbox_Rectangle("ORANGE_TP_ORB", 20, 20, -2, -2, 8, 8)
+    Object_Hitbox_Rectangle("BLUE_TP_ORB", 0, 0, 0, 0, 8, 8)
+
 };
 
 #undef Object_Hitbox
