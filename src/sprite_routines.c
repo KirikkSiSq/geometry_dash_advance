@@ -590,15 +590,20 @@ void spider_pad_orb_teleport_up(struct ObjectSlot *objectSlot) {
     curr_player.gravity_dir = GRAVITY_UP;
     curr_player.player_y_speed = 0;
     teleport_up_spider();
+    curr_player.old_player_y = curr_player.player_y;
+
 
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
-        intended_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
-        scroll_y = intended_scroll_y;    
+        u32 new_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
+        if (ABS((s32)(new_scroll_y - scroll_y)) > 0x70 << SUBPIXEL_BITS) {
+            intended_scroll_y = new_scroll_y;
+            scroll_y = new_scroll_y;    
 
-        if (player_death) load_camera_screen();
-        else update_flags |= REFRESH_SCREEN;
+            if (player_death) load_camera_screen();
+            else update_flags |= REFRESH_SCREEN;
+        }
     }
 
     curr_player.ball_rotation_direction = sign;
@@ -614,15 +619,19 @@ void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
     curr_player.gravity_dir = GRAVITY_DOWN;
     curr_player.player_y_speed = 0;
     teleport_down_spider();
+    curr_player.old_player_y = curr_player.player_y;
 
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
-        intended_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
-        scroll_y = intended_scroll_y;    
+        u32 new_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
+        if (ABS((s32)(new_scroll_y - scroll_y)) > 0x70 << SUBPIXEL_BITS) {
+            intended_scroll_y = new_scroll_y;
+            scroll_y = new_scroll_y;    
 
-        if (player_death) load_camera_screen();
-        else update_flags |= REFRESH_SCREEN;
+            if (player_death) load_camera_screen();
+            else update_flags |= REFRESH_SCREEN;
+        }
     }
 
     curr_player.ball_rotation_direction = sign;
