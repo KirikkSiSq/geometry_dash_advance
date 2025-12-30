@@ -258,19 +258,39 @@ u16 animated_sprite_timer = 0;
 
 void run_animated_sprites() {
     u32 pad_particle_id = (animated_sprite_timer & 0b1111) << 1;
-    memcpy32(&tile_mem_obj[0][PAD_PARTICLE_VRAM_ID], &animated_sprites[pad_particle_id], (sizeof(TILE) / sizeof(u32)) * 2);
-    memcpy32(&tile_mem_obj[0][PAD_PARTICLE_VRAM_ID + 2], &animated_sprites[pad_particle_id + 32], (sizeof(TILE) / sizeof(u32)) * 2);
-
     u32 coin_id = (animated_sprite_timer >> 3) & 0b11;
-    memcpy32(&tile_mem_obj[0][COIN_VRAM_ID], &animated_sprites[(coin_id << 4) + COIN_OFFSET], (sizeof(TILE) / sizeof(u32)) * 16);
-    
     u32 orb_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 4);
-    memcpy32(&tile_mem_obj[0][ORB_PARTICLE_VRAM_ID], &animated_sprites[orb_particle_id + ORB_OFFSET], (sizeof(TILE) / sizeof(u32)) * 16);
-
     u32 portal_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 3);
-    memcpy32(&tile_mem_obj[0][PORTAL_PARTICLE_VRAM_ID], &animated_sprites[portal_particle_id + PORTAL_OFFSET], (sizeof(TILE) / sizeof(u32)) * 8);
+    u32 dash_fire_id = (((animated_sprite_timer >> 1) & 0b111) << 5);
 
     animated_sprite_timer += 1;
+    
+    u32 new_pad_particle_id = (animated_sprite_timer & 0b1111) << 1;
+    u32 new_coin_id = (animated_sprite_timer >> 3) & 0b11;
+    u32 new_orb_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 4);
+    u32 new_portal_particle_id = (((animated_sprite_timer >> 2) & 0b1111) << 3);
+    u32 new_dash_fire_id = (((animated_sprite_timer >> 1) & 0b111) << 5);
+    
+    if (pad_particle_id != new_pad_particle_id) {
+        memcpy32(&tile_mem_obj[0][PAD_PARTICLE_VRAM_ID], &animated_sprites[new_pad_particle_id], (sizeof(TILE) / sizeof(u32)) * 2);
+        memcpy32(&tile_mem_obj[0][PAD_PARTICLE_VRAM_ID + 2], &animated_sprites[new_pad_particle_id + 32], (sizeof(TILE) / sizeof(u32)) * 2);
+    }
+
+    if (coin_id != new_coin_id) {
+        memcpy32(&tile_mem_obj[0][COIN_VRAM_ID], &animated_sprites[(new_coin_id << 4) + COIN_OFFSET], (sizeof(TILE) / sizeof(u32)) * 16);
+    }
+    
+    if (orb_particle_id != new_orb_particle_id) {
+        memcpy32(&tile_mem_obj[0][ORB_PARTICLE_VRAM_ID], &animated_sprites[new_orb_particle_id + ORB_OFFSET], (sizeof(TILE) / sizeof(u32)) * 16);
+    }
+    
+    if (portal_particle_id != new_portal_particle_id) {
+        memcpy32(&tile_mem_obj[0][PORTAL_PARTICLE_VRAM_ID], &animated_sprites[new_portal_particle_id + PORTAL_OFFSET], (sizeof(TILE) / sizeof(u32)) * 8);
+    }
+
+    if (dash_fire_id != new_dash_fire_id) {
+        memcpy32(&tile_mem_obj[0][DASH_FIRE_VRAM_ID], &animated_sprites[new_dash_fire_id + DASH_FIRE_OFFSET], (sizeof(TILE) / sizeof(u32)) * 32);
+    }
 }
 
 ARM_CODE void tile_h_flip(u8 *pointer) {

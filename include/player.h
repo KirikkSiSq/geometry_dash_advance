@@ -112,6 +112,7 @@ struct Player {
 
     u8 dashing;
     u16 dashing_rot;
+    FIXED dashing_anim_scale;
 
     // Initial position of player for the curve. In pixels
     u64 cutscene_initial_player_x;

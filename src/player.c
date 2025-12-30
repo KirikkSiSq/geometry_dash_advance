@@ -695,6 +695,31 @@ void draw_player() {
             trail_enabled[curr_player_id][TRAIL_LENGTH - 1] = FALSE;
         }
 
+        if (curr_player.dashing || curr_player.dashing_anim_scale) {
+            if (curr_player.dashing) {
+                curr_player.dashing_anim_scale += float2fx(0.25);
+                if (curr_player.dashing_anim_scale > int2fx(1)) {
+                    curr_player.dashing_anim_scale = int2fx(1);
+                }
+            } else {
+                curr_player.dashing_anim_scale -= float2fx(0.25);
+                if (curr_player.dashing_anim_scale < 0) {
+                    curr_player.dashing_anim_scale = 0;
+                }
+            }
+
+            if (curr_player.dashing_anim_scale > 0) {
+                u16 rotation = curr_player.dashing_rot;
+                s32 slot = AFF_SLOT_DASH_FIRE_P1 + curr_player_id;
+
+                // Draw affine sprite
+                oam_affine_metaspr(curr_player.relative_player_x - x_offset, curr_player.relative_player_y - y_offset, dashFireSpr, rotation, slot + NUM_RESERVED_ROT_SLOTS, 
+                    1, 0, -1, 2, 0, FALSE, FALSE);
+                obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
+                obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], scale_inv(fxmul(mirror_scaling, curr_player.dashing_anim_scale)), scale_inv(curr_player.dashing_anim_scale), -rotation);
+            }
+        }
+
         switch (curr_player.gamemode) {
             case GAMEMODE_CUBE:
                 if (curr_player.player_size == SIZE_BIG && !curr_player.slope_counter) {

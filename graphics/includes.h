@@ -11,7 +11,7 @@ extern TILE bg_chr[256];
 extern TILE level_select_chr[512];
 extern TILE title_screen_chr[512];
 extern TILE icon_kit_chr[512];
-extern TILE animated_sprites[512];
+extern TILE animated_sprites[1024];
 extern TILE level_text_chr[32];
 extern TILE level_complete_screen[112];
 extern TILE grounds[256];

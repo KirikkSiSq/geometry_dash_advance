@@ -140,6 +140,17 @@ const u16 hitboxPoint[] = {
     0xffff
 };
 
+const u16 dashFireSpr[] = {
+    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
+    ATTR1_SIZE_64x32,
+    ATTR2_PALBANK(0) | ATTR2_ID(DASH_FIRE_VRAM_ID),
+    -32,
+    0,
+    PRIO_IDOFF(0, 0, 0), // id offset
+    CENTER(16, 16),
+    0xffff
+};
+
 
 
 // Menu

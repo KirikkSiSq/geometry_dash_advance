@@ -554,6 +554,7 @@ void green_dash_orb(struct ObjectSlot *objectSlot) {
 
         curr_player.dashing = TRUE;
         curr_player.dashing_rot = objectSlot->object.rotation;
+        curr_player.dashing_anim_scale = float2fx(0.01);
     
         curr_player.ball_rotation_direction = sign;
 
@@ -570,6 +571,7 @@ void pink_dash_orb(struct ObjectSlot *objectSlot) {
 
         curr_player.dashing = TRUE;
         curr_player.dashing_rot = objectSlot->object.rotation;
+        curr_player.dashing_anim_scale = float2fx(0.01);
         curr_player.gravity_dir ^= 1;
     
         curr_player.ball_rotation_direction = sign;

@@ -7,7 +7,7 @@
 #ifndef SPR_LOADING_H
 #define SPR_LOADING_H
 
-#define NUM_ROT_SLOTS 24 // 8 are reserved to saws, music pulsing circles, and both players
+#define NUM_ROT_SLOTS 22 // 8 are reserved to saws, music pulsing circles, and both players (sprite + dash orb fire)
 #define NUM_RESERVED_ROT_SLOTS 32 - NUM_ROT_SLOTS 
 
 #define AFF_SLOT_P1 0
@@ -18,6 +18,8 @@
 #define AFF_SLOT_COUNTERCLOCKWISE_SLOW 5
 #define AFF_SLOT_PULSING 6
 #define AFF_SLOT_PULSING_ORB 7
+#define AFF_SLOT_DASH_FIRE_P1 8
+#define AFF_SLOT_DASH_FIRE_P2 9
 
 #define H_FLIP_FLAG (1 << 1)
 #define V_FLIP_FLAG (1 << 0)
@@ -96,5 +98,6 @@ void object_tile_data_load(u16 object_type);
 
 void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3);
 
+IWRAM_CODE s32 find_affine_slot(u16 rotation);
 IWRAM_CODE void sort_oam_by_prio();
 #endif

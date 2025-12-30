@@ -267,6 +267,9 @@ void reset_variables() {
     player_1.on_slope = FALSE;
     player_1.player_size = SIZE_BIG;
     player_1.gravity_dir = GRAVITY_DOWN;
+    player_1.dashing = FALSE;
+    player_1.dashing_rot = 0;
+    player_1.dashing_anim_scale = 0;
     coll_x = 0;
     coll_y = 0;
     player_death = FALSE;
