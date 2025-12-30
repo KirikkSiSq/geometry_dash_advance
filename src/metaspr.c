@@ -7,6 +7,7 @@
 
 #define CENTER(x,y) ((x & 0xff) << 8) | (y & 0xff)
 #define PRIO_IDOFF(prio, use_dbl, id_off) ((prio << 10) & PRIORITY_MASK) | ((use_dbl << 9) & DLB_SCALE_MASK) | (id_off & TILE_OFFSET_MASK)
+#define PRIO_IDOFF_NO(prio, use_dbl, id_off) (1 << 15) | ((prio << 10) & PRIORITY_MASK) | ((use_dbl << 9) & DLB_SCALE_MASK) | (id_off & TILE_OFFSET_MASK)
 
 // Next sprite slot in OAM
 u8 nextSpr = 0;
@@ -1040,8 +1041,8 @@ const u16 greenOrbSpr[] = {
 };
 
 const u16 greenDashOrbSpr[] = {
-    ATTR0_4BPP | ATTR0_SQUARE,
-    ATTR1_SIZE_32x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(4),
     -8, // x
     -8, // y
@@ -1053,15 +1054,15 @@ const u16 greenDashOrbSpr[] = {
     ATTR2_PALBANK(4) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
     -4, // x
     -4, // y
-    PRIO_IDOFF(5, 0, 0), // id offset
+    PRIO_IDOFF_NO(5, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff
 };
 
 const u16 pinkDashOrbSpr[] = {
-    ATTR0_4BPP | ATTR0_SQUARE,
-    ATTR1_SIZE_32x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(3),
     -8, // x
     -8, // y
@@ -1073,7 +1074,7 @@ const u16 pinkDashOrbSpr[] = {
     ATTR2_PALBANK(3) | ATTR2_ID(ORB_PARTICLE_VRAM_ID),
     -4, // x
     -4, // y
-    PRIO_IDOFF(5, 0, 0), // id offset
+    PRIO_IDOFF_NO(5, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff
@@ -1399,8 +1400,8 @@ const u16 pulsingObjectSpr[] = {
 };
 
 const u16 pulsingObjectBigSpr[] = {
-    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
-    ATTR1_SIZE_32x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P2),
     -8, // x
     -8, // y
@@ -1410,8 +1411,8 @@ const u16 pulsingObjectBigSpr[] = {
 };
 
 const u16 pulsingObjectBigSprP1[] = {
-    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
-    ATTR1_SIZE_32x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1),
     -8, // x
     -8, // y
@@ -1443,8 +1444,8 @@ const u16 tallBgDecoSpr[] = {
 };
 
 const u16 tallBgArrowSpr[] = {
-    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
-    ATTR1_SIZE_16x32,
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND | ATTR0_AFF,
+    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     0, // x
     -8, // y
@@ -1454,8 +1455,8 @@ const u16 tallBgArrowSpr[] = {
 };
 
 const u16 tallBgArrowSprP2[] = {
-    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
-    ATTR1_SIZE_16x32,
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND | ATTR0_AFF,
+    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     0, // x
     -8, // y
@@ -2518,25 +2519,30 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         // Add offset
         offset = tile_id + (data[i + 5] & TILE_OFFSET_MASK);
 
+        s32 no_affine = (data[i + 5] & 0x8000);
+
         // Get next sprite slot
         OAM_SPR *newSpr = &shadow_oam[nextSpr];
 
-        u16 attribute0 = data[i] | ATTR0_AFF;
+        u16 attribute0 = data[i] | ((!no_affine) ? ATTR0_AFF : 0);
         u16 attribute1 = data[i + 1];
         u16 attribute2 = data[i + 2];
 
+        s32 pulses = BFN_GET(attribute1, ATTR1_AFF_ID);
+        s32 does_pulse = (pulses == AFF_SLOT_PULSING || pulses == AFF_SLOT_PULSING_ORB);
+
         s32 shape = (attribute0 & ATTR0_SHAPE_MASK) >> 12;
 
-        s32 should_use_double_size = dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
+        s32 should_use_double_size = !no_affine && dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
         
         // Set double size flag if especified, not square and rotation is not a multiple of 90º
-        if (should_use_double_size) {
+        if (should_use_double_size && !no_affine) {
             attribute0 |= ATTR0_AFF_DBL;
         }
 
         // Set affine ID slot if not set in sprite data
-        if (!(attribute1 & ATTR1_AFF_ID_MASK)) {
-            attribute1 |= ATTR1_AFF_ID(aff_id);
+        if ((!(attribute1 & ATTR1_AFF_ID_MASK) && !no_affine) || does_pulse) {
+            BFN_SET(attribute1, aff_id, ATTR1_AFF_ID);
         }
 
         // Set tile id if not set already by sprite data
@@ -2587,9 +2593,11 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         s32 center_x = data[i + 6] >> 8;
         s32 center_y = data[i + 6] & 0xff;
 
+        s32 used_rotation = (!no_affine) ? rotation : 0;
+
         // Trigonometric functions give a 20:12 fixed value
-        s32 sin_theta = lu_sin(rotation); 
-        s32 cos_theta = lu_cos(rotation);
+        s32 sin_theta = lu_sin(used_rotation); 
+        s32 cos_theta = lu_cos(used_rotation);
 
         s32 relative_x = offset_x - center_x;
         s32 relative_y = offset_y - center_y;

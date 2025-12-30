@@ -73,6 +73,7 @@ void title_screen_loop() {
 
     memset32(shadow_oam, ATTR0_HIDE, 256);
     memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
+    memset16(rotation_flags_buffer, 0x0000, NUM_ROT_SLOTS);
     
     do_button_draw();
     
@@ -143,6 +144,7 @@ void title_screen_loop() {
 
         memset32(shadow_oam, ATTR0_HIDE, 256);
         memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
+        memset16(rotation_flags_buffer, 0x0000, NUM_ROT_SLOTS);
 
         nextSpr = 0;
 

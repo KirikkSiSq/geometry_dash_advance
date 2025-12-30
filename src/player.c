@@ -171,8 +171,6 @@ void player_main() {
     }
 }
 
-#define scale_inv(s) ((1<<24)/s)>>8
-
 ROM_DATA const FIXED_16 jump_speed_mult[SPEED_COUNT] = {
     FLOAT_TO_FIXED(0.95),  // 0.5x
     FLOAT_TO_FIXED(1),    // 1x
@@ -715,10 +713,10 @@ void draw_player() {
                 s32 slot = AFF_SLOT_DASH_FIRE_P1 + curr_player_id;
 
                 // Draw affine sprite
-                oam_affine_metaspr(curr_player.relative_player_x - 8, curr_player.relative_player_y - 8, dashFireSpr, rotation, slot + NUM_RESERVED_ROT_SLOTS, 
+                oam_affine_metaspr(curr_player.relative_player_x - 8, curr_player.relative_player_y - 8, dashFireSpr, rotation, slot, 
                     1, 0, -1, 2, 0, FALSE, FALSE);
-                obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
-                obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], scale_inv(fxmul(mirror_scaling, curr_player.dashing_anim_scale)), scale_inv(curr_player.dashing_anim_scale), -rotation);
+                obj_aff_identity(&obj_aff_buffer[slot]);
+                obj_aff_rotscale(&obj_aff_buffer[slot], scale_inv(fxmul(mirror_scaling, curr_player.dashing_anim_scale)), scale_inv(curr_player.dashing_anim_scale), -rotation);
             }
         }
 
@@ -770,8 +768,6 @@ void draw_player() {
         }
     }
 }
-
-#undef scale_inv
 
 void set_player_speed() {
     player_1.player_x_speed = speed_constants[speed_id];

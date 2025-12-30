@@ -19,6 +19,9 @@ u16 saw_rotation[4];
 
 struct ObjectSlot object_buffer[MAX_OBJECTS];
 
+FIXED pulsing_value;
+FIXED pulsing_orb_value;
+
 
 ARM_CODE s32 get_tile_id(u32 chr_offset) {
     s32 i;
@@ -199,16 +202,18 @@ void load_objects(u32 load_chr, u32 loading_level) {
 
 void do_collision(struct ObjectSlot *objectSlot);
 
-ARM_CODE s32 find_affine_slot(u16 rotation) {
+ARM_CODE s32 find_affine_slot(u16 rotation, u16 pulses) {
     // Search for already existing values
     for (s32 slot = 0; slot < NUM_ROT_SLOTS; slot++) {
         u16 curr_rot = rotation_buffer[slot];
+        u16 curr_pulses = rotation_flags_buffer[slot];
 
-        if (rotation == curr_rot) return slot;
+        if (rotation == curr_rot && pulses == curr_pulses) return slot;
         // If curr_rot is 0, then we are on empty slots
-        if (!curr_rot) {
+        if (!curr_rot && !curr_pulses) {
             // Set here rotation
             rotation_buffer[slot] = rotation;
+            rotation_flags_buffer[slot] = pulses;
 
             return slot;
         }
@@ -270,13 +275,33 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
             rotation = -rotation;
         }
 
-        s32 slot = find_affine_slot(rotation);
+        u16 attr1 = obj_sprites[curr_object.type][1];
+        u16 pulses = BFN_GET(attr1, ATTR1_AFF_ID);
+        s32 pulse_type = NO_PULSE;
+        if (pulses == AFF_SLOT_PULSING) pulse_type = PULSE_NORMAL;
+        else if (pulses == AFF_SLOT_PULSING_ORB) pulse_type = PULSE_ORB;
+
+        s32 slot = find_affine_slot(rotation, pulse_type);
 
         if (slot >= 0) {
             // Draw affine sprite
             oam_affine_metaspr(relative_x, relative_y, obj_sprites[curr_object.type], curr_object.rotation, slot + NUM_RESERVED_ROT_SLOTS, 1, tile_id, palette, priority, curr_object.z_index, FALSE, disable_blending);
-            obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
-            obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], mirror_scaling, float2fx(1.0), -rotation);
+            if (pulse_type == NO_PULSE) {
+                obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
+                obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], mirror_scaling, float2fx(1.0), -rotation);
+            } else if (pulse_type == PULSE_NORMAL) {
+                obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
+                obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], 
+                    scale_inv(fxmul(mirror_scaling, pulsing_value)), 
+                    scale_inv(pulsing_value), 
+                    -rotation);
+            } else if (pulse_type == PULSE_ORB) {
+                obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
+                obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], 
+                    scale_inv(fxmul(mirror_scaling, pulsing_orb_value)), 
+                    scale_inv(pulsing_orb_value), 
+                    -rotation);
+            }
         } else {
             // Slots are full, so display a normal sprite
             oam_metaspr(relative_x, relative_y, obj_sprites[curr_object.type], hflip, vflip, tile_id, palette, priority, curr_object.z_index, FALSE, disable_blending);
@@ -367,11 +392,15 @@ ARM_CODE void scale_pulsing_objects() {
     FIXED rms = Sqrt(int2fx(mean));
 
     FIXED final_value = calculate_amplitude(rms);
+    pulsing_value = final_value;
 
     obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING], final_value, final_value);
 
-    if (final_value < float2fx(0.6f)) final_value = float2fx(0.6f);
-    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING_ORB], final_value, final_value);
+    s32 value_orb = final_value;
+    if (value_orb < float2fx(0.6f)) value_orb = float2fx(0.6f);
+    pulsing_orb_value = value_orb;
+
+    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING_ORB], value_orb, value_orb);
 }
 
 #define SAW_SPEED 0x400

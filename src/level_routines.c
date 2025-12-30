@@ -1683,6 +1683,7 @@ void restore_practice_vars() {
 
     memset32(shadow_oam, ATTR0_HIDE, 256);
     memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
+    memset16(rotation_flags_buffer, 0x0000, NUM_ROT_SLOTS);
 
     scroll_x = curr_checkpoint.scroll_x;
 

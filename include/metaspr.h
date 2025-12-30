@@ -10,6 +10,8 @@
 #define PRIORITY_DONT_DISABLE_0 (1 << 3)
 #define PRIORITY_DONT_MODIFY_PRIO (1 << 2)
 
+#define scale_inv(s) (((1<<24)/s)>>8)
+
 extern u8 nextSpr;
 
 #ifdef DEBUG

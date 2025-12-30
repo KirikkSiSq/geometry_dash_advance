@@ -56,6 +56,7 @@ void icon_kit_loop() {
 
     memset32(shadow_oam, ATTR0_HIDE, 256);
     memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
+    memset16(rotation_flags_buffer, 0x0000, NUM_ROT_SLOTS);
 
     memset32(palette_buffer, 0, 256);
     memcpy16(palette_buffer, icon_kit_palette, sizeof(icon_kit_palette) / sizeof(COLOR));

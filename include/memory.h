@@ -46,6 +46,7 @@ extern u8 obj_priorities[128];
 extern EWRAM_DATA u16 level_buffer[LEVEL_LAYERS][MAX_LEVEL_HEIGHT*LEVEL_BUFFER_WIDTH];
 extern IWRAM_DATA COLOR palette_buffer[512];
 extern EWRAM_DATA u16 rotation_buffer[NUM_ROT_SLOTS];
+extern EWRAM_DATA u16 rotation_flags_buffer[NUM_ROT_SLOTS];
 
 #define COL_TRIG_BUFF_ACTIVE 0
 #define COL_TRIG_BUFF_OLD_COLOR 1

@@ -82,10 +82,18 @@ enum OrbBufferStates {
     ORB_BUFFER_END
 };
 
+enum PulseType {
+    NO_PULSE,
+    PULSE_NORMAL,
+    PULSE_ORB,
+};
+
 extern u16 *sprite_pointer;
 extern u64 last_sprite_x;
 extern struct ObjectSlot object_buffer[MAX_OBJECTS];
 
+extern FIXED pulsing_value;
+extern FIXED pulsing_orb_value;
 
 void load_objects(u32 load_chr, u32 loading_level);
 IWRAM_CODE void display_objects();
@@ -98,6 +106,6 @@ void object_tile_data_load(u16 object_type);
 
 void setup_graphics_upload(u16 type, u8 object_slot, u16 attrib3);
 
-IWRAM_CODE s32 find_affine_slot(u16 rotation);
+IWRAM_CODE s32 find_affine_slot(u16 rotation, u16 pulses);
 IWRAM_CODE void sort_oam_by_prio();
 #endif

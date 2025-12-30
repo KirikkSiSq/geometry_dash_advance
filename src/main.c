@@ -67,6 +67,7 @@ void vblank_handler() {
             memset32(shadow_oam, ATTR0_HIDE, nextSpr << 1);
             // Clear rotation buffer
             memset16(rotation_buffer, 0x0000, NUM_ROT_SLOTS);
+            memset16(rotation_flags_buffer, 0x0000, NUM_ROT_SLOTS);
         }
     }
 
