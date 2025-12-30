@@ -3055,7 +3055,7 @@ void teleport_up_spider() {
             // If it has collision, continue
             if (curr_object.has_collision) {   
                 // Metatile sprite
-                if (object.type == BASIC_BLOCK_OBJ) {
+                if (object.type == BASIC_BLOCK_OBJ || object.type == BASIC_SLAB_OBJ) {
                     u16 metatile_ID = object.attrib3;
 
                     u16 collision = metatiles[metatile_ID][4];
@@ -3240,7 +3240,7 @@ void teleport_down_spider() {
             // If it has collision, continue
             if (curr_object.has_collision) {   
                 // Metatile sprite
-                if (object.type == BASIC_BLOCK_OBJ) {
+                if (object.type == BASIC_BLOCK_OBJ || object.type == BASIC_SLAB_OBJ) {
                     u16 metatile_ID = object.attrib3;
 
                     u16 collision = metatiles[metatile_ID][4];
@@ -3383,7 +3383,7 @@ void teleport_down_spider() {
 
     if (closest_slot_mt_y > 0 && closest_slot_type == CLOSEST_TYPE_METATILE) {
         curr_player.player_y = closest_slot_mt_y << SUBPIXEL_BITS;
-        do_ejection(0x10 - closest_slot_mod_y + eject_bottom, BOTTOM);
+        do_ejection((curr_player.player_height - closest_slot_mod_y) + eject_bottom, BOTTOM);
         return;
     }
 
@@ -3397,6 +3397,6 @@ void teleport_down_spider() {
         player_death = TRUE;
     } else if (closest_slot_type == CLOSEST_TYPE_BLOCK) {
         curr_player.player_y = object.y << SUBPIXEL_BITS;
-        do_ejection((0x10 - closest_slot_mod_y) + eject_bottom, BOTTOM);
+        do_ejection((curr_player.player_height - closest_slot_mod_y) + eject_bottom, BOTTOM);
     } 
 }
