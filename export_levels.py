@@ -215,6 +215,12 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                     rotation = int(prop['value'])
                                     rotation = rotation % 360
                                     if rotation < 0: rotation = 360 - rotation
+
+                                    if gid == 161 or gid == 162: # Dash orbs
+                                        if rotation > 70 and rotation < 90:
+                                            rotation = 70
+                                        elif rotation >= 270 and rotation < 290:
+                                            rotation = 290
                                 elif prop['name'] == 'metatile ID appearance':
                                     if gid == 43 or gid == 44:
                                         graphics = int(prop['value'])

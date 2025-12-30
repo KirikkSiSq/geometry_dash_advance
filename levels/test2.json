@@ -2363,7 +2363,7 @@
                         {
                          "name":"rotation angle",
                          "type":"int",
-                         "value":-90
+                         "value":89
                         }],
                  "rotation":0,
                  "type":"",
@@ -2699,6 +2699,52 @@
                  "width":16,
                  "x":96,
                  "y":1904
+                }, 
+                {
+                 "gid":16546,
+                 "height":16,
+                 "id":854,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"rotation angle",
+                         "type":"int",
+                         "value":-89
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":752,
+                 "y":64
+                }, 
+                {
+                 "gid":16546,
+                 "height":16,
+                 "id":855,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"rotation angle",
+                         "type":"int",
+                         "value":110
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":832,
+                 "y":64
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2707,7 +2753,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":854,
+ "nextobjectid":856,
  "orientation":"orthogonal",
  "properties":[
         {
