@@ -592,9 +592,9 @@ void spider_pad_orb_teleport_up(struct ObjectSlot *objectSlot) {
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
-        intended_scroll_y = MAX(curr_player.player_y - (80 << SUBPIXEL_BITS), 0);
-        scroll_y = intended_scroll_y;
-    
+        intended_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
+        scroll_y = intended_scroll_y;    
+
         if (player_death) load_camera_screen();
         else update_flags |= REFRESH_SCREEN;
     }
@@ -616,9 +616,9 @@ void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
-        intended_scroll_y = MIN(curr_player.player_y - (80 << SUBPIXEL_BITS), BOTTOM_SCROLL_LIMIT);
+        intended_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
         scroll_y = intended_scroll_y;    
-    
+
         if (player_death) load_camera_screen();
         else update_flags |= REFRESH_SCREEN;
     }
