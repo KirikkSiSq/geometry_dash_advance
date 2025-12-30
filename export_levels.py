@@ -130,7 +130,7 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                     blending = bool(prop['value'])
 
                         except Exception:
-                            raise Exception(f"Encountered color trigger without attributes on pos {x/16}, {y/16}.")
+                            raise Exception(f"Encountered color trigger without attributes on pos x {x/16}, y {y/16}.")
                         
                         channel_id = 0
 
@@ -139,7 +139,7 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                         possible_copy_channels = ["BG", "GROUND", "OBJ", "LINE", "P1", "P2", "1", "2", "3", "4"]
 
                         if channel not in possible_channels:
-                            raise Exception(f"Encountered invalid color channel: {channel}, on pos {x/16}, {y/16}. Must be one of the following: BG, GROUND, OBJ, LINE, 1, 2, 3, 4.") 
+                            raise Exception(f"Encountered invalid color channel: {channel}, on pos x {x/16}, y {y/16}. Must be one of the following: BG, GROUND, OBJ, LINE, 1, 2, 3, 4.") 
 
                         if channel == "BG":
                             channel_id = 4
@@ -155,7 +155,7 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                         copy_channel_id = 0
                         if copy:
                             if copy_channel not in possible_copy_channels:
-                                raise Exception(f"Encountered invalid copy color channel: {copy_channel}, on pos {x/16}, {y/16}. Must be one of the following: BG, GROUND, OBJ, LINE, P1, P2, 1, 2, 3, 4.") 
+                                raise Exception(f"Encountered invalid copy color channel: {copy_channel}, on pos x {x/16}, y {y/16}. Must be one of the following: BG, GROUND, OBJ, LINE, P1, P2, 1, 2, 3, 4.") 
                             
                             if copy_channel == "BG":
                                 copy_channel_id = 4
@@ -229,11 +229,11 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                 elif prop['name'] == 'z index':
                                     zindex = int(prop['value']) + 1
                                     if zindex < 1 or zindex > 31: 
-                                        raise Exception(f"Encountered invalid setting in pos {x/16}, {y/16}. Z index must be in the range 0 to 30.") 
+                                        raise Exception(f"Encountered invalid setting in pos x {x/16}, y {y/16}. Z index must be in the range 0 to 30.") 
                                 elif prop['name'] == 'color channel':
                                     pal_name = prop['value']
                                     if pal_name not in possible_spr_color_channels:
-                                        raise Exception(f"Encounterd invalid color channel of non trigger object in pos {x/16}, {y/16}. Must be one of the following: DEFAULT, BLACK, P1, P2, LBG, 1, 2, 3, 4.")  
+                                        raise Exception(f"Encounterd invalid color channel of non trigger object in pos x {x/16}, y {y/16}. Must be one of the following: DEFAULT, BLACK, P1, P2, LBG, 1, 2, 3, 4.")  
                                     
                                     pal = possible_spr_color_channels.index(pal_name)
                         except KeyError:
@@ -300,7 +300,7 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                     offset = y - int(obj_search['y'])
 
                             if offset is None:
-                                raise Exception(f"No orange teleport orb object in pos {x/16} for blue teleport orb in {x/16} {y/16}. Please make sure they are pixel aligned (use arrow keys).")  
+                                raise Exception(f"No orange teleport orb object in pos x {x/16} for blue teleport orb in x {x/16}, y {y/16}. Please make sure they are pixel aligned (use arrow keys).")  
 
 
                             out_file.write(f"   .hword {hex(((priority & 0x7) << 3) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"rotated" if enable_rotation else "non rotated"} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} \n")
