@@ -160,6 +160,8 @@ void cube_portal(struct ObjectSlot *objectSlot) {
     gamemode_upload_buffer[curr_player_id] = GAMEMODE_CUBE;
 
     check_for_same_dual_gravity();
+
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 2);
     
     objectSlot->activated[curr_player_id] = TRUE;
 }
@@ -176,6 +178,8 @@ void ship_portal(struct ObjectSlot *objectSlot) {
     check_for_same_dual_gravity();
     set_target_y_scroll(objectSlot->object.y);
 
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 1);
+
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -191,6 +195,8 @@ void ball_portal(struct ObjectSlot *objectSlot) {
     check_for_same_dual_gravity();
     set_target_y_scroll(objectSlot->object.y);
 
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 5);
+
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -205,6 +211,8 @@ void ufo_portal(struct ObjectSlot *objectSlot) {
     
     check_for_same_dual_gravity();
     set_target_y_scroll(objectSlot->object.y);
+    
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 6);
 
     objectSlot->activated[curr_player_id] = TRUE;
 }
@@ -221,6 +229,8 @@ void wave_portal(struct ObjectSlot *objectSlot) {
     
     check_for_same_dual_gravity();
     set_target_y_scroll(objectSlot->object.y);
+    
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 3);
 
     objectSlot->activated[curr_player_id] = TRUE;
 }
@@ -234,7 +244,9 @@ void blue_gravity_portal(struct ObjectSlot *objectSlot) {
         curr_player.airborne_jumped = TRUE;
         
         curr_player.ball_rotation_direction = -1;
-        check_for_same_dual_gravity();
+        check_for_same_dual_gravity();    
+
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 3);
     }
 
     objectSlot->activated[curr_player_id] = TRUE;
@@ -250,6 +262,8 @@ void yellow_gravity_portal(struct ObjectSlot *objectSlot) {
 
         curr_player.ball_rotation_direction = 1;
         check_for_same_dual_gravity();
+        
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 4);
     }
 
     objectSlot->activated[curr_player_id] = TRUE;
@@ -257,23 +271,31 @@ void yellow_gravity_portal(struct ObjectSlot *objectSlot) {
 
 void mirror_portal(struct ObjectSlot *objectSlot) {
     mirror_screen();
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 6);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
 void unmirror_portal(struct ObjectSlot *objectSlot) {
     unmirror_screen();
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 3);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
 void mini_portal(struct ObjectSlot *objectSlot) {
     curr_player.player_size = SIZE_MINI;
     curr_player.changed_size_frames = 3;
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 1);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
 void big_portal(struct ObjectSlot *objectSlot) {
     curr_player.player_size = SIZE_BIG;
     curr_player.changed_size_frames = 3;
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 2);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -305,11 +327,15 @@ void speed_portal_4x(struct ObjectSlot *objectSlot) {
 void orange_dual_portal(struct ObjectSlot *objectSlot) {
     set_target_y_scroll(objectSlot->object.y);
     activate_dual();
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 6);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
 void blue_dual_portal(struct ObjectSlot *objectSlot) {
     deactivate_dual();
+        
+    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 3);
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -385,6 +411,7 @@ void yellow_orb(struct ObjectSlot *objectSlot) {
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
 
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 1);
         curr_player.ball_rotation_direction = sign;
 
         objectSlot->activated[curr_player_id] = TRUE;
@@ -400,6 +427,15 @@ void yellow_pad(struct ObjectSlot *objectSlot) {
     curr_player.trail_on = TRUE;
     curr_player.on_floor = FALSE;
     curr_player.airborne_jumped = TRUE;
+    
+    s32 x, y;
+    s32 rotation = 0;
+    if (objectSlot->object.attrib1 & V_FLIP_FLAG) rotation = 0x8000;
+    if (objectSlot->object.rotation) rotation = objectSlot->object.rotation;
+
+    get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, rotation, &x, &y);
+    spawn_use_effect(x, y, USE_EFFECT_PAD, 1);
+
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -414,7 +450,7 @@ void blue_orb(struct ObjectSlot *objectSlot) {
         curr_player.ball_rotation_direction = sign;
         
         curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][BLUE_ORB_INDEX] * sign;
-
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 2);
         check_for_same_dual_gravity();
 
         objectSlot->activated[curr_player_id] = TRUE;
@@ -448,6 +484,14 @@ void blue_pad(struct ObjectSlot *objectSlot) {
         }
     }
 
+    s32 x, y;
+    s32 rotation = 0;
+    if (objectSlot->object.attrib1 & V_FLIP_FLAG) rotation = 0x8000;
+    if (objectSlot->object.rotation) rotation = objectSlot->object.rotation;
+
+    get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, rotation, &x, &y);
+    spawn_use_effect(x, y, USE_EFFECT_PAD, 2);
+
     // Gravity should change 
     curr_player.gravity_dir ^= 1;
     s32 sign = (curr_player.gravity_dir == GRAVITY_UP) ? -1 : 1;
@@ -474,7 +518,8 @@ void pink_orb(struct ObjectSlot *objectSlot) {
         curr_player.ball_rotation_direction = sign;
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
-        
+
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
         curr_player.player_buffering = ORB_BUFFER_END;
@@ -488,6 +533,15 @@ void pink_pad(struct ObjectSlot *objectSlot) {
     curr_player.trail_on = TRUE;
     curr_player.airborne_jumped = TRUE;
     curr_player.on_floor = FALSE;
+    
+    s32 x, y;
+    s32 rotation = 0;
+    if (objectSlot->object.attrib1 & V_FLIP_FLAG) rotation = 0x8000;
+    if (objectSlot->object.rotation) rotation = objectSlot->object.rotation;
+
+    get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, rotation, &x, &y);
+    spawn_use_effect(x, y, USE_EFFECT_PAD, 3);
+
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -500,6 +554,7 @@ void green_orb(struct ObjectSlot *objectSlot) {
         curr_player.trail_on = TRUE;
 
         curr_player.ball_rotation_direction = sign;
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 4);
 
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
@@ -514,6 +569,7 @@ void black_orb(struct ObjectSlot *objectSlot) {
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
 
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 5);
         curr_player.ball_rotation_direction = sign;
 
         objectSlot->activated[curr_player_id] = TRUE;
@@ -529,6 +585,7 @@ void red_orb(struct ObjectSlot *objectSlot) {
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
 
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 6);
         curr_player.ball_rotation_direction = sign;
 
         objectSlot->activated[curr_player_id] = TRUE;
@@ -544,6 +601,15 @@ void red_pad(struct ObjectSlot *objectSlot) {
     curr_player.trail_on = TRUE;
     curr_player.airborne_jumped = TRUE;
     curr_player.on_floor = FALSE;
+    
+    s32 x, y;
+    s32 rotation = 0;
+    if (objectSlot->object.attrib1 & V_FLIP_FLAG) rotation = 0x8000;
+    if (objectSlot->object.rotation) rotation = objectSlot->object.rotation;
+
+    get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, rotation, &x, &y);
+    spawn_use_effect(x, y, USE_EFFECT_PAD, 6);
+
     objectSlot->activated[curr_player_id] = TRUE;
 }
 
@@ -556,6 +622,7 @@ void green_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.dashing_rot = objectSlot->object.rotation;
         curr_player.dashing_anim_scale = float2fx(0.01);
     
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 4);
         curr_player.ball_rotation_direction = sign;
 
         objectSlot->activated[curr_player_id] = TRUE;
@@ -575,6 +642,7 @@ void pink_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.gravity_dir ^= 1;
     
         curr_player.ball_rotation_direction = sign;
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
 
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
@@ -591,8 +659,6 @@ void spider_pad_orb_teleport_up(struct ObjectSlot *objectSlot) {
     curr_player.player_y_speed = 0;
     teleport_up_spider();
     curr_player.old_player_y = curr_player.player_y;
-
-
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
@@ -620,7 +686,6 @@ void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
     curr_player.player_y_speed = 0;
     teleport_down_spider();
     curr_player.old_player_y = curr_player.player_y;
-
     curr_player.came_from_spider_orb = TRUE;
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
@@ -643,6 +708,7 @@ void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
 void up_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
         spider_pad_orb_teleport_up(objectSlot);
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
         curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
@@ -650,22 +716,33 @@ void up_spider_orb(struct ObjectSlot *objectSlot) {
 void down_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
         spider_pad_orb_teleport_down(objectSlot);
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
         curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
 
 void spider_pad(struct ObjectSlot *objectSlot) {
+    s32 x, y;
     u32 enabled_rotation = (objectSlot->object.attrib1 & ENABLE_ROTATION_FLAG);
     if (!enabled_rotation) {
         // Object is not rotated
         if ((objectSlot->object.attrib1 & V_FLIP_FLAG)) {
+            get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, 0x8000, &x, &y);
+            spawn_use_effect(x, y, USE_EFFECT_PAD, 3);
+
             spider_pad_orb_teleport_down(objectSlot);
         } else {
+            get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, 0, &x, &y);
+            spawn_use_effect(x, y, USE_EFFECT_PAD, 3);
             spider_pad_orb_teleport_up(objectSlot);
         }
     } else {
-        // Object is rotated
         u16 rotation = (objectSlot->object.rotation);
+
+        get_pad_x_y_center(objectSlot->object.x, objectSlot->object.y, rotation, &x, &y);
+        spawn_use_effect(x, y, USE_EFFECT_PAD, 3);
+        
+        // Object is rotated
         if (rotation > 0x4000 && rotation < 0xc000) {
             // Object rotation is between 90 and 270 degrees
             spider_pad_orb_teleport_down(objectSlot);
@@ -683,6 +760,8 @@ void blue_tp_orb(struct ObjectSlot *objectSlot) {
         curr_player.player_y_speed = 0;
         curr_player.player_y = (objectSlot->object.y - objectSlot->object.attrib3) << SUBPIXEL_BITS;
         curr_player.old_player_y = curr_player.player_y;
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 2);
+        spawn_use_effect(objectSlot->object.x, objectSlot->object.y - objectSlot->object.attrib3, USE_EFFECT_ORB, 6);
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
             u32 new_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);

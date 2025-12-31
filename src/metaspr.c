@@ -1401,7 +1401,7 @@ const u16 pulsingObjectSpr[] = {
 
 const u16 pulsingObjectBigSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(P2),
     -8, // x
     -8, // y
@@ -1412,7 +1412,7 @@ const u16 pulsingObjectBigSpr[] = {
 
 const u16 pulsingObjectBigSprP1[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
+    ATTR1_SIZE_32x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(P1),
     -8, // x
     -8, // y
@@ -1445,7 +1445,7 @@ const u16 tallBgDecoSpr[] = {
 
 const u16 tallBgArrowSpr[] = {
     ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND | ATTR0_AFF,
-    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
+    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     0, // x
     -8, // y
@@ -1456,7 +1456,7 @@ const u16 tallBgArrowSpr[] = {
 
 const u16 tallBgArrowSprP2[] = {
     ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND | ATTR0_AFF,
-    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
+    ATTR1_SIZE_16x32 | ATTR1_AFF_ID(AFF_SLOT_PULSING_ORB),
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     0, // x
     -8, // y
@@ -1903,6 +1903,18 @@ const u16 coinSpr[] = {
     ATTR2_PALBANK(7) | ATTR2_ID(COIN_VRAM_ID),
     -4, // x
     -4, // y
+    PRIO_IDOFF(5, 0, 0), // id offset
+    CENTER(8, 8),
+
+    0xffff
+};
+
+const u16 useEffectSpr[] = {
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
+    ATTR1_SIZE_16x16,
+    ATTR2_PALBANK(7),
+    0, // x
+    0, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
 

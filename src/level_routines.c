@@ -313,6 +313,7 @@ void reset_variables() {
     memset32(object_buffer, 0x0000, (sizeof(struct ObjectSlot) * MAX_OBJECTS) / sizeof(u32));
     memcpy16(&se_mem[26][0], square_background_tilemap, sizeof(square_background_tilemap) / 2);
     memset32(&se_mem[30][0], dup16(SE_BUILD(639, 0, 0, 0)), sizeof(SCREENBLOCK) / 2);
+    memset32(use_effect_buffer, 0x0000, (sizeof(struct UseEffectSlot) * AFF_SLOT_USE_EFFECT_COUNT) / sizeof(u32));
 
     memcpy16(&se_mem[30][0], level_complete_l3_tilemap, sizeof(level_complete_l3_tilemap) / 2);
 
@@ -1970,5 +1971,75 @@ ARM_CODE void load_camera_screen() {
                 seam_y += 8;
             }
         }   
+    }
+}
+
+void spawn_use_effect(s32 x, s32 y, s32 type, s32 palette) {
+    for (s32 slot = 0; slot < AFF_SLOT_USE_EFFECT_COUNT; slot++) {
+        struct UseEffectSlot *curr_slot = &use_effect_buffer[slot];
+
+        if (!curr_slot->active) {
+            curr_slot->x = x;
+            curr_slot->y = y;
+            curr_slot->type = type;
+            curr_slot->palette = palette;
+            curr_slot->curr_frame = 0;
+
+            if (type == USE_EFFECT_PAD) curr_slot->frames = 10;
+            else curr_slot->frames = 15;
+
+            curr_slot->active = TRUE;
+            break;
+        }
+    }
+}
+
+void get_pad_x_y_center(s32 x, s32 y, s32 rotation, s32 *out_x, s32 *out_y) {
+    s32 sin_theta = lu_sin(rotation); 
+    s32 cos_theta = lu_cos(rotation);
+
+    s32 relative_x = 0 - 8;
+    s32 relative_y = 6 - 8;
+
+    s32 relative_x_centered = relative_x + 8;
+    s32 relative_y_centered = relative_y + 8;
+    
+    // Divide by 4096 to get back to pixels
+    s32 rotated_x = ((s32)(relative_x_centered * cos_theta) - (s32)(relative_y_centered * sin_theta)) / 4096;
+    s32 rotated_y = ((s32)(relative_y_centered * cos_theta) + (s32)(relative_x_centered * sin_theta)) / 4096;
+
+    *out_x = x + rotated_x;
+    *out_y = y + rotated_y;
+}
+
+ARM_CODE void run_use_effects() {
+    for (s32 slot = 0; slot < AFF_SLOT_USE_EFFECT_COUNT; slot++) {
+        struct UseEffectSlot *curr_slot = &use_effect_buffer[slot];
+
+        if (curr_slot->active) {
+            s32 relative_x = curr_slot->x - ((scroll_x >> SUBPIXEL_BITS) & 0xffffffff);
+            s32 relative_y = curr_slot->y - ((scroll_y >> SUBPIXEL_BITS) & 0xffff);
+
+            if (relative_y > SCREEN_HEIGHT + 20 || relative_y < -20) continue;
+
+            s32 tile_id = 0x3A0;
+            if (curr_slot->type == USE_EFFECT_PORTAL) tile_id = 0x3A4;
+
+            FIXED current = int2fx(curr_slot->curr_frame);
+            FIXED t = (current / curr_slot->frames);
+            if (curr_slot->type != USE_EFFECT_PAD) t = int2fx(1) - t;
+            curr_slot->scale = fxmul(t + 0x10, float2fx(1.3333));
+
+            s32 priority = 2;
+            if (curr_slot->type == USE_EFFECT_PORTAL) priority = 0;
+
+            oam_affine_metaspr(relative_x, relative_y, useEffectSpr, 0, slot + AFF_SLOT_USE_EFFECT_START, TRUE, tile_id, curr_slot->palette, priority, 1, FALSE, FALSE);
+            obj_aff_identity(&obj_aff_buffer[slot + AFF_SLOT_USE_EFFECT_START]);
+            obj_aff_scale_inv(&obj_aff_buffer[slot + AFF_SLOT_USE_EFFECT_START], curr_slot->scale, curr_slot->scale);
+
+            if (++curr_slot->curr_frame > curr_slot->frames) {
+                curr_slot->active = FALSE;
+            } 
+        }
     }
 }

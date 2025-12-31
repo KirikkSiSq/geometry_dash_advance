@@ -13,6 +13,8 @@ u8 obj_priorities[128];
 EWRAM_DATA u16 rotation_buffer[NUM_ROT_SLOTS];
 EWRAM_DATA u16 rotation_flags_buffer[NUM_ROT_SLOTS];
 
+EWRAM_DATA struct UseEffectSlot use_effect_buffer[AFF_SLOT_USE_EFFECT_COUNT];
+
 // Level buffer
 EWRAM_DATA u16 level_buffer[LEVEL_LAYERS][MAX_LEVEL_HEIGHT*LEVEL_BUFFER_WIDTH];
 IWRAM_DATA COLOR palette_buffer[512];

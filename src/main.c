@@ -317,7 +317,8 @@ void game_loop() {
 
     memcpy16(&palette_buffer[240], &menu_palette[16], 16);
     
-    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(level_text_chr) / 4);
+    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(TILE) * 32 / 4);
+    memcpy32(&tile_mem_obj[0][928], &level_text_chr[32], sizeof(TILE) * 8 / 4);
     memcpy16(&palette_buffer[256], spritePalette, sizeof(spritePalette) / sizeof(COLOR));
 
     REG_DISPCNT = DCNT_OBJ | DCNT_OBJ_1D | DCNT_MODE0 | DCNT_BG0 | DCNT_BG1 | DCNT_BG2 | DCNT_BG3 | DCNT_WIN0;
@@ -415,6 +416,9 @@ void level_loop() {
         rotate_saws();
         scale_pulsing_objects();
         draw_attempt_counter();
+        
+        // Run use effects first
+        run_use_effects();
 
         if (in_practice_mode) {
             if (key_hit(KEY_L)) {

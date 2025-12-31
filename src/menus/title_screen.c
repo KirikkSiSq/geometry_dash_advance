@@ -54,7 +54,7 @@ void title_screen_loop() {
 
     memcpy32(&tile_mem[0][0], square_background_chr, sizeof(square_background_chr) / 8);
     memcpy32(&tile_mem[0][256], title_screen_chr, sizeof(title_screen_chr) / 8);
-    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(level_text_chr) / 4);
+    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(TILE) * 32 / 4);
     memcpy32(&se_mem[26][0], title_screen_l0_tilemap, sizeof(title_screen_l0_tilemap) / sizeof(u32));
     memcpy32(&se_mem[27][0], title_screen_l1_tilemap, sizeof(title_screen_l1_tilemap) / sizeof(u32));
     memcpy32(&se_mem[28][0], square_background_tilemap, sizeof(square_background_tilemap) / sizeof(u32));

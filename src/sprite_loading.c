@@ -292,13 +292,13 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
             } else if (pulse_type == PULSE_NORMAL) {
                 obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
                 obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], 
-                    scale_inv(fxmul(mirror_scaling, pulsing_value)), 
+                    (screen_mirrored ? -scale_inv(pulsing_value)  : scale_inv(pulsing_value) ), 
                     scale_inv(pulsing_value), 
                     -rotation);
             } else if (pulse_type == PULSE_ORB) {
                 obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
                 obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], 
-                    scale_inv(fxmul(mirror_scaling, pulsing_orb_value)), 
+                    (screen_mirrored ? -scale_inv(pulsing_orb_value)  : scale_inv(pulsing_orb_value) ), 
                     scale_inv(pulsing_orb_value), 
                     -rotation);
             }
@@ -394,13 +394,14 @@ ARM_CODE void scale_pulsing_objects() {
     FIXED final_value = calculate_amplitude(rms);
     pulsing_value = final_value;
 
-    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING], final_value, final_value);
+    s32 mult = (screen_mirrored ? -1 : 1);
+    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING], final_value * mult, final_value);
 
     s32 value_orb = final_value;
     if (value_orb < float2fx(0.6f)) value_orb = float2fx(0.6f);
     pulsing_orb_value = value_orb;
 
-    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING_ORB], value_orb, value_orb);
+    obj_aff_scale_inv(&obj_aff_buffer[AFF_SLOT_PULSING_ORB], value_orb * mult, value_orb);
 }
 
 #define SAW_SPEED 0x400
@@ -413,6 +414,7 @@ void rotate_saws() {
 
 ARM_CODE void display_objects() {
     profile_start();
+
     for (s32 index = 0; index < MAX_OBJECTS; index++) {
         if (object_buffer[index].occupied) {
             struct Object curr_object = object_buffer[index].object;

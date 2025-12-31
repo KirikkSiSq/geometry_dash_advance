@@ -40,6 +40,25 @@ typedef OBJ_ATTR OAM_SPR;
 #define ARM_CODE __attribute__((target("arm"), section(".iwram"), long_call))
 #define ROM_DATA __attribute__((section(".rodata,\"a\",%progbits @")))
 
+enum UseEffectType {
+    USE_EFFECT_ORB,
+    USE_EFFECT_PAD,
+    USE_EFFECT_PORTAL,
+};
+
+struct UseEffectSlot {
+    u8 active;
+    u8 type;
+    u8 palette;
+    s32 x;
+    s32 y;
+    s32 curr_frame;
+    s32 frames;
+    FIXED scale;
+};
+
+extern EWRAM_DATA struct UseEffectSlot use_effect_buffer[AFF_SLOT_USE_EFFECT_COUNT];
+
 extern OAM_SPR shadow_oam[128];
 extern OBJ_AFFINE *obj_aff_buffer;
 extern u8 obj_priorities[128];

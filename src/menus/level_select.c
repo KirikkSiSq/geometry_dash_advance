@@ -64,7 +64,7 @@ void level_select_loop() {
 
     memcpy32(&tile_mem[0][0], level_select_chr, sizeof(level_select_chr) / 8);
     memcpy32(&tile_mem_obj[0][0], &level_select_chr[256], sizeof(level_select_chr) / 8);
-    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(level_text_chr) / 4);
+    memcpy32(&tile_mem_obj[0][992], level_text_chr, sizeof(TILE) * 32 / 4);
 
     memcpy32(&se_mem[26][0], level_select_l0_tilemap, sizeof(level_select_l0_tilemap) / 4);
     memcpy32(&se_mem[27][0], level_select_l1_tilemap, sizeof(level_select_l1_tilemap) / 4);

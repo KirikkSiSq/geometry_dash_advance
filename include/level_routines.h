@@ -83,6 +83,11 @@ void shift_trail();
 void set_background(u16 background_ID);
 void set_ground(u16 ground_ID);
 void put_practice_gui();
+
+void spawn_use_effect(s32 x, s32 y, s32 type, s32 palette);
+void get_pad_x_y_center(s32 x, s32 y, s32 rotation, s32 *out_x, s32 *out_y);
+ARM_CODE void run_use_effects();
+
 u32 handle_key_holding(u16 keys);
 
 enum BG_types {
