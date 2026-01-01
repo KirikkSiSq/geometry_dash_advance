@@ -248,6 +248,12 @@ enum ObjTypes {
     BLUE_TP_ORB,
     ORANGE_TP_ORB,
 
+    S_BLOCK,
+    J_BLOCK,
+    H_BLOCK,
+    D_BLOCK,
+    F_BLOCK,
+
     OBJ_COUNT
 };
 

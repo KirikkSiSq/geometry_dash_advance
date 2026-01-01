@@ -413,7 +413,9 @@ void yellow_orb(struct ObjectSlot *objectSlot) {
 
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 1);
         curr_player.ball_rotation_direction = sign;
-
+        
+        curr_player.came_from_orb = TRUE;
+        
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
         curr_player.player_buffering = ORB_BUFFER_END;
@@ -447,6 +449,8 @@ void blue_orb(struct ObjectSlot *objectSlot) {
         curr_player.trail_on = TRUE;
         curr_player.airborne_jumped = TRUE;
         
+        curr_player.came_from_orb = TRUE;
+
         curr_player.ball_rotation_direction = sign;
         
         curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][BLUE_ORB_INDEX] * sign;
@@ -519,6 +523,8 @@ void pink_orb(struct ObjectSlot *objectSlot) {
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
 
+        curr_player.came_from_orb = TRUE;
+
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
@@ -556,6 +562,8 @@ void green_orb(struct ObjectSlot *objectSlot) {
         curr_player.ball_rotation_direction = sign;
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 4);
 
+        curr_player.came_from_orb = TRUE;
+
         objectSlot->activated[curr_player_id] = TRUE;
         curr_player.on_floor = FALSE;
         curr_player.player_buffering = ORB_BUFFER_END;
@@ -568,6 +576,8 @@ void black_orb(struct ObjectSlot *objectSlot) {
         curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][BLACK_ORB_INDEX] * sign;
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
+        
+        curr_player.came_from_orb = TRUE;
 
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 5);
         curr_player.ball_rotation_direction = sign;
@@ -584,6 +594,8 @@ void red_orb(struct ObjectSlot *objectSlot) {
         curr_player.player_y_speed = orb_pad_bounces[curr_player.player_size][curr_player.gamemode][RED_ORB_INDEX] * sign;
         curr_player.inverse_rotation_flag = FALSE;
         curr_player.trail_on = TRUE;
+        
+        curr_player.came_from_orb = TRUE;
 
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 6);
         curr_player.ball_rotation_direction = sign;
@@ -621,6 +633,8 @@ void green_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.dashing = TRUE;
         curr_player.dashing_rot = objectSlot->object.rotation;
         curr_player.dashing_anim_scale = float2fx(0.01);
+
+        curr_player.came_from_orb = TRUE;
     
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 4);
         curr_player.ball_rotation_direction = sign;
@@ -640,6 +654,8 @@ void pink_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.dashing_rot = objectSlot->object.rotation;
         curr_player.dashing_anim_scale = float2fx(0.01);
         curr_player.gravity_dir ^= 1;
+
+        curr_player.came_from_orb = TRUE;
     
         curr_player.ball_rotation_direction = sign;
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
@@ -709,6 +725,7 @@ void up_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
         spider_pad_orb_teleport_up(objectSlot);
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
+        curr_player.came_from_orb = TRUE;
         curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
@@ -717,6 +734,7 @@ void down_spider_orb(struct ObjectSlot *objectSlot) {
     if (curr_player.player_buffering == ORB_BUFFER_READY) {
         spider_pad_orb_teleport_down(objectSlot);
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);
+        curr_player.came_from_orb = TRUE;
         curr_player.player_buffering = ORB_BUFFER_END;
     }
 }
@@ -762,6 +780,8 @@ void blue_tp_orb(struct ObjectSlot *objectSlot) {
         curr_player.old_player_y = curr_player.player_y;
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 2);
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y - objectSlot->object.attrib3, USE_EFFECT_ORB, 6);
+
+        curr_player.came_from_orb = TRUE;
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
             u32 new_scroll_y = CLAMP(curr_player.player_y - (80 << SUBPIXEL_BITS), 0, BOTTOM_SCROLL_LIMIT);
@@ -833,6 +853,27 @@ void coin(UNUSED struct ObjectSlot *objectSlot) {
 
         objectSlot->activated[ID_PLAYER_1] = objectSlot->activated[ID_PLAYER_2] = TRUE;
     }
+}
+
+void s_block(UNUSED struct ObjectSlot *objectSlot) {
+    curr_player.dashing = FALSE;
+}
+
+void j_block(UNUSED struct ObjectSlot *objectSlot) {
+    if (curr_player.came_from_orb) curr_player.came_from_spider_orb = TRUE;
+}
+
+void h_block(UNUSED struct ObjectSlot *objectSlot) {
+    curr_player.should_check_ceiling = TRUE;
+}
+
+void d_block(UNUSED struct ObjectSlot *objectSlot) {
+    curr_player.d_block_active = TRUE;
+}
+
+void f_block(UNUSED struct ObjectSlot *objectSlot) {
+    curr_player.f_block_active = TRUE;
+    curr_player.should_check_ceiling = TRUE;
 }
 
 void do_nothing(UNUSED struct ObjectSlot *objectSlot) {
@@ -1079,6 +1120,12 @@ const jmp_table routines_jump_table[] = {
     blue_tp_orb,
 
     do_nothing,
+
+    s_block,
+    j_block,
+    h_block,
+    d_block,
+    f_block,
 };
 
 // In pixels
@@ -1304,6 +1351,12 @@ const s16 obj_hitbox[][6] = {
     Object_Hitbox_Rectangle("SPIDER_PAD", 16, 4, 0, 12, 8, 8)
     Object_Hitbox_Rectangle("ORANGE_TP_ORB", 20, 20, -2, -2, 8, 8)
     Object_Hitbox_Rectangle("BLUE_TP_ORB", 0, 0, 0, 0, 8, 8)
+
+    Object_Hitbox_Rectangle("S_BLOCK", 20, 20, -2, -2, 8, 8)
+    Object_Hitbox_Rectangle("J_BLOCK", 20, 20, -2, -2, 8, 8)
+    Object_Hitbox_Rectangle("H_BLOCK", 20, 20, -2, -2, 8, 8)
+    Object_Hitbox_Rectangle("D_BLOCK", 20, 20, -2, -2, 8, 8)
+    Object_Hitbox_Rectangle("F_BLOCK", 20, 20, -2, -2, 8, 8)
 
 };
 

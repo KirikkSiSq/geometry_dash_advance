@@ -99,6 +99,9 @@ struct Player {
     // 0 : not buffering, 1 : buffering
     u8 player_buffering;
     u8 came_from_spider_orb;
+    u8 came_from_orb;
+    u8 d_block_active;
+    u8 f_block_active;
 
     // Current player gamemode
     u8 gamemode;

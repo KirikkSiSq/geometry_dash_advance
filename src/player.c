@@ -129,6 +129,13 @@ void player_main() {
             if (player_death) break;
         }
 
+        if (curr_player.came_from_orb && !key_is_down(KEY_A | KEY_UP)) {
+            curr_player.came_from_orb = FALSE;
+        }
+
+        curr_player.d_block_active = FALSE;
+        curr_player.f_block_active = FALSE;
+
         curr_player.disable_jumping = FALSE;
 
         curr_player.player_x_diff = curr_player.player_x - curr_player.old_player_x;

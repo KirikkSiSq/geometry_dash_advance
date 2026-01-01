@@ -2144,7 +2144,13 @@ ROM_DATA const u16 *obj_sprites[] = {
 
     pinkPadSpr, // Spider pad
     blueTPOrbSpr,
-    orangeTPOrbSpr,
+    orangeTPOrbSpr, 
+
+    NULL, // S block
+    NULL, // J block
+    NULL, // H block
+    NULL, // D block
+    NULL, // F block
 };
 
 #undef P1
@@ -2388,6 +2394,13 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("SPIDER_PAD", 0x9A4, 0x4)
     CHR_SLOT("BLUE_TP_ORB", 0x9B0, 0x10)
     CHR_SLOT("ORANGE_TP_ORB", 0x9B0, 0x10)
+
+    CHR_SLOT("S_BLOCK", SPRITE_NO_CHR,0)
+    CHR_SLOT("J_BLOCK", SPRITE_NO_CHR,0)
+    CHR_SLOT("H_BLOCK", SPRITE_NO_CHR,0)
+    CHR_SLOT("D_BLOCK", SPRITE_NO_CHR,0)
+    CHR_SLOT("F_BLOCK", SPRITE_NO_CHR,0)
+
 
 };
 #undef CHR_SLOT

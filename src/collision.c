@@ -841,7 +841,7 @@ ARM_CODE u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
 #ifdef DEBUG
-        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
+        if (!curr_player.d_block_active && curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
             if (side == CENTER) {
                 player_death = TRUE;
             } else {
@@ -849,7 +849,7 @@ ARM_CODE u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             }
         }
 #else
-        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
+        if (!curr_player.d_block_active && curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
             if (side == CENTER) {
                 player_death = TRUE;
             } else {
@@ -870,7 +870,7 @@ ARM_CODE u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
         if (curr_player.changed_size_frames) max_eject = 0x10;
 
 #ifdef DEBUG
-        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
+        if (!curr_player.d_block_active && curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL && !noclip) {
             if (side == CENTER) {
                 player_death = TRUE;
             } else {
@@ -878,7 +878,7 @@ ARM_CODE u32 col_type_lookup(u16 col_type, u32 x, u32 y, u8 side, u32 layer) {
             }
         }
 #else
-        if (curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
+        if (!curr_player.d_block_active && curr_player.gamemode == GAMEMODE_WAVE && col_type != COL_FLOOR_CEIL) {
             if (side == CENTER) {
                 player_death = TRUE;
             } else {
@@ -905,7 +905,17 @@ ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
     if (!curr_player.on_floor && curr_player.airborne_jumped) curr_player.airborne_jumped = FALSE;
 
     if (ejection_type == TOP) {
-        curr_player.player_y += (eject_value - 1) << SUBPIXEL_BITS;
+        s32 check_ceiling = curr_player.should_check_ceiling;
+        s32 extra_eject = 1;
+
+        if (check_ceiling && curr_player.gravity_dir == GRAVITY_DOWN) extra_eject = 0;
+
+        curr_player.player_y += (eject_value - extra_eject) << SUBPIXEL_BITS;
+
+        if (curr_player.f_block_active && curr_player.gravity_dir == GRAVITY_DOWN) {
+            curr_player.came_from_spider_orb = TRUE;
+            curr_player.gravity_dir = GRAVITY_UP;
+        }
 
         if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_UP) {
             // We are resting on the ceiling so allow jumping and stuff
@@ -914,6 +924,11 @@ ARM_CODE void do_ejection(s32 eject_value, u32 ejection_type) {
         }
     } else {
         curr_player.player_y -= eject_value << SUBPIXEL_BITS;
+
+        if (curr_player.f_block_active && curr_player.gravity_dir == GRAVITY_UP) {
+            curr_player.came_from_spider_orb = TRUE;
+            curr_player.gravity_dir = GRAVITY_DOWN;
+        }
 
         if (curr_player.gamemode != GAMEMODE_CUBE || curr_player.gravity_dir == GRAVITY_DOWN) {
             // We are resting on the ceiling so allow jumping and stuff
@@ -2421,12 +2436,14 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
             break;
 
         case GAMEMODE_WAVE:
+            if (!curr_player.d_block_active) {
             // Kill if wave
             #ifdef DEBUG
                 if (!noclip) player_death = TRUE;
             #else
                 player_death = TRUE;
             #endif
+            }
             break;
         case GAMEMODE_UFO:
             if (type == DEGREES_63_5 || type == DEGREES_63_5_UD) {
