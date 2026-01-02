@@ -593,9 +593,12 @@ u64 approach_value_asymptotic(u64 current, u64 target, u32 multiplier, u32 max_a
 u64 approach_value(u64 current, u64 target, s32 inc, s32 dec);
 
 void scroll_screen_vertically() {
+    
+    s32 relative_player_y = FROM_FIXED(curr_player.player_y) - FROM_FIXED(intended_scroll_y);
+
     if (player_1.gamemode == GAMEMODE_CUBE && dual == DUAL_OFF) {
         // This scrolls the screen on the y axis
-        if (player_1.relative_player_y + 16 >= BOTTOM_SCROLL_Y) {
+        if (relative_player_y + 16 >= BOTTOM_SCROLL_Y) {
             scroll_y_dir = 1;
             
             // Scroll downwards if player is going downwards or is still
@@ -604,7 +607,7 @@ void scroll_screen_vertically() {
             } else if (player_1.player_y_diff == 0) {
                 intended_scroll_y += CUBE_MAX_Y_SPEED / 2;
             } 
-        } else if (player_1.relative_player_y <= TOP_SCROLL_Y) { 
+        } else if (relative_player_y <= TOP_SCROLL_Y) { 
             scroll_y_dir = 0;
 
             // Scroll upwards if player is going upwards or is still

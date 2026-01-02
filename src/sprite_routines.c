@@ -681,7 +681,7 @@ void spider_pad_orb_teleport_up(struct ObjectSlot *objectSlot) {
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
         if (relative_player_y <= TOP_SCROLL_Y) {
-            u32 new_scroll_y = (TOP_SCROLL_Y - (relative_player_y)) << SUBPIXEL_BITS;
+            u32 new_scroll_y = (TOP_SCROLL_Y - relative_player_y) << SUBPIXEL_BITS;
             intended_scroll_y -= new_scroll_y;
             if (relative_player_y <= TOP_SCROLL_Y - 0x40) {
                 scroll_y = intended_scroll_y;    
@@ -712,7 +712,7 @@ void spider_pad_orb_teleport_down(struct ObjectSlot *objectSlot) {
 
     if (curr_player.gamemode == GAMEMODE_CUBE) {
         if (relative_player_y + 16 >= BOTTOM_SCROLL_Y) {
-            u32 new_scroll_y = (BOTTOM_SCROLL_Y - (relative_player_y + 16)) << SUBPIXEL_BITS;
+            u32 new_scroll_y = (BOTTOM_SCROLL_Y - relative_player_y) << SUBPIXEL_BITS;
 
             intended_scroll_y -= new_scroll_y;
 
@@ -798,7 +798,7 @@ void blue_tp_orb(struct ObjectSlot *objectSlot) {
 
         if (curr_player.gamemode == GAMEMODE_CUBE) {
             if (relative_player_y <= TOP_SCROLL_Y) {
-                u32 new_scroll_y = (TOP_SCROLL_Y - (relative_player_y)) << SUBPIXEL_BITS;
+                u32 new_scroll_y = (TOP_SCROLL_Y - relative_player_y) << SUBPIXEL_BITS;
                 intended_scroll_y -= new_scroll_y;
                 if (relative_player_y <= TOP_SCROLL_Y - 0x40) {
                     scroll_y = intended_scroll_y;    
@@ -807,7 +807,7 @@ void blue_tp_orb(struct ObjectSlot *objectSlot) {
                     else update_flags |= REFRESH_SCREEN;
                 } 
             } else if (relative_player_y + 16 >= BOTTOM_SCROLL_Y) {
-                u32 new_scroll_y = (BOTTOM_SCROLL_Y - (relative_player_y + 16)) << SUBPIXEL_BITS;
+                u32 new_scroll_y = (BOTTOM_SCROLL_Y - relative_player_y) << SUBPIXEL_BITS;
 
                 intended_scroll_y -= new_scroll_y;
 
