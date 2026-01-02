@@ -10,9 +10,6 @@
 #include "icon_kit.h"
 #include "math.h"
 
-#define TOP_SCROLL_Y 0x24
-#define BOTTOM_SCROLL_Y SCREEN_HEIGHT-0x24
-
 // RLE variables
 u16 value[LEVEL_LAYERS];
 s32 length[LEVEL_LAYERS];
@@ -606,7 +603,7 @@ void scroll_screen_vertically() {
                 intended_scroll_y += player_1.player_y_diff;
             } else if (player_1.player_y_diff == 0) {
                 intended_scroll_y += CUBE_MAX_Y_SPEED / 2;
-            }
+            } 
         } else if (player_1.relative_player_y <= TOP_SCROLL_Y) { 
             scroll_y_dir = 0;
 

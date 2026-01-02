@@ -18,6 +18,9 @@
 #define PLAYER_CHR_SIZE (4 * (sizeof(TILE) / sizeof(u32)))
 #define PLAYER_CHR_SIZE_BYTES (4 * sizeof(TILE))
 
+#define TOP_SCROLL_Y 0x24
+#define BOTTOM_SCROLL_Y SCREEN_HEIGHT-0x24
+
 extern s32 seam_x;
 extern s32 seam_y;
 
