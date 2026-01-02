@@ -1332,14 +1332,6 @@ const u16 bgChainsBigSpr[] = {
 };
 
 const u16 largePulsingCircleSpr[] = {
-    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
-    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
-    ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
-    0, // x
-    -16, // y
-    PRIO_IDOFF(4, 0, 0), // id offset
-    CENTER(8, 8),
-
     ATTR0_4BPP | ATTR0_TALL,
     ATTR1_SIZE_16x32,
     ATTR2_PALBANK(1),
@@ -1348,17 +1340,17 @@ const u16 largePulsingCircleSpr[] = {
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
 
-    0xffff
-};
-const u16 mediumPulsingCircleSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
     ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
-    0,  // x
-    -8, // y
+    0, // x
+    -16, // y
     PRIO_IDOFF(4, 0, 0), // id offset
     CENTER(8, 8),
 
+    0xffff
+};
+const u16 mediumPulsingCircleSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE,
     ATTR1_SIZE_16x16,
     ATTR2_PALBANK(1),
@@ -1367,9 +1359,25 @@ const u16 mediumPulsingCircleSpr[] = {
     PRIO_IDOFF(5, 0, 2), // id offset
     CENTER(8, 8),
 
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
+    ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
+    ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
+    0,  // x
+    -8, // y
+    PRIO_IDOFF(4, 0, 0), // id offset
+    CENTER(8, 8),
+
     0xffff
 };
 const u16 smallPulsingCircleSpr[] = {
+    ATTR0_4BPP | ATTR0_WIDE,
+    ATTR1_SIZE_8x16,
+    ATTR2_PALBANK(1),
+    0, // x
+    8, // y
+    PRIO_IDOFF(5, 0, 4), // id offset
+    CENTER(8, 8),
+    
     ATTR0_4BPP | ATTR0_SQUARE | ATTR0_AFF | ATTR0_BLEND,
     ATTR1_SIZE_16x16 | ATTR1_AFF_ID(AFF_SLOT_PULSING),
     ATTR2_PALBANK(P1) | ATTR2_ID(PULSING_VRAM_ID),
@@ -1378,13 +1386,6 @@ const u16 smallPulsingCircleSpr[] = {
     PRIO_IDOFF(4, 0, 0), // id offset
     CENTER(8, 8),
 
-    ATTR0_4BPP | ATTR0_WIDE,
-    ATTR1_SIZE_8x16,
-    ATTR2_PALBANK(1),
-    0, // x
-    8, // y
-    PRIO_IDOFF(5, 0, 4), // id offset
-    CENTER(8, 8),
     0xffff
 };
 
@@ -2539,6 +2540,9 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         should_flip = FALSE;
     }
 
+    s32 pulses = BFN_GET(data[1], ATTR1_AFF_ID);
+    s32 does_pulse = (pulses == AFF_SLOT_PULSING || pulses == AFF_SLOT_PULSING_ORB);
+
     // Continue until end of data
     while (data[i] != 0xffff && nextSpr < 128) {
         // Add offset
@@ -2553,9 +2557,6 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         u16 attribute1 = data[i + 1];
         u16 attribute2 = data[i + 2];
 
-        s32 pulses = BFN_GET(attribute1, ATTR1_AFF_ID);
-        s32 does_pulse = (pulses == AFF_SLOT_PULSING || pulses == AFF_SLOT_PULSING_ORB);
-
         s32 shape = (attribute0 & ATTR0_SHAPE_MASK) >> 12;
 
         s32 should_use_double_size = !no_affine && dbl && ((shape != ATTR0_SQUARE && !(rotation & 0x3fff)) || !(data[i + 5] & DLB_SCALE_MASK)) ;
@@ -2566,7 +2567,7 @@ ARM_CODE void oam_affine_metaspr(u16 x, u8 y, const u16 *data, u16 rotation, u8 
         }
 
         // Set affine ID slot if not set in sprite data
-        if ((!(attribute1 & ATTR1_AFF_ID_MASK) && !no_affine) || does_pulse) {
+        if ((!(attribute1 & ATTR1_AFF_ID_MASK) || does_pulse) && !no_affine ) {
             BFN_SET(attribute1, aff_id, ATTR1_AFF_ID);
         }
 
