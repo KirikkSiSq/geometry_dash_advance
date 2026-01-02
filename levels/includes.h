@@ -195,8 +195,16 @@
 #include "dorabaebasic7/SP.h"
 #include "dorabaebasic7/properties.h"
 
+// selectpaymenttype
+#define selectpaymenttype_ID 20
+
+#include "selectpaymenttype/l1.h"
+#include "selectpaymenttype/l2.h"
+#include "selectpaymenttype/SP.h"
+#include "selectpaymenttype/properties.h"
+
 // groundtospace
-#define groundtospace_ID 20
+#define groundtospace_ID 21
 
 #include "groundtospace/l1.h"
 #include "groundtospace/l2.h"
@@ -204,7 +212,7 @@
 #include "groundtospace/properties.h"
 
 // ultimatedestruction
-#define ultimatedestruction_ID 21
+#define ultimatedestruction_ID 22
 
 #include "ultimatedestruction/l1.h"
 #include "ultimatedestruction/l2.h"
@@ -212,7 +220,7 @@
 #include "ultimatedestruction/properties.h"
 
 // thenightmare
-#define thenightmare_ID 22
+#define thenightmare_ID 23
 
 #include "thenightmare/l1.h"
 #include "thenightmare/l2.h"
@@ -220,7 +228,7 @@
 #include "thenightmare/properties.h"
 
 // rose
-#define rose_ID 23
+#define rose_ID 24
 
 #include "rose/l1.h"
 #include "rose/l2.h"
@@ -228,7 +236,7 @@
 #include "rose/properties.h"
 
 // problematic
-#define problematic_ID 24
+#define problematic_ID 25
 
 #include "problematic/l1.h"
 #include "problematic/l2.h"
@@ -236,7 +244,7 @@
 #include "problematic/properties.h"
 
 // deathmoon
-#define deathmoon_ID 25
+#define deathmoon_ID 26
 
 #include "deathmoon/l1.h"
 #include "deathmoon/l2.h"
@@ -244,7 +252,7 @@
 #include "deathmoon/properties.h"
 
 // everyend
-#define everyend_ID 26
+#define everyend_ID 27
 
 #include "everyend/l1.h"
 #include "everyend/l2.h"
@@ -252,7 +260,7 @@
 #include "everyend/properties.h"
 
 // test
-#define test_ID 27
+#define test_ID 28
 
 #include "test/l1.h"
 #include "test/l2.h"
@@ -260,13 +268,13 @@
 #include "test/properties.h"
 
 // test2
-#define test2_ID 28
+#define test2_ID 29
 
 #include "test2/l1.h"
 #include "test2/l2.h"
 #include "test2/SP.h"
 #include "test2/properties.h"
 
-#define LEVEL_COUNT 29
+#define LEVEL_COUNT 30
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

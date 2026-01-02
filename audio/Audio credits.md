@@ -35,3 +35,4 @@
 |Ultimate Destruction|TMM43|Orionconstel|
 |Clown Party|Waterflame|Orionconstel|
 |Death Moon|SoundHolicK|HatSwitch|
+|Select Payment Type|Crafty Jumper| Crafty Jumper|

@@ -28,7 +28,7 @@
 
 /* SAVES */
 // Version of the level save, increment if a new level is added
-#define LEVEL_VERSION 6
+#define LEVEL_VERSION 7
  
 // Version of the non level save, increment if a wipe is needed
 #define DATA_VERSION 9
