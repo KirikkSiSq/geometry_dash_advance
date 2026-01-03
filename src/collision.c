@@ -377,6 +377,9 @@ ARM_CODE u16 obtain_block(u32 x, u32 y, u32 layer) {
 }
 
 ARM_CODE INLINE u16 obtain_collision_type(u32 x, u32 y, u32 layer) {
+    // If above the level, then return no collision col type
+    if ((s32) y < 0) return COL_NONE;
+
     // Obtain the col type from the table, indexed by metatile ID
     return metatiles[obtain_block(x,y,layer)][4];
 }
