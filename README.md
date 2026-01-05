@@ -29,7 +29,6 @@ If you want to access to developer builds, you can download the latest nightly b
 |Hatswitch|Music and levels|
 |[SeaGlowingPro](https://github.com/SeaGlowingPro)|levels|
 |Crafty Jumper|music and levels (Select Payment Type)|
-|[banana6000](https://github.com/xXFamidashFan69Xx)|graphics, levels and metatiles|
 |Nicolestarlight|music|
 |[Sotos_24](https://github.com/Soteris24)|music|
 |Redgd|graphics|

@@ -929,10 +929,30 @@ void modify_fade_block_flipped(u16 block_id, s32 calculated_x, s32 calculated_y,
 #define FADING_MEDIUM_SPIKE_TOP_ID    407
 #define FADING_MEDIUM_SPIKE_LEFT_ID   408
 #define FADING_MEDIUM_SPIKE_RIGHT_ID  409
-#define FADING_MINIBLOCK_ID           410
+#define FADING_MINIBLOCK_CENTER_ID           410
+
+#define FADING_MINIBLOCK_0001_ID 411
+#define FADING_MINIBLOCK_0010_ID 412
+#define FADING_MINIBLOCK_0100_ID 413
+#define FADING_MINIBLOCK_1000_ID 414
+#define FADING_MINIBLOCK_0011_ID 415
+#define FADING_MINIBLOCK_1100_ID 416
+#define FADING_MINIBLOCK_1010_ID 417
+#define FADING_MINIBLOCK_0101_ID 418
+#define FADING_MINIBLOCK_1011_ID 419
+#define FADING_MINIBLOCK_0111_ID 420
+#define FADING_MINIBLOCK_1110_ID 421
+#define FADING_MINIBLOCK_1101_ID 422
+#define FADING_MINIBLOCK_1001_ID 423
+#define FADING_MINIBLOCK_0110_ID 424
+#define FADING_MINIBLOCK_1111_ID 425
+#define FADING_SLAB_TOP_ID 426
+#define FADING_SLAB_BOTTOM_ID 427
+#define FADING_SLAB_LEFT_ID 428
+#define FADING_SLAB_RIGHT_ID 429
 
 #define FIRST_FADING_METATILE FADING_BLOCK_ID
-#define LAST_FADING_METATILE FADING_MINIBLOCK_ID
+#define LAST_FADING_METATILE FADING_SLAB_RIGHT_ID
 
 #define FIRST_FADING_MINISPIKE 7824
 #define LAST_FADING_MINISPIKE  7871
@@ -948,11 +968,148 @@ const u16 fading_block_frames[][4] = {
     { TILE(0x123, 0, 0, 0), TILE(0x123, 0, H, 0), TILE(0x123, 0, 0, V), TILE(0x123, 0, H, V) },
 };
 
-const u16 fading_miniblock_frames[][4] = {
+const u16 fading_miniblock_center_frames[][4] = {
     { TILE(0x16c, 0, 0, 0), TILE(0x16c, 0, H, 0), TILE(0x16c, 0, 0, V), TILE(0x16c, 0, H, V) },
     { TILE(0x16d, 0, 0, 0), TILE(0x16d, 0, H, 0), TILE(0x16d, 0, 0, V), TILE(0x16d, 0, H, V) },
     { TILE(0x16e, 0, 0, 0), TILE(0x16e, 0, H, 0), TILE(0x16e, 0, 0, V), TILE(0x16e, 0, H, V) },
     { TILE(0x16f, 0, 0, 0), TILE(0x16f, 0, H, 0), TILE(0x16f, 0, 0, V), TILE(0x16f, 0, H, V) },
+};
+
+//    Miniblocks
+
+const u16 fading_miniblock_0001_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0010_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0100_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1000_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0011_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1100_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1010_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0101_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1011_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0111_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1110_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1101_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1001_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_0110_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_miniblock_1111_frames[][4] = {
+    { TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), TILE(0x337, 0, 0, 0), },
+    { TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), TILE(0x338, 0, 0, 0), },
+    { TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), TILE(0x339, 0, 0, 0), },
+    { TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), TILE(0x33A, 0, 0, 0), },
+};
+
+// Slabs
+
+const u16 fading_slab_top_frames[][4] = {
+    { TILE(0x128, 0, 0, 0), TILE(0x128, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x129, 0, 0, 0), TILE(0x129, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x12A, 0, 0, 0), TILE(0x12A, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+    { TILE(0x12B, 0, 0, 0), TILE(0x12B, 0, H, 0), TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_slab_bottom_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x128, 0, 0, 0), TILE(0x128, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x129, 0, 0, 0), TILE(0x129, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x12A, 0, 0, 0), TILE(0x12A, 0, H, 0), },
+    { TILE(0x000, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x12B, 0, 0, 0), TILE(0x12B, 0, H, 0), },
+};
+
+const u16 fading_slab_left_frames[][4] = {
+    { TILE(0x124, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x124, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x125, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x125, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x126, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x126, 0, 0, V), TILE(0x000, 0, 0, 0), },
+    { TILE(0x127, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x127, 0, 0, V), TILE(0x000, 0, 0, 0), },
+};
+
+const u16 fading_slab_right_frames[][4] = {
+    { TILE(0x000, 0, 0, 0), TILE(0x124, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x124, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x125, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x125, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x126, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x126, 0, 0, V), },
+    { TILE(0x000, 0, 0, 0), TILE(0x127, 0, 0, 0), TILE(0x000, 0, 0, 0), TILE(0x127, 0, 0, V), },
 };
 
 // Normal spikes
@@ -1382,7 +1539,26 @@ ROM_DATA const u16 (*fading_table[])[4] = {
     fading_medium_spike_top_frames,
     fading_medium_spike_left_frames,
     fading_medium_spike_right_frames,
-    fading_miniblock_frames,
+    fading_miniblock_center_frames,
+    fading_miniblock_0001_frames,
+    fading_miniblock_0010_frames,
+    fading_miniblock_0100_frames,
+    fading_miniblock_1000_frames,
+    fading_miniblock_0011_frames,
+    fading_miniblock_1100_frames,
+    fading_miniblock_1010_frames,
+    fading_miniblock_0101_frames,
+    fading_miniblock_1011_frames,
+    fading_miniblock_0111_frames,
+    fading_miniblock_1110_frames,
+    fading_miniblock_1101_frames,
+    fading_miniblock_1001_frames,
+    fading_miniblock_0110_frames,
+    fading_miniblock_1111_frames,
+    fading_slab_top_frames,
+    fading_slab_bottom_frames,
+    fading_slab_left_frames,
+    fading_slab_right_frames,
 
     // 7000-ish metatiles later
 
