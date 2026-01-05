@@ -134,7 +134,6 @@ void set_bg_color(COLOR *dst, COLOR color) {
     // Set BG color
     dst[0x00] = color;
     dst[BG_PAL + BG_COLOR] = color;
-    dst[BG_PAL + DARK_COLOR] = dst[BG_COLOR + 4];
 
     dst[LIGHTER_BG_PAL + BG_COLOR] = color;
     
@@ -147,6 +146,9 @@ void set_bg_color(COLOR *dst, COLOR color) {
         dst[index] = blend_clr(dst[BG_PAL + BG_COLOR], 0, blend_value);
         blend_value += 0x1f / (7 - 2 + 1);
     }
+    
+    dst[BG_PAL + DARK_COLOR] = dst[BG_COLOR + 5];
+    dst[BG_PAL + DARK_COLOR - 1] = dst[BG_COLOR + 4];
 
     blend_bg_and_obj(dst, BG_PAL);
     
@@ -159,7 +161,8 @@ void set_bg_color(COLOR *dst, COLOR color) {
     for (u32 pal = COL_CHN_PAL; pal < COL_CHN_PAL_LAST; pal += 0x10) {  
         // Blend col
         dst[BG_COLOR + pal] = color;
-        dst[DARK_COLOR + pal] = dst[BG_COLOR + 4];
+        dst[DARK_COLOR + pal] = dst[BG_COLOR + 5];
+        dst[DARK_COLOR - 1 + pal] = dst[BG_COLOR + 4];
         blend_bg_and_col(dst, pal);
         blend_bg_and_obj(dst, pal);
 
@@ -189,7 +192,8 @@ void set_bg_color(COLOR *dst, COLOR color) {
 void update_lbg_palette(COLOR *dst) {
     // Get LBG color
     COLOR lbg = calculate_lbg(dst[BG_PAL + BG_COLOR], dst[PLAYER_SPR_PAL + P1_COLOR]);
-    dst[LIGHTER_BG_PAL + DARK_COLOR] = dst[BG_COLOR + 4];
+    dst[LIGHTER_BG_PAL + DARK_COLOR] = dst[BG_COLOR + 5];
+    dst[LIGHTER_BG_PAL + DARK_COLOR - 1] = dst[BG_COLOR + 4];
     
     // Blend both bg and lbg
     u32 blend_value = 0x1f / (COL_ID_COLOR - BG_COL_BLENDING + 1);
@@ -218,7 +222,6 @@ void update_lbg_palette(COLOR *dst) {
 
 void adjust_brighter_color(COLOR *dst, u32 pal) {
     dst[pal + BRIGHTER_COLOR]     = blend_clr(dst[BG_PAL + BG_COLOR], dst[PORTAL_WHITE_COLOR], 0x0a);
-    dst[pal + BRIGHTER_COLOR + 1] = blend_clr(dst[BG_PAL + BG_COLOR], dst[PORTAL_WHITE_COLOR], 0x10);
 }
 
 void set_player_colors(COLOR *dst, COLOR p1, COLOR p2, COLOR glow) {
