@@ -525,10 +525,14 @@ void wave_gamemode() {
 
     curr_player.cube_rotation = ArcTan2(curr_player.player_x_speed >> 8, curr_player.player_y_speed >> 8) * mirror_sign;
 
-    if (curr_player.player_size == SIZE_BIG) {
-        curr_player.player_y_speed = curr_player.player_x_speed * sign * hold_sign;     
+    if (!curr_player.dashing) {
+        if (curr_player.player_size == SIZE_BIG) {
+            curr_player.player_y_speed = curr_player.player_x_speed * sign * hold_sign;     
+        } else {
+            curr_player.player_y_speed = curr_player.player_x_speed * 2 * sign * hold_sign;     
+        }
     } else {
-        curr_player.player_y_speed = curr_player.player_x_speed * 2 * sign * hold_sign;     
+        curr_player.cube_rotation = -curr_player.dashing_rot;
     }
     
     curr_player.on_floor = FALSE;
