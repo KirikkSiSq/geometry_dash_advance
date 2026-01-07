@@ -211,7 +211,7 @@ void cube_gamemode() {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_JUMP_SPEED : CUBE_MINI_JUMP_SPEED) * sign;       
         }
 
-        curr_player.player_y_speed = FIXED_MUL(curr_player.player_y_speed, jump_speed_mult[speed_id]);
+        curr_player.player_y_speed = FIXED_MUL_LONG(curr_player.player_y_speed, jump_speed_mult[speed_id]);
 
         if (curr_player.on_slope) curr_player.slope_counter = 2;
 
@@ -656,7 +656,7 @@ void update_falling() {
 void draw_player() {
     curr_player.old_relative_player_y = curr_player.relative_player_y;
 
-    curr_player.relative_player_x = FROM_FIXED(curr_player.player_x - scroll_x);
+    curr_player.relative_player_x = FROM_FIXED_LONG(curr_player.player_x - scroll_x);
     curr_player.relative_player_y = FROM_FIXED(curr_player.player_y) - FROM_FIXED(scroll_y);
 
     // Draw only if on screen vertically
@@ -674,10 +674,10 @@ void draw_player() {
 
             rotation = curr_player.lerped_cube_rotation;
         } else {
-            FIXED_16 lerped = TO_FIXED(curr_player.lerped_cube_rotation);
-            FIXED_16 normal = TO_FIXED(curr_player.cube_rotation);
+            FIXED_16 lerped = TO_FIXED_LONG(curr_player.lerped_cube_rotation);
+            FIXED_16 normal = TO_FIXED_LONG(curr_player.cube_rotation);
 
-            curr_player.lerped_cube_rotation = FROM_FIXED(slerp(lerped, normal, FLOAT_TO_FIXED(0.2f)));
+            curr_player.lerped_cube_rotation = FROM_FIXED_LONG(slerp(lerped, normal, FLOAT_TO_FIXED(0.2f)));
 
             if (ABS((s16)curr_player.lerped_cube_rotation) < 0x100) rotation = 0;
             else rotation = curr_player.lerped_cube_rotation;
@@ -805,12 +805,12 @@ void level_complete_cutscene() {
 void anim_player_to_wall() {
     // This uses a Bézier Cuadratic formula:  P = ((1−t)^2)*P1 + 2*(1−t)*t*P2 + (t^2)*P3
     // Calculate t
-    u32 t_fixed = FIXED_DIV(FIXED_MUL(cutscene_frame * SUBPIXEL_MULTIPLIER, cutscene_frame * SUBPIXEL_MULTIPLIER), FIXED_MUL(TOTAL_CUTSCENE_FRAMES * SUBPIXEL_MULTIPLIER, TOTAL_CUTSCENE_FRAMES * SUBPIXEL_MULTIPLIER));
+    u32 t_fixed = FIXED_DIV_LONG(FIXED_MUL_LONG(cutscene_frame * SUBPIXEL_MULTIPLIER, cutscene_frame * SUBPIXEL_MULTIPLIER), FIXED_MUL_LONG(TOTAL_CUTSCENE_FRAMES * SUBPIXEL_MULTIPLIER, TOTAL_CUTSCENE_FRAMES * SUBPIXEL_MULTIPLIER));
 
     // Calculate (1 - t) and powers
     u32 one_minus_t = SUBPIXEL_MULTIPLIER - t_fixed;
-    u32 one_minus_t_squared = FIXED_MUL(one_minus_t, one_minus_t);
-    u32 t_squared = FIXED_MUL(t_fixed, t_fixed);
+    u32 one_minus_t_squared = FIXED_MUL_LONG(one_minus_t, one_minus_t);
+    u32 t_squared = FIXED_MUL_LONG(t_fixed, t_fixed);
 
     u64 final_x = (scroll_x >> SUBPIXEL_BITS) + SCREEN_WIDTH + 0x10;
     u32 final_y = (scroll_y >> SUBPIXEL_BITS) + (SCREEN_HEIGHT/2) - 8;
@@ -824,14 +824,14 @@ void anim_player_to_wall() {
     
     // Update player position
     curr_player.player_x = (
-                FIXED_MUL(one_minus_t_squared, curr_player.cutscene_initial_player_x * SUBPIXEL_MULTIPLIER) +
-                FIXED_MUL(FIXED_MUL(2 * SUBPIXEL_MULTIPLIER, one_minus_t), t_fixed) * top_x +
-                FIXED_MUL(t_squared, final_x * SUBPIXEL_MULTIPLIER)
+                FIXED_MUL_LONG(one_minus_t_squared, curr_player.cutscene_initial_player_x * SUBPIXEL_MULTIPLIER) +
+                FIXED_MUL_LONG(FIXED_MUL_LONG(2 * SUBPIXEL_MULTIPLIER, one_minus_t), t_fixed) * top_x +
+                FIXED_MUL_LONG(t_squared, final_x * SUBPIXEL_MULTIPLIER)
     );
 
     curr_player.player_y = (
-                FIXED_MUL(one_minus_t_squared, curr_player.cutscene_initial_player_y * SUBPIXEL_MULTIPLIER) +
-                FIXED_MUL(FIXED_MUL(2 * SUBPIXEL_MULTIPLIER, one_minus_t), t_fixed) * top_y +
-                FIXED_MUL(t_squared, final_y * SUBPIXEL_MULTIPLIER)
+                FIXED_MUL_LONG(one_minus_t_squared, curr_player.cutscene_initial_player_y * SUBPIXEL_MULTIPLIER) +
+                FIXED_MUL_LONG(FIXED_MUL_LONG(2 * SUBPIXEL_MULTIPLIER, one_minus_t), t_fixed) * top_y +
+                FIXED_MUL_LONG(t_squared, final_y * SUBPIXEL_MULTIPLIER)
     );
 }

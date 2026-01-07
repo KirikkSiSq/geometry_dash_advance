@@ -320,13 +320,13 @@ COLOR calculate_lbg(COLOR bg, COLOR p1) {
     struct RGB555 lbg_rgb = hsv_to_rgb(hsv);
 
     // Get multiplier
-    FIXED_16 multiplier = FIXED_DIV(bg_rgb.red + bg_rgb.green + bg_rgb.blue, 18);
+    FIXED_16 multiplier = FIXED_DIV_LONG(bg_rgb.red + bg_rgb.green + bg_rgb.blue, 18);
     
     // If below 1.0, don't modify LBG
     if (multiplier < FIXED_MULTIPLIER) {
-        lbg_rgb.red = FROM_FIXED(FIXED_MUL(TO_FIXED(lbg_rgb.red), multiplier) + FIXED_MUL(TO_FIXED(p1_rgb.red), FIXED_MULTIPLIER - multiplier));
-        lbg_rgb.green = FROM_FIXED(FIXED_MUL(TO_FIXED(lbg_rgb.green), multiplier) + FIXED_MUL(TO_FIXED(p1_rgb.green), FIXED_MULTIPLIER - multiplier));
-        lbg_rgb.blue = FROM_FIXED(FIXED_MUL(TO_FIXED(lbg_rgb.blue), multiplier) + FIXED_MUL(TO_FIXED(p1_rgb.blue), FIXED_MULTIPLIER - multiplier));
+        lbg_rgb.red =   FROM_FIXED_LONG(FIXED_MUL_LONG(TO_FIXED(lbg_rgb.red), multiplier)   + FIXED_MUL_LONG(TO_FIXED(p1_rgb.red), FIXED_MULTIPLIER - multiplier));
+        lbg_rgb.green = FROM_FIXED_LONG(FIXED_MUL_LONG(TO_FIXED(lbg_rgb.green), multiplier) + FIXED_MUL_LONG(TO_FIXED(p1_rgb.green), FIXED_MULTIPLIER - multiplier));
+        lbg_rgb.blue =  FROM_FIXED_LONG(FIXED_MUL_LONG(TO_FIXED(lbg_rgb.blue), multiplier)  + FIXED_MUL_LONG(TO_FIXED(p1_rgb.blue), FIXED_MULTIPLIER - multiplier));
     }
 
     // Return BGR555 color
@@ -401,9 +401,9 @@ ARM_CODE u16 lerp_color(COLOR color1, COLOR color2, FIXED time) {
     u32 b2 = (color2 >> 10) & 0x1F;
 
     // Interpolate components
-    u32 red_lerp   = FROM_FIXED(r1 * (TO_FIXED(1) - time) + r2 * time);
-    u32 green_lerp = FROM_FIXED(g1 * (TO_FIXED(1) - time) + g2 * time);
-    u32 blue_lerp  = FROM_FIXED(b1 * (TO_FIXED(1) - time) + b2 * time);
+    u32 red_lerp   = FROM_FIXED_LONG(r1 * (TO_FIXED(1) - time) + r2 * time);
+    u32 green_lerp = FROM_FIXED_LONG(g1 * (TO_FIXED(1) - time) + g2 * time);
+    u32 blue_lerp  = FROM_FIXED_LONG(b1 * (TO_FIXED(1) - time) + b2 * time);
 
     // Combine into a single BGR555 value
     return (blue_lerp << 10) | (green_lerp << 5) | red_lerp;
@@ -489,9 +489,9 @@ void set_face_palettes(COLOR *dst) {
 
 struct HSV rgb_to_hsv(struct RGB555 rgb) {
     struct HSV hsv_return;
-    FIXED_16 r = TO_FIXED(rgb.red) / 31;
-    FIXED_16 g = TO_FIXED(rgb.green) / 31;
-    FIXED_16 b = TO_FIXED(rgb.blue) / 31;
+    FIXED_16 r = TO_FIXED_LONG(rgb.red) / 31;
+    FIXED_16 g = TO_FIXED_LONG(rgb.green) / 31;
+    FIXED_16 b = TO_FIXED_LONG(rgb.blue) / 31;
 
     FIXED_16 max = MAX_3(r, g, b);
     FIXED_16 min = MIN_3(r, g, b);
@@ -504,22 +504,22 @@ struct HSV rgb_to_hsv(struct RGB555 rgb) {
         hue = 0;
     } else {
         if (max == r) {
-            hue = FIXED_DIV(g - b, delta) * 60;
+            hue = FIXED_DIV_LONG(g - b, delta) * 60;
         } else if (max == g) {
-            hue = FIXED_DIV(b - r, delta) * 60 + TO_FIXED(120);
+            hue = FIXED_DIV_LONG(b - r, delta) * 60 + TO_FIXED_LONG(120);
         } else { // max == b
-            hue = FIXED_DIV(r - g, delta) * 60 + TO_FIXED(240);
+            hue = FIXED_DIV_LONG(r - g, delta) * 60 + TO_FIXED_LONG(240);
         }
     }
 
     // Normalize hue to 0-360
-    if (hue < 0) hue += TO_FIXED(360);
+    if (hue < 0) hue += TO_FIXED_LONG(360);
 
     // Calculate saturation
     if (max == 0) {
         saturation = 0;
     } else {
-        saturation = FIXED_MULTIPLIER - FIXED_DIV(min, max);
+        saturation = FIXED_MULTIPLIER - FIXED_DIV_LONG(min, max);
     }
 
 
@@ -536,7 +536,7 @@ struct HSV rgb_to_hsv(struct RGB555 rgb) {
 struct RGB555 hsv_to_rgb(struct HSV hsv) {
     struct RGB555 rgb_struct;
     if (hsv.saturation == 0) {
-        u8 value_5 = FROM_FIXED(hsv.value * 31);
+        u8 value_5 = FROM_FIXED_LONG(hsv.value * 31);
         rgb_struct.red = value_5;
         rgb_struct.green = value_5;
         rgb_struct.blue = value_5;
@@ -547,15 +547,15 @@ struct RGB555 hsv_to_rgb(struct HSV hsv) {
     FIXED hue_mult = hsv.hue / 360;
     
     // Get sector [0-5]
-    FIXED_16 sector = FROM_FIXED(hue_mult * 6);
+    FIXED_16 sector = FROM_FIXED_LONG(hue_mult * 6);
 
     // Get fraction by subtracting original value to floored value [0-1]
-    FIXED_16 fraction = (hue_mult * 6) - TO_FIXED(sector);
+    FIXED_16 fraction = (hue_mult * 6) - TO_FIXED_LONG(sector);
 
     // Get some values
-    FIXED_16 p = FIXED_MUL(hsv.value, FIXED_MULTIPLIER - hsv.saturation);
-    FIXED_16 q = FIXED_MUL(hsv.value, FIXED_MULTIPLIER - FIXED_MUL(hsv.saturation, fraction));
-    FIXED_16 t = FIXED_MUL(hsv.value, FIXED_MULTIPLIER - FIXED_MUL(hsv.saturation, FIXED_MULTIPLIER - fraction));
+    FIXED_16 p = FIXED_MUL_LONG(hsv.value, FIXED_MULTIPLIER - hsv.saturation);
+    FIXED_16 q = FIXED_MUL_LONG(hsv.value, FIXED_MULTIPLIER - FIXED_MUL_LONG(hsv.saturation, fraction));
+    FIXED_16 t = FIXED_MUL_LONG(hsv.value, FIXED_MULTIPLIER - FIXED_MUL_LONG(hsv.saturation, FIXED_MULTIPLIER - fraction));
 
     // Assign RGB based on sector
     switch (sector) {
@@ -583,9 +583,9 @@ struct RGB555 hsv_to_rgb(struct HSV hsv) {
     }
 
     // Convert 0-1 scale to 0-31
-    rgb_struct.red = FROM_FIXED(r * 31);
-    rgb_struct.green = FROM_FIXED(g * 31);
-    rgb_struct.blue = FROM_FIXED(b * 31);
+    rgb_struct.red = FROM_FIXED_LONG(r * 31);
+    rgb_struct.green = FROM_FIXED_LONG(g * 31);
+    rgb_struct.blue = FROM_FIXED_LONG(b * 31);
 
     return rgb_struct;
 }

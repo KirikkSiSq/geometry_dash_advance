@@ -179,7 +179,7 @@ u32 repeat(u32 a, u32 length) {
     s64 result = a - ((u64) div_floor) * length;
 
     if (result < 0)      result = 0;
-    if (result > TO_FIXED(length)) result = TO_FIXED(length);
+    if (result > TO_FIXED_LONG(length)) result = TO_FIXED_LONG(length);
 
     return result;
 }
@@ -187,10 +187,10 @@ u32 repeat(u32 a, u32 length) {
 u32 slerp(u32 a, u32 b, u32 ratio) {
     s64 delta = repeat(b - a, (1 << 16));
 
-    if (delta > TO_FIXED((1 << 15)))
-        delta -= TO_FIXED((1 << 16));
+    if (delta > TO_FIXED_LONG((1 << 15)))
+        delta -= TO_FIXED_LONG((1 << 16));
 
-    return a + FIXED_MUL(delta, ratio);
+    return a + FIXED_MUL_LONG(delta, ratio);
 }
 #define Q12_DIV(a, b) (((a) << 12) / (b))
 ARM_CODE s32 tan_calc(u32 angle) {

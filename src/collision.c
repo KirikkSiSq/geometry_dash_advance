@@ -2415,10 +2415,10 @@ s32 slope_check(u16 type, u32 col_type, s32 eject, u32 ejection_type, struct cir
             return TRUE;
         }
         // Set the player speed so it goes along the slope
-        FIXED_16 speed_multiplier = FIXED_MUL(curr_player.player_x_speed, curr_player.slope_speed_multiplier);
+        FIXED_16 speed_multiplier = FIXED_MUL_LONG(curr_player.player_x_speed, curr_player.slope_speed_multiplier);
         // Set to 1.0 if the slope goes down
         if (type >= DEGREES_45_DOWN) speed_multiplier = curr_player.player_x_speed;
-        final_speed = FIXED_MUL(slope_speed_multiplier[col_type - COL_SLOPE_START], speed_multiplier);
+        final_speed = FIXED_MUL_LONG(slope_speed_multiplier[col_type - COL_SLOPE_START], speed_multiplier);
     } else {
         curr_player.player_y_speed = 0;
         curr_player.snap_cube_rotation = TRUE;

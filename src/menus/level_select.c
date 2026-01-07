@@ -516,7 +516,7 @@ void put_coin_sprites(u16 level_id, u16 page) {
 
 void draw_progress_bar(s32 x, s32 y, s32 sb, u32 page, u32 value, u32 max, u32 width, u32 bar_type) {
     // Calculate pixels
-    FIXED_16 factor = FIXED_DIV(TO_FIXED(value), TO_FIXED(max));
+    FIXED_16 factor = FIXED_DIV_LONG(TO_FIXED(value), TO_FIXED(max));
     FIXED_16 progress_px = FROM_FIXED(factor * (width - 2));
 
     // Get tile IDs
