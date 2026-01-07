@@ -564,8 +564,6 @@ void reset_level() {
     // Sort OAM
     sort_oam_by_prio();
 
-    attempt_count++;
-
     // Wait a bit before fading
     for (s32 frame = 0; frame < 30; frame++) {
         VBlankIntrWait();
@@ -575,6 +573,8 @@ void reset_level() {
     }
 
     fade_out_level();
+
+    attempt_count++;
 
     oam_init(shadow_oam, 128);
     load_level(loaded_level_id);
