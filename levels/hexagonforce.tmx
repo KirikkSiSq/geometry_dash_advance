@@ -1812,35 +1812,35 @@
    <properties>
     <property name="enable rotation" type="bool" value="true"/>
     <property name="rotation angle" type="int" value="315"/>
-    <property name="vflip" type="bool" value="true"/>
+    <property name="vflip" type="bool" value="false"/>
    </properties>
   </object>
   <object id="1481" gid="16514" x="3616" y="416" width="16" height="16">
    <properties>
     <property name="enable rotation" type="bool" value="true"/>
     <property name="rotation angle" type="int" value="315"/>
-    <property name="vflip" type="bool" value="true"/>
+    <property name="vflip" type="bool" value="false"/>
    </properties>
   </object>
   <object id="1494" gid="16514" x="3976" y="424" width="16" height="16">
    <properties>
     <property name="enable rotation" type="bool" value="true"/>
     <property name="rotation angle" type="int" value="315"/>
-    <property name="vflip" type="bool" value="true"/>
+    <property name="vflip" type="bool" value="false"/>
    </properties>
   </object>
   <object id="1495" gid="16514" x="4024" y="424" width="16" height="16">
    <properties>
     <property name="enable rotation" type="bool" value="true"/>
     <property name="rotation angle" type="int" value="45"/>
-    <property name="vflip" type="bool" value="true"/>
+    <property name="vflip" type="bool" value="false"/>
    </properties>
   </object>
   <object id="1496" gid="16514" x="3808" y="416" width="16" height="16">
    <properties>
     <property name="enable rotation" type="bool" value="true"/>
     <property name="rotation angle" type="int" value="45"/>
-    <property name="vflip" type="bool" value="true"/>
+    <property name="vflip" type="bool" value="false"/>
    </properties>
   </object>
   <object id="1497" gid="16503" x="3840" y="464" width="16" height="16"/>

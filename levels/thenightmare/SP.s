@@ -7379,7 +7379,7 @@ thenightmare_spr_data:
    .hword 0x10 @ delta x
    .hword 0x140 @ y
    .hword 0x3a @ type
-   .hword 0x26 @ bg layer 4 rotated flipped horizontally  
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 32768 @ rotation
 @ Object 1164
@@ -7411,7 +7411,7 @@ thenightmare_spr_data:
    .hword 0x8 @ delta x
    .hword 0x140 @ y
    .hword 0x3a @ type
-   .hword 0x26 @ bg layer 4 rotated flipped horizontally  
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 32768 @ rotation
 @ Object 1169
@@ -7443,7 +7443,7 @@ thenightmare_spr_data:
    .hword 0x20 @ delta x
    .hword 0x140 @ y
    .hword 0x3a @ type
-   .hword 0x26 @ bg layer 4 rotated flipped horizontally  
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 32768 @ rotation
 @ Object 1174

@@ -1828,7 +1828,7 @@ hexagonforce_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x81 @ type
-   .hword 0x25 @ bg layer 4 rotated  flipped vertically 
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 57344 @ rotation
 @ Object 293
@@ -2069,7 +2069,7 @@ hexagonforce_spr_data:
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x81 @ type
-   .hword 0x25 @ bg layer 4 rotated  flipped vertically 
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 57344 @ rotation
 @ Object 331
@@ -2196,7 +2196,7 @@ hexagonforce_spr_data:
    .hword 0x10 @ delta x
    .hword 0x1a0 @ y
    .hword 0x81 @ type
-   .hword 0x25 @ bg layer 4 rotated  flipped vertically 
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 8192 @ rotation
 @ Object 352
@@ -2281,7 +2281,7 @@ hexagonforce_spr_data:
    .hword 0x14 @ delta x
    .hword 0x1a8 @ y
    .hword 0x81 @ type
-   .hword 0x25 @ bg layer 4 rotated  flipped vertically 
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 57344 @ rotation
 @ Object 366
@@ -2330,7 +2330,7 @@ hexagonforce_spr_data:
    .hword 0x18 @ delta x
    .hword 0x1a8 @ y
    .hword 0x81 @ type
-   .hword 0x25 @ bg layer 4 rotated  flipped vertically 
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
    .hword 8192 @ rotation
 @ Object 374

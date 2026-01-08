@@ -242,6 +242,22 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                         if saved_metatile_id >= 0:
                             graphics = saved_metatile_id
                             
+                        # Do flips with rotated sprites
+                        if enable_rotation:
+                            if h_flip and v_flip:
+                                rotation = 180 + rotation
+                            elif h_flip:
+                                rotation = 360 - rotation
+                            elif v_flip:
+                                rotation = 180 - rotation
+                            
+                            rotation = rotation % 360
+
+                            if rotation < 0: rotation = 360 - rotation
+                            
+                            h_flip = False
+                            v_flip = False
+
                     
                         if gid == 43 or gid == 44:
                             # Sprite that behaves like a metatile

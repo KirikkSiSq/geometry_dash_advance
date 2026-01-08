@@ -256,6 +256,8 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
         tile_id += fade * (chr_rom_tile_num / 4);
     }
 
+    s32 has_dbl = (chr_rom_tile_num & 0x40000000) ? FALSE : TRUE;
+
     // Handle continuous rotating objects separately
     if (curr_object.attrib2 & IS_ROTATING_FLAG) {
         u32 saw_rot_id = (curr_object.attrib2 & ROTATING_DIRECTION_BIT) ? AFF_SLOT_CLOCKWISE : AFF_SLOT_COUNTERCLOCKWISE;
@@ -285,7 +287,7 @@ ARM_CODE void do_display(struct Object curr_object, s32 relative_x, s32 relative
 
         if (slot >= 0) {
             // Draw affine sprite
-            oam_affine_metaspr(relative_x, relative_y, obj_sprites[curr_object.type], curr_object.rotation, slot + NUM_RESERVED_ROT_SLOTS, 1, tile_id, palette, priority, curr_object.z_index, FALSE, disable_blending);
+            oam_affine_metaspr(relative_x, relative_y, obj_sprites[curr_object.type], curr_object.rotation, slot + NUM_RESERVED_ROT_SLOTS, has_dbl, tile_id, palette, priority, curr_object.z_index, FALSE, disable_blending);
             if (pulse_type == NO_PULSE) {
                 obj_aff_identity(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS]);
                 obj_aff_rotscale(&obj_aff_buffer[slot + NUM_RESERVED_ROT_SLOTS], mirror_scaling, float2fx(1.0), -rotation);

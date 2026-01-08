@@ -725,4 +725,10 @@ test_spr_data:
    .hword 0xa0 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
+@ Object 119
+   .hword 0x110 @ delta x
+   .hword 0x190 @ y
+   .hword 0xa1 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
    .byte 0xff

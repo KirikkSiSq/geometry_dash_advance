@@ -1203,88 +1203,88 @@ const u16 blueTPOrbSpr[] = {
 // Deco 
 
 const u16 bigBgDecoSpr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_64x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_64x64,
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     -24,   // x
-    -10,   // y
+    -42,   // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 mediumBgDecoSpr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_64x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_64x64,
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     -24, // x
-    -10, // y
+    -42, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 smallBgDecoSpr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_32x16,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     -8, // x
-    0,  // y
+    -16,// y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 tinyBgSpikesSpr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_16x8,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_16x16,
     ATTR2_PALBANK(P1) | ATTR2_PRIO(3),
     0, // x
-    6, // y
+    -2, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 bigBgDecoP2Spr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_64x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_64x64,
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     -24,   // x
-    -10,   // y
+    -42,   // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 mediumBgDecoP2Spr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_64x32,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_64x64,
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     -24, // x
-    -10, // y
+    -42, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 smallBgDecoP2Spr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_32x16,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_32x32,
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     -8, // x
-    0,  // y
+    -16,  // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
 };
 
 const u16 tinyBgSpikesP2Spr[] = {
-    ATTR0_4BPP | ATTR0_WIDE | ATTR0_BLEND,
-    ATTR1_SIZE_16x8,
+    ATTR0_4BPP | ATTR0_SQUARE | ATTR0_BLEND,
+    ATTR1_SIZE_16x16,
     ATTR2_PALBANK(P2) | ATTR2_PRIO(3),
     0, // x
-    6, // y
+    -2, // y
     PRIO_IDOFF(5, 0, 0), // id offset
     CENTER(8, 8),
     0xffff
@@ -2158,6 +2158,7 @@ ROM_DATA const u16 *obj_sprites[] = {
 #undef P2
 
 #define CHR_SLOT(name, rom, vram) {rom, vram},
+#define NO_DBL_CHR_SLOT(name, rom, vram) {rom, 0x40000000 | vram},
 #define FADE_SLOT(name, rom, vram) {rom, 0x80000000 | vram},
 
 const u32 obj_chr_offset[][2] = {
@@ -2166,10 +2167,10 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("CUBE_PORTAL", 0x00, 0x28)
     CHR_SLOT("COL_TRIGGER", SPRITE_NO_CHR,0)
 
-    CHR_SLOT("BIG_BG_SPIKES", 0x80, 0x20)
-    CHR_SLOT("MEDIUM_BG_SPIKES", 0xa0, 0x20)
-    CHR_SLOT("SMALL_BG_SPIKES", 0x70, 0x8)
-    CHR_SLOT("TINY_BG_SPIKES", 0x78, 0x2)
+    NO_DBL_CHR_SLOT("BIG_BG_SPIKES", 0x9D0, 0x40)
+    NO_DBL_CHR_SLOT("MEDIUM_BG_SPIKES", 0xA10, 0x40)
+    NO_DBL_CHR_SLOT("SMALL_BG_SPIKES", 0x9C0, 0x10)
+    NO_DBL_CHR_SLOT("TINY_BG_SPIKES", 0x70, 0x4)
 
     CHR_SLOT("BG_CHAIN", 0x100, 0x8)
     
@@ -2193,8 +2194,8 @@ const u32 obj_chr_offset[][2] = {
     CHR_SLOT("PULSING_DIAMOND", 0x118, 0x4)
     CHR_SLOT("PULSING_STAR", 0x11c, 0x4)
 
-    CHR_SLOT("BIG_BG_CLOUDS", 0xc0, 0x20)
-    CHR_SLOT("SMALL_BG_CLOUDS", 0xe0, 0x8)
+    NO_DBL_CHR_SLOT("BIG_BG_CLOUDS", 0xa50, 0x40)
+    NO_DBL_CHR_SLOT("SMALL_BG_CLOUDS", 0xe0, 0x10)
 
     CHR_SLOT("BALL_PORTAL", 0x00, 0x28)
 
@@ -2245,9 +2246,9 @@ const u32 obj_chr_offset[][2] = {
 
     CHR_SLOT("UFO_PORTAL", 0x00, 0x28)
 
-    CHR_SLOT("BIG_BG_SQUARES", 0x2e0, 0x20)
-    CHR_SLOT("MEDIUM_BG_SQUARES", 0x300, 0x20)
-    CHR_SLOT("SMALL_BG_SQUARES", 0x320, 0x8)
+    NO_DBL_CHR_SLOT("BIG_BG_SQUARES", 0x80, 0x40)
+    NO_DBL_CHR_SLOT("MEDIUM_BG_SQUARES", 0x2e0, 0x40)
+    NO_DBL_CHR_SLOT("SMALL_BG_SQUARES", 0x320, 0x10)
     
     CHR_SLOT("PULSING_ARROW", 0x330, 0x10)
     CHR_SLOT("PULSING_EXCLAMATION", 0x340, 0x10)
