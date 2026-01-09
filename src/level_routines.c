@@ -482,6 +482,9 @@ void fade_out() {
     for (s32 frame = 0; frame <= 32; frame += 4) {
         VBlankIntrWait();
         clr_blend_fast(palette_buffer, (COLOR*) black_buffer, pal_bg_mem, 512, frame);
+        
+        bg_lvl_select_color = pal_bg_mem[0];
+        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, 0x10);
     }
 }
 
@@ -544,6 +547,9 @@ void fade_in_menu() {
         draw_button_glyphs_level_select();
         
         clr_blend_fast(palette_buffer, (COLOR*) black_buffer, pal_bg_mem, 512, 32 - frame);
+        
+        bg_lvl_select_color = pal_bg_mem[0];
+        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, 0x10);
     }
     update_flags = UPDATE_ALL;
 }

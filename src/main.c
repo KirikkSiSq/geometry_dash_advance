@@ -13,6 +13,7 @@
 #include "math.h"
 
 void game_loop();
+void hblank_lvl_select_handler();
 u32 paused_routines();
 
 void vblank_handler() {
@@ -131,6 +132,7 @@ void init_maxmod() {
     mmSetModuleVolume(819);
     irq_init(NULL);
     irq_set(II_VBLANK, vblank_handler, 0);
+    irq_set(II_HBLANK, hblank_lvl_select_handler, 0);
     irq_set(II_GAMEPAK, hang, 0);
     irq_enable(II_VBLANK);
 }
@@ -284,6 +286,8 @@ void level_loop();
 void game_loop() {
     // Fade out
     fade_out();
+    
+    irq_disable(II_HBLANK);
 
     mirror_scaling = float2fx(1.0);
 

@@ -62,6 +62,9 @@ struct UseEffectSlot {
     FIXED scale;
 };
 
+extern EWRAM_DATA u16 bg_lvl_select_color;
+extern EWRAM_DATA u16 bg_lvl_select_color_target;
+
 extern EWRAM_DATA struct UseEffectSlot use_effect_buffer[AFF_SLOT_USE_EFFECT_COUNT];
 
 extern OAM_SPR shadow_oam[128];

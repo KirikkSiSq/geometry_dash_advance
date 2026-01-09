@@ -25,8 +25,28 @@ void do_page_change(u16 level_id);
 
 #define HALF_U64 ((u64)1 << 63)
 
+EWRAM_DATA u16 bg_lvl_select_color;
+EWRAM_DATA u16 bg_lvl_select_color_target;
+
 u64 target_scroll_x;
 #define scroll_page intended_scroll_y // REPURPOSED FOR MENU
+
+ARM_CODE void hblank_lvl_select_handler() {
+    u32 vcount = REG_VCOUNT;
+    if (vcount < 128) {
+        u16 blended = blend_clr(bg_lvl_select_color, bg_lvl_select_color_target, vcount >> 2);
+        pal_bg_mem[0] = pal_bg_mem[0x121] = blended;
+        u16 blended_darker = blend_clr(blended, 0, 0x10);
+        pal_bg_mem[0x12] = blended_darker;
+        pal_bg_mem[0x24] = blended_darker;
+        pal_bg_mem[0x3e] = blended_darker;
+        pal_bg_mem[0x4e] = blended_darker;
+        pal_bg_mem[0x5e] = blended_darker;
+        pal_bg_mem[0x6e] = blended_darker;
+        pal_bg_mem[0x7e] = blended_darker;
+        pal_bg_mem[0x8e] = blended_darker;
+    }
+}
 
 void level_select_loop() {
     // Enable all BGs, also enable sprites
@@ -96,6 +116,8 @@ void level_select_loop() {
     // Init OAM
     memset32(shadow_oam, ATTR0_HIDE, 256);
     obj_copy(oam_mem, shadow_oam, 128);
+
+    irq_enable(II_HBLANK);
     
     fade_in_menu();
     while (1) {
@@ -103,6 +125,13 @@ void level_select_loop() {
         
         // Approach target value
         scroll_x = approach_value_asymptotic(scroll_x, target_scroll_x, 0x2800, 0x300000);
+        
+        // Copy palette from buffer
+        memcpy32(pal_bg_mem, palette_buffer, 256);
+
+        do_menu_color_transition();
+        bg_lvl_select_color = palette_buffer[0];
+        bg_lvl_select_color_target = blend_clr(palette_buffer[0], 0, 0x10);
 
         // Draw sprites
         put_level_info_sprites(level_id);
@@ -117,11 +146,6 @@ void level_select_loop() {
         memset32(shadow_oam, ATTR0_HIDE, 256);
         
         nextSpr = 0;
-
-        do_menu_color_transition();
-        
-        // Copy palette from buffer
-        memcpy32(pal_bg_mem, palette_buffer, 256);
 
 #ifdef DEBUG
         if (key_hit(KEY_L)) {
