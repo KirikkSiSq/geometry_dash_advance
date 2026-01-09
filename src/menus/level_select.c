@@ -45,6 +45,7 @@ ARM_CODE void hblank_lvl_select_handler() {
         pal_bg_mem[0x6e] = blended_darker;
         pal_bg_mem[0x7e] = blended_darker;
         pal_bg_mem[0x8e] = blended_darker;
+        pal_bg_mem[0x122] = blended_darker;
     }
 }
 
