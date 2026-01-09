@@ -96,6 +96,10 @@ void level_select_loop() {
     memcpy16(&palette_buffer[0x1f0], button_glyph_pal, sizeof(button_glyph_pal) / sizeof(COLOR));
     memcpy32(&tile_mem_obj[0][512], &title_screen_chr[0xf0], 24 * sizeof(TILE8) / 4);
 
+
+    if (loaded_level_id == 0 && custom_levels) loaded_level_id = NUM_ROBTOP_LEVELS;
+    else if (loaded_level_id == NUM_ROBTOP_LEVELS && !custom_levels) loaded_level_id = 0;
+
     s32 level_id = loaded_level_id;
     
     // Set BG color and disable any prior transition
@@ -119,6 +123,16 @@ void level_select_loop() {
 
     irq_enable(II_HBLANK);
     
+    s32 min, max;
+
+    if (custom_levels) {
+        min = NUM_ROBTOP_LEVELS;
+        max = LEVEL_COUNT;
+    } else {
+        min = 0;
+        max = NUM_ROBTOP_LEVELS;
+    }
+
     fade_in_menu();
     while (1) {
         key_poll();
@@ -158,7 +172,7 @@ void level_select_loop() {
             // Increment level ID
             level_id++;
             scroll_page++;
-            level_id = WRAP(level_id, 0, LEVEL_COUNT);
+            level_id = WRAP(level_id, min, max);
 
             do_page_change(level_id);
         }
@@ -168,7 +182,7 @@ void level_select_loop() {
             // Decrement level ID
             level_id--;
             scroll_page--;
-            level_id = WRAP(level_id, 0, LEVEL_COUNT);
+            level_id = WRAP(level_id, min, max);
 
             do_page_change(level_id);
         }
@@ -189,6 +203,7 @@ void level_select_loop() {
         if (key_hit(KEY_B)) {
             game_state = STATE_TITLE_SCREEN;
             fade_out();
+            irq_disable(II_HBLANK);
             break;
         }
 

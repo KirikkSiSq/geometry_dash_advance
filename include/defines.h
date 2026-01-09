@@ -16,6 +16,8 @@
 // Number of coins in a single level
 #define NUM_COINS_PER_LEVEL 3
 
+// Number of robtop levels
+#define NUM_ROBTOP_LEVELS 16
 
 /* GAMEPLAY */
 // Number of stored checkpoints before older ones are overwritten

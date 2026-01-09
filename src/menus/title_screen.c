@@ -105,6 +105,7 @@ void title_screen_loop() {
 
         // Level select
         if (key_hit(KEY_A) | key_hit(KEY_START)) {
+            custom_levels = FALSE;
             game_state = STATE_LEVEL_SELECT;
             break;
         }
@@ -112,6 +113,13 @@ void title_screen_loop() {
         // Icon kit
         if (key_hit(KEY_L)) {
             game_state = STATE_ICON_KIT;
+            break;
+        }
+
+        // Custom level menu
+        if (key_hit(KEY_R)) {
+            custom_levels = TRUE;
+            game_state = STATE_LEVEL_SELECT;
             break;
         }
 

@@ -109,6 +109,8 @@ extern u8 swap_queue;
 extern u16 loaded_level_id;
 extern u16 loaded_song_id;
 
+extern u8 custom_levels;
+
 #define NUM_CHANNELS 16
 
 extern u8 music_data[NUM_CHANNELS * (MM_SIZEOF_MODCH
