@@ -120,8 +120,6 @@ u8 complete_cutscene = 0;
 // Current frame in the cutscene
 u16 cutscene_frame = 0;
 
-EWRAM_DATA u32 ewram_data;
-
 // First player
 EWRAM_DATA struct Player player_1;
 

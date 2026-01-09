@@ -164,8 +164,6 @@ extern volatile u8 frame_finished;
 extern u8 complete_cutscene;
 extern u16 cutscene_frame;
 
-extern EWRAM_DATA u32 ewram_data;
-
 extern EWRAM_DATA struct Player player_1;
 extern EWRAM_DATA struct Player player_2;
 extern struct Player curr_player;

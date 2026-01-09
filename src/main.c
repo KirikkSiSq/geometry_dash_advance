@@ -159,24 +159,6 @@ const u32 ROM_MAGIC[MEM_CHECK_SIZE] = {
     MEM_CHECK_MAGIC + 15,
 };
 
-void check_ewram_overclock() {
-    // Set overclocked EWRAM
-    REG_MEMCTRL = 0x0E000020;
-
-    for(s32 index = 8; index >= 0; --index) {
-        vu32 *volatile_ewram_data = &ewram_data;
-
-        u32 test_value = qran();
-        *volatile_ewram_data = test_value;
-
-        // If different value (read failed), then disable overclock
-        if(*volatile_ewram_data != test_value) {
-            REG_MEMCTRL = 0x0D000020;
-            return;
-        }
-    }
-}
-
 EWRAM_CODE u32 check_rom_waitstate(u32 mask) {
     REG_WSCNT = mask;
 
@@ -209,6 +191,7 @@ const u32 WSCNT_MASK[] = {
     WS_ROM0_N2 | WS_ROM0_S1 | WS_PREFETCH | WS_SRAM_8,
     WS_ROM0_N3 | WS_ROM0_S1 | WS_PREFETCH | WS_SRAM_8,
     WS_ROM0_N3 | WS_ROM0_S2 | WS_PREFETCH | WS_SRAM_8,
+    WS_ROM0_N4 | WS_ROM0_S1 | WS_PREFETCH | WS_SRAM_8,
 };
 
 void rom_waitstates() {
@@ -232,8 +215,6 @@ int __attribute__((target("arm"))) main() {
     );
     
     init_maxmod();
-
-    check_ewram_overclock();
 
     rom_waitstates();
 
