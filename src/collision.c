@@ -2972,15 +2972,11 @@ ARM_CODE void collide_with_obj_spikes(u32 x, u32 y, u32 width, u32 height) {
         
         u32 obj_x = slot.object.x;
         u32 obj_y = slot.object.y;
-        u32 obj_width = obj_hitbox[slot.object.type][0];
-        u32 obj_height = obj_hitbox[slot.object.type][1];
 
         // Check if this pixel is inside the object hitbox
-        if (is_colliding(x, y, width, height, obj_x, obj_y, obj_width, obj_height)) {
-            u16 col_type = block_object_buffer_flags[i - 1];
-            if (col_type < COL_TYPES_COUNT) {
-                spike_coll_jump_table[col_type](x, y, width, height, obj_x, obj_y);
-            }
+        u16 col_type = block_object_buffer_flags[i - 1];
+        if (col_type < COL_TYPES_COUNT) {
+            spike_coll_jump_table[col_type](x, y, width, height, obj_x, obj_y);
         }
     }
 }
