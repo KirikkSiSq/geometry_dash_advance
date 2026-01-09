@@ -123,10 +123,10 @@ u16 cutscene_frame = 0;
 EWRAM_DATA u32 ewram_data;
 
 // First player
-struct Player player_1;
+EWRAM_DATA struct Player player_1;
 
 // Second player
-struct Player player_2;
+EWRAM_DATA struct Player player_2;
 
 // Current player
 struct Player curr_player;

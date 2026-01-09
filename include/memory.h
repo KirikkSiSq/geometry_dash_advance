@@ -166,8 +166,8 @@ extern u16 cutscene_frame;
 
 extern EWRAM_DATA u32 ewram_data;
 
-extern struct Player player_1;
-extern struct Player player_2;
+extern EWRAM_DATA struct Player player_1;
+extern EWRAM_DATA struct Player player_2;
 extern struct Player curr_player;
 extern u8 curr_player_id;
 
