@@ -525,7 +525,7 @@ ARM_CODE void check_obj_collision(u32 index) {
 
         // If the object rotation is not a 90 degrees step, use player's rotated hitbox
         if (curr_object.rotation & 0x3fff) {
-            ply_rotation = curr_player.cube_rotation;
+            ply_rotation = -curr_player.cube_rotation;
         }
 
         if (is_colliding_rotated_fixed(

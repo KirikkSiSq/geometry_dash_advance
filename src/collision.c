@@ -1244,6 +1244,12 @@ ARM_CODE s32 is_colliding_rotated_fixed(
                     u32 y = rect2_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);
                     oam_metaspr(x, y, hitboxPoint, 0, 0, 0, -1, 0, 0, FALSE, FALSE);
                 }
+                // Player
+                for (s32 i = 0; i < 4; i++) {
+                    u32 x = rect1_corners[i][0] - (scroll_x >> SUBPIXEL_BITS);
+                    u32 y = rect1_corners[i][1] - (scroll_y >> SUBPIXEL_BITS);
+                    oam_metaspr(x, y, hitboxPoint, 0, 0, 0, 2, 0, 0, FALSE, FALSE);
+                }
             }
 #endif
             return 0; // Gap found, no collision
