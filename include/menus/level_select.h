@@ -31,7 +31,7 @@ enum GameplayMode {
 void put_star_number(u16 level_id, u16 page);
 void put_coin_sprites(u16 level_id, u16 page);
 void level_select_loop();
-void put_level_info_sprites(u16 level_id);
+void put_level_info_sprites(u16 level_id, s32 min, s32 max);
 void do_menu_color_transition();
 void draw_button_glyphs_level_select();
 

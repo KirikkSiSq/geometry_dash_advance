@@ -149,7 +149,7 @@ void level_select_loop() {
         bg_lvl_select_color_target = blend_clr(palette_buffer[0], 0, 0x10);
 
         // Draw sprites
-        put_level_info_sprites(level_id);
+        put_level_info_sprites(level_id, min, max);
         draw_button_glyphs_level_select();
 
         REG_BG2HOFS = REG_BG3HOFS = scroll_x >> SUBPIXEL_BITS;
@@ -449,15 +449,15 @@ void print_level_info(u16 level_id) {
 #define EVEN_PAGE_BAR_SB 28
 #define ODD_PAGE_BAR_SB  29
 
-void put_level_info_sprites(u16 level_id) {
+void put_level_info_sprites(u16 level_id, s32 min, s32 max) {
     s32 adjacent_level_id;
 
     if (scroll_x < target_scroll_x) {
         // Going to the right
-        adjacent_level_id = WRAP((level_id - 1), 0, LEVEL_COUNT);
+        adjacent_level_id = WRAP((level_id - 1), min, max);
     } else {
         // Going to the left
-        adjacent_level_id = WRAP((level_id + 1), 0, LEVEL_COUNT);
+        adjacent_level_id = WRAP((level_id + 1), min, max);
     }
 
     // Current page
