@@ -266,6 +266,7 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                             # V -> vertical flip   p -> palette
                             # hword 4: pppp ZZZZ ZZPP PEHV 
                             # hword 5: MMMM MMMM MMMM MMMM
+                            # If E is 1:
                             # hword 6: AAAA AAAA AAAA AAAA
                             out_file.write(f"   .hword {hex((pal << 12) | ((zindex & 0b111111) << 6) | ((priority & 0x7) << 3) | (enable_rotation << 2) | (h_flip << 1) | v_flip)} @ bg layer {priority} {"flipped horizontally" if h_flip else ""} {"flipped vertically" if v_flip else ""} z index {zindex}{f" pal {pal}" if pal != 0 else ""} \n")
                             out_file.write(f"   .hword {graphics} @ metatile ID appareance\n")
@@ -273,7 +274,6 @@ def export_objects_to_assembly(json_file_path, level_name, layer_name, output_s_
                                 out_file.write(f"   .hword {int(rotation / 360.0 * 65536)} @ rotation\n")
                                 byte_counter += 2
                             byte_counter += 4
-                            byte_counter += 6
                         elif gid == 89:
                             # Secret coin
                             # P -> priority        A -> 16 bit angle   E -> enable rotation
