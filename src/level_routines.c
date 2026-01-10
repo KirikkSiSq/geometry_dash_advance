@@ -493,7 +493,7 @@ void fade_out() {
         clr_blend_fast(palette_buffer, (COLOR*) black_buffer, pal_bg_mem, 512, frame);
         
         bg_lvl_select_color = pal_bg_mem[0];
-        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, 0x10);
+        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, MENU_GRADIENT_DARKER_FACTOR);
     }
 }
 
@@ -556,7 +556,7 @@ void fade_in_menu() {
         clr_blend_fast(palette_buffer, (COLOR*) black_buffer, pal_bg_mem, 512, 32 - frame);
         
         bg_lvl_select_color = pal_bg_mem[0];
-        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, 0x10);
+        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, MENU_GRADIENT_DARKER_FACTOR);
 
         put_level_info_sprites(loaded_level_id, 0, LEVEL_COUNT);
         draw_button_glyphs_level_select();

@@ -2,6 +2,8 @@
 
 #pragma once
 
+#define MENU_GRADIENT_DARKER_FACTOR 0x8
+
 extern u16 game_state;
 extern u16 loaded_level_id;
 

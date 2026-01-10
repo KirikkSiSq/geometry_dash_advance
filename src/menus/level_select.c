@@ -152,7 +152,7 @@ void level_select_loop() {
 
         do_menu_color_transition();
         bg_lvl_select_color = palette_buffer[0];
-        bg_lvl_select_color_target = blend_clr(palette_buffer[0], 0, 0x10);
+        bg_lvl_select_color_target = blend_clr(palette_buffer[0], 0, MENU_GRADIENT_DARKER_FACTOR);
 
         // Draw sprites
         put_level_info_sprites(level_id, min, max);
