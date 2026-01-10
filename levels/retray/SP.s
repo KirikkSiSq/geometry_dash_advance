@@ -2439,795 +2439,814 @@ retray_spr_data:
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
 @ Object 388
-   .hword 0x7 @ delta x
+   .hword 0x1 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 389
+   .hword 0x6 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 389
+@ Object 390
    .hword 0x0 @ delta x
    .hword 0x108 @ y
    .hword 0x28 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 390
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 391
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0xa @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 392
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x3 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 393
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 394
-   .hword 0x20 @ delta x
+   .hword 0x3 @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 395
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 395
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 396
-   .hword 0x20 @ delta x
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 397
+   .hword 0x13 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 397
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 398
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 399
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 400
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 400
+@ Object 401
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 402
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 403
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 404
+   .hword 0x1a @ delta x
+   .hword 0x198 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 405
+   .hword 0x6 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 406
+   .hword 0xa @ delta x
+   .hword 0x188 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 407
+   .hword 0x3 @ delta x
+   .hword 0x198 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 408
+   .hword 0xd @ delta x
+   .hword 0x178 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 409
+   .hword 0x3 @ delta x
+   .hword 0x188 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 410
+   .hword 0x3 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 411
    .hword 0x8 @ delta x
    .hword 0x1a8 @ y
    .hword 0x28 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 401
-   .hword 0x9 @ delta x
-   .hword 0x165 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 402
-   .hword 0x8 @ delta x
-   .hword 0x162 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 403
-   .hword 0x0 @ delta x
-   .hword 0x16e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 404
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 405
-   .hword 0x1 @ delta x
-   .hword 0x155 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 406
-   .hword 0x8 @ delta x
-   .hword 0x152 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 407
-   .hword 0x0 @ delta x
-   .hword 0x15e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 408
-   .hword 0x8 @ delta x
-   .hword 0x145 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 409
-   .hword 0x8 @ delta x
-   .hword 0x142 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 410
-   .hword 0x0 @ delta x
-   .hword 0x14e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 411
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 412
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x5 @ delta x
+   .hword 0x178 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 413
-   .hword 0x1 @ delta x
-   .hword 0x135 @ y
+   .hword 0x4 @ delta x
+   .hword 0x165 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7045 @ metatile ID appareance
 @ Object 414
    .hword 0x8 @ delta x
-   .hword 0x132 @ y
+   .hword 0x162 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7125 @ metatile ID appareance
 @ Object 415
    .hword 0x0 @ delta x
-   .hword 0x13e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 416
-   .hword 0x8 @ delta x
-   .hword 0x125 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 417
-   .hword 0x8 @ delta x
-   .hword 0x122 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 418
-   .hword 0x0 @ delta x
-   .hword 0x12e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 419
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 420
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 421
-   .hword 0x1 @ delta x
-   .hword 0x115 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 422
-   .hword 0x8 @ delta x
-   .hword 0x112 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 423
-   .hword 0x0 @ delta x
-   .hword 0x11e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 424
-   .hword 0x17 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 425
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 426
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 427
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 428
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 429
-   .hword 0x1 @ delta x
-   .hword 0x195 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 430
-   .hword 0x8 @ delta x
-   .hword 0x192 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 431
-   .hword 0x0 @ delta x
-   .hword 0x19e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 432
-   .hword 0x8 @ delta x
-   .hword 0x185 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 433
-   .hword 0x8 @ delta x
-   .hword 0x182 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 434
-   .hword 0x0 @ delta x
-   .hword 0x18e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 435
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 436
-   .hword 0x1 @ delta x
-   .hword 0x175 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 437
-   .hword 0x8 @ delta x
-   .hword 0x172 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 438
-   .hword 0x0 @ delta x
-   .hword 0x17e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 439
-   .hword 0x8 @ delta x
-   .hword 0x165 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 440
-   .hword 0x8 @ delta x
-   .hword 0x162 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 441
-   .hword 0x0 @ delta x
    .hword 0x16e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
-@ Object 442
+@ Object 416
    .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 443
+@ Object 417
    .hword 0x1 @ delta x
    .hword 0x155 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7045 @ metatile ID appareance
-@ Object 444
+@ Object 418
    .hword 0x8 @ delta x
    .hword 0x152 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7125 @ metatile ID appareance
-@ Object 445
+@ Object 419
    .hword 0x0 @ delta x
    .hword 0x15e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
-@ Object 446
-   .hword 0x17 @ delta x
+@ Object 420
+   .hword 0x8 @ delta x
+   .hword 0x145 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 421
+   .hword 0x8 @ delta x
+   .hword 0x142 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 422
+   .hword 0x0 @ delta x
+   .hword 0x14e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 423
+   .hword 0x7 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 424
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 425
+   .hword 0x1 @ delta x
+   .hword 0x135 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 426
+   .hword 0x8 @ delta x
+   .hword 0x132 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 427
+   .hword 0x0 @ delta x
+   .hword 0x13e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 428
+   .hword 0x8 @ delta x
+   .hword 0x125 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 429
+   .hword 0x8 @ delta x
+   .hword 0x122 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 430
+   .hword 0x0 @ delta x
+   .hword 0x12e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 431
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 447
+@ Object 432
    .hword 0x0 @ delta x
-   .hword 0x108 @ y
-   .hword 0x28 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 448
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 433
+   .hword 0x1 @ delta x
+   .hword 0x115 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 434
+   .hword 0x8 @ delta x
+   .hword 0x112 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 435
+   .hword 0x0 @ delta x
+   .hword 0x11e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 436
+   .hword 0x17 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 437
    .hword 0x10 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 449
+@ Object 438
    .hword 0x10 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 450
+@ Object 439
    .hword 0x10 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xe8 @ changes 1 for 29 frames
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 451
+@ Object 440
    .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 452
-   .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 453
-   .hword 0x20 @ delta x
+@ Object 441
+   .hword 0x1 @ delta x
+   .hword 0x195 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 442
+   .hword 0x8 @ delta x
+   .hword 0x192 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 443
+   .hword 0x0 @ delta x
+   .hword 0x19e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 444
+   .hword 0x8 @ delta x
+   .hword 0x185 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 445
+   .hword 0x8 @ delta x
+   .hword 0x182 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 446
+   .hword 0x0 @ delta x
+   .hword 0x18e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 447
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 448
+   .hword 0x1 @ delta x
+   .hword 0x175 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 449
+   .hword 0x8 @ delta x
+   .hword 0x172 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 450
+   .hword 0x0 @ delta x
+   .hword 0x17e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 451
+   .hword 0x8 @ delta x
+   .hword 0x165 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 452
+   .hword 0x8 @ delta x
+   .hword 0x162 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 453
+   .hword 0x0 @ delta x
+   .hword 0x16e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
 @ Object 454
-   .hword 0x20 @ delta x
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 455
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 456
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 457
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 458
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 459
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 460
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 461
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 462
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 463
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 464
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 465
-   .hword 0x10 @ delta x
-   .hword 0x1a8 @ y
-   .hword 0x28 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 466
-   .hword 0x1 @ delta x
-   .hword 0x165 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 467
-   .hword 0x8 @ delta x
-   .hword 0x162 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 468
-   .hword 0x0 @ delta x
-   .hword 0x16e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 469
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 470
    .hword 0x1 @ delta x
    .hword 0x155 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7045 @ metatile ID appareance
-@ Object 471
+@ Object 456
    .hword 0x8 @ delta x
    .hword 0x152 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7125 @ metatile ID appareance
-@ Object 472
+@ Object 457
    .hword 0x0 @ delta x
    .hword 0x15e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
-@ Object 473
-   .hword 0x8 @ delta x
-   .hword 0x145 @ y
+@ Object 458
+   .hword 0x1 @ delta x
+   .hword 0x148 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 474
-   .hword 0x8 @ delta x
-   .hword 0x142 @ y
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 459
+   .hword 0x10 @ delta x
+   .hword 0x138 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 475
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 460
+   .hword 0x3 @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 461
+   .hword 0x3 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 462
    .hword 0x0 @ delta x
-   .hword 0x14e @ y
+   .hword 0x108 @ y
+   .hword 0x28 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 463
+   .hword 0xa @ delta x
+   .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 476
-   .hword 0x7 @ delta x
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 464
+   .hword 0x3 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 465
+   .hword 0x3 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 466
+   .hword 0xa @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 467
+   .hword 0x3 @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 468
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 469
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 470
+   .hword 0x3 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 471
+   .hword 0x10 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 472
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 473
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 474
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 475
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 476
+   .hword 0x10 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 477
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 478
+   .hword 0x10 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 479
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 480
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 478
-   .hword 0x1 @ delta x
-   .hword 0x135 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 479
-   .hword 0x8 @ delta x
-   .hword 0x132 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 480
-   .hword 0x0 @ delta x
-   .hword 0x13e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
 @ Object 481
-   .hword 0x8 @ delta x
-   .hword 0x125 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 482
-   .hword 0x8 @ delta x
-   .hword 0x122 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 483
    .hword 0x0 @ delta x
-   .hword 0x12e @ y
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 483
+   .hword 0x1a @ delta x
+   .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 484
-   .hword 0x7 @ delta x
+   .hword 0x6 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 485
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0xa @ delta x
+   .hword 0x188 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 486
-   .hword 0x1 @ delta x
-   .hword 0x115 @ y
+   .hword 0x3 @ delta x
+   .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 487
-   .hword 0x8 @ delta x
-   .hword 0x112 @ y
+   .hword 0xd @ delta x
+   .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 488
-   .hword 0x0 @ delta x
-   .hword 0x11e @ y
+   .hword 0x3 @ delta x
+   .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 489
-   .hword 0x17 @ delta x
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 490
-   .hword 0x20 @ delta x
+   .hword 0xd @ delta x
+   .hword 0x178 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 491
+   .hword 0x3 @ delta x
+   .hword 0x1a8 @ y
+   .hword 0x28 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 492
+   .hword 0x1 @ delta x
+   .hword 0x165 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 493
+   .hword 0x8 @ delta x
+   .hword 0x162 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 494
+   .hword 0x0 @ delta x
+   .hword 0x16e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 495
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 491
-   .hword 0x1 @ delta x
-   .hword 0x195 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 492
-   .hword 0x8 @ delta x
-   .hword 0x192 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 493
-   .hword 0x0 @ delta x
-   .hword 0x19e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 494
-   .hword 0x8 @ delta x
-   .hword 0x185 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 495
-   .hword 0x8 @ delta x
-   .hword 0x182 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
 @ Object 496
+   .hword 0x1 @ delta x
+   .hword 0x155 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 497
+   .hword 0x8 @ delta x
+   .hword 0x152 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 498
    .hword 0x0 @ delta x
-   .hword 0x18e @ y
+   .hword 0x15e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
-@ Object 497
+@ Object 499
+   .hword 0x8 @ delta x
+   .hword 0x145 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 500
+   .hword 0x8 @ delta x
+   .hword 0x142 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 501
+   .hword 0x0 @ delta x
+   .hword 0x14e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 502
    .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 498
-   .hword 0x1 @ delta x
-   .hword 0x175 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 499
-   .hword 0x8 @ delta x
-   .hword 0x172 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 500
-   .hword 0x0 @ delta x
-   .hword 0x17e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 501
-   .hword 0x8 @ delta x
-   .hword 0x165 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 502
-   .hword 0x8 @ delta x
-   .hword 0x162 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
 @ Object 503
-   .hword 0x0 @ delta x
-   .hword 0x16e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 504
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 505
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 506
+@ Object 504
    .hword 0x1 @ delta x
-   .hword 0x155 @ y
+   .hword 0x135 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7045 @ metatile ID appareance
-@ Object 507
+@ Object 505
    .hword 0x8 @ delta x
-   .hword 0x152 @ y
+   .hword 0x132 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7125 @ metatile ID appareance
-@ Object 508
+@ Object 506
    .hword 0x0 @ delta x
-   .hword 0x15e @ y
+   .hword 0x13e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
+@ Object 507
+   .hword 0x8 @ delta x
+   .hword 0x125 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 508
+   .hword 0x8 @ delta x
+   .hword 0x122 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 509
-   .hword 0x17 @ delta x
+   .hword 0x0 @ delta x
+   .hword 0x12e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 510
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 510
-   .hword 0x0 @ delta x
-   .hword 0x108 @ y
-   .hword 0x28 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
 @ Object 511
    .hword 0x0 @ delta x
    .hword 0x150 @ y
@@ -3236,133 +3255,118 @@ retray_spr_data:
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 512
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x1 @ delta x
+   .hword 0x115 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 513
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x112 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 514
-   .hword 0x10 @ delta x
+   .hword 0x0 @ delta x
+   .hword 0x11e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 515
+   .hword 0x17 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 515
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 516
-   .hword 0x10 @ delta x
+   .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 517
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x1 @ delta x
+   .hword 0x195 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 518
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x192 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 519
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 520
    .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x19e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 520
+   .hword 0x8 @ delta x
+   .hword 0x185 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 521
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x182 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 522
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x0 @ delta x
+   .hword 0x18e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
 @ Object 523
-   .hword 0x20 @ delta x
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 524
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x1 @ delta x
+   .hword 0x175 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 525
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x172 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 526
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 527
    .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x17e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 527
+   .hword 0x8 @ delta x
+   .hword 0x165 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 528
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x162 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 529
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x0 @ delta x
+   .hword 0x16e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
 @ Object 530
-   .hword 0x20 @ delta x
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
@@ -3370,137 +3374,146 @@ retray_spr_data:
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 531
    .hword 0x0 @ delta x
-   .hword 0x1a8 @ y
-   .hword 0x28 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
-@ Object 532
-   .hword 0x11 @ delta x
-   .hword 0x145 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 533
-   .hword 0x8 @ delta x
-   .hword 0x142 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 534
-   .hword 0x0 @ delta x
-   .hword 0x14e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 535
-   .hword 0x7 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 536
-   .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 537
+@ Object 532
    .hword 0x1 @ delta x
-   .hword 0x135 @ y
+   .hword 0x155 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7045 @ metatile ID appareance
-@ Object 538
+@ Object 533
    .hword 0x8 @ delta x
-   .hword 0x132 @ y
+   .hword 0x152 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7125 @ metatile ID appareance
-@ Object 539
+@ Object 534
    .hword 0x0 @ delta x
-   .hword 0x13e @ y
+   .hword 0x15e @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7123 @ metatile ID appareance
-@ Object 540
-   .hword 0x8 @ delta x
-   .hword 0x125 @ y
+@ Object 535
+   .hword 0x11 @ delta x
+   .hword 0x148 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 541
-   .hword 0x8 @ delta x
-   .hword 0x122 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 542
-   .hword 0x0 @ delta x
-   .hword 0x12e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 543
-   .hword 0x7 @ delta x
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 536
+   .hword 0x6 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 544
+@ Object 537
+   .hword 0x0 @ delta x
+   .hword 0x108 @ y
+   .hword 0x28 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 538
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xe8 @ changes 1 for 29 frames
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 539
+   .hword 0xa @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 540
+   .hword 0x3 @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 541
+   .hword 0xd @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 542
+   .hword 0x3 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 543
+   .hword 0x3 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 544
+   .hword 0xa @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 545
-   .hword 0x1 @ delta x
-   .hword 0x115 @ y
+   .hword 0x3 @ delta x
+   .hword 0x128 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 546
-   .hword 0x8 @ delta x
-   .hword 0x112 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
+   .hword 0x3 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 547
-   .hword 0x0 @ delta x
-   .hword 0x11e @ y
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 548
-   .hword 0x17 @ delta x
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 549
-   .hword 0x20 @ delta x
+   .hword 0x10 @ delta x
+   .hword 0x14f @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 550
+   .hword 0x10 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 550
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 551
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 552
    .hword 0x0 @ delta x
@@ -3513,8 +3526,8 @@ retray_spr_data:
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 554
    .hword 0x0 @ delta x
@@ -3524,794 +3537,1229 @@ retray_spr_data:
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 555
-   .hword 0x1 @ delta x
-   .hword 0x195 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 556
-   .hword 0x8 @ delta x
-   .hword 0x192 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 557
-   .hword 0x0 @ delta x
-   .hword 0x19e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 558
-   .hword 0x8 @ delta x
-   .hword 0x185 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
-@ Object 559
-   .hword 0x8 @ delta x
-   .hword 0x182 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
-@ Object 560
-   .hword 0x0 @ delta x
-   .hword 0x18e @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
-@ Object 561
-   .hword 0x7 @ delta x
+   .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 557
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 558
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 559
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 560
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 561
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 562
-   .hword 0x1 @ delta x
-   .hword 0x175 @ y
+   .hword 0x1a @ delta x
+   .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 563
-   .hword 0x8 @ delta x
-   .hword 0x172 @ y
-   .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
+   .hword 0x6 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 564
-   .hword 0x0 @ delta x
-   .hword 0x17e @ y
+   .hword 0xa @ delta x
+   .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 565
-   .hword 0x8 @ delta x
-   .hword 0x165 @ y
+   .hword 0x3 @ delta x
+   .hword 0x198 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 566
-   .hword 0x8 @ delta x
-   .hword 0x162 @ y
+   .hword 0xd @ delta x
+   .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 567
-   .hword 0x0 @ delta x
-   .hword 0x16e @ y
+   .hword 0x3 @ delta x
+   .hword 0x188 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 568
-   .hword 0x7 @ delta x
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 569
-   .hword 0x1 @ delta x
-   .hword 0x155 @ y
+   .hword 0xa @ delta x
+   .hword 0x168 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7045 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 570
-   .hword 0x8 @ delta x
-   .hword 0x152 @ y
+   .hword 0x3 @ delta x
+   .hword 0x178 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7125 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 571
-   .hword 0x0 @ delta x
-   .hword 0x15e @ y
+   .hword 0xd @ delta x
+   .hword 0x158 @ y
    .hword 0x2b @ type
-   .hword 0x20 @ bg layer 4   z index 0 
-   .hword 7123 @ metatile ID appareance
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 572
-   .hword 0x7 @ delta x
-   .hword 0x108 @ y
-   .hword 0x28 @ type
-   .hword 0x20 @ bg layer 4 non rotated   
-   .hword 0x0 @ z index 0
+   .hword 0x3 @ delta x
+   .hword 0x168 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 573
-   .hword 0x10 @ delta x
+   .hword 0x3 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x2 @ changes 3 for 0 frames
    .hword 0x1d @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 574
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x0 @ delta x
+   .hword 0x1a8 @ y
+   .hword 0x28 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
 @ Object 575
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0xd @ delta x
+   .hword 0x158 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
 @ Object 576
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x4 @ delta x
+   .hword 0x145 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
 @ Object 577
-   .hword 0x0 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
+   .hword 0x8 @ delta x
+   .hword 0x142 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
 @ Object 578
-   .hword 0x20 @ delta x
+   .hword 0x0 @ delta x
+   .hword 0x14e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 579
+   .hword 0x7 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0x3a @ changes 3 for 7 frames
    .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 579
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
-   .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 580
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 581
-   .hword 0x10 @ delta x
-   .hword 0x150 @ y
-   .hword 0x3 @ type
-   .hword 0xe8 @ changes 1 for 29 frames
-   .hword 0xbfa @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 582
-   .hword 0x10 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 583
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x2 @ changes 3 for 0 frames
-   .hword 0x1d @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 584
-   .hword 0x20 @ delta x
-   .hword 0xa0 @ y
-   .hword 0x3 @ type
-   .hword 0x3a @ changes 3 for 7 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 585
-   .hword 0x30 @ delta x
-   .hword 0x130 @ y
-   .hword 0x3 @ type
-   .hword 0xf7 @ changes LINE for 30 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 586
-   .hword 0x0 @ delta x
-   .hword 0x140 @ y
-   .hword 0x3 @ type
-   .hword 0xf6 @ changes OBJ for 30 frames
-   .hword 0x0 @ color
-   .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 587
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 581
+   .hword 0x1 @ delta x
+   .hword 0x135 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 582
+   .hword 0x8 @ delta x
+   .hword 0x132 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 583
+   .hword 0x0 @ delta x
+   .hword 0x13e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 584
+   .hword 0x8 @ delta x
+   .hword 0x125 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 585
+   .hword 0x8 @ delta x
+   .hword 0x122 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 586
+   .hword 0x0 @ delta x
+   .hword 0x12e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 587
+   .hword 0x7 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 588
-   .hword 0x20 @ delta x
+   .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xe8 @ changes 1 for 29 frames
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
 @ Object 589
-   .hword 0x80 @ delta x
+   .hword 0x1 @ delta x
+   .hword 0x115 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 590
+   .hword 0x8 @ delta x
+   .hword 0x112 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 591
+   .hword 0x0 @ delta x
+   .hword 0x11e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 592
+   .hword 0x17 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 593
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 594
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 595
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 596
+   .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 590
+@ Object 597
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 598
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 599
+   .hword 0x1 @ delta x
+   .hword 0x195 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 600
+   .hword 0x8 @ delta x
+   .hword 0x192 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 601
+   .hword 0x0 @ delta x
+   .hword 0x19e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 602
+   .hword 0x8 @ delta x
+   .hword 0x185 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 603
+   .hword 0x8 @ delta x
+   .hword 0x182 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 604
+   .hword 0x0 @ delta x
+   .hword 0x18e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 605
+   .hword 0x7 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 606
+   .hword 0x1 @ delta x
+   .hword 0x175 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 607
+   .hword 0x8 @ delta x
+   .hword 0x172 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 608
+   .hword 0x0 @ delta x
+   .hword 0x17e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 609
+   .hword 0x8 @ delta x
+   .hword 0x165 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 610
+   .hword 0x8 @ delta x
+   .hword 0x162 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 611
+   .hword 0x0 @ delta x
+   .hword 0x16e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 612
+   .hword 0x7 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 613
+   .hword 0x1 @ delta x
+   .hword 0x155 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7045 @ metatile ID appareance
+@ Object 614
+   .hword 0x8 @ delta x
+   .hword 0x152 @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7125 @ metatile ID appareance
+@ Object 615
+   .hword 0x0 @ delta x
+   .hword 0x15e @ y
+   .hword 0x2b @ type
+   .hword 0x20 @ bg layer 4   z index 0 
+   .hword 7123 @ metatile ID appareance
+@ Object 616
+   .hword 0x1 @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 617
+   .hword 0x6 @ delta x
+   .hword 0x108 @ y
+   .hword 0x28 @ type
+   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x0 @ z index 0
+@ Object 618
+   .hword 0xa @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 619
+   .hword 0x3 @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 620
+   .hword 0x3 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 621
+   .hword 0xa @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 622
+   .hword 0x3 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 623
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 624
+   .hword 0x3 @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 625
+   .hword 0x3 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 626
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 627
+   .hword 0xd @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 628
+   .hword 0x13 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 629
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 630
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 631
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 632
+   .hword 0x10 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 633
+   .hword 0x10 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 634
+   .hword 0x10 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 635
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x2 @ changes 3 for 0 frames
+   .hword 0x1d @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 636
+   .hword 0x20 @ delta x
+   .hword 0xa0 @ y
+   .hword 0x3 @ type
+   .hword 0x3a @ changes 3 for 7 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 637
+   .hword 0x30 @ delta x
+   .hword 0x130 @ y
+   .hword 0x3 @ type
+   .hword 0xf7 @ changes LINE for 30 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 638
+   .hword 0x0 @ delta x
+   .hword 0x140 @ y
+   .hword 0x3 @ type
+   .hword 0xf6 @ changes OBJ for 30 frames
+   .hword 0x0 @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 639
+   .hword 0x0 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 640
    .hword 0x20 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xe8 @ changes 1 for 29 frames
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 591
+@ Object 641
+   .hword 0x5a @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 642
    .hword 0x10 @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 643
+   .hword 0x3 @ delta x
+   .hword 0x118 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 644
+   .hword 0xd @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 645
+   .hword 0x3 @ delta x
+   .hword 0x128 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 646
+   .hword 0x3 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x18a @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 647
+   .hword 0xa @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 648
+   .hword 0x3 @ delta x
+   .hword 0x138 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 649
+   .hword 0xd @ delta x
+   .hword 0x158 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 650
+   .hword 0x3 @ delta x
+   .hword 0x148 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 651
+   .hword 0x3 @ delta x
+   .hword 0x150 @ y
+   .hword 0x3 @ type
+   .hword 0xe8 @ changes 1 for 29 frames
+   .hword 0xbfa @ color
+   .hword 0x0 @ doesn't copy any channel normal trigger
+@ Object 652
+   .hword 0xa @ delta x
+   .hword 0x168 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 653
+   .hword 0x3 @ delta x
+   .hword 0x158 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 654
+   .hword 0x3 @ delta x
    .hword 0x180 @ y
    .hword 0x35 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 592
+@ Object 655
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x2 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 593
+@ Object 656
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x1c @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 594
+@ Object 657
    .hword 0x0 @ delta x
    .hword 0x1a0 @ y
    .hword 0x35 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 595
-   .hword 0x20 @ delta x
+@ Object 658
+   .hword 0xd @ delta x
+   .hword 0x168 @ y
+   .hword 0x2b @ type
+   .hword 0x24 @ bg layer 4   z index 0 
+   .hword 5859 @ metatile ID appareance
+   .hword 8192 @ rotation
+@ Object 659
+   .hword 0x13 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x18a @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 596
+@ Object 660
    .hword 0x20 @ delta x
    .hword 0x150 @ y
    .hword 0x3 @ type
    .hword 0xe8 @ changes 1 for 29 frames
    .hword 0xbfa @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 597
+@ Object 661
    .hword 0x10 @ delta x
    .hword 0x110 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 598
+@ Object 662
    .hword 0x0 @ delta x
    .hword 0x120 @ y
    .hword 0x3 @ type
    .hword 0xf2 @ changes 3 for 30 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 599
+@ Object 663
    .hword 0x0 @ delta x
    .hword 0x130 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 600
+@ Object 664
    .hword 0xf0 @ delta x
    .hword 0x170 @ y
    .hword 0x39 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 601
+@ Object 665
    .hword 0x10 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
-   .hword 0x0 @ changes 1 for 0 frames
+   .hword 0x3 @ changes 4 for 0 frames
    .hword 0xa2 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 602
+@ Object 666
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0x1 @ changes 2 for 0 frames
    .hword 0xa8c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 603
+@ Object 667
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0x0 @ changes 1 for 0 frames
    .hword 0x3f6 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 604
+@ Object 668
    .hword 0x10 @ delta x
    .hword 0x170 @ y
    .hword 0x36 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 605
+@ Object 669
    .hword 0x10 @ delta x
    .hword 0x170 @ y
    .hword 0x37 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 606
+@ Object 670
    .hword 0x1b @ delta x
    .hword 0x175 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 607
+@ Object 671
    .hword 0x5 @ delta x
    .hword 0x170 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 608
+@ Object 672
    .hword 0x20 @ delta x
    .hword 0x150 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 609
+@ Object 673
    .hword 0x30 @ delta x
    .hword 0x180 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 610
+@ Object 674
    .hword 0x30 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x187 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 611
+@ Object 675
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0x1ff4 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 612
+@ Object 676
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x1ea @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 613
+@ Object 677
    .hword 0x20 @ delta x
    .hword 0x170 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 614
+@ Object 678
    .hword 0xb @ delta x
    .hword 0x155 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 615
+@ Object 679
    .hword 0x5 @ delta x
    .hword 0x150 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 616
+@ Object 680
    .hword 0x49 @ delta x
    .hword 0x17d @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6501 @ metatile ID appareance
-@ Object 617
+@ Object 681
    .hword 0x7 @ delta x
    .hword 0x180 @ y
    .hword 0x4b @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 618
+@ Object 682
    .hword 0x1 @ delta x
    .hword 0x182 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6583 @ metatile ID appareance
-@ Object 619
+@ Object 683
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6579 @ metatile ID appareance
-@ Object 620
+@ Object 684
    .hword 0x1f @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0xa2 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 621
+@ Object 685
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xa8c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 622
+@ Object 686
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x3f6 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 623
+@ Object 687
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 624
+@ Object 688
    .hword 0x2b @ delta x
    .hword 0x195 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 625
+@ Object 689
    .hword 0x5 @ delta x
    .hword 0x190 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 626
+@ Object 690
    .hword 0x30 @ delta x
    .hword 0x150 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 627
+@ Object 691
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x7d0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 628
+@ Object 692
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xc3 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 629
+@ Object 693
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x20c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 630
+@ Object 694
    .hword 0x3f @ delta x
    .hword 0x135 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 631
+@ Object 695
    .hword 0x5 @ delta x
    .hword 0x130 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 632
+@ Object 696
    .hword 0xc @ delta x
    .hword 0x180 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 633
+@ Object 697
    .hword 0x19 @ delta x
    .hword 0x16d @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6501 @ metatile ID appareance
-@ Object 634
+@ Object 698
    .hword 0x7 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x187 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 635
+@ Object 699
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0x1ff4 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 636
+@ Object 700
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x1ea @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 637
+@ Object 701
    .hword 0x0 @ delta x
    .hword 0x170 @ y
    .hword 0x4b @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 638
+@ Object 702
    .hword 0x1 @ delta x
    .hword 0x172 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6583 @ metatile ID appareance
-@ Object 639
+@ Object 703
    .hword 0x0 @ delta x
    .hword 0x176 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6579 @ metatile ID appareance
-@ Object 640
+@ Object 704
    .hword 0x5f @ delta x
    .hword 0x170 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 641
+@ Object 705
    .hword 0x40 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0xa2 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 642
+@ Object 706
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xa8c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 643
+@ Object 707
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x3f6 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 644
+@ Object 708
    .hword 0xf @ delta x
    .hword 0x195 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 645
+@ Object 709
    .hword 0x5 @ delta x
    .hword 0x190 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 646
+@ Object 710
    .hword 0x4c @ delta x
    .hword 0x1a0 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 647
+@ Object 711
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x7d0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 648
+@ Object 712
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xc3 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 649
+@ Object 713
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x20c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 650
+@ Object 714
    .hword 0x0 @ delta x
    .hword 0x150 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 651
+@ Object 715
    .hword 0x4b @ delta x
    .hword 0x155 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 652
+@ Object 716
    .hword 0x5 @ delta x
    .hword 0x150 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 653
+@ Object 717
    .hword 0x20 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x187 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 654
+@ Object 718
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0x1ff4 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 655
+@ Object 719
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x1ea @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 656
+@ Object 720
    .hword 0x10 @ delta x
    .hword 0x190 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 657
+@ Object 721
    .hword 0x19 @ delta x
    .hword 0x17d @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6501 @ metatile ID appareance
-@ Object 658
+@ Object 722
    .hword 0x7 @ delta x
    .hword 0x180 @ y
    .hword 0x4b @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 659
+@ Object 723
    .hword 0x1 @ delta x
    .hword 0x182 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6583 @ metatile ID appareance
-@ Object 660
+@ Object 724
    .hword 0x0 @ delta x
    .hword 0x186 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 6579 @ metatile ID appareance
-@ Object 661
+@ Object 725
    .hword 0x1f @ delta x
    .hword 0x150 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 662
+@ Object 726
    .hword 0x4b @ delta x
    .hword 0x195 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 7231 @ metatile ID appareance
-@ Object 663
+@ Object 727
    .hword 0x5 @ delta x
    .hword 0xd0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0xa2 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 664
+@ Object 728
    .hword 0x0 @ delta x
    .hword 0xe0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xa8c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 665
+@ Object 729
    .hword 0x0 @ delta x
    .hword 0xf0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x3f6 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 666
+@ Object 730
    .hword 0x0 @ delta x
    .hword 0x190 @ y
    .hword 0x7e @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
-@ Object 667
+@ Object 731
    .hword 0x30 @ delta x
    .hword 0x170 @ y
    .hword 0x7f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x100 @ z index 0 pal 4
-@ Object 668
+@ Object 732
    .hword 0x20 @ delta x
    .hword 0x168 @ y
    .hword 0x34 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 669
+@ Object 733
    .hword 0x10 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf2 @ changes 3 for 30 frames
    .hword 0x17d0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 670
+@ Object 734
    .hword 0x20 @ delta x
    .hword 0xa0 @ y
    .hword 0x3 @ type
    .hword 0xf3 @ changes 4 for 30 frames
    .hword 0x7d0 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 671
+@ Object 735
    .hword 0x0 @ delta x
    .hword 0xb0 @ y
    .hword 0x3 @ type
    .hword 0xf1 @ changes 2 for 30 frames
    .hword 0xc3 @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 672
+@ Object 736
    .hword 0x0 @ delta x
    .hword 0xc0 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x20c @ color
    .hword 0x0 @ doesn't copy any channel normal trigger
-@ Object 673
+@ Object 737
    .hword 0x160 @ delta x
    .hword 0x160 @ y
    .hword 0x15 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 674
+@ Object 738
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x59 @ type
    .hword 0x120 @ coin 2 bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 675
+@ Object 739
    .hword 0x0 @ delta x
    .hword 0x160 @ y
    .hword 0x5a @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
-@ Object 676
+@ Object 740
    .hword 0xa0 @ delta x
    .hword 0x128 @ y
    .hword 0x2b @ type
    .hword 0x20 @ bg layer 4   z index 0 
    .hword 1245 @ metatile ID appareance
-@ Object 677
+@ Object 741
    .hword 0x0 @ delta x
    .hword 0x180 @ y
    .hword 0x3 @ type
