@@ -376,6 +376,14 @@ const u16 cubePortalSpr[] = {
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
     CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(2) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
+    CENTER(8, 8),
 
     0xffff
 };
@@ -413,10 +421,10 @@ const u16 shipPortalSpr[] = {
     PRIO_IDOFF(4, 0, 8), // id offset
     CENTER(8, 8),
 
-    ATTR0_4BPP | ATTR0_TALL,
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
     ATTR1_SIZE_16x32,
     ATTR2_PALBANK(1) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
-    -12, // x
+    -10, // x
     -8, // y
     PRIO_IDOFF(3, 0, 0), // id offset
     CENTER(8, 8),
@@ -456,6 +464,14 @@ const u16 ballPortalSpr[] = {
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
     CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(5) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
+    CENTER(8, 8),
 
     0xffff
 };
@@ -491,6 +507,14 @@ const u16 ufoPortalSpr[] = {
     -5, // x
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
+    CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(6) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff
@@ -528,6 +552,14 @@ const u16 wavePortalSpr[] = {
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
     CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(3) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
+    CENTER(8, 8),
 
     0xffff
 };
@@ -563,6 +595,14 @@ const u16 gravityPortalBlueSpr[] = {
     8, // x
     16, // y
     PRIO_IDOFF(0, 0, 24), // id offset
+    CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(3) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -6, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff
@@ -600,6 +640,15 @@ const u16 gravityPortalYellowSpr[] = {
     16, // y
     PRIO_IDOFF(0, 0, 24), // id offset
     CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(4) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -6, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
+    CENTER(8, 8),
+
     0xffff
 };
 
@@ -634,6 +683,14 @@ const u16 mirrorPortalOrangeSpr[] = {
     -16, // x
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
+    CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(6) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff
@@ -670,6 +727,14 @@ const u16 mirrorPortalBlueSpr[] = {
     -16, // x
     16,  // y
     PRIO_IDOFF(4, 0, 8), // id offset
+    CENTER(8, 8),
+    
+    ATTR0_4BPP | ATTR0_TALL | ATTR0_BLEND,
+    ATTR1_SIZE_16x32,
+    ATTR2_PALBANK(3) | ATTR2_ID(PORTAL_PARTICLE_VRAM_ID),
+    -10, // x
+    -8, // y
+    PRIO_IDOFF(3, 0, 0), // id offset
     CENTER(8, 8),
 
     0xffff

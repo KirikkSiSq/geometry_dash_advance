@@ -160,8 +160,6 @@ void cube_portal(struct ObjectSlot *objectSlot) {
     gamemode_upload_buffer[curr_player_id] = GAMEMODE_CUBE;
 
     check_for_same_dual_gravity();
-
-    spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_PORTAL, 2);
     
     objectSlot->activated[curr_player_id] = TRUE;
 }
