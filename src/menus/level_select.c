@@ -214,8 +214,8 @@ void level_select_loop() {
 
         // Title screen
         if (key_hit(KEY_B)) {
-            game_state = STATE_TITLE_SCREEN;
             fade_out();
+            game_state = STATE_TITLE_SCREEN;
             irq_disable(II_HBLANK);
             break;
         }
