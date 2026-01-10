@@ -31,7 +31,7 @@ extern const COLOR spritePalette[256];
 extern const COLOR secret_coin_palette[16];
 extern const COLOR user_coin_palette[16];
 extern const COLOR menu_palette[64];
-extern const COLOR menu_spr_palette[48];
+extern const COLOR menu_spr_palette[64];
 extern const COLOR menu_secret_coin_palette[16];
 extern const COLOR menu_user_coin_palette[16];
 extern const COLOR icon_kit_palette[320];

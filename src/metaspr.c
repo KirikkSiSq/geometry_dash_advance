@@ -159,7 +159,7 @@ const u16 dashFireSpr[] = {
 const u16 menuStarSpr[] = {
     ATTR0_4BPP | ATTR0_SQUARE,
     ATTR1_SIZE_8x8,
-    ATTR2_PALBANK(0) | ATTR2_ID(8),
+    ATTR2_PALBANK(3) | ATTR2_ID(8),
     0,
     0,
     PRIO_IDOFF(0, 0, 0), // id offset
