@@ -133,6 +133,11 @@ void player_main() {
             curr_player.came_from_orb = FALSE;
         }
 
+        if (curr_player.came_from_dash_orb && !key_is_down(KEY_A | KEY_UP)) {
+            curr_player.came_from_dash_orb = FALSE;
+        }
+        
+
         curr_player.d_block_active = FALSE;
         curr_player.f_block_active = FALSE;
 
@@ -204,7 +209,7 @@ void cube_gamemode() {
     u32 jumped = FALSE;
    
     // If on floor and holding A or UP, jump
-    if (!curr_player.disable_jumping && curr_player.on_floor && key_is_down(KEY_A | KEY_UP) && !curr_player.came_from_spider_orb) {
+    if (!curr_player.disable_jumping && curr_player.on_floor && key_is_down(KEY_A | KEY_UP) && !curr_player.came_from_spider_orb && !curr_player.came_from_dash_orb) {
         if (key_hit(KEY_A | KEY_UP)) {
             curr_player.player_y_speed = -((curr_player.player_size == SIZE_BIG) ? CUBE_FIRST_JUMP_SPEED : CUBE_MINI_FIRST_JUMP_SPEED) * sign;     
         } else {
@@ -520,7 +525,7 @@ void wave_gamemode() {
     }
 
     s8 sign = curr_player.gravity_dir ? -1 : 1;
-    s8 hold_sign = key_is_down(KEY_A | KEY_UP) ? -1 : 1;
+    s8 hold_sign = key_is_down(KEY_A | KEY_UP) && !curr_player.came_from_dash_orb ? -1 : 1;
     s8 mirror_sign = screen_mirrored ? 1 : -1;
 
     curr_player.cube_rotation = ArcTan2(curr_player.player_x_speed >> 8, curr_player.player_y_speed >> 8) * mirror_sign;
@@ -585,7 +590,7 @@ void do_cube_gravity() {
 void do_ship_gravity(s32 max_y_speed, s32 max_y_speed_holding) {
     update_falling();
 
-    u32 holding = key_is_down(KEY_A | KEY_UP);
+    u32 holding = key_is_down(KEY_A | KEY_UP) && !curr_player.came_from_dash_orb;
 
     if (holding) {
         curr_player.gravity = ((curr_player.player_size == SIZE_BIG) ? SHIP_GRAVITY_BASE : SHIP_MINI_GRAVITY_BASE);

@@ -635,6 +635,7 @@ void green_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.dashing_anim_scale = float2fx(0.01);
 
         curr_player.came_from_orb = TRUE;
+        curr_player.came_from_dash_orb = TRUE;
     
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 4);
         curr_player.ball_rotation_direction = sign;
@@ -656,6 +657,7 @@ void pink_dash_orb(struct ObjectSlot *objectSlot) {
         curr_player.gravity_dir ^= 1;
 
         curr_player.came_from_orb = TRUE;
+        curr_player.came_from_dash_orb = TRUE;
     
         curr_player.ball_rotation_direction = sign;
         spawn_use_effect(objectSlot->object.x, objectSlot->object.y, USE_EFFECT_ORB, 3);

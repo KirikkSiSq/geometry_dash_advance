@@ -267,6 +267,9 @@ void reset_variables() {
     player_1.dashing = FALSE;
     player_1.dashing_rot = 0;
     player_1.dashing_anim_scale = 0;
+    player_1.came_from_dash_orb = FALSE;
+    player_1.came_from_orb = FALSE;
+    player_1.came_from_spider_orb = FALSE;
     coll_x = 0;
     coll_y = 0;
     player_death = FALSE;
