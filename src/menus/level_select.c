@@ -98,8 +98,8 @@ void level_select_loop() {
     memcpy32(&tile_mem_obj[0][512], &title_screen_chr[0xf0], 24 * sizeof(TILE8) / 4);
 
 
-    if (loaded_level_id == 0 && custom_levels) loaded_level_id = NUM_ROBTOP_LEVELS;
-    else if (loaded_level_id == NUM_ROBTOP_LEVELS && !custom_levels) loaded_level_id = 0;
+    if (loaded_level_id < NUM_ROBTOP_LEVELS && custom_levels) loaded_level_id = NUM_ROBTOP_LEVELS;
+    else if (loaded_level_id >= NUM_ROBTOP_LEVELS && !custom_levels) loaded_level_id = 0;
 
     s32 level_id = loaded_level_id;
     
