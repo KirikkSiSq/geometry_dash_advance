@@ -70,6 +70,12 @@ void level_select_loop() {
 
     memcpy16(&palette_buffer[256], menu_spr_palette, sizeof(menu_spr_palette) / sizeof(COLOR));
 
+    if (custom_levels) {
+        memcpy16(&palette_buffer[256], menu_user_coin_palette, sizeof(menu_user_coin_palette) / sizeof(COLOR));
+    } else {
+        memcpy16(&palette_buffer[256], menu_secret_coin_palette, sizeof(menu_secret_coin_palette) / sizeof(COLOR));
+    }
+
     // Init PUSAB font
     tte_init_se(
         2,                                     // Background number (BG 2)

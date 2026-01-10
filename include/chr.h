@@ -17,6 +17,7 @@
 
 #define COIN_VRAM_ID 1024-48
 #define COIN_OFFSET 0x40
+#define USER_COIN_OFFSET 0x300
 
 #define PULSING_VRAM_ID 1024-68
 
@@ -27,8 +28,12 @@
 
 extern const COLOR blockPalette[240];
 extern const COLOR spritePalette[256];
+extern const COLOR secret_coin_palette[16];
+extern const COLOR user_coin_palette[16];
 extern const COLOR menu_palette[64];
 extern const COLOR menu_spr_palette[48];
+extern const COLOR menu_secret_coin_palette[16];
+extern const COLOR menu_user_coin_palette[16];
 extern const COLOR icon_kit_palette[320];
 extern const COLOR black_buffer[512];
 extern const SCR_ENTRY square_background_tilemap[1024];

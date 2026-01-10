@@ -388,6 +388,12 @@ void load_level(u32 level_ID) {
     // Copy palettes into the buffer
     memcpy16(palette_buffer, blockPalette, sizeof(blockPalette) / sizeof(COLOR));
     memcpy16(&palette_buffer[256], spritePalette, sizeof(spritePalette) / sizeof(COLOR));
+    if (custom_levels) {
+        memcpy16(&palette_buffer[0x170], user_coin_palette, sizeof(user_coin_palette) / sizeof(COLOR));
+    } else {
+        memcpy16(&palette_buffer[0x170], secret_coin_palette, sizeof(secret_coin_palette) / sizeof(COLOR));
+    }
+
     set_player_colors(palette_buffer, palette_kit_colors[save_data.p1_col_selected], palette_kit_colors[save_data.p2_col_selected], palette_kit_colors[save_data.glow_col_selected]);
 
     // Set initial player gamemode CHR
