@@ -267,11 +267,6 @@ void main_loop() {
 void level_loop();
 
 void game_loop() {
-    // Fade out
-    fade_out();
-    
-    irq_disable(II_HBLANK);
-
     mirror_scaling = float2fx(1.0);
 
     REG_BG0CNT  = BG_CBB(0) | BG_SBB(27) | BG_REG_32x32 | BG_PRIO(1);

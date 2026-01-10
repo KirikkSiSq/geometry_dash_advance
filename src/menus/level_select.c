@@ -203,12 +203,14 @@ void level_select_loop() {
         if (key_hit(KEY_A | KEY_START)) {
             // Start the level
             loaded_level_id = level_id;
-            game_state = STATE_PLAYING;
             mmStop();
             mmEffect(SFX_LEVEL_ENTER);
             for (s32 i = 0; i < 30; i++) {
                 VBlankIntrWait();
             }
+            fade_out();
+            game_state = STATE_PLAYING;
+            irq_disable(II_HBLANK);
             break;
         }
 
