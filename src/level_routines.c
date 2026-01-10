@@ -810,6 +810,7 @@ void set_new_best(u32 new_best, u32 mode) {
                 level_data->coin1 |= coin_buffer[0];
                 level_data->coin2 |= coin_buffer[1];
                 level_data->coin3 |= coin_buffer[2];
+                level_data->completed = TRUE;
             }
             write_save_block();
         }
