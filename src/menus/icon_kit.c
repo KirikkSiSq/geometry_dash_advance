@@ -57,16 +57,19 @@ void calculate_stats() {
         struct SaveLevelData *data = obtain_level_data(i);
         u32 *properties_pointer = (u32*) level_defines[i][LEVEL_PROPERTIES_INDEX];
         u32 stars = properties_pointer[LEVEL_STARS_NUM];
+        u32 num_coins = properties_pointer[LEVEL_COINS_NUM];
 
         if (data->normal_progress >= 100) stars_count += stars;
 
-        u32 coins_collected = 0;
-        if (data->coin1) coins_collected++;
-        if (data->coin2) coins_collected++;
-        if (data->coin3) coins_collected++;
+        if (num_coins > 0) {
+            u32 coins_collected = 0;
+            if (data->coin1) coins_collected++;
+            if (num_coins > 1 && data->coin2) coins_collected++;
+            if (num_coins > 2 && data->coin3) coins_collected++;
 
-        if (i < NUM_ROBTOP_LEVELS) secret_coin_count += coins_collected;
-        else user_coin_count += coins_collected;
+            if (i < NUM_ROBTOP_LEVELS) secret_coin_count += coins_collected;
+            else user_coin_count += coins_collected;
+        }
     }
 }
 
