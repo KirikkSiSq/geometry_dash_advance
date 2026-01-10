@@ -1395,8 +1395,9 @@ baseafterbase_spr_data:
    .hword 0x10 @ delta x
    .hword 0x170 @ y
    .hword 0xc @ type
-   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x24 @ bg layer 4 rotated   
    .hword 0x0 @ z index 0
+   .hword 16384 @ rotation
 @ Object 230
    .hword 0x20 @ delta x
    .hword 0x1b0 @ y

@@ -1612,12 +1612,12 @@
   <object id="1114" gid="16397" x="6160" y="326" width="16" height="16"/>
   <object id="1115" gid="16397" x="6192" y="342" width="16" height="16"/>
   <object id="1116" gid="16397" x="6224" y="358" width="16" height="16"/>
-  <object id="1117" gid="16483" x="6152" y="277" width="16" height="16"/>
-  <object id="1118" gid="16480" x="6152" y="277" width="16" height="16"/>
-  <object id="1119" gid="16483" x="6184" y="293" width="16" height="16"/>
-  <object id="1120" gid="16480" x="6184" y="293" width="16" height="16"/>
-  <object id="1121" gid="16483" x="6216" y="309" width="16" height="16"/>
-  <object id="1122" gid="16480" x="6216" y="309" width="16" height="16"/>
+  <object id="1117" gid="16483" x="6156" y="280" width="16" height="16"/>
+  <object id="1118" gid="16480" x="6156" y="280" width="16" height="16"/>
+  <object id="1119" gid="16483" x="6188" y="296" width="16" height="16"/>
+  <object id="1120" gid="16480" x="6188" y="296" width="16" height="16"/>
+  <object id="1121" gid="16483" x="6220" y="312" width="16" height="16"/>
+  <object id="1122" gid="16480" x="6220" y="312" width="16" height="16"/>
   <object id="1123" gid="16401" x="6304" y="359" width="16" height="16"/>
   <object id="1124" gid="16485" x="6304" y="359" width="16" height="16"/>
   <object id="1125" gid="16488" x="6336" y="304" width="16" height="16">
@@ -2085,7 +2085,11 @@
   <object id="1353" gid="16480" x="8368" y="340" width="16" height="16"/>
   <object id="1354" gid="16405" x="8368" y="340" width="16" height="16"/>
   <object id="1355" gid="16397" x="7536" y="390" width="16" height="16"/>
-  <object id="1356" gid="16397" x="7536" y="314" width="16" height="16"/>
+  <object id="1356" gid="16397" x="7536" y="314" width="16" height="16">
+   <properties>
+    <property name="vflip" type="bool" value="true"/>
+   </properties>
+  </object>
   <object id="1357" gid="16459" x="7628" y="284" width="16" height="16">
    <properties>
     <property name="bg layer" value="1"/>

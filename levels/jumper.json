@@ -4638,6 +4638,75 @@
                  "width":16,
                  "x":12152,
                  "y":368
+                }, 
+                {
+                 "gid":16397,
+                 "height":16,
+                 "id":1000,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"rotation angle",
+                         "type":"int",
+                         "value":90
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":8208,
+                 "y":336
+                }, 
+                {
+                 "gid":16397,
+                 "height":16,
+                 "id":1001,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"rotation angle",
+                         "type":"int",
+                         "value":90
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":8208,
+                 "y":352
+                }, 
+                {
+                 "gid":16397,
+                 "height":16,
+                 "id":1002,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"rotation angle",
+                         "type":"int",
+                         "value":90
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":8208,
+                 "y":368
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4646,7 +4715,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":1000,
+ "nextobjectid":1003,
  "orientation":"orthogonal",
  "properties":[
         {

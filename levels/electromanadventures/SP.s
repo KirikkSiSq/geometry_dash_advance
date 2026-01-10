@@ -3857,55 +3857,55 @@ electromanadventures_spr_data:
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 635
-   .hword 0x18 @ delta x
-   .hword 0x115 @ y
+   .hword 0x1c @ delta x
+   .hword 0x118 @ y
    .hword 0x62 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 636
    .hword 0x0 @ delta x
-   .hword 0x115 @ y
+   .hword 0x118 @ y
    .hword 0x5f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 637
-   .hword 0x8 @ delta x
+   .hword 0x4 @ delta x
    .hword 0x146 @ y
    .hword 0xc @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 638
-   .hword 0x18 @ delta x
-   .hword 0x125 @ y
+   .hword 0x1c @ delta x
+   .hword 0x128 @ y
    .hword 0x62 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 639
    .hword 0x0 @ delta x
-   .hword 0x125 @ y
+   .hword 0x128 @ y
    .hword 0x5f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 640
-   .hword 0x8 @ delta x
+   .hword 0x4 @ delta x
    .hword 0x156 @ y
    .hword 0xc @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 641
-   .hword 0x18 @ delta x
-   .hword 0x135 @ y
+   .hword 0x1c @ delta x
+   .hword 0x138 @ y
    .hword 0x62 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 642
    .hword 0x0 @ delta x
-   .hword 0x135 @ y
+   .hword 0x138 @ y
    .hword 0x5f @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0x0 @ z index 0
 @ Object 643
-   .hword 0x8 @ delta x
+   .hword 0x4 @ delta x
    .hword 0x166 @ y
    .hword 0xc @ type
    .hword 0x20 @ bg layer 4 non rotated   
@@ -4811,7 +4811,7 @@ electromanadventures_spr_data:
    .hword 0x30 @ delta x
    .hword 0x13a @ y
    .hword 0xc @ type
-   .hword 0x20 @ bg layer 4 non rotated   
+   .hword 0x21 @ bg layer 4 non rotated  flipped vertically 
    .hword 0x0 @ z index 0
 @ Object 792
    .hword 0x0 @ delta x

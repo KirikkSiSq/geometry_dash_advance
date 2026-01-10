@@ -2906,6 +2906,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"enable rotation",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"rotation angle",
                          "type":"int",
                          "value":90
