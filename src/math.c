@@ -217,7 +217,7 @@ ARM_CODE u32 get_n_digits(const u32 value) {
 }
 
 // Returns the next character x pos (useful for icons)
-ARM_CODE u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority) {
+ARM_CODE u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u32 vram_index, const u16* number_metasprite, const u32 priority) {
     u32 x_pos_temp = x;
     u32 value_temp = value;
 
@@ -225,7 +225,7 @@ ARM_CODE u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const
         u32 digit = value_temp % 10;
 
         // Print digit
-        oam_metaspr(x_pos_temp, y, number_metasprite, FALSE, FALSE, FIRST_NUMBER_ID + digit, -1, priority, 0, TRUE, FALSE);
+        oam_metaspr(x_pos_temp, y, number_metasprite, FALSE, FALSE, vram_index + digit, -1, priority, 0, TRUE, FALSE);
         
         value_temp /= 10;
         // Move 8 pixels to the left

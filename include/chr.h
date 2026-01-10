@@ -34,7 +34,7 @@ extern const COLOR menu_palette[64];
 extern const COLOR menu_spr_palette[64];
 extern const COLOR menu_secret_coin_palette[16];
 extern const COLOR menu_user_coin_palette[16];
-extern const COLOR icon_kit_palette[320];
+extern const COLOR icon_kit_palette[336];
 extern const COLOR black_buffer[512];
 extern const SCR_ENTRY square_background_tilemap[1024];
 

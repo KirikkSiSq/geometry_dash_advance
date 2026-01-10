@@ -13,7 +13,7 @@ FIXED_LONG_16 fexp(FIXED_LONG_16 x);
 FIXED_16 fln(FIXED_16 s);
 FIXED_LONG_16 fpow(FIXED_16 a, FIXED_16 b);
 IWRAM_CODE COLOR blend_clr(const COLOR clra, const COLOR clrb, u32 alpha);
-u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u16* number_metasprite, const u32 priority);
+u32 draw_sprite_number(const u32 x, const u32 y, const u32 value, const u32 vram_index, const u16* number_metasprite, const u32 priority);
 u32 get_n_digits(const u32 value);
 IWRAM_CODE s32 step_divide(s32 value, s32 steps);
 IWRAM_CODE s32 tan_calc(u32 angle);

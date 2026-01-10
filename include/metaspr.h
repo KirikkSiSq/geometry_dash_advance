@@ -23,6 +23,7 @@ extern const u16 hitboxPoint[];
 
 extern const u16 menuStarSpr[];
 extern const u16 menuNumberSpr[];
+extern const u16 iconKitNumberSpr[];
 extern const u16 gottenCoinSpr[];
 extern const u16 ungottenCoinSpr[];
 extern const u16 fineBarSpr[];

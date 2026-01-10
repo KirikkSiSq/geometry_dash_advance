@@ -771,7 +771,7 @@ void draw_percentage(u32 x, u32 y, u32 percentage, const u16* number_sprite, u16
     u32 percentage_pos = x + (pixels / 2) + 8;
 
     oam_metaspr(percentage_pos, y, number_sprite, FALSE, FALSE, PERCENTAGE_SYMBOL_ID, -1, priority, 0, TRUE, FALSE);
-    draw_sprite_number(percentage_pos - 8, y, percentage, number_sprite, priority);
+    draw_sprite_number(percentage_pos - 8, y, percentage, FIRST_NUMBER_ID, number_sprite, priority);
 }
 
 void draw_attempt_counter() {
@@ -781,7 +781,7 @@ void draw_attempt_counter() {
         s32 digit_pixels = (get_n_digits(attempt_count) - 1) * 8;
 
         oam_metaspr(relative_x, relative_y, attemptSpr, 0, 0, -1, -1, 0, 0, TRUE, FALSE);
-        draw_sprite_number(relative_x + 64 + digit_pixels, relative_y, attempt_count, numberSpr, 0);
+        draw_sprite_number(relative_x + 64 + digit_pixels, relative_y, attempt_count, FIRST_NUMBER_ID, numberSpr, 0);
     }
 }
 

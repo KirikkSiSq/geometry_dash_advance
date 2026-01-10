@@ -135,6 +135,8 @@ void init_maxmod() {
     irq_set(II_HBLANK, hblank_lvl_select_handler, 0);
     irq_set(II_GAMEPAK, hang, 0);
     irq_enable(II_VBLANK);
+    irq_disable(II_HBLANK);
+    
 }
 
 #define MEM_CHECK_MAGIC 14021968
@@ -375,8 +377,8 @@ void level_loop() {
                 hitbox_display ^= 1;
             }
             
-            draw_sprite_number(232, 120, player_profile, numberSpr, 0);
-            draw_sprite_number(232, 128, display_profile, numberSpr, 0);
+            draw_sprite_number(232, 120, player_profile, FIRST_NUMBER_ID, numberSpr, 0);
+            draw_sprite_number(232, 128, display_profile, FIRST_NUMBER_ID, numberSpr, 0);
         }
 
         if (noclip) oam_metaspr(0, 0, noclipSpr, 0, 0, 0, -1, 0, 0, TRUE, FALSE); 

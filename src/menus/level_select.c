@@ -501,7 +501,7 @@ void put_star_number(u16 level_id, u16 page) {
     u32 *properties_pointer = (u32*) level_defines[level_id][LEVEL_PROPERTIES_INDEX];
     u32 stars = properties_pointer[LEVEL_STARS_NUM];
 
-    draw_sprite_number(relative_x, STAR_COUNT_POS_Y, stars, menuNumberSpr, 2);
+    draw_sprite_number(relative_x, STAR_COUNT_POS_Y, stars, FIRST_NUMBER_ID, menuNumberSpr, 2);
 }
 
 #define MENU_COIN_X 154

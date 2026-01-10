@@ -5,12 +5,15 @@
 #include "level_routines.h"
 #include "math.h"
 
+#define FIRST_ICON_KIT_NUMBER_ID 976
+
 void upload_icons(u32 gamemode, u32 page);
 void draw_icons(u32 gamemode, u32 page);
 void draw_selected_icon(u32 gamemode);
 void draw_selected_glyph(u32 selected_x, u32 selected_y);
 void update_gamemode_palette(u32 gamemode);
 void draw_button_glyphs_icon_kit();
+void draw_stats();
 
 void palette_kit_loop();
 
@@ -41,6 +44,32 @@ EWRAM_DATA s32 selected_page;
 EWRAM_DATA s32 selected_x;
 EWRAM_DATA s32 selected_y;
 
+EWRAM_DATA u32 stars_count;
+EWRAM_DATA u32 secret_coin_count;
+EWRAM_DATA u32 user_coin_count;
+
+void calculate_stats() {
+    stars_count = 0;
+    secret_coin_count = 0;
+    user_coin_count = 0;
+
+    for (s32 i = 0; i < LEVEL_COUNT; i++) {
+        struct SaveLevelData *data = obtain_level_data(i);
+        u32 *properties_pointer = (u32*) level_defines[i][LEVEL_PROPERTIES_INDEX];
+        u32 stars = properties_pointer[LEVEL_STARS_NUM];
+
+        if (data->normal_progress >= 100) stars_count += stars;
+
+        u32 coins_collected = 0;
+        if (data->coin1) coins_collected++;
+        if (data->coin2) coins_collected++;
+        if (data->coin3) coins_collected++;
+
+        if (i < NUM_ROBTOP_LEVELS) secret_coin_count += coins_collected;
+        else user_coin_count += coins_collected;
+    }
+}
+
 void icon_kit_loop() {
     // Enable BG 0
     REG_DISPCNT = DCNT_MODE0 | DCNT_OBJ | DCNT_OBJ_1D | DCNT_BG0 | DCNT_BG1;
@@ -61,7 +90,7 @@ void icon_kit_loop() {
     memset32(palette_buffer, 0, 256);
     memcpy16(palette_buffer, icon_kit_palette, sizeof(icon_kit_palette) / sizeof(COLOR));
 
-    memcpy32(&tile_mem_obj[0][992], &icon_kit_chr[ICON_KIT_SELECTION_INDEX], sizeof(TILE) / 4 * 32);
+    memcpy32(&tile_mem_obj[0][976], &icon_kit_chr[ICON_KIT_SELECTION_INDEX], sizeof(TILE) / 4 * 48);
 
     memcpy32(&se_mem[26][0], icon_kit_l0_tilemap, sizeof(icon_kit_l0_tilemap) / sizeof(u32));
     memset16(&se_mem[27][0], SE_BUILD(0x33, 0, 0, 0), sizeof(SCREENBLOCK) * 2 / sizeof(u16));
@@ -73,6 +102,8 @@ void icon_kit_loop() {
     memcpy32(&tile_mem_obj[0][512], &title_screen_chr[0xf0], 24 * sizeof(TILE8) / 4);
 
     nextSpr = 0;
+
+    calculate_stats();
 
     set_player_colors_spr(palette_buffer, 0x56B5, 0x7FFF, 0x2529);
     set_player_colors_spr(&palette_buffer[0x10], palette_kit_colors[save_data.p1_col_selected], palette_kit_colors[save_data.p2_col_selected], palette_kit_colors[save_data.glow_col_selected]);
@@ -90,6 +121,7 @@ void icon_kit_loop() {
     draw_selected_glyph(selected_x, selected_y);
     update_gamemode_palette(GAMEMODE_CUBE);
     draw_button_glyphs_icon_kit();
+    draw_stats();
     
     obj_copy(oam_mem, shadow_oam, 128);
     obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
@@ -231,6 +263,7 @@ void icon_kit_loop() {
         draw_selected_icon(selected_gamemode);
         draw_selected_glyph(selected_x, selected_y);
         draw_button_glyphs_icon_kit();
+        draw_stats();
 
         // Open palette kit
         if (key_hit(KEY_SELECT)) {
@@ -240,6 +273,12 @@ void icon_kit_loop() {
         // Wait for VSYNC
         VBlankIntrWait();
     }
+}
+
+void draw_stats() {
+    draw_sprite_number(216, 8, stars_count, FIRST_ICON_KIT_NUMBER_ID, iconKitNumberSpr, 3);
+    draw_sprite_number(216, 16, secret_coin_count, FIRST_ICON_KIT_NUMBER_ID, iconKitNumberSpr, 3);
+    draw_sprite_number(216, 24, user_coin_count, FIRST_ICON_KIT_NUMBER_ID, iconKitNumberSpr, 3);
 }
 
 
@@ -269,6 +308,7 @@ void palette_kit_loop() {
         scroll_y = approach_value_asymptotic(scroll_y, 0, 0x2000, 0x30000);
         
         draw_palette_kit_icons();
+        draw_stats();
         
         // Draw icons 
         draw_icons(selected_gamemode, selected_page);
@@ -385,6 +425,7 @@ void palette_kit_loop() {
         scroll_y = approach_value_asymptotic(scroll_y, TO_FIXED(154), 0x2000, 0x30000);
 
         draw_palette_kit_icons();
+        draw_stats();
 
         // Draw icons 
         draw_icons(selected_gamemode, selected_page);
