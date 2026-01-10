@@ -74,6 +74,8 @@ void calculate_stats() {
 }
 
 void icon_kit_loop() {
+    irq_enable(II_HBLANK);
+
     // Enable BG 0
     REG_DISPCNT = DCNT_MODE0 | DCNT_OBJ | DCNT_OBJ_1D | DCNT_BG0 | DCNT_BG1;
 
@@ -130,9 +132,14 @@ void icon_kit_loop() {
     obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
 
     fade_in();
+        
+    bg_lvl_select_color = palette_buffer[0];
+    bg_lvl_select_color_target = blend_clr(palette_buffer[0], 0, MENU_GRADIENT_DARKER_FACTOR);
 
     while (1) {
         key_poll();
+
+        pal_bg_mem[0] = palette_buffer[0];
         
         nextSpr = 0;
         obj_copy(oam_mem, shadow_oam, 128);
@@ -148,6 +155,7 @@ void icon_kit_loop() {
             write_save_block();
 
             fade_out();
+            irq_disable(II_HBLANK);        
             break;
         }
 
@@ -304,6 +312,7 @@ void palette_kit_loop() {
     // Scroll palette kit down
     while (scroll_y > 0) {
         nextSpr = 0;
+        pal_bg_mem[0] = palette_buffer[0];
         obj_copy(oam_mem, shadow_oam, 128);
         obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
     
@@ -328,7 +337,7 @@ void palette_kit_loop() {
 
     while (1) {
         key_poll();
-
+        pal_bg_mem[0] = palette_buffer[0];
         nextSpr = 0;
         obj_copy(oam_mem, shadow_oam, 128);
         obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
@@ -420,6 +429,7 @@ void palette_kit_loop() {
     // Scroll palette kit up
     while (scroll_y < TO_FIXED(154)) {
         nextSpr = 0;
+        pal_bg_mem[0] = palette_buffer[0];
         obj_copy(oam_mem, shadow_oam, 128);
         obj_aff_copy(obj_aff_mem, obj_aff_buffer, 32);
 
@@ -442,6 +452,8 @@ void palette_kit_loop() {
 
         VBlankIntrWait();
     }
+    
+    pal_bg_mem[0] = palette_buffer[0];
 }
 
 void draw_palette_kit_icons() {

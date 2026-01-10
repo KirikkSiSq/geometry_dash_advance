@@ -539,6 +539,9 @@ void fade_in() {
         key_poll();
         
         clr_blend_fast(palette_buffer, (COLOR*) black_buffer, pal_bg_mem, 512, 32 - frame);
+        
+        bg_lvl_select_color = pal_bg_mem[0];
+        bg_lvl_select_color_target = blend_clr(pal_bg_mem[0], 0, MENU_GRADIENT_DARKER_FACTOR);
     }
     update_flags = UPDATE_ALL;
 }

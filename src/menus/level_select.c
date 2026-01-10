@@ -35,17 +35,23 @@ ARM_CODE void hblank_lvl_select_handler() {
     u32 vcount = REG_VCOUNT;
     if (vcount < 128) {
         u16 blended = blend_clr(bg_lvl_select_color, bg_lvl_select_color_target, vcount >> 2);
-        pal_bg_mem[0] = pal_bg_mem[0x121] = blended;
         u16 blended_darker = blend_clr(blended, 0, 0x10);
-        pal_bg_mem[0x12] = blended_darker;
-        pal_bg_mem[0x24] = blended_darker;
-        pal_bg_mem[0x3e] = blended_darker;
-        pal_bg_mem[0x4e] = blended_darker;
-        pal_bg_mem[0x5e] = blended_darker;
-        pal_bg_mem[0x6e] = blended_darker;
-        pal_bg_mem[0x7e] = blended_darker;
-        pal_bg_mem[0x8e] = blended_darker;
-        pal_bg_mem[0x122] = blended_darker;
+        pal_bg_mem[0] = blended;
+        if (game_state == STATE_LEVEL_SELECT) {
+            pal_bg_mem[0x121] = blended;
+            pal_bg_mem[0x12] = blended_darker;
+            pal_bg_mem[0x24] = blended_darker;
+            pal_bg_mem[0x3e] = blended_darker;
+            pal_bg_mem[0x4e] = blended_darker;
+            pal_bg_mem[0x5e] = blended_darker;
+            pal_bg_mem[0x6e] = blended_darker;
+            pal_bg_mem[0x7e] = blended_darker;
+            pal_bg_mem[0x8e] = blended_darker;
+            pal_bg_mem[0x122] = blended_darker;
+        } else {
+            pal_bg_mem[0x2] = blended_darker;
+            pal_bg_mem[0x10f] = blended_darker;
+        }
     }
 }
 
