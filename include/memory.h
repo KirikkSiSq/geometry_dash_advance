@@ -197,6 +197,9 @@ struct PracticeCheckpoint {
     u8 speed_id;
     u8 dual;
 
+    FIXED gravity_multiplier;
+    FIXED free_camera;
+
     u16 col_trigger_buffer[CHANNEL_COUNT][5];
     u8 col_channels_flags[CHANNEL_COUNT];
     u16 col_channels_color[CHANNEL_COUNT];

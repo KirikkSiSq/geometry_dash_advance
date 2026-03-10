@@ -2047,6 +2047,9 @@ void store_practice_vars() {
     new_checkpoint.intended_scroll_y = intended_scroll_y;
     new_checkpoint.target_scroll_y = target_scroll_y;
 
+    new_checkpoint.gravity_multiplier = gravity_multiplier;
+    new_checkpoint.free_camera = free_camera;
+
     new_checkpoint.channels[COL1]   = palette_buffer[COL_ID_COLOR + COL_CHN_PAL];
     new_checkpoint.channels[COL2]   = palette_buffer[COL_ID_COLOR + COL_CHN_PAL + 0x10];
     new_checkpoint.channels[COL3]   = palette_buffer[COL_ID_COLOR + COL_CHN_PAL + 0x20];
@@ -2077,6 +2080,9 @@ void restore_practice_vars() {
     screen_mirrored_transition = curr_checkpoint.screen_mirrored_transition;
     mirror_scaling = curr_checkpoint.mirror_scaling;
     transition_frame = curr_checkpoint.transition_frame;
+    
+    gravity_multiplier = curr_checkpoint.gravity_multiplier;
+    free_camera = curr_checkpoint.free_camera;
 
     scroll_y = curr_checkpoint.scroll_y;
 
