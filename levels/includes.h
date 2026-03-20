@@ -203,8 +203,16 @@
 #include "leveleasy/SP.h"
 #include "leveleasy/properties.h"
 
+// dorabaebasic
+#define dorabaebasic_ID 21
+
+#include "dorabaebasic/l1.h"
+#include "dorabaebasic/l2.h"
+#include "dorabaebasic/SP.h"
+#include "dorabaebasic/properties.h"
+
 // dorabaebasic4
-#define dorabaebasic4_ID 21
+#define dorabaebasic4_ID 22
 
 #include "dorabaebasic4/l1.h"
 #include "dorabaebasic4/l2.h"
@@ -212,7 +220,7 @@
 #include "dorabaebasic4/properties.h"
 
 // dorabaebasic7
-#define dorabaebasic7_ID 22
+#define dorabaebasic7_ID 23
 
 #include "dorabaebasic7/l1.h"
 #include "dorabaebasic7/l2.h"
@@ -220,7 +228,7 @@
 #include "dorabaebasic7/properties.h"
 
 // goldenclub
-#define goldenclub_ID 23
+#define goldenclub_ID 24
 
 #include "goldenclub/l1.h"
 #include "goldenclub/l2.h"
@@ -228,7 +236,7 @@
 #include "goldenclub/properties.h"
 
 // squareadv
-#define squareadv_ID 24
+#define squareadv_ID 25
 
 #include "squareadv/l1.h"
 #include "squareadv/l2.h"
@@ -236,7 +244,7 @@
 #include "squareadv/properties.h"
 
 // selectpaymenttype
-#define selectpaymenttype_ID 25
+#define selectpaymenttype_ID 26
 
 #include "selectpaymenttype/l1.h"
 #include "selectpaymenttype/l2.h"
@@ -244,7 +252,7 @@
 #include "selectpaymenttype/properties.h"
 
 // storymadness
-#define storymadness_ID 26
+#define storymadness_ID 27
 
 #include "storymadness/l1.h"
 #include "storymadness/l2.h"
@@ -252,7 +260,7 @@
 #include "storymadness/properties.h"
 
 // groundtospace
-#define groundtospace_ID 27
+#define groundtospace_ID 28
 
 #include "groundtospace/l1.h"
 #include "groundtospace/l2.h"
@@ -260,7 +268,7 @@
 #include "groundtospace/properties.h"
 
 // one
-#define one_ID 28
+#define one_ID 29
 
 #include "one/l1.h"
 #include "one/l2.h"
@@ -268,15 +276,23 @@
 #include "one/properties.h"
 
 // dynamicontrack
-#define dynamicontrack_ID 29
+#define dynamicontrack_ID 30
 
 #include "dynamicontrack/l1.h"
 #include "dynamicontrack/l2.h"
 #include "dynamicontrack/SP.h"
 #include "dynamicontrack/properties.h"
 
+// iceland
+#define iceland_ID 31
+
+#include "iceland/l1.h"
+#include "iceland/l2.h"
+#include "iceland/SP.h"
+#include "iceland/properties.h"
+
 // ultimatedestruction
-#define ultimatedestruction_ID 30
+#define ultimatedestruction_ID 32
 
 #include "ultimatedestruction/l1.h"
 #include "ultimatedestruction/l2.h"
@@ -284,7 +300,7 @@
 #include "ultimatedestruction/properties.h"
 
 // pyrophoric
-#define pyrophoric_ID 31
+#define pyrophoric_ID 33
 
 #include "pyrophoric/l1.h"
 #include "pyrophoric/l2.h"
@@ -292,7 +308,7 @@
 #include "pyrophoric/properties.h"
 
 // cantletgov2
-#define cantletgov2_ID 32
+#define cantletgov2_ID 34
 
 #include "cantletgov2/l1.h"
 #include "cantletgov2/l2.h"
@@ -300,7 +316,7 @@
 #include "cantletgov2/properties.h"
 
 // funnygameholiday
-#define funnygameholiday_ID 33
+#define funnygameholiday_ID 35
 
 #include "funnygameholiday/l1.h"
 #include "funnygameholiday/l2.h"
@@ -308,7 +324,7 @@
 #include "funnygameholiday/properties.h"
 
 // thenightmare
-#define thenightmare_ID 34
+#define thenightmare_ID 36
 
 #include "thenightmare/l1.h"
 #include "thenightmare/l2.h"
@@ -316,7 +332,7 @@
 #include "thenightmare/properties.h"
 
 // demonjumper
-#define demonjumper_ID 35
+#define demonjumper_ID 37
 
 #include "demonjumper/l1.h"
 #include "demonjumper/l2.h"
@@ -324,7 +340,7 @@
 #include "demonjumper/properties.h"
 
 // rose
-#define rose_ID 36
+#define rose_ID 38
 
 #include "rose/l1.h"
 #include "rose/l2.h"
@@ -332,7 +348,7 @@
 #include "rose/properties.h"
 
 // problematic
-#define problematic_ID 37
+#define problematic_ID 39
 
 #include "problematic/l1.h"
 #include "problematic/l2.h"
@@ -340,7 +356,7 @@
 #include "problematic/properties.h"
 
 // deathmoon
-#define deathmoon_ID 38
+#define deathmoon_ID 40
 
 #include "deathmoon/l1.h"
 #include "deathmoon/l2.h"
@@ -348,7 +364,7 @@
 #include "deathmoon/properties.h"
 
 // acropolis
-#define acropolis_ID 39
+#define acropolis_ID 41
 
 #include "acropolis/l1.h"
 #include "acropolis/l2.h"
@@ -356,7 +372,7 @@
 #include "acropolis/properties.h"
 
 // everyend
-#define everyend_ID 40
+#define everyend_ID 42
 
 #include "everyend/l1.h"
 #include "everyend/l2.h"
@@ -364,7 +380,7 @@
 #include "everyend/properties.h"
 
 // test
-#define test_ID 41
+#define test_ID 43
 
 #include "test/l1.h"
 #include "test/l2.h"
@@ -372,7 +388,7 @@
 #include "test/properties.h"
 
 // test2
-#define test2_ID 42
+#define test2_ID 44
 
 #include "test2/l1.h"
 #include "test2/l2.h"
@@ -380,13 +396,13 @@
 #include "test2/properties.h"
 
 // endless
-#define endless_ID 43
+#define endless_ID 45
 
 #include "endless/l1.h"
 #include "endless/l2.h"
 #include "endless/SP.h"
 #include "endless/properties.h"
 
-#define LEVEL_COUNT 44
+#define LEVEL_COUNT 46
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];
