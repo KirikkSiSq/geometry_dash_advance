@@ -37,6 +37,8 @@ levels=(
   pyrophoric
   cantletgov2
   funnygameholiday
+  tig_oglevel
+  fireaura_tig
   thenightmare
   demonjumper
   rose

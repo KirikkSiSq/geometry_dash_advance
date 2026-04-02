@@ -323,8 +323,24 @@
 #include "funnygameholiday/SP.h"
 #include "funnygameholiday/properties.h"
 
+// tig_oglevel
+#define tig_oglevel_ID 36
+
+#include "tig_oglevel/l1.h"
+#include "tig_oglevel/l2.h"
+#include "tig_oglevel/SP.h"
+#include "tig_oglevel/properties.h"
+
+// fireaura_tig
+#define fireaura_tig_ID 37
+
+#include "fireaura_tig/l1.h"
+#include "fireaura_tig/l2.h"
+#include "fireaura_tig/SP.h"
+#include "fireaura_tig/properties.h"
+
 // thenightmare
-#define thenightmare_ID 36
+#define thenightmare_ID 38
 
 #include "thenightmare/l1.h"
 #include "thenightmare/l2.h"
@@ -332,7 +348,7 @@
 #include "thenightmare/properties.h"
 
 // demonjumper
-#define demonjumper_ID 37
+#define demonjumper_ID 39
 
 #include "demonjumper/l1.h"
 #include "demonjumper/l2.h"
@@ -340,7 +356,7 @@
 #include "demonjumper/properties.h"
 
 // rose
-#define rose_ID 38
+#define rose_ID 40
 
 #include "rose/l1.h"
 #include "rose/l2.h"
@@ -348,7 +364,7 @@
 #include "rose/properties.h"
 
 // problematic
-#define problematic_ID 39
+#define problematic_ID 41
 
 #include "problematic/l1.h"
 #include "problematic/l2.h"
@@ -356,7 +372,7 @@
 #include "problematic/properties.h"
 
 // deathmoon
-#define deathmoon_ID 40
+#define deathmoon_ID 42
 
 #include "deathmoon/l1.h"
 #include "deathmoon/l2.h"
@@ -364,7 +380,7 @@
 #include "deathmoon/properties.h"
 
 // acropolis
-#define acropolis_ID 41
+#define acropolis_ID 43
 
 #include "acropolis/l1.h"
 #include "acropolis/l2.h"
@@ -372,7 +388,7 @@
 #include "acropolis/properties.h"
 
 // everyend
-#define everyend_ID 42
+#define everyend_ID 44
 
 #include "everyend/l1.h"
 #include "everyend/l2.h"
