@@ -37,6 +37,7 @@ levels=(
   pyrophoric
   cantletgov2
   funnygameholiday
+  revolution
   tig_oglevel
   fireaura_tig
   thenightmare
@@ -44,6 +45,7 @@ levels=(
   rose
   problematic
   deathmoon
+  kaleidoscopic
   acropolis
   everyend
   test

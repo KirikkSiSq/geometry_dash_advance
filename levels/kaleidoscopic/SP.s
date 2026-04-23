@@ -6400,21 +6400,21 @@ kaleidoscopic_spr_data:
    .hword 0x0 @ z index 0
 @ Object 960
    .hword 0x8 @ delta x
-   .hword 0x24f @ y
+   .hword 0x250 @ y
    .hword 0x3 @ type
    .hword 0xf2 @ changes 3 for 30 frames
    .hword 0x0 @ color
    .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 961
    .hword 0x0 @ delta x
-   .hword 0x25f @ y
+   .hword 0x260 @ y
    .hword 0x3 @ type
    .hword 0xf0 @ changes 1 for 30 frames
    .hword 0x0 @ color
    .hword 0x20 @ doesn't copy any channel blending normal trigger
 @ Object 962
    .hword 0x0 @ delta x
-   .hword 0x26f @ y
+   .hword 0x270 @ y
    .hword 0x3 @ type
    .hword 0xf4 @ changes BG for 30 frames
    .hword 0x0 @ color
@@ -26902,13 +26902,13 @@ kaleidoscopic_spr_data:
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
 @ Object 4066
-   .hword 0x7 @ delta x
+   .hword 0x8 @ delta x
    .hword 0x345 @ y
    .hword 0x51 @ type
    .hword 0x20 @ bg layer 4 non rotated   
    .hword 0xc0 @ z index 0 pal 3
 @ Object 4067
-   .hword 0x16 @ delta x
+   .hword 0x15 @ delta x
    .hword 0x345 @ y
    .hword 0x52 @ type
    .hword 0x20 @ bg layer 4 non rotated   

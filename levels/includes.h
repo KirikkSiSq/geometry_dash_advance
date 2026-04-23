@@ -387,21 +387,21 @@
 #include "deathmoon/SP.h"
 #include "deathmoon/properties.h"
 
-// acropolis
-#define acropolis_ID 44
-
-#include "acropolis/l1.h"
-#include "acropolis/l2.h"
-#include "acropolis/SP.h"
-#include "acropolis/properties.h"
-
 // kaleidoscopic
-#define kaleidoscopic_ID 45
+#define kaleidoscopic_ID 44
 
 #include "kaleidoscopic/l1.h"
 #include "kaleidoscopic/l2.h"
 #include "kaleidoscopic/SP.h"
 #include "kaleidoscopic/properties.h"
+
+// acropolis
+#define acropolis_ID 45
+
+#include "acropolis/l1.h"
+#include "acropolis/l2.h"
+#include "acropolis/SP.h"
+#include "acropolis/properties.h"
 
 // everyend
 #define everyend_ID 46

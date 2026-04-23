@@ -42,6 +42,8 @@ ROM_DATA char *sound_test_songs_names[] = {
     "PROBLEMATIC",
     "DEATH MOON",
     "FINAL BATTLE",
+    "FIRE AURA (SLOW)",
+    "INFERNO",
     "EVERY END"
 };
 
@@ -75,6 +77,8 @@ ROM_DATA char *sound_test_song_files[] = {
     "PROBLEMATIC.XM",
     "DEATHMOON.XM",
     "FINALBATTLE.XM",
+    "FAURA_SLOW.XM",
+    "INFERNO.XM",
     "EVERYEND.XM"
 };
 
@@ -108,6 +112,8 @@ ROM_DATA u16 sound_test_song_ids[] = {
     MOD_PROBLEM,
     MOD_DEATHMOON,
     MOD_FINALBATTLE,
+    MOD_FAURA_SLOW,
+    MOD_INFERNO,
     MOD_EVERYEND
 };
 void put_song_info(u32 song_id);
