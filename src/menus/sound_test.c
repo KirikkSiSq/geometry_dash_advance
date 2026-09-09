@@ -39,13 +39,16 @@ ROM_DATA char *sound_test_songs_names[] = {
     "SELECT PAYMENT TYPE",
     "GROUND TO SPACE",
     "ULTIMATE DESTRUCTION",
+	"AT THE SPEED OF LIGHT",
     "PYROPHORIC",
     "ROSE",
     "PROBLEMATIC",
     "DEATH MOON",
     "FINAL BATTLE",
+	"FIRE AURA",
     "FIRE AURA (SLOW)",
     "INFERNO",
+	"ISOLATION",
     "EVERY END"
 };
 
@@ -76,13 +79,16 @@ ROM_DATA char *sound_test_song_files[] = {
     "SELECTPAYMENT.XM",
     "GROUND.XM",
     "ULTIMATE.XM",
+	"ATSOL.XM",
     "PYRO.XM",
     "ROSE.XM",
     "PROBLEMATIC.XM",
     "DEATHMOON.XM",
     "FINALBATTLE.XM",
+	"FAURA.XM",
     "FAURA_SLOW.XM",
     "INFERNO.XM",
+	"ISOLATION.XM",
     "EVERYEND.XM"
 };
 
@@ -113,13 +119,16 @@ ROM_DATA u16 sound_test_song_ids[] = {
     MOD_SELECTPAYMENT,
     MOD_GROUND,
     MOD_ULTIMATE,
+	MOD_ATSOL,
     MOD_PYRO,
     MOD_ROSE,
     MOD_PROBLEM,
     MOD_DEATHMOON,
     MOD_FINALBATTLE,
+	MOD_FAURA,
     MOD_FAURA_SLOW,
     MOD_INFERNO,
+	MOD_ISOLATION,
     MOD_EVERYEND
 };
 

@@ -179,160 +179,56 @@
 #include "theoryofeverything2/SP.h"
 #include "theoryofeverything2/properties.h"
 
-// autocycles
-#define autocycles_ID 18
-
-#include "autocycles/l1.h"
-#include "autocycles/l2.h"
-#include "autocycles/SP.h"
-#include "autocycles/properties.h"
-
 // sonar
-#define sonar_ID 19
+#define sonar_ID 18
 
 #include "sonar/l1.h"
 #include "sonar/l2.h"
 #include "sonar/SP.h"
 #include "sonar/properties.h"
 
-// retray
-#define retray_ID 20
-
-#include "retray/l1.h"
-#include "retray/l2.h"
-#include "retray/SP.h"
-#include "retray/properties.h"
-
-// invisontrack
-#define invisontrack_ID 21
-
-#include "invisontrack/l1.h"
-#include "invisontrack/l2.h"
-#include "invisontrack/SP.h"
-#include "invisontrack/properties.h"
-
 // leveleasy
-#define leveleasy_ID 22
+#define leveleasy_ID 19
 
 #include "leveleasy/l1.h"
 #include "leveleasy/l2.h"
 #include "leveleasy/SP.h"
 #include "leveleasy/properties.h"
 
-// dorabaebasic
-#define dorabaebasic_ID 23
-
-#include "dorabaebasic/l1.h"
-#include "dorabaebasic/l2.h"
-#include "dorabaebasic/SP.h"
-#include "dorabaebasic/properties.h"
-
-// dorabaebasic4
-#define dorabaebasic4_ID 24
-
-#include "dorabaebasic4/l1.h"
-#include "dorabaebasic4/l2.h"
-#include "dorabaebasic4/SP.h"
-#include "dorabaebasic4/properties.h"
-
 // dorabaebasic7
-#define dorabaebasic7_ID 25
+#define dorabaebasic7_ID 20
 
 #include "dorabaebasic7/l1.h"
 #include "dorabaebasic7/l2.h"
 #include "dorabaebasic7/SP.h"
 #include "dorabaebasic7/properties.h"
 
-// goldenclub
-#define goldenclub_ID 26
+// anubis
+#define anubis_ID 21
 
-#include "goldenclub/l1.h"
-#include "goldenclub/l2.h"
-#include "goldenclub/SP.h"
-#include "goldenclub/properties.h"
+#include "anubis/l1.h"
+#include "anubis/l2.h"
+#include "anubis/SP.h"
+#include "anubis/properties.h"
 
-// squareadv
-#define squareadv_ID 27
+// scarletsurge
+#define scarletsurge_ID 22
 
-#include "squareadv/l1.h"
-#include "squareadv/l2.h"
-#include "squareadv/SP.h"
-#include "squareadv/properties.h"
+#include "scarletsurge/l1.h"
+#include "scarletsurge/l2.h"
+#include "scarletsurge/SP.h"
+#include "scarletsurge/properties.h"
 
-// selectpaymenttype
-#define selectpaymenttype_ID 28
+// kappaclysm
+#define kappaclysm_ID 23
 
-#include "selectpaymenttype/l1.h"
-#include "selectpaymenttype/l2.h"
-#include "selectpaymenttype/SP.h"
-#include "selectpaymenttype/properties.h"
-
-// storymadness
-#define storymadness_ID 29
-
-#include "storymadness/l1.h"
-#include "storymadness/l2.h"
-#include "storymadness/SP.h"
-#include "storymadness/properties.h"
-
-// groundtospace
-#define groundtospace_ID 30
-
-#include "groundtospace/l1.h"
-#include "groundtospace/l2.h"
-#include "groundtospace/SP.h"
-#include "groundtospace/properties.h"
-
-// one
-#define one_ID 31
-
-#include "one/l1.h"
-#include "one/l2.h"
-#include "one/SP.h"
-#include "one/properties.h"
-
-// dynamicontrack
-#define dynamicontrack_ID 32
-
-#include "dynamicontrack/l1.h"
-#include "dynamicontrack/l2.h"
-#include "dynamicontrack/SP.h"
-#include "dynamicontrack/properties.h"
-
-// iceland
-#define iceland_ID 33
-
-#include "iceland/l1.h"
-#include "iceland/l2.h"
-#include "iceland/SP.h"
-#include "iceland/properties.h"
-
-// ultimatedestruction
-#define ultimatedestruction_ID 34
-
-#include "ultimatedestruction/l1.h"
-#include "ultimatedestruction/l2.h"
-#include "ultimatedestruction/SP.h"
-#include "ultimatedestruction/properties.h"
-
-// pyrophoric
-#define pyrophoric_ID 35
-
-#include "pyrophoric/l1.h"
-#include "pyrophoric/l2.h"
-#include "pyrophoric/SP.h"
-#include "pyrophoric/properties.h"
-
-// cantletgov2
-#define cantletgov2_ID 36
-
-#include "cantletgov2/l1.h"
-#include "cantletgov2/l2.h"
-#include "cantletgov2/SP.h"
-#include "cantletgov2/properties.h"
+#include "kappaclysm/l1.h"
+#include "kappaclysm/l2.h"
+#include "kappaclysm/SP.h"
+#include "kappaclysm/properties.h"
 
 // funnygameholiday
-#define funnygameholiday_ID 37
+#define funnygameholiday_ID 24
 
 #include "funnygameholiday/l1.h"
 #include "funnygameholiday/l2.h"
@@ -340,31 +236,231 @@
 #include "funnygameholiday/properties.h"
 
 // revolution
-#define revolution_ID 38
+#define revolution_ID 25
 
 #include "revolution/l1.h"
 #include "revolution/l2.h"
 #include "revolution/SP.h"
 #include "revolution/properties.h"
 
-// tig_oglevel
-#define tig_oglevel_ID 39
+// fireaura_sumsar
+#define fireaura_sumsar_ID 26
 
-#include "tig_oglevel/l1.h"
-#include "tig_oglevel/l2.h"
-#include "tig_oglevel/SP.h"
-#include "tig_oglevel/properties.h"
+#include "fireaura_sumsar/l1.h"
+#include "fireaura_sumsar/l2.h"
+#include "fireaura_sumsar/SP.h"
+#include "fireaura_sumsar/properties.h"
+
+// tetrix
+#define tetrix_ID 27
+
+#include "tetrix/l1.h"
+#include "tetrix/l2.h"
+#include "tetrix/SP.h"
+#include "tetrix/properties.h"
 
 // fireaura_tig
-#define fireaura_tig_ID 40
+#define fireaura_tig_ID 28
 
 #include "fireaura_tig/l1.h"
 #include "fireaura_tig/l2.h"
 #include "fireaura_tig/SP.h"
 #include "fireaura_tig/properties.h"
 
+// tig_oglevel
+#define tig_oglevel_ID 29
+
+#include "tig_oglevel/l1.h"
+#include "tig_oglevel/l2.h"
+#include "tig_oglevel/SP.h"
+#include "tig_oglevel/properties.h"
+
+// chaozfantasy_tig
+#define chaozfantasy_tig_ID 30
+
+#include "chaozfantasy_tig/l1.h"
+#include "chaozfantasy_tig/l2.h"
+#include "chaozfantasy_tig/SP.h"
+#include "chaozfantasy_tig/properties.h"
+
+// payload
+#define payload_ID 31
+
+#include "payload/l1.h"
+#include "payload/l2.h"
+#include "payload/SP.h"
+#include "payload/properties.h"
+
+// beastmode
+#define beastmode_ID 32
+
+#include "beastmode/l1.h"
+#include "beastmode/l2.h"
+#include "beastmode/SP.h"
+#include "beastmode/properties.h"
+
+// machina
+#define machina_ID 33
+
+#include "machina/l1.h"
+#include "machina/l2.h"
+#include "machina/SP.h"
+#include "machina/properties.h"
+
+// years
+#define years_ID 34
+
+#include "years/l1.h"
+#include "years/l2.h"
+#include "years/SP.h"
+#include "years/properties.h"
+
+// autocycles
+#define autocycles_ID 35
+
+#include "autocycles/l1.h"
+#include "autocycles/l2.h"
+#include "autocycles/SP.h"
+#include "autocycles/properties.h"
+
+// retray
+#define retray_ID 36
+
+#include "retray/l1.h"
+#include "retray/l2.h"
+#include "retray/SP.h"
+#include "retray/properties.h"
+
+// invisontrack
+#define invisontrack_ID 37
+
+#include "invisontrack/l1.h"
+#include "invisontrack/l2.h"
+#include "invisontrack/SP.h"
+#include "invisontrack/properties.h"
+
+// dorabaebasic
+#define dorabaebasic_ID 38
+
+#include "dorabaebasic/l1.h"
+#include "dorabaebasic/l2.h"
+#include "dorabaebasic/SP.h"
+#include "dorabaebasic/properties.h"
+
+// dorabaebasic2
+#define dorabaebasic2_ID 39
+
+#include "dorabaebasic2/l1.h"
+#include "dorabaebasic2/l2.h"
+#include "dorabaebasic2/SP.h"
+#include "dorabaebasic2/properties.h"
+
+// dorabaebasic4
+#define dorabaebasic4_ID 40
+
+#include "dorabaebasic4/l1.h"
+#include "dorabaebasic4/l2.h"
+#include "dorabaebasic4/SP.h"
+#include "dorabaebasic4/properties.h"
+
+// goldenclub
+#define goldenclub_ID 41
+
+#include "goldenclub/l1.h"
+#include "goldenclub/l2.h"
+#include "goldenclub/SP.h"
+#include "goldenclub/properties.h"
+
+// squareadv
+#define squareadv_ID 42
+
+#include "squareadv/l1.h"
+#include "squareadv/l2.h"
+#include "squareadv/SP.h"
+#include "squareadv/properties.h"
+
+// selectpaymenttype
+#define selectpaymenttype_ID 43
+
+#include "selectpaymenttype/l1.h"
+#include "selectpaymenttype/l2.h"
+#include "selectpaymenttype/SP.h"
+#include "selectpaymenttype/properties.h"
+
+// storymadness
+#define storymadness_ID 44
+
+#include "storymadness/l1.h"
+#include "storymadness/l2.h"
+#include "storymadness/SP.h"
+#include "storymadness/properties.h"
+
+// groundtospace
+#define groundtospace_ID 45
+
+#include "groundtospace/l1.h"
+#include "groundtospace/l2.h"
+#include "groundtospace/SP.h"
+#include "groundtospace/properties.h"
+
+// one
+#define one_ID 46
+
+#include "one/l1.h"
+#include "one/l2.h"
+#include "one/SP.h"
+#include "one/properties.h"
+
+// dynamicontrack
+#define dynamicontrack_ID 47
+
+#include "dynamicontrack/l1.h"
+#include "dynamicontrack/l2.h"
+#include "dynamicontrack/SP.h"
+#include "dynamicontrack/properties.h"
+
+// iceland
+#define iceland_ID 48
+
+#include "iceland/l1.h"
+#include "iceland/l2.h"
+#include "iceland/SP.h"
+#include "iceland/properties.h"
+
+// ultimatedestruction
+#define ultimatedestruction_ID 49
+
+#include "ultimatedestruction/l1.h"
+#include "ultimatedestruction/l2.h"
+#include "ultimatedestruction/SP.h"
+#include "ultimatedestruction/properties.h"
+
+// pyrophoric
+#define pyrophoric_ID 50
+
+#include "pyrophoric/l1.h"
+#include "pyrophoric/l2.h"
+#include "pyrophoric/SP.h"
+#include "pyrophoric/properties.h"
+
+// cantletgov2
+#define cantletgov2_ID 51
+
+#include "cantletgov2/l1.h"
+#include "cantletgov2/l2.h"
+#include "cantletgov2/SP.h"
+#include "cantletgov2/properties.h"
+
+// f
+#define f_ID 52
+
+#include "f/l1.h"
+#include "f/l2.h"
+#include "f/SP.h"
+#include "f/properties.h"
+
 // thenightmare
-#define thenightmare_ID 41
+#define thenightmare_ID 53
 
 #include "thenightmare/l1.h"
 #include "thenightmare/l2.h"
@@ -372,7 +468,7 @@
 #include "thenightmare/properties.h"
 
 // demonjumper
-#define demonjumper_ID 42
+#define demonjumper_ID 54
 
 #include "demonjumper/l1.h"
 #include "demonjumper/l2.h"
@@ -380,7 +476,7 @@
 #include "demonjumper/properties.h"
 
 // rose
-#define rose_ID 43
+#define rose_ID 55
 
 #include "rose/l1.h"
 #include "rose/l2.h"
@@ -388,7 +484,7 @@
 #include "rose/properties.h"
 
 // problematic
-#define problematic_ID 44
+#define problematic_ID 56
 
 #include "problematic/l1.h"
 #include "problematic/l2.h"
@@ -396,7 +492,7 @@
 #include "problematic/properties.h"
 
 // deathmoon
-#define deathmoon_ID 45
+#define deathmoon_ID 57
 
 #include "deathmoon/l1.h"
 #include "deathmoon/l2.h"
@@ -404,7 +500,7 @@
 #include "deathmoon/properties.h"
 
 // acropolis
-#define acropolis_ID 46
+#define acropolis_ID 58
 
 #include "acropolis/l1.h"
 #include "acropolis/l2.h"
@@ -412,7 +508,7 @@
 #include "acropolis/properties.h"
 
 // kaleidoscopic
-#define kaleidoscopic_ID 47
+#define kaleidoscopic_ID 59
 
 #include "kaleidoscopic/l1.h"
 #include "kaleidoscopic/l2.h"
@@ -420,7 +516,7 @@
 #include "kaleidoscopic/properties.h"
 
 // everyend
-#define everyend_ID 48
+#define everyend_ID 60
 
 #include "everyend/l1.h"
 #include "everyend/l2.h"
@@ -428,7 +524,7 @@
 #include "everyend/properties.h"
 
 // test
-#define test_ID 49
+#define test_ID 61
 
 #include "test/l1.h"
 #include "test/l2.h"
@@ -436,7 +532,7 @@
 #include "test/properties.h"
 
 // test2
-#define test2_ID 50
+#define test2_ID 62
 
 #include "test2/l1.h"
 #include "test2/l2.h"
@@ -444,13 +540,13 @@
 #include "test2/properties.h"
 
 // endless
-#define endless_ID 51
+#define endless_ID 63
 
 #include "endless/l1.h"
 #include "endless/l2.h"
 #include "endless/SP.h"
 #include "endless/properties.h"
 
-#define LEVEL_COUNT 52
+#define LEVEL_COUNT 64
 extern ROM_DATA const u16 *level_defines[][4];
 extern ROM_DATA const u8 *level_names[];

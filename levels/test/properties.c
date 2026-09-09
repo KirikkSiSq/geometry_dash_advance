@@ -16,7 +16,7 @@ const unsigned int test_properties[] = {
  /*name length*/   4,
  /*difficulty*/    0,
  /*stars*/         0,
- /*coins number*/  3,
+ /*coins number*/  0,
  /*background*/    0,
  /*ground*/        0,
 };
