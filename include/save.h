@@ -1,7 +1,6 @@
 #include <tonc.h>
 #include "../levels/includes.h"
 #include "libsavgba/gba_sram.h"
-#include "libsavgba/gba_flash.h"
 
 #pragma once
 
@@ -35,17 +34,6 @@ struct SaveBlock {
 };
 
 extern EWRAM_DATA struct SaveBlock save_data;
-
-//Backup save slot structure and addresses
-#define NUM_SAVE_SLOTS 2
-struct SaveSlot {
-    u32 seq;
-    u32 checksum;
-    struct SaveBlock block;
-};
-#define SAVE_SLOT_SIZE sizeof(struct SaveSlot)
-// For flash, place slots on separate 64KB regions to avoid erasing the same sector on each save. Place slot0 at 0x00000, slot1 at 0x10000.
-#define SAVE_SLOT_ADDR(n) ((n) == 0 ? 0x00000 : 0x10000)
 
 void memcpy8(volatile unsigned char *dst, const volatile unsigned char *src, size_t length);
 void memset8(volatile unsigned char *dst, unsigned char val, size_t length);
